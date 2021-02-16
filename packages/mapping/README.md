@@ -1,3 +1,5 @@
+> This package was copied in as a template then gutted, this was the original Readme
+
 # WHO COVID-19 Surveillance Package
 
 This package sets up a mapping mediator instance to map COVID-19 QuestionnaireResponse FHIR resources to FHIR Bundles.

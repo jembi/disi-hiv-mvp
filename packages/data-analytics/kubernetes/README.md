@@ -1,3 +1,4 @@
+> This package was copied in as a template then gutted, this was the original Readme
 # Kubernetes
 
 To start use the following:
@@ -9,7 +10,7 @@ kubectl delete -k main/
 
 ## Troubleshooting
 
-[`kompose`](https://kompose.io) was used to create the resource manifests. There are two issues that this process generates.  One is that a port is not open for the service. 
+[`kompose`](https://kompose.io) was used to create the resource manifests. There are two issues that this process generates.  One is that a port is not open for the service.
 
 Another is that there is potential for port contention, so the exposed port is remapped to 3001.
 

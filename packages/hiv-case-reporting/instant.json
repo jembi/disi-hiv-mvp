@@ -1,8 +1,0 @@
-{
-  "id": "hiv-case-reporting",
-  "name": "HIV Case Reporting",
-  "description": "",
-  "type": "infrastructure",
-  "version": "v0.0.0",
-  "dependencies": ["core"]
-}
