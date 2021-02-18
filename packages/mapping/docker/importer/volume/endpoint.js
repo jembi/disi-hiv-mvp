@@ -5,7 +5,7 @@ const http = require('http')
 const path = require('path')
 
 const MEDIATOR_HOSTNAME =
-  process.env.MEDIATOR_HOST_NAME || 'covid19-surveillance-mediator'
+  process.env.MEDIATOR_HOST_NAME || 'mapping-mediator'
 const MEDIATOR_API_PORT = process.env.MEDIATOR_API_PORT || 3003
 
 const ENDPOINT_FILES = [
@@ -44,10 +44,10 @@ ENDPOINT_FILES.forEach(file => {
         if (data) {
           data = JSON.parse(data)
           if (data.error && data.error.match(/duplicate key error/).length) {
-            console.log('covid19-surveillance endpoint already exists')
+            console.log('mapping endpoint already exists')
             return
           }
-          throw Error('covid19-surveillance endpoint creation failed')
+          throw Error('mapping endpoint creation failed')
         }
       })
 
@@ -59,16 +59,16 @@ ENDPOINT_FILES.forEach(file => {
 
     if (res.statusCode != 201) {
       throw Error(
-        `Failed to create covid19-surveillance mediator endpoint: ${res.statusCode}`
+        `Failed to create mapping mediator endpoint: ${res.statusCode}`
       )
     } else {
-      console.log('Successfully created covid19-surveillance endpoint')
+      console.log('Successfully created mapping endpoint')
     }
   })
 
   req.on('error', (error) => {
     console.error(
-      'Failed to create covid19-surveillance mediator endpoint: ',
+      'Failed to create mapping mediator endpoint: ',
       error
     )
   })

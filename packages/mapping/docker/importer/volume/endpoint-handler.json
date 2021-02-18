@@ -1,8 +1,8 @@
 {
-  "name": "FHIR - Covid-19 QuestionnaireResponse Orchestrator",
-  "description": "Endpoint to validate the incoming Covid-19 QuestionnaireResponse payload then transform to a usable format",
+  "name": "FHIR - QuestionnaireResponse Orchestrator",
+  "description": "Endpoint to validate the incoming QuestionnaireResponse payload then transform to a usable format",
   "endpoint": {
-    "pattern": "/covid19-surveillance"
+    "pattern": "/mapping"
   },
   "transformation": {
     "input": "JSON",
