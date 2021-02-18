@@ -29,6 +29,12 @@ services:
       ELASTICSEARCH_URL: http://es:9200
       ELASTICSEARCH_HOSTS: http://es:9200
 
+  fhir2es:
+    image: jembi/fhir2es:latest
+    container_name: fhir2es
+    environment:
+      ES_BASE_URL: http://es:9200
+      FHIR_BASE_URL: http://fhir:8080/hapi-fhir-jpaserver/fhir
 
 volumes:
   data01:
