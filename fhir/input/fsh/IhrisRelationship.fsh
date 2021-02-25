@@ -144,6 +144,7 @@ Usage:          #example
 * extension[reportlink].extension[reportelement][0].extension[filter].valueBoolean = true
 * extension[reportlink].extension[reportelement][0].extension[dropDownFilter].valueBoolean = true
 
+// TODO - restrict linked resources by code
 Instance:       hiv-cbs-report
 InstanceOf:     IhrisRelationship
 Title:          "iHRIS Relationship Example"
@@ -159,3 +160,30 @@ Usage:          #example
 * extension[reportdetails].extension[reportelement][1].extension[label].valueString = "birthDate"
 * extension[reportdetails].extension[reportelement][1].extension[name].valueString = "birthDate"
 * extension[reportdetails].extension[reportelement][1].extension[display].valueString = "Birth date"
+* extension[reportlink][0].extension[name].valueString = "condition"
+* extension[reportlink][0].extension[resource].valueString = "Condition"
+* extension[reportlink][0].extension[linkElement].valueString = "Condition.subject.reference"
+* extension[reportlink][0].extension[linkTo].valueString = "hivcbspatient"
+* extension[reportlink][0].extension[linkElementSearchParameter].valueString = "patient"
+* extension[reportlink][0].extension[multiple].valueBoolean = false
+* extension[reportlink][0].extension[reportelement][0].extension[label].valueString = "hivcondition"
+* extension[reportlink][0].extension[reportelement][0].extension[name].valueString = "clinicalStatus.coding.code = 'active'"
+* extension[reportlink][0].extension[reportelement][0].extension[display].valueString = "Has condition HIV"
+* extension[reportlink][1].extension[name].valueString = "artmedicationstatement"
+* extension[reportlink][1].extension[resource].valueString = "MedicationStatement"
+* extension[reportlink][1].extension[linkElement].valueString = "MedicationStatement.subject.reference"
+* extension[reportlink][1].extension[linkTo].valueString = "hivcbspatient"
+* extension[reportlink][1].extension[linkElementSearchParameter].valueString = "patient"
+* extension[reportlink][1].extension[multiple].valueBoolean = false
+* extension[reportlink][1].extension[reportelement][0].extension[label].valueString = "onart"
+* extension[reportlink][1].extension[reportelement][0].extension[name].valueString = "status = 'active'"
+* extension[reportlink][1].extension[reportelement][0].extension[display].valueString = "Currently on ARTs"
+* extension[reportlink][2].extension[name].valueString = "vlobs"
+* extension[reportlink][2].extension[resource].valueString = "Observation"
+* extension[reportlink][2].extension[linkElement].valueString = "Observation.subject.reference"
+* extension[reportlink][2].extension[linkTo].valueString = "hivcbspatient"
+* extension[reportlink][2].extension[linkElementSearchParameter].valueString = "patient"
+* extension[reportlink][2].extension[multiple].valueBoolean = false
+* extension[reportlink][2].extension[reportelement][0].extension[label].valueString = "vlresult"
+* extension[reportlink][2].extension[reportelement][0].extension[name].valueString = "valueCodeableConcept.coding.code"
+* extension[reportlink][2].extension[reportelement][0].extension[display].valueString = "Viral load result"
