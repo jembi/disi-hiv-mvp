@@ -15,7 +15,7 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - data01:/usr/share/elasticsearch/data
+      - es-data:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
 
@@ -35,9 +35,8 @@ services:
     environment:
       ES_BASE_URL: http://es:9200
       FHIR_BASE_URL: http://fhir:8080/hapi-fhir-jpaserver/fhir
-      RELATIONSHIP_IDS: 5
-      POLL_INTERVAL: 5000
+      RELATIONSHIP_IDS: hiv-cbs-report
+      POLL_INTERVAL: 30000
 
 volumes:
-  data01:
-    # driver: local
+  es-data:
