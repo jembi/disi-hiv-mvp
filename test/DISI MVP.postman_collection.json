@@ -26,6 +26,11 @@
 						"key": "Content-Type",
 						"value": "application/fhir+json",
 						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Custom test",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -38,15 +43,16 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3447/hapi-fhir-jpaserver/fhir",
+					"raw": "http://localhost:5001/hapi-fhir-jpaserver/fhir/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3447",
+					"port": "5001",
 					"path": [
 						"hapi-fhir-jpaserver",
-						"fhir"
+						"fhir",
+						""
 					]
 				}
 			},
@@ -71,7 +77,12 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/fhir+json",
+						"type": "text",
+						"value": "application/fhir+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Custom test",
 						"type": "text"
 					}
 				],
@@ -85,15 +96,16 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3447/hapi-fhir-jpaserver/fhir",
+					"raw": "http://localhost:5001/hapi-fhir-jpaserver/fhir/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3447",
+					"port": "5001",
 					"path": [
 						"hapi-fhir-jpaserver",
-						"fhir"
+						"fhir",
+						""
 					]
 				}
 			},
@@ -120,6 +132,11 @@
 						"key": "Content-Type",
 						"type": "text",
 						"value": "application/fhir+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Custom test",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -132,15 +149,16 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3447/hapi-fhir-jpaserver/fhir",
+					"raw": "http://localhost:5001/hapi-fhir-jpaserver/fhir/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3447",
+					"port": "5001",
 					"path": [
 						"hapi-fhir-jpaserver",
-						"fhir"
+						"fhir",
+						""
 					]
 				}
 			},
@@ -167,6 +185,11 @@
 						"key": "Content-Type",
 						"type": "text",
 						"value": "application/fhir+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Custom test",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -179,15 +202,16 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3447/hapi-fhir-jpaserver/fhir",
+					"raw": "http://localhost:5001/hapi-fhir-jpaserver/fhir/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3447",
+					"port": "5001",
 					"path": [
 						"hapi-fhir-jpaserver",
-						"fhir"
+						"fhir",
+						""
 					]
 				}
 			},
@@ -214,6 +238,11 @@
 						"key": "Content-Type",
 						"type": "text",
 						"value": "application/fhir+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Custom test",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -226,15 +255,16 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3447/hapi-fhir-jpaserver/fhir",
+					"raw": "http://localhost:5001/hapi-fhir-jpaserver/fhir/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3447",
+					"port": "5001",
 					"path": [
 						"hapi-fhir-jpaserver",
-						"fhir"
+						"fhir",
+						""
 					]
 				}
 			},
