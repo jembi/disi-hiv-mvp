@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  # container for executing config import scripts for setting up initial config
+  hapi-fhir-config-importer:
+    container_name: hapi-fhir-config-importer
+    image: jembi/instantohie-config-importer
+    restart: on-failure
+    environment:
+      HAPI_FHIR_PATH: '/hapi-fhir-jpaserver/fhir'
+      HAPI_FHIR_PORT: 8080
+      HAPI_FHIR_HOSTNAME: fhir
+      IG_URL: 'https://openhie.github.io/hiv-ig'
+      IG_PROTOCOL: 'http:'
+    volumes:
+      - type: volume
+        source: instant
+        target: /instant
+    command: sh -c "wait-on -t 60000 http-get://fhir:8080/hapi-fhir-jpaserver && sleep 1 && node /instant/disi/docker/importer/volume/fhirConfig.js"
+
+volumes:
+  instant:
+    external: true
