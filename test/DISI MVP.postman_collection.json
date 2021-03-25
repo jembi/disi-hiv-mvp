@@ -6,474 +6,582 @@
 	},
 	"item": [
 		{
-			"name": "Send CBS bundle - All events",
-			"event": [
+			"name": "MPI interactions",
+			"item": [
 				{
-					"listen": "prerequest",
-					"script": {
-						"id": "db0fa9f8-d1fd-45cd-97d8-dea944795c3d",
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/fhir+json",
-						"type": "text"
-					},
-					{
-						"key": "Authorization",
-						"value": "Custom test",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"id\": \"hiv-case-record-bundle\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"hiv-patient\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n          ]\n        },\n        \"identifier\": [\n          {\n            \"system\": \"http://test.org/identifier/test-poc\",\n            \"value\": \"{{$guid}}\"\n          }\n        ],\n        \"active\": true,\n        \"name\": [\n          {\n            \"given\": [\n              \"{{$randomFirstName}}\"\n            ]\n          },\n          {\n            \"family\": \"{{$randomLastName}}\"\n          }\n        ],\n        \"gender\": \"{{gender}}\",\n        \"birthDate\": \"{{dob}}\"\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Condition\",\n        \"id\": \"hiv-condition\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-condition\"\n          ]\n        },\n        \"clinicalStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"active\"\n            }\n          ]\n        },\n        \"verificationStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"confirmed\"\n            }\n          ]\n        },\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"86406008\",\n              \"system\": \"http://snomed.info/sct\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"MedicationStatement\",\n        \"id\": \"art-medication-statement\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/arv-therapy-summary\"\n          ]\n        },\n        \"status\": \"active\",\n        \"medicationCodeableConcept\": {\n          \"coding\": [\n            {\n              \"code\": \"ART\",\n              \"system\": \"http://test.org/medication-type\",\n              \"display\": \"Antiretrovirals\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Observation\",\n        \"id\": \"vl-obs\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-viral-load\"\n          ]\n        },\n        \"status\": \"final\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"VL-RESULT\",\n              \"system\": \"http://test.org/obs\",\n              \"display\": \"Viral load result\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        },\n        \"valueCodeableConcept\": {\n          \"coding\": [\n            {\n              \"code\": \"{{vlCode}}\",\n              \"system\": \"http://test.org/obs/vl-result\",\n              \"display\": \"{{vlDisplay}}\"\n            }\n          ]\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    }\n  ]\n}\n",
-					"options": {
-						"raw": {
-							"language": "json"
+					"name": "Register random patient",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let headerValue = pm.response.headers.get(\"location\")",
+									"pm.collectionVariables.set(\"extPatientRef\", headerValue);",
+									""
+								],
+								"type": "text/javascript"
+							}
 						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:5001/fhir/",
-					"protocol": "http",
-					"host": [
-						"localhost"
 					],
-					"port": "5001",
-					"path": [
-						"fhir",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Register random patient",
-			"event": [
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Custom test"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Patient\",\n    \"meta\": {\n        \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n        ]\n    },\n    \"identifier\": [\n        {\n            \"system\": \"http://test.org/identifier/test-poc\",\n            \"value\": \"{{$guid}}\"\n        },\n        {\n            \"system\": \"https://instantopenhie.org/client{{randomClientId}}\",\n            \"value\": \"{{$guid}}\"\n        }\n    ],\n    \"active\": true,\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"given\": [\n                \"{{$randomFirstName}}\"\n            ],\n            \"family\": \"{{$randomLastName}}\"\n        }\n    ],\n    \"gender\": \"{{gender}}\",\n    \"birthDate\": \"{{dob}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/client/Patient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"client",
+								"Patient"
+							]
+						}
+					},
+					"response": []
+				},
 				{
-					"listen": "prerequest",
-					"script": {
-						"id": "2719da73-a5cb-4f83-8a95-738690e6d9d2",
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/fhir+json"
-					},
-					{
-						"key": "Authorization",
-						"type": "text",
-						"value": "Custom test"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"resourceType\": \"Patient\",\n    \"meta\": {\n        \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n        ]\n    },\n    \"identifier\": [\n        {\n            \"system\": \"http://test.org/identifier/test-poc\",\n            \"value\": \"{{$guid}}\"\n        },\n        {\n            \"system\": \"https://instantopenhie.org/client{{$randomClientId}}\",\n            \"value\": \"{{$guid}}\"\n        }\n    ],\n    \"active\": true,\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"given\": [\n                \"{{$randomFirstName}}\"\n            ],\n            \"family\": \"{{$randomLastName}}\"\n        }\n    ],\n    \"gender\": \"{{gender}}\",\n    \"birthDate\": \"{{dob}}\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+					"name": "Register duplicate patient - client 1",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let headerValue = pm.response.headers.get(\"location\")",
+									"pm.collectionVariables.set(\"extPatientRef\", headerValue);",
+									""
+								],
+								"type": "text/javascript"
+							}
 						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:5001/client/Patient",
-					"protocol": "http",
-					"host": [
-						"localhost"
 					],
-					"port": "5001",
-					"path": [
-						"client",
-						"Patient"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Register static patient - client 1",
-			"event": [
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Custom test"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Patient\",\n    \"meta\": {\n        \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n        ]\n    },\n    \"identifier\": [\n        {\n            \"system\": \"http://test.org/identifier/test-poc\",\n            \"value\": \"1234567890\"\n        },\n        {\n            \"system\": \"https://instantopenhie.org/client1\",\n            \"value\": \"0987654321\"\n        }\n    ],\n    \"active\": true,\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"given\": [\n                \"Jane\"\n            ],\n            \"family\": \"Smith\"\n        }\n    ],\n    \"gender\": \"female\",\n    \"birthDate\": \"1986-06-04\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/client/Patient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"client",
+								"Patient"
+							]
+						}
+					},
+					"response": []
+				},
 				{
-					"listen": "prerequest",
-					"script": {
-						"id": "c4225da2-6823-4077-aff9-67dc0d64e7f5",
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/fhir+json"
-					},
-					{
-						"key": "Authorization",
-						"type": "text",
-						"value": "Custom test"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"resourceType\": \"Patient\",\n    \"meta\": {\n        \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n        ]\n    },\n    \"identifier\": [\n        {\n            \"system\": \"http://test.org/identifier/test-poc\",\n            \"value\": \"1234567890\"\n        },\n        {\n            \"system\": \"https://instantopenhie.org/client1\",\n            \"value\": \"0987654321\"\n        }\n    ],\n    \"active\": true,\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"given\": [\n                \"Jane\"\n            ],\n            \"family\": \"Smith\"\n        }\n    ],\n    \"gender\": \"female\",\n    \"birthDate\": \"1986-06-04\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+					"name": "Register duplicate patient - client 2",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let headerValue = pm.response.headers.get(\"location\")",
+									"pm.collectionVariables.set(\"extPatientRef\", headerValue);",
+									""
+								],
+								"type": "text/javascript"
+							}
 						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:5001/client/Patient",
-					"protocol": "http",
-					"host": [
-						"localhost"
 					],
-					"port": "5001",
-					"path": [
-						"client",
-						"Patient"
-					]
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Custom test"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Patient\",\n    \"meta\": {\n        \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n        ]\n    },\n    \"identifier\": [\n        {\n            \"system\": \"http://test.org/identifier/test-poc\",\n            \"value\": \"1234567890\"\n        },\n        {\n            \"system\": \"https://instantopenhie.org/client3\",\n            \"value\": \"1111111111\"\n        }\n    ],\n    \"active\": true,\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"given\": [\n                \"Jaane\"\n            ],\n            \"family\": \"Smiith\"\n        }\n    ],\n    \"gender\": \"female\",\n    \"birthDate\": \"1986-06-04\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/client/Patient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"client",
+								"Patient"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Register static patient - client 2",
-			"event": [
+			"name": "Submit CBS events bundle",
+			"item": [
 				{
-					"listen": "prerequest",
-					"script": {
-						"id": "96cb169e-a9a0-4d91-8d43-5e1374fce5cd",
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/fhir+json"
-					},
-					{
-						"key": "Authorization",
-						"type": "text",
-						"value": "Custom test"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"resourceType\": \"Patient\",\n    \"meta\": {\n        \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n        ]\n    },\n    \"identifier\": [\n        {\n            \"system\": \"http://test.org/identifier/test-poc\",\n            \"value\": \"1234567890\"\n        },\n        {\n            \"system\": \"https://instantopenhie.org/client2\",\n            \"value\": \"0987654321\"\n        }\n    ],\n    \"active\": true,\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"given\": [\n                \"Jane\"\n            ],\n            \"family\": \"Smith\"\n        }\n    ],\n    \"gender\": \"female\",\n    \"birthDate\": \"1986-06-04\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+					"name": "All events, random patient",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
 						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:5001/client/Patient",
-					"protocol": "http",
-					"host": [
-						"localhost"
 					],
-					"port": "5001",
-					"path": [
-						"client",
-						"Patient"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Send CBS bundle - HIV + ART event",
-			"event": [
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Custom test"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"resource\": {\n        \"resourceType\": \"Composition\",\n        \"patient\": {\n          \"reference\": \"Patient/hiv-patient\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n          ]\n        },\n        \"identifier\": [\n          {\n            \"system\": \"http://test.org/identifier/test-poc\",\n            \"value\": \"{{$guid}}\"\n          },\n          {\n            \"system\": \"https://instantopenhie.org/client{{randomClientId}}\",\n            \"value\": \"{{$guid}}\"\n          }\n        ],\n        \"active\": true,\n        \"name\": [\n          {\n            \"given\": [\n              \"{{$randomFirstName}}\"\n            ]\n          },\n          {\n            \"family\": \"{{$randomLastName}}\"\n          }\n        ],\n        \"gender\": \"{{gender}}\",\n        \"birthDate\": \"{{dob}}\"\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Condition\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-condition\"\n          ]\n        },\n        \"clinicalStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"active\"\n            }\n          ]\n        },\n        \"verificationStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"confirmed\"\n            }\n          ]\n        },\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"86406008\",\n              \"system\": \"http://snomed.info/sct\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"MedicationStatement\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/arv-therapy-summary\"\n          ]\n        },\n        \"status\": \"active\",\n        \"medicationCodeableConcept\": {\n          \"coding\": [\n            {\n              \"code\": \"ART\",\n              \"system\": \"http://test.org/medication-type\",\n              \"display\": \"Antiretrovirals\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Observation\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-viral-load\"\n          ]\n        },\n        \"status\": \"final\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"VL-RESULT\",\n              \"system\": \"http://test.org/obs\",\n              \"display\": \"Viral load result\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        },\n        \"valueCodeableConcept\": {\n          \"coding\": [\n            {\n              \"code\": \"{{vlCode}}\",\n              \"system\": \"http://test.org/obs/vl-result\",\n              \"display\": \"{{vlDisplay}}\"\n            }\n          ]\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    }\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/fhir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"fhir"
+							]
+						}
+					},
+					"response": []
+				},
 				{
-					"listen": "prerequest",
-					"script": {
-						"id": "1c369a99-5d3f-4b6e-a00e-04a5c24f7b80",
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/fhir+json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Custom test",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"id\": \"hiv-case-record-bundle\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"hiv-patient\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n          ]\n        },\n        \"identifier\": [\n          {\n            \"system\": \"http://test.org/identifier/test-poc\",\n            \"value\": \"{{$guid}}\"\n          }\n        ],\n        \"active\": true,\n        \"name\": [\n          {\n            \"given\": [\n              \"{{$randomFirstName}}\"\n            ]\n          },\n          {\n            \"family\": \"{{$randomLastName}}\"\n          }\n        ],\n        \"gender\": \"{{gender}}\",\n        \"birthDate\": \"{{dob}}\"\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Condition\",\n        \"id\": \"hiv-condition\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-condition\"\n          ]\n        },\n        \"clinicalStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"active\"\n            }\n          ]\n        },\n        \"verificationStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"confirmed\"\n            }\n          ]\n        },\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"86406008\",\n              \"system\": \"http://snomed.info/sct\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"MedicationStatement\",\n        \"id\": \"art-medication-statement\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/arv-therapy-summary\"\n          ]\n        },\n        \"status\": \"active\",\n        \"medicationCodeableConcept\": {\n          \"coding\": [\n            {\n              \"code\": \"ART\",\n              \"system\": \"http://test.org/medication-type\",\n              \"display\": \"Antiretrovirals\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    }\n  ]\n}\n",
-					"options": {
-						"raw": {
-							"language": "json"
+					"name": "All events, duplicate patient - client 1",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
 						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:5001/fhir/",
-					"protocol": "http",
-					"host": [
-						"localhost"
 					],
-					"port": "5001",
-					"path": [
-						"fhir",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Send CBS bundle - VL event",
-			"event": [
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Custom test"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"resource\": {\n        \"resourceType\": \"Composition\",\n        \"patient\": {\n          \"reference\": \"Patient/hiv-patient\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n          ]\n        },\n        \"identifier\": [\n          {\n            \"system\": \"http://test.org/identifier/test-poc\",\n            \"value\": \"{{$guid}}\"\n          },\n          {\n            \"system\": \"https://instantopenhie.org/client1\",\n            \"value\": \"121212\"\n          }\n        ],\n        \"active\": true,\n        \"name\": [\n          {\n            \"given\": [\n              \"John\"\n            ]\n          },\n          {\n            \"family\": \"Snow\"\n          }\n        ],\n        \"gender\": \"male\",\n        \"birthDate\": \"1990-01-02\"\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Condition\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-condition\"\n          ]\n        },\n        \"clinicalStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"active\"\n            }\n          ]\n        },\n        \"verificationStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"confirmed\"\n            }\n          ]\n        },\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"86406008\",\n              \"system\": \"http://snomed.info/sct\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"MedicationStatement\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/arv-therapy-summary\"\n          ]\n        },\n        \"status\": \"active\",\n        \"medicationCodeableConcept\": {\n          \"coding\": [\n            {\n              \"code\": \"ART\",\n              \"system\": \"http://test.org/medication-type\",\n              \"display\": \"Antiretrovirals\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Observation\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-viral-load\"\n          ]\n        },\n        \"status\": \"final\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"VL-RESULT\",\n              \"system\": \"http://test.org/obs\",\n              \"display\": \"Viral load result\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        },\n        \"valueCodeableConcept\": {\n          \"coding\": [\n            {\n              \"code\": \"{{vlCode}}\",\n              \"system\": \"http://test.org/obs/vl-result\",\n              \"display\": \"{{vlDisplay}}\"\n            }\n          ]\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    }\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/fhir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"fhir"
+							]
+						}
+					},
+					"response": []
+				},
 				{
-					"listen": "prerequest",
-					"script": {
-						"id": "b77de89d-9450-4073-a9e9-1293a2a6ea07",
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/fhir+json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Custom test",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"id\": \"hiv-case-record-bundle\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"hiv-patient\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n          ]\n        },\n        \"identifier\": [\n          {\n            \"system\": \"http://test.org/identifier/test-poc\",\n            \"value\": \"{{$guid}}\"\n          }\n        ],\n        \"active\": true,\n        \"name\": [\n          {\n            \"given\": [\n              \"{{$randomFirstName}}\"\n            ]\n          },\n          {\n            \"family\": \"{{$randomLastName}}\"\n          }\n        ],\n        \"gender\": \"{{gender}}\",\n        \"birthDate\": \"{{dob}}\"\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Observation\",\n        \"id\": \"vl-obs\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-viral-load\"\n          ]\n        },\n        \"status\": \"final\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"VL-RESULT\",\n              \"system\": \"http://test.org/obs\",\n              \"display\": \"Viral load result\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        },\n        \"valueCodeableConcept\": {\n          \"coding\": [\n            {\n              \"code\": \"{{vlCode}}\",\n              \"system\": \"http://test.org/obs/vl-result\",\n              \"display\": \"{{vlDisplay}}\"\n            }\n          ]\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    }\n  ]\n}\n",
-					"options": {
-						"raw": {
-							"language": "json"
+					"name": "All events, duplicate patient - client 2",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
 						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:5001/fhir/",
-					"protocol": "http",
-					"host": [
-						"localhost"
 					],
-					"port": "5001",
-					"path": [
-						"fhir",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Send CBS bundle - ART event",
-			"event": [
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Custom test"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"resource\": {\n        \"resourceType\": \"Composition\",\n        \"patient\": {\n          \"reference\": \"Patient/hiv-patient\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n          ]\n        },\n        \"identifier\": [\n          {\n            \"system\": \"http://test.org/identifier/test-poc\",\n            \"value\": \"{{$guid}}\"\n          },\n          {\n            \"system\": \"https://instantopenhie.org/client1\",\n            \"value\": \"121212\"\n          }\n        ],\n        \"active\": true,\n        \"name\": [\n          {\n            \"given\": [\n              \"John\"\n            ]\n          },\n          {\n            \"family\": \"Snow\"\n          }\n        ],\n        \"gender\": \"male\",\n        \"birthDate\": \"1990-01-02\"\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Condition\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-condition\"\n          ]\n        },\n        \"clinicalStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"active\"\n            }\n          ]\n        },\n        \"verificationStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"confirmed\"\n            }\n          ]\n        },\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"86406008\",\n              \"system\": \"http://snomed.info/sct\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"MedicationStatement\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/arv-therapy-summary\"\n          ]\n        },\n        \"status\": \"active\",\n        \"medicationCodeableConcept\": {\n          \"coding\": [\n            {\n              \"code\": \"ART\",\n              \"system\": \"http://test.org/medication-type\",\n              \"display\": \"Antiretrovirals\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Observation\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-viral-load\"\n          ]\n        },\n        \"status\": \"final\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"VL-RESULT\",\n              \"system\": \"http://test.org/obs\",\n              \"display\": \"Viral load result\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        },\n        \"valueCodeableConcept\": {\n          \"coding\": [\n            {\n              \"code\": \"{{vlCode}}\",\n              \"system\": \"http://test.org/obs/vl-result\",\n              \"display\": \"{{vlDisplay}}\"\n            }\n          ]\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    }\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/fhir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"fhir"
+							]
+						}
+					},
+					"response": []
+				},
 				{
-					"listen": "prerequest",
-					"script": {
-						"id": "f81ee3e4-7736-4dfe-b30e-731572abceb9",
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/fhir+json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Custom test",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"id\": \"hiv-case-record-bundle\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"hiv-patient\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n          ]\n        },\n        \"identifier\": [\n          {\n            \"system\": \"http://test.org/identifier/test-poc\",\n            \"value\": \"{{$guid}}\"\n          }\n        ],\n        \"active\": true,\n        \"name\": [\n          {\n            \"given\": [\n              \"{{$randomFirstName}}\"\n            ]\n          },\n          {\n            \"family\": \"{{$randomLastName}}\"\n          }\n        ],\n        \"gender\": \"{{gender}}\",\n        \"birthDate\": \"{{dob}}\"\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"MedicationStatement\",\n        \"id\": \"art-medication-statement\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/arv-therapy-summary\"\n          ]\n        },\n        \"status\": \"active\",\n        \"medicationCodeableConcept\": {\n          \"coding\": [\n            {\n              \"code\": \"ART\",\n              \"system\": \"http://test.org/medication-type\",\n              \"display\": \"Antiretrovirals\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    }\n  ]\n}\n",
-					"options": {
-						"raw": {
-							"language": "json"
+					"name": "All events, external patient reference",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
 						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:5001/fhir/",
-					"protocol": "http",
-					"host": [
-						"localhost"
 					],
-					"port": "5001",
-					"path": [
-						"fhir",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Send CBS bundle - HIV event",
-			"event": [
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Custom test"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"resource\": {\n        \"resourceType\": \"Composition\",\n        \"patient\": {\n          \"reference\": \"{{extPatientRef}}\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Condition\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-condition\"\n          ]\n        },\n        \"clinicalStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"active\"\n            }\n          ]\n        },\n        \"verificationStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"confirmed\"\n            }\n          ]\n        },\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"86406008\",\n              \"system\": \"http://snomed.info/sct\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"{{extPatientRef}}\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"MedicationStatement\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/arv-therapy-summary\"\n          ]\n        },\n        \"status\": \"active\",\n        \"medicationCodeableConcept\": {\n          \"coding\": [\n            {\n              \"code\": \"ART\",\n              \"system\": \"http://test.org/medication-type\",\n              \"display\": \"Antiretrovirals\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"{{extPatientRef}}\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Observation\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-viral-load\"\n          ]\n        },\n        \"status\": \"final\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"VL-RESULT\",\n              \"system\": \"http://test.org/obs\",\n              \"display\": \"Viral load result\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"{{extPatientRef}}\"\n        },\n        \"valueCodeableConcept\": {\n          \"coding\": [\n            {\n              \"code\": \"{{vlCode}}\",\n              \"system\": \"http://test.org/obs/vl-result\",\n              \"display\": \"{{vlDisplay}}\"\n            }\n          ]\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    }\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/fhir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"fhir"
+							]
+						}
+					},
+					"response": []
+				},
 				{
-					"listen": "prerequest",
-					"script": {
-						"id": "51e68321-a427-4de5-b8dc-a890e58018f4",
-						"exec": [
-							""
+					"name": "All events, invalid external patient reference",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Custom test"
+							}
 						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"type": "text",
-						"value": "application/fhir+json"
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"resource\": {\n        \"resourceType\": \"Composition\",\n        \"patient\": {\n          \"reference\": \"Patient/555\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Condition\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-condition\"\n          ]\n        },\n        \"clinicalStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"active\"\n            }\n          ]\n        },\n        \"verificationStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"confirmed\"\n            }\n          ]\n        },\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"86406008\",\n              \"system\": \"http://snomed.info/sct\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/555\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"MedicationStatement\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/arv-therapy-summary\"\n          ]\n        },\n        \"status\": \"active\",\n        \"medicationCodeableConcept\": {\n          \"coding\": [\n            {\n              \"code\": \"ART\",\n              \"system\": \"http://test.org/medication-type\",\n              \"display\": \"Antiretrovirals\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/555\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Observation\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-viral-load\"\n          ]\n        },\n        \"status\": \"final\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"VL-RESULT\",\n              \"system\": \"http://test.org/obs\",\n              \"display\": \"Viral load result\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/555\"\n        },\n        \"valueCodeableConcept\": {\n          \"coding\": [\n            {\n              \"code\": \"{{vlCode}}\",\n              \"system\": \"http://test.org/obs/vl-result\",\n              \"display\": \"{{vlDisplay}}\"\n            }\n          ]\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    }\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/fhir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"fhir"
+							]
+						}
 					},
-					{
-						"key": "Authorization",
-						"value": "Custom test",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"id\": \"hiv-case-record-bundle\",\n  \"type\": \"transaction\",\n  \"entry\": [\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"hiv-patient\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n          ]\n        },\n        \"identifier\": [\n          {\n            \"system\": \"http://test.org/identifier/test-poc\",\n            \"value\": \"{{$guid}}\"\n          }\n        ],\n        \"active\": true,\n        \"name\": [\n          {\n            \"given\": [\n              \"{{$randomFirstName}}\"\n            ]\n          },\n          {\n            \"family\": \"{{$randomLastName}}\"\n          }\n        ],\n        \"gender\": \"{{gender}}\",\n        \"birthDate\": \"{{dob}}\"\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    },\n    {\n      \"fullUrl\": \"\",\n      \"resource\": {\n        \"resourceType\": \"Condition\",\n        \"id\": \"hiv-condition\",\n        \"meta\": {\n          \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-condition\"\n          ]\n        },\n        \"clinicalStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"active\"\n            }\n          ]\n        },\n        \"verificationStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"confirmed\"\n            }\n          ]\n        },\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"86406008\",\n              \"system\": \"http://snomed.info/sct\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/hiv-patient\"\n        }\n      },\n      \"request\": {\n        \"method\": \"POST\"\n      }\n    }\n  ]\n}\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:5001/fhir/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5001",
-					"path": [
-						"fhir",
-						""
-					]
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Get mapping mediator endpoints",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3003/endpoints",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3003",
-					"path": [
-						"endpoints"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Save mapping mediator endpoints",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"endpoint\": {\n        \"method\": \"POST\",\n        \"pattern\": \"/create-observation\"\n    },\n    \"transformation\": {\n        \"input\": \"JSON\",\n        \"output\": \"JSON\"\n    },\n    \"requests\": {\n        \"lookup\": [],\n        \"response\": []\n    },\n    \"state\": {\n        \"config\": {\n            \"networkErrors\": \"no-filter\",\n            \"includeStatuses\": []\n        }\n    },\n    \"name\": \"FHIR - Orchestrate Observation Data into one resource\",\n    \"description\": \"\",\n    \"inputMapping\": {\n        \"requestBody.id\": \"observation.fullUrl\",\n        \"requestBody.value\": \"observation.resource\",\n        \"requestBody.coding\": \"observation.resource.code.coding[]+\",\n        \"constants.template.resource.resourceType\": \"observation.resource.resourceType\",\n        \"constants.template.resource.status\": \"observation.resource.status\"\n    },\n    \"constants\": {\n        \"template\": {\n            \"resource\": {\n                \"resourceType\": \"Observation\",\n                \"code\": {\n                    \"coding\": []\n                },\n                \"status\": \"final\"\n            }\n        }\n    },\n    \"createdAt\": \"2021-03-18T12:56:01.770Z\",\n    \"updatedAt\": \"2021-03-18T12:56:01.770Z\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Mapping mediator WIP",
+			"item": [
+				{
+					"name": "Get mapping mediator endpoints",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/endpoints",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"endpoints"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:3003/endpoints",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3003",
-					"path": [
-						"endpoints"
-					]
+				{
+					"name": "Endpoint - validate-identity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"CR Orchestration of a clinical bundle\",\n    \"description\": \"\",\n    \"endpoint\": {\n        \"method\": \"POST\",\n        \"pattern\": \"/orchestrate-bundle\"\n    },\n    \"transformation\": {\n        \"input\": \"JSON\",\n        \"output\": \"JSON\"\n    },\n    \"inputMapping\": {\n        \"resourecType\": \"resourceType\",\n        \"type\": \"type\",\n        \"entry\": \"entry\"\n    },\n    \"inputTransforms\": {\n        \"identityStatus\": \"$exists(entry[resource.resourceType='Patient']) ? 'create' : 'validate'\",\n        \"patientRef\": \"entry[resource.resourceType='Composition'].resource.patient.reference\"\n    },\n    \"requests\": {\n        \"lookup\": [],\n        \"response\": [\n            {\n                \"id\": \"validateIdentity\",\n                \"config\": {\n                    \"method\": \"GET\",\n                    \"url\": \"http://mapping-mediator:3003/identity/:status\",\n                    \"params\": {\n                        \"url\": {\n                            \"status\": {\n                                \"path\": \"transforms.identityStatus\"\n                            }\n                        },\n                        \"query\": {\n                            \"patientRef\": {\n                                \"path\": \"transforms.patientRef\"\n                            }\n                        }\n                    }\n                }\n            }\n        ]\n    },\n    \"state\": {\n        \"config\": {\n            \"networkErrors\": \"no-filter\",\n            \"includeStatuses\": []\n        }\n    },\n    \"constants\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/endpoints",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"endpoints"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endpoint - identity-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Create identity\",\n    \"description\": \"\",\n    \"endpoint\": {\n        \"method\": \"POST\",\n        \"pattern\": \"/identity/create\"\n    },\n    \"transformation\": {\n        \"input\": \"JSON\",\n        \"output\": \"JSON\"\n    },\n    \"inputMapping\": {\n        ??\n    },\n    \"inputTransforms\": {\n        \"patient\": \"entry[resource.resourceType='Patient'].resource\",\n        \"strippedEntries\": \"entry[resource.resourceType!='Patient']\"\n    },\n    \"requests\": {\n        \"lookup\": [\n        ],\n        \"response\": [\n            {\n                \"id\": \"createPatient\",\n                \"config\": {\n                    \"method\": \"POST\",\n                    \"url\": \"http://client:3447/fhir/Patient\"\n                }\n            }\n        ]\n    },\n    \"state\": {\n        \"config\": {\n            \"networkErrors\": \"no-filter\",\n            \"includeStatuses\": []\n        }\n    },\n    \"constants\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/endpoints",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"endpoints"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endpoint - identity-validate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Validate identity\",\n    \"description\": \"\",\n    \"endpoint\": {\n        \"method\": \"POST\",\n        \"pattern\": \"/identity/validate\"\n    },\n    \"transformation\": {\n        \"input\": \"JSON\",\n        \"output\": \"JSON\"\n    },\n    \"inputMapping\": {},\n    \"inputTransforms\": {\n        \"identityStatus\": \"$exists(lookupRequests.validateIdentity.id) ? 'valid' : 'invalid'\"\n    },\n    \"requests\": {\n        \"lookup\": [\n            {\n                \"id\": \"validateIdentity\",\n                \"config\": {\n                    \"method\": \"GET\",\n                    \"url\": \"http://client:3447/fhir/:patientRef\",\n                    \"params\": {\n                        \"url\": {\n                            \"patientRef\": {\n                                \"path\": \"query.patientRef\"\n                            }\n                        }\n                    }\n                }\n            }\n        ],\n        \"response\": [\n            {\n                \"id\": \"submitBundle\",\n                \"config\": {\n                    \"method\": \"POST\",\n                    \"url\": \"http://hapi-fhir:3447/fhir\"\n                }\n            }\n        ]\n    },\n    \"state\": {\n        \"config\": {\n            \"networkErrors\": \"no-filter\",\n            \"includeStatuses\": []\n        }\n    },\n    \"constants\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/endpoints",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"endpoints"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	],
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "42198e99-2528-47f3-a58f-5e573b5b40c1",
 				"type": "text/javascript",
 				"exec": [
 					"function getRandomInt(min, max) {",
@@ -501,7 +609,6 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "22a953a6-5f5e-4562-9377-21942c605969",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -509,5 +616,10 @@
 			}
 		}
 	],
-	"protocolProfileBehavior": {}
+	"variable": [
+		{
+			"key": "extPatientRef",
+			"value": "Patient/123"
+		}
+	]
 }
