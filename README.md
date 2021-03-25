@@ -1,6 +1,7 @@
 # HIV Case Reporting DISI MVP
 
 An exploratory MVP that support data centralization and reporting for an HIV case-based surveillance usecase. See the architecture document [here](https://docs.google.com/document/d/1-gPPDLbwFLlSI7VsYKCKlMIFLDqEkpD9x85h1OnmZew/edit#heading=h.nfb6t6sppokf).
+
 ## Getting started
 
 1. Start the entire stack: `./mvp.sh init` - requires [docker](https://docs.docker.com/get-docker/) and [docker compose](https://docs.docker.com/compose/install/)
@@ -13,6 +14,7 @@ An exploratory MVP that support data centralization and reporting for an HIV cas
 8. Navigate to http://localhost:5601/app/dashboards#/list and view the HIV 90-90-90 dashboard
 
 ## Note
+
 For OpenCR to work correctly you need to live patch the image until their latest changes make it into a released docker image:
 
 ```sh
@@ -23,5 +25,6 @@ docker restart opencr
 ```
 
 ## Other tips
+
 * Destroy the entire stack: `./mvp.sh destroy`
 * You can see all the container getting stood up by running: `watch docker ps`
