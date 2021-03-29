@@ -6,7 +6,7 @@ An exploratory MVP that support data centralization and reporting for an HIV cas
 
 1. Start the entire stack: `./mvp.sh init` - requires [docker](https://docs.docker.com/get-docker/) and [docker compose](https://docs.docker.com/compose/install/)
 2. Build the FHIR short hand: `cd fhir && sushi . && cd ..` - requires [sushi](https://fshschool.org/docs/sushi/installation/) to be installed
-3. Navigate to <http://localhost:3447/resource?serverId=home&pretty=false&\_summary=&resource=Basic> (you might need to wait while HAPI FHIR starts up)
+3. Navigate to <http://localhost:3447/resource?serverId=home&pretty=false&_summary=&resource=Basic> (you might need to wait while HAPI FHIR starts up)
 4. Click on CRUD Operations, paste the contents of `fhir/fsh-generated/resources/Basic-hiv-cbs-report.json` into the **'Update'** section's contents and choose an ID of 'hiv-cbs-report', click _Update_
 5. Navigate to <http://localhost:5601/> click the menu icon in the top left, choose stack management
 6. Choose 'saved objects', then 'import' then select the file `packages/disi/docker/kibana-export.ndjson` and click 'Import'
