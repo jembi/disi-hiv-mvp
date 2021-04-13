@@ -5,7 +5,8 @@ services:
     image: docker.elastic.co/logstash/logstash:7.6.2
     container_name: logstash
     volumes:
-      - logstash-data:/usr/share/logstash/pipeline/
+      - logstash-pipeline:/usr/share/logstash/pipeline/
+      - logstash-config:/usr/share/logstash/config/
 
   fhir-extractor:
     image: jembi/fhir-extractor:latest
@@ -15,5 +16,7 @@ services:
       - POST_URL=http://logstash:5055/fhir
 
 volumes:
-  logstash-data:
+  logstash-pipeline:
+    external: true
+  logstash-config:
     external: true
