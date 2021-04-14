@@ -1,0 +1,14 @@
+{
+  "name": "disi-tests",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Jembi",
+  "license": "MIT",
+  "dependencies": {
+    "newman": "^5.2.2"
+  },
+  "scripts": {
+    "test": "yarn newman run 'DISI MVP.postman_collection.json' --folder 'MPI interactions' --folder 'Submit CBS events bundle'",
+    "test:1000": "yarn newman run 'DISI MVP.postman_collection.json' --folder 'All events, random patient' -n 1000 --delay-request 1000"
+  }
+}

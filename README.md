@@ -7,8 +7,8 @@ An exploratory MVP that support data centralization and reporting for an HIV cas
 1. Start the entire stack: `./mvp.sh init` - requires [docker](https://docs.docker.com/get-docker/) and [docker compose](https://docs.docker.com/compose/install/)
 2. Navigate to <http://localhost:5601/> click the cog icon
 3. Choose 'saved objects', then 'import' then select the file `packages/disi/docker/kibana-export.ndjson` and click 'Import'
-4. Log into the OpenHIM here <http://localhost:9000/#!/> (u: root@openhim.org p: instant101), navigate to 'Channels', click on 'Poll FHIR Extractor' then click on the save button (Bug alert: polling channel aren't started correctly when they are automatically imported)
-5. Use postman to execute some transactions, see saved postman collection here `test/DISI MVP.postman_collection.json`
+4. Log into the OpenHIM here <http://localhost:9000/#!/> (u: root@openhim.org p: instant101), navigate to 'Channels', click on 'Poll FHIR Extractor' then click on the save button (Bug alert: polling channels aren't started correctly when they are automatically imported)
+5. Use postman to execute some transactions, see saved postman collection here `test/DISI MVP.postman_collection.json` OR use the command line: `cd test && yarn test`
 6. Navigate to <http://localhost:5601/app/kibana#/dashboards> and view the HIV 90-90-90 dashboard
 
 ## Note
