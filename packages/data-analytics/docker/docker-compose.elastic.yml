@@ -33,11 +33,12 @@ services:
     image: jsreport/jsreport:2.11.0-full-patch1
     environment:
       allowLocalFilesAccess: 'true'
-    volumes:
-      - jsreport-data:/app/data
+    # Volumes won't work without some fiddling because of this - https://github.com/jsreport/jsreport/issues/743
+    # volumes:
+    #   - jsreport-data:/app/data
     ports:
       - 5488:5488
 
 volumes:
   es-data:
-  jsreport-data:
+  # jsreport-data:
