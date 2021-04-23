@@ -77,7 +77,7 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									""
+									"pm.collectionVariables.set(\"localPatientID\", \"1111111111\")"
 								],
 								"type": "text/javascript"
 							}
@@ -86,8 +86,6 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"let headerValue = pm.response.headers.get(\"location\")",
-									"pm.collectionVariables.set(\"extPatientRef\", headerValue);",
 									""
 								],
 								"type": "text/javascript"
@@ -110,7 +108,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"resourceType\": \"Patient\",\n    \"meta\": {\n        \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n        ]\n    },\n    \"identifier\": [\n        {\n            \"system\": \"https://instantopenhie.org/client1\",\n            \"value\": \"0987654321\"\n        }\n    ],\n    \"active\": true,\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"given\": [\n                \"Jane\"\n            ],\n            \"family\": \"Smith\"\n        }\n    ],\n    \"gender\": \"female\",\n    \"birthDate\": \"1986-06-04\"\n}",
+							"raw": "{\n    \"resourceType\": \"Patient\",\n    \"meta\": {\n        \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n        ]\n    },\n    \"identifier\": [\n        {\n            \"system\": \"https://instantopenhie.org/client1\",\n            \"value\": \"{{localPatientID}}\"\n        }\n    ],\n    \"active\": true,\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"given\": [\n                \"Jane\"\n            ],\n            \"family\": \"Smith\"\n        }\n    ],\n    \"gender\": \"female\",\n    \"birthDate\": \"1986-06-04\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -139,7 +137,7 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									""
+									"pm.collectionVariables.set(\"localPatientID\", \"2222222222\")"
 								],
 								"type": "text/javascript"
 							}
@@ -148,8 +146,6 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"let headerValue = pm.response.headers.get(\"location\")",
-									"pm.collectionVariables.set(\"extPatientRef\", headerValue);",
 									""
 								],
 								"type": "text/javascript"
@@ -172,7 +168,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"resourceType\": \"Patient\",\n    \"meta\": {\n        \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n        ]\n    },\n    \"identifier\": [\n        {\n            \"system\": \"https://instantopenhie.org/client3\",\n            \"value\": \"1111111111\"\n        }\n    ],\n    \"active\": true,\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"given\": [\n                \"Jaane\"\n            ],\n            \"family\": \"Smiith\"\n        }\n    ],\n    \"gender\": \"female\",\n    \"birthDate\": \"1986-06-04\"\n}",
+							"raw": "{\n    \"resourceType\": \"Patient\",\n    \"meta\": {\n        \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n        ]\n    },\n    \"identifier\": [\n        {\n            \"system\": \"https://instantopenhie.org/client2\",\n            \"value\": \"{{localPatientID}}\"\n        }\n    ],\n    \"active\": true,\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"given\": [\n                \"Jaane\"\n            ],\n            \"family\": \"Smiith\"\n        }\n    ],\n    \"gender\": \"female\",\n    \"birthDate\": \"1986-06-04\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -189,6 +185,116 @@
 							"path": [
 								"client",
 								"Patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register duplicate patient - facility 3 - (manual link)",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"localPatientID\", \"3333333333\")"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/fhir+json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Custom test"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"Patient\",\n    \"meta\": {\n        \"profile\": [\n            \"http://openhie.org/fhir/StructureDefinition/hiv-patient\"\n        ]\n    },\n    \"identifier\": [\n        {\n            \"system\": \"https://instantopenhie.org/client3\",\n            \"value\": \"{{localPatientID}}\"\n        }\n    ],\n    \"active\": true,\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"given\": [\n                \"Jan\"\n            ],\n            \"family\": \"Smthxxyz\"\n        }\n    ],\n    \"gender\": \"female\",\n    \"birthDate\": \"1986-06-04\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/client/Patient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"client",
+								"Patient"
+							]
+						},
+						"description": "Will create a patient that needs manual action to be matched with other patients from the request above in OpenCR."
+					},
+					"response": []
+				},
+				{
+					"name": "Get patient local ID from CR",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let body = pm.response.json()",
+									"pm.collectionVariables.set(\"extPatientRef\", `Patient/${body.entry[0].resource.id}`);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Custom test",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/client/Patient?identifier={{localPatientID}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"client",
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": "{{localPatientID}}"
+								}
 							]
 						}
 					},
@@ -350,7 +456,7 @@
 					"response": []
 				},
 				{
-					"name": "All events, duplicate patient - facility 3",
+					"name": "All events, duplicate patient - facility 3 - (manual link)",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -395,7 +501,8 @@
 							"path": [
 								"fhir"
 							]
-						}
+						},
+						"description": "Will create a patient that needs manual action to be matched with other patients from the request above in OpenCR."
 					},
 					"response": []
 				},
@@ -454,7 +561,8 @@
 							"path": [
 								"fhir"
 							]
-						}
+						},
+						"description": "Before running this one you need to run:\n* Register duplicate patient - facility x\n* Get patient local ID from CR"
 					},
 					"response": []
 				},
@@ -518,114 +626,6 @@
 					"response": []
 				}
 			]
-		},
-		{
-			"name": "Mapping mediator WIP",
-			"item": [
-				{
-					"name": "Get mapping mediator endpoints",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3003/endpoints",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3003",
-							"path": [
-								"endpoints"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Endpoint - validate-identity",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\": \"CR Orchestration of a clinical bundle\",\n    \"description\": \"\",\n    \"endpoint\": {\n        \"method\": \"POST\",\n        \"pattern\": \"/orchestrate-bundle\"\n    },\n    \"transformation\": {\n        \"input\": \"JSON\",\n        \"output\": \"JSON\"\n    },\n    \"inputMapping\": {\n        \"resourecType\": \"resourceType\",\n        \"type\": \"type\",\n        \"entry\": \"entry\"\n    },\n    \"inputTransforms\": {\n        \"identityStatus\": \"$exists(entry[resource.resourceType='Patient']) ? 'create' : 'validate'\",\n        \"patientRef\": \"entry[resource.resourceType='Composition'].resource.patient.reference\"\n    },\n    \"requests\": {\n        \"lookup\": [],\n        \"response\": [\n            {\n                \"id\": \"validateIdentity\",\n                \"config\": {\n                    \"method\": \"GET\",\n                    \"url\": \"http://mapping-mediator:3003/identity/:status\",\n                    \"params\": {\n                        \"url\": {\n                            \"status\": {\n                                \"path\": \"transforms.identityStatus\"\n                            }\n                        },\n                        \"query\": {\n                            \"patientRef\": {\n                                \"path\": \"transforms.patientRef\"\n                            }\n                        }\n                    }\n                }\n            }\n        ]\n    },\n    \"state\": {\n        \"config\": {\n            \"networkErrors\": \"no-filter\",\n            \"includeStatuses\": []\n        }\n    },\n    \"constants\": {}\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3003/endpoints",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3003",
-							"path": [
-								"endpoints"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Endpoint - identity-create",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\": \"Create identity\",\n    \"description\": \"\",\n    \"endpoint\": {\n        \"method\": \"POST\",\n        \"pattern\": \"/identity/create\"\n    },\n    \"transformation\": {\n        \"input\": \"JSON\",\n        \"output\": \"JSON\"\n    },\n    \"inputMapping\": {\n        ??\n    },\n    \"inputTransforms\": {\n        \"patient\": \"entry[resource.resourceType='Patient'].resource\",\n        \"strippedEntries\": \"entry[resource.resourceType!='Patient']\"\n    },\n    \"requests\": {\n        \"lookup\": [\n        ],\n        \"response\": [\n            {\n                \"id\": \"createPatient\",\n                \"config\": {\n                    \"method\": \"POST\",\n                    \"url\": \"http://client:3447/fhir/Patient\"\n                }\n            }\n        ]\n    },\n    \"state\": {\n        \"config\": {\n            \"networkErrors\": \"no-filter\",\n            \"includeStatuses\": []\n        }\n    },\n    \"constants\": {}\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3003/endpoints",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3003",
-							"path": [
-								"endpoints"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Endpoint - identity-validate",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\": \"Validate identity\",\n    \"description\": \"\",\n    \"endpoint\": {\n        \"method\": \"POST\",\n        \"pattern\": \"/identity/validate\"\n    },\n    \"transformation\": {\n        \"input\": \"JSON\",\n        \"output\": \"JSON\"\n    },\n    \"inputMapping\": {},\n    \"inputTransforms\": {\n        \"identityStatus\": \"$exists(lookupRequests.validateIdentity.id) ? 'valid' : 'invalid'\"\n    },\n    \"requests\": {\n        \"lookup\": [\n            {\n                \"id\": \"validateIdentity\",\n                \"config\": {\n                    \"method\": \"GET\",\n                    \"url\": \"http://client:3447/fhir/:patientRef\",\n                    \"params\": {\n                        \"url\": {\n                            \"patientRef\": {\n                                \"path\": \"query.patientRef\"\n                            }\n                        }\n                    }\n                }\n            }\n        ],\n        \"response\": [\n            {\n                \"id\": \"submitBundle\",\n                \"config\": {\n                    \"method\": \"POST\",\n                    \"url\": \"http://hapi-fhir:3447/fhir\"\n                }\n            }\n        ]\n    },\n    \"state\": {\n        \"config\": {\n            \"networkErrors\": \"no-filter\",\n            \"includeStatuses\": []\n        }\n    },\n    \"constants\": {}\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3003/endpoints",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3003",
-							"path": [
-								"endpoints"
-							]
-						}
-					},
-					"response": []
-				}
-			]
 		}
 	],
 	"event": [
@@ -670,6 +670,10 @@
 		{
 			"key": "extPatientRef",
 			"value": "Patient/123"
+		},
+		{
+			"key": "localPatientID",
+			"value": ""
 		}
 	]
 }
