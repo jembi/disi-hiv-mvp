@@ -22,6 +22,8 @@ app.get(
       fs.writeFileSync(SYNC_FILE, ts)
     }
 
+    const newTS = new Date().toISOString()
+
     const bundleResponse = await fetch(`${GET_URL}/_history?_since=${ts}`, {
       method: 'get',
       headers: {
@@ -29,7 +31,6 @@ app.get(
       }
     })
 
-    const newTS = new Date().toISOString()
     const submitResponse = await fetch(POST_URL, {
       method: 'post',
       headers: {
@@ -38,12 +39,11 @@ app.get(
       body: bundleResponse.body
     })
 
-    fs.writeFileSync(SYNC_FILE, newTS)
-
     if (submitResponse.ok) {
+      fs.writeFileSync(SYNC_FILE, newTS)
       res.sendStatus(200)
     } else {
-      res.sendStatus(submitResponse.size)
+      res.sendStatus(submitResponse.status)
     }
   })
 )
