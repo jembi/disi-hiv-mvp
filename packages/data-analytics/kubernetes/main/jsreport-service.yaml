@@ -6,15 +6,15 @@ metadata:
     kompose.version: 1.22.0 (955b78124)
   creationTimestamp: null
   labels:
-    io.kompose.service: kibana
-  name: kibana
+    io.kompose.service: jsreport
+  name: jsreport
 spec:
   type: LoadBalancer
   ports:
-    - name: "5601"
-      port: 5601
-      targetPort: 5601
+    - name: "5488"
+      port: 5488
+      targetPort: 5488
   selector:
-    io.kompose.service: kibana
+    io.kompose.service: jsreport
 status:
   loadBalancer: {}

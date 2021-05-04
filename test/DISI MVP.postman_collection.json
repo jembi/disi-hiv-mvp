@@ -56,12 +56,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5001/client/Patient",
+							"raw": "http://{{openhimHost}}:{{openhimPort}}/client/Patient",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{openhimHost}}"
 							],
-							"port": "5001",
+							"port": "{{openhimPort}}",
 							"path": [
 								"client",
 								"Patient"
@@ -116,12 +116,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5001/client/Patient",
+							"raw": "http://{{openhimHost}}:{{openhimPort}}/client/Patient",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{openhimHost}}"
 							],
-							"port": "5001",
+							"port": "{{openhimPort}}",
 							"path": [
 								"client",
 								"Patient"
@@ -176,12 +176,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5001/client/Patient",
+							"raw": "http://{{openhimHost}}:{{openhimPort}}/client/Patient",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{openhimHost}}"
 							],
-							"port": "5001",
+							"port": "{{openhimPort}}",
 							"path": [
 								"client",
 								"Patient"
@@ -236,12 +236,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5001/client/Patient",
+							"raw": "http://{{openhimHost}}:{{openhimPort}}/client/Patient",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{openhimHost}}"
 							],
-							"port": "5001",
+							"port": "{{openhimPort}}",
 							"path": [
 								"client",
 								"Patient"
@@ -280,12 +280,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5001/client/Patient?identifier={{localPatientID}}",
+							"raw": "http://{{openhimHost}}:{{openhimPort}}/client/Patient?identifier={{localPatientID}}",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{openhimHost}}"
 							],
-							"port": "5001",
+							"port": "{{openhimPort}}",
 							"path": [
 								"client",
 								"Patient"
@@ -342,12 +342,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5001/fhir",
+							"raw": "http://{{openhimHost}}:{{openhimPort}}/fhir",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{openhimHost}}"
 							],
-							"port": "5001",
+							"port": "{{openhimPort}}",
 							"path": [
 								"fhir"
 							]
@@ -392,12 +392,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5001/fhir",
+							"raw": "http://{{openhimHost}}:{{openhimPort}}/fhir",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{openhimHost}}"
 							],
-							"port": "5001",
+							"port": "{{openhimPort}}",
 							"path": [
 								"fhir"
 							]
@@ -442,12 +442,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5001/fhir",
+							"raw": "http://{{openhimHost}}:{{openhimPort}}/fhir",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{openhimHost}}"
 							],
-							"port": "5001",
+							"port": "{{openhimPort}}",
 							"path": [
 								"fhir"
 							]
@@ -492,12 +492,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5001/fhir",
+							"raw": "http://{{openhimHost}}:{{openhimPort}}/fhir",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{openhimHost}}"
 							],
-							"port": "5001",
+							"port": "{{openhimPort}}",
 							"path": [
 								"fhir"
 							]
@@ -552,12 +552,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5001/fhir",
+							"raw": "http://{{openhimHost}}:{{openhimPort}}/fhir",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{openhimHost}}"
 							],
-							"port": "5001",
+							"port": "{{openhimPort}}",
 							"path": [
 								"fhir"
 							]
@@ -612,12 +612,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5001/fhir",
+							"raw": "http://{{openhimHost}}:{{openhimPort}}/fhir",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{openhimHost}}"
 							],
-							"port": "5001",
+							"port": "{{openhimPort}}",
 							"path": [
 								"fhir"
 							]
@@ -674,6 +674,14 @@
 		{
 			"key": "localPatientID",
 			"value": ""
+		},
+		{
+			"key": "openhimHost",
+			"value": "localhost"
+		},
+		{
+			"key": "openhimPort",
+			"value": "5001"
 		}
 	]
 }

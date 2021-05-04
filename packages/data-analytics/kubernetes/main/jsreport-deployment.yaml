@@ -6,13 +6,13 @@ metadata:
     kompose.version: 1.22.0 (955b78124)
   creationTimestamp: null
   labels:
-    io.kompose.service: kibana
-  name: kibana
+    io.kompose.service: jsreport
+  name: jsreport
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: kibana
+      io.kompose.service: jsreport
   strategy: {}
   template:
     metadata:
@@ -21,18 +21,16 @@ spec:
         kompose.version: 1.22.0 (955b78124)
       creationTimestamp: null
       labels:
-        io.kompose.service: kibana
+        io.kompose.service: jsreport
     spec:
       containers:
         - env:
-            - name: ELASTICSEARCH_HOSTS
-              value: http://es-analytics:9200
-            - name: ELASTICSEARCH_URL
-              value: http://es-analytics:9200
-          image: docker.elastic.co/kibana/kibana:7.10.2
-          name: kibana
+            - name: allowLocalFilesAccess
+              value: "true"
+          image: jsreport/jsreport:2.11.0-full-patch1
+          name: jsreport
           ports:
-            - containerPort: 5601
+            - containerPort: 5488
           resources: {}
       restartPolicy: Always
 status: {}
