@@ -7,13 +7,6 @@ const PORT = process.env.PORT || 3000
 const CR_URL = process.env.CR_URL || 'http://localhost:3004/fhir'
 const SHR_URL = process.env.SHR_URL || 'http://localhost:3447/fhir'
 const OPENHIM_CLIENT_ID = process.env.OPENHIM_CLIENT_ID || 'test'
-const IDENTIFIER_SYSTEMS_FOR_CLIENT_IDENTIFIERS = process.env.IDENTIFIER_SYSTEMS_FOR_CLIENT_IDENTIFIERS?.split(
-  ','
-) || [
-  'https://instantopenhie.org/client1',
-  'https://instantopenhie.org/client2',
-  'https://instantopenhie.org/client3'
-]
 const PATIENT_REF_TO_USE_IN_SHR =
   process.env.PATIENT_REF_TO_USE_IN_SHR || 'CRUID' // Options are LOCAL or CRUID
 
@@ -54,31 +47,11 @@ async function submitIdentityThenBundle(patient, patientFullUrl, req) {
 
   const createIdentityRes = await postFHIR(patient, CR_URL)
   console.log(`Create patient status: ${createIdentityRes.status}`)
-  const CRUID = createIdentityRes.headers.get('location')
-  console.log(`CRUID: ${CRUID}`)
 
-  let localPatientReference
-  // search for newly created patient to get local patient record ID (this isn't ideal, it would be better if OpenCR returned this ID rather than the CRUID)
-  if (PATIENT_REF_TO_USE_IN_SHR === 'LOCAL') {
-    const patientsFacilityIdentifier = patient.identifier.find((identifier) =>
-      IDENTIFIER_SYSTEMS_FOR_CLIENT_IDENTIFIERS.includes(identifier.system)
-    ).value
-    const searchLocalPatient = await searchFHIR(
-      'Patient',
-      {
-        identifier: patientsFacilityIdentifier
-      },
-      CR_URL
-    )
-    const results = await searchLocalPatient.json()
-    if (results.total !== 1 || !results.entry[0]) {
-      throw new Error(
-        `Local patient record not found for identifier ${patientsFacilityIdentifier}`
-      )
-    }
-    localPatientReference = `Patient/${results.entry[0].resource.id}`
-    console.log(`Local Patient ID: ${localPatientReference}`)
-  }
+  const localPatientReference = createIdentityRes.headers.get('location')
+  const CRUID = createIdentityRes.headers.get('locationcruid')
+  console.log(`Local Patient ID: ${localPatientReference}`)
+  console.log(`CRUID: ${CRUID}`)
 
   let strippedBundle = Object.assign({}, req.body)
   strippedBundle.entry = strippedBundle.entry.filter(

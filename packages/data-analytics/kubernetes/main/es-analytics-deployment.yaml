@@ -24,6 +24,9 @@ spec:
       labels:
         io.kompose.service: es-analytics
     spec:
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
       containers:
         - env:
             - name: ES_JAVA_OPTS
