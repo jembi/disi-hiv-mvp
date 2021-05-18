@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  mpi-mediator:
+    image: jembi/mpi-mediator
+    container_name: mpi-mediator
+    environment:
+      - CR_URL=http://opencr:3000/fhir
+      - SHR_URL=http://hapi-fhir:8080/fhir
+      - OPENHIM_CLIENT_ID=test
+      - PATIENT_REF_TO_USE_IN_SHR=LOCAL
