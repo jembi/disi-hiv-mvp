@@ -12,6 +12,16 @@ An exploratory MVP that support data centralization and reporting for an HIV cas
 7. Execute `./test/send-test-bundle.sh` a few time
 8. Navigate to http://localhost:5601/app/dashboards#/list and view the HIV 90-90-90 dashboard
 
+## Note
+For OpenCR to work correctly you need to live patch the image until their latest changes make it into a released docker image:
+
+```sh
+wget https://raw.githubusercontent.com/intrahealth/client-registry/9628aa9e279b1243af6facf57f1bc71609ab5b21/server/lib/app.js -O /tmp/app.js
+sed -i '/if a certificate/,+3d' /tmp/app.js
+docker cp /tmp/app.js opencr:/src/server/lib/app.js
+docker restart opencr
+```
+
 ## Other tips
 * Destroy the entire stack: `./mvp.sh destroy`
 * You can see all the container getting stood up by running: `watch docker ps`
