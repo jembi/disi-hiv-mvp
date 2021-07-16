@@ -1,18 +1,13 @@
-configMapGenerator:
-#   - name: core-hapi-fhir-server-configmap
-#     files:
-#       - ./hapi-fhir/volume/hapi.properties
-#   - name: core-openhim-core-configmap
-#     files:
-#       - ./openhim/volume/openhim-core/development.json
 resources:
   # volumes
-  - data01-persistentvolumeclaim.yaml
+  - es-data-persistentvolumeclaim.yaml
 
   # deployments
-  - es-deployment.yaml
+  - es-analytics-deployment.yaml
   - kibana-deployment.yaml
+  - jsreport-deployment.yaml
 
   # services
-  - es-service.yaml
+  - es-analytics-service.yaml
   - kibana-service.yaml
+  - jsreport-service.yaml

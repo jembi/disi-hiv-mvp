@@ -1,0 +1,8 @@
+{
+  "id": "data-pipeline",
+  "name": "Data pipeline package",
+  "description": "",
+  "type": "use-case",
+  "version": "v0.1.0",
+  "dependencies": []
+}

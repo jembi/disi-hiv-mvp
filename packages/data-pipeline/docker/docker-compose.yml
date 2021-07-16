@@ -1,0 +1,29 @@
+version: '3.3'
+
+services:
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.6.2
+    container_name: logstash
+    volumes:
+      - logstash-pipeline:/usr/share/logstash/pipeline/
+      - logstash-config:/usr/share/logstash/config/
+
+  fhir-extractor:
+    image: jembi/fhir-extractor:latest
+    container_name: fhir-extractor
+    environment:
+      - GET_URL=http://fhir:8080/fhir
+      - POST_URL=http://logstash:5055/fhir
+
+  reprocess-mediator:
+    image: jembi/reprocess-mediator:latest
+    container_name: reprocess-mediator
+    environment:
+      - ES_URL=http://es-analytics:9200
+      - LOGSTASH_URL=http://logstash:5066/fhir
+
+volumes:
+  logstash-pipeline:
+    external: true
+  logstash-config:
+    external: true
