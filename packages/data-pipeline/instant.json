@@ -4,5 +4,5 @@
   "description": "",
   "type": "use-case",
   "version": "v0.1.0",
-  "dependencies": []
+  "dependencies": ["data-analytics"]
 }

@@ -1,6 +1,0 @@
-resources:
-  # deployments
-  - mpi-mediator-deployment.yaml
-
-  # services
-  - mpi-mediator-service.yaml

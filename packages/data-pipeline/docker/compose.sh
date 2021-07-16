@@ -4,8 +4,7 @@ composeFilePath=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 
 if [ "$1" == "init" ]; then
     docker create --name logstash-helper -v logstash-pipeline:/pipeline/ -v logstash-config:/config/ busybox
-    docker cp "$composeFilePath"/fhir-extractor.conf logstash-helper:/pipeline/
-    docker cp "$composeFilePath"/fhir-enrich.conf logstash-helper:/pipeline/
+    docker cp "$composeFilePath"/pipeline/. logstash-helper:/pipeline/
     docker cp "$composeFilePath"/id-query.json logstash-helper:/pipeline/
     docker cp "$composeFilePath"/jvm.options logstash-helper:/config/
     docker cp "$composeFilePath"/log4j2.properties logstash-helper:/config/

@@ -33,7 +33,7 @@ echo "> Other Flags: ${OTHER_FLAGS[@]}"
 echo
 
 if [[ $ACTION = "init" ]]
-then 
+then
   echo "Delete a pre-existing instant volume..."
 
   docker volume rm instant
@@ -44,11 +44,10 @@ echo "Creating fresh instant container with volumes..."
 docker create -it --rm\
   --mount='type=volume,src=instant,dst=/instant' \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  -v ~/.kube/config:/root/.kube/config:ro \
-  -v ~/.minikube:/home/$USER/.minikube:ro \
   --network host \
   --name instant-openhie \
-  openhie/instant:latest \
+  --env-file .env \
+  openhie/instant:mongo-cache-fix \
   $ACTION \
   ${OTHER_FLAGS[@]} \
   ${PACKAGES[@]}
@@ -66,7 +65,7 @@ echo "Run Instant OpenHIE Installer Container"
 docker start -a instant-openhie
 
 if [[ $ACTION = "destroy" ]]
-then 
+then
   echo "Delete instant volume..."
 
   docker volume rm instant

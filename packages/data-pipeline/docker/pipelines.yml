@@ -1,6 +1,3 @@
 - pipeline.id: fhir-raw
-  path.config: "/usr/share/logstash/pipeline/fhir-extractor.conf"
-  queue.type: persisted
-- pipeline.id: fhir-enrich
-  path.config: "/usr/share/logstash/pipeline/fhir-enrich.conf"
+  path.config: "/usr/share/logstash/pipeline/fhir-raw.logstash.conf"
   queue.type: persisted

@@ -1,0 +1,2 @@
+*.pem
+/packages/cdr/docker/jsreport/settings

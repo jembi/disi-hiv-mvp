@@ -4,5 +4,5 @@
   "description": "",
   "type": "infrastructure",
   "version": "v0.1.0",
-  "dependencies": ["core"]
+  "dependencies": []
 }

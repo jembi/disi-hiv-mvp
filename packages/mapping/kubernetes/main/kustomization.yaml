@@ -1,6 +1,0 @@
-resources:
-  # deployments
-  - mapper-deployment.yaml
-
-  # services
-  - mapper-service.yaml

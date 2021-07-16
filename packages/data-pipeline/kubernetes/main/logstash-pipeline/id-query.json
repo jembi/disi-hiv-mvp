@@ -1,7 +1,0 @@
-{
-  "query": {
-    "ids": {
-      "values": ["%{[[resource][subject][reference]]}"]
-    }
-  }
-}

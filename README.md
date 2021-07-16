@@ -1,18 +1,46 @@
-# HIV Case Reporting DISI MVP
+# ICAP CDR
 
-An exploratory MVP that support data centralization and reporting for an HIV case-based surveillance usecase. See the MVP architecture document [here](https://docs.google.com/document/d/1-gPPDLbwFLlSI7VsYKCKlMIFLDqEkpD9x85h1OnmZew/edit#heading=h.nfb6t6sppokf).
+Central Data Repository (CDR) for Ethiopia. In collaboration with ICAP Ethiopia.
+
+## Components
+
+- Elasticsearch <http://localhost:9201/> - (u: elastic p: dev_password_only) - for analytics
+- Logstash (No UI) - for data pipeline config
+- Kibana <http://localhost:5601/> - (u: elastic p: dev_password_only) - for live dashboards and data discovery
+- HAPI FHIR <http://localhost:3447/> - for central storage of OLTP data
+- JS Reports <http://localhost:5488/> - (u: admin p: dev_password_only) - for pixel-perfect PDF reporting
+- OpenHIM <http://localhost:9000/> - (u: root@openhim.org p: instant101) - for transaction logging, routing and scheduled triggers
 
 ## Getting started
 
 1. Start the entire stack: `./mvp.sh init` - requires [docker](https://docs.docker.com/get-docker/) and [docker compose](https://docs.docker.com/compose/install/)
-2. Navigate to <http://localhost:5601/> click the cog icon, choose 'saved objects', then 'import' then select the file `packages/disi/docker/kibana-export.ndjson` and click 'Import'
-3. Log into the OpenHIM here <http://localhost:9000/#!/> (u: root@openhim.org p: instant101), navigate to 'Channels', click on 'Poll FHIR Extractor' then click on the save button (Bug alert: polling channels aren't started correctly when they are automatically imported)
-4. Navigate to <http://localhost:5488/>, click on the gear icon in the top right, choose 'Import'. Select the file `packages/disi/docker/jsreport-export.zip`, choose 'full' then click 'Validate', 'Import', then 'Ok.
-5. Use postman to execute some transactions, see saved postman collection here `test/DISI MVP.postman_collection.json` OR use the command line: `cd test && yarn test`
-6. Navigate to <http://localhost:5601/app/kibana#/dashboards> and view the HIV 90-90-90 dashboard and the Reports dashboard - also explore data via 'Discover' section.
+2. Log into the OpenHIM here <http://localhost:9000/#!/> (u: root@openhim.org p: instant101), navigate to 'Channels', click on 'Poll FHIR Extractor' then click on the save button (Bug alert: polling channels aren't started correctly when they are automatically imported)
+3. Use postman to execute some transactions, see saved postman collection here `test/CDR.postman_collection.json` OR use the command line: `cd test && yarn bootstrap && sleep 10 && yarn test:1000`
+4. Navigate to <http://localhost:5601/app/kibana#/dashboards> and view the dashboards - also explore data via 'Discover' section.
 
 ## Other tips
 
 - Destroy the entire stack: `./mvp.sh destroy`
-- You can see all the container getting stood up by running: `watch docker ps`
-- Deploy to Kubernetes: make sure you are connecting to the correct cluster `kubectl config get-contexts`, `kubectl config use-context <my_cluster>` then `./mvp-k8s.sh init`
+- You can see all the container getting stood up by running: `watch docker ps` (better yet, use [lazydocker](https://github.com/jesseduffield/lazydocker))
+- To mount Logstash pipeline files into the docker container so that they automatically reload when changes are made, run: `cd packages/data-pipeline/docker && ./dev-mnt-logstash.sh`
+- To mount packages/cdr/docker/jsreport directory into the docker container so we can dev reports locally and automatically sync with the running jsReport container: `cd packages/cdr/docker && ./dev-mnt-jsreport.sh`
+
+## QA server quick links
+
+- Kibana <http://<qa_hostname>:5601/> - (u: elastic p: dev_password_only)
+- JS Reports <http://<qa_hostname>:5488/> - (u: admin p: dev_password_only)
+- OpenHIM <http://<qa_hostname>:9000/> - (u: root@openhim.org p: instant101)
+
+## Staging server quick links
+
+- Kibana <http://<stg_hostname>:5601/> - (u: elastic p: dev_password_only)
+- JS Reports <http://<stg_hostname>:5488/> - (u: admin p: dev_password_only)
+- OpenHIM <http://<stg_hostname>:9000/> - (u: root@openhim.org p: instant101)
+
+## Windows setup only
+
+- Install Ubuntu and WSL2 <https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10>
+- Integrate Ubuntu with docker for windows <https://docs.docker.com/docker-for-windows/wsl/>
+- If you're using VSCode <https://code.visualstudio.com/blogs/2019/09/03/wsl2>
+- To stop WSL from using all your RAM (and it will) <https://medium.com/@lewwybogus/how-to-stop-wsl2-from-hogging-all-your-ram-with-docker-d7846b9c5b37>
+- Note: Clone the repo into your WSL partition, not your windows partition and run your code from there

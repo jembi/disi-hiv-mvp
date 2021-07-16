@@ -1,5 +1,5 @@
 {
-  "name": "disi-tests",
+  "name": "cdr-tests",
   "version": "0.1.0",
   "main": "index.js",
   "author": "Jembi",
@@ -9,9 +9,16 @@
     "newman": "^5.2.2"
   },
   "scripts": {
-    "test": "yarn newman run 'DISI MVP.postman_collection.json' --folder 'MPI interactions' --folder 'Submit CBS events bundle'",
-    "test:1000": "yarn newman run 'DISI MVP.postman_collection.json' --folder 'All events, random patient' -n 1000 --delay-request 1000",
-    "test:abuse": "yarn newman run 'DISI MVP.postman_collection.json' --folder 'All events, random patient' -n 1000",
-    "test:abuse-x4": "yarn concurrently \"yarn test:abuse\" \"yarn test:abuse\" \"yarn test:abuse\" \"yarn test:abuse\""
+    "bootstrap": "yarn newman run 'CDR.postman_collection.json' --folder 'Bootstrap'",
+    "test": "yarn newman run 'CDR.postman_collection.json' --folder 'Report 1.1 bundle' --folder 'Report 1.2 bundle' --folder 'Report 2.1 bundle'",
+    "test:1000": "yarn test -n 1000 --delay-request 1000",
+    "test:abuse": "yarn test -n 1000",
+    "test:abuse-x4": "yarn concurrently \"yarn test:abuse\" \"yarn test:abuse\" \"yarn test:abuse\" \"yarn test:abuse\"",
+    "bootstrap:qa": "yarn bootstrap --env-var openhimHost=<qa_hostname>",
+    "test:qa": "yarn test --env-var openhimHost=<qa_hostname>",
+    "test:qa:1000": "yarn test:1000 --env-var openhimHost=<qa_hostname>",
+    "bootstrap:stg": "yarn bootstrap --env-var openhimHost=<stg_hostname>",
+    "test:stg": "yarn test --env-var openhimHost=<stg_hostname>",
+    "test:stg:1000": "yarn test:1000 --env-var openhimHost=<stg_hostname>"
   }
 }

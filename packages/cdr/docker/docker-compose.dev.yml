@@ -1,0 +1,9 @@
+version: '3.3'
+
+services:
+  jsreport:
+    environment:
+      allowLocalFilesAccess: 'true'
+      extensions_fs-store_syncModifications: 'true'
+    volumes:
+      - ./jsreport:/instant/cdr/docker/jsreport
