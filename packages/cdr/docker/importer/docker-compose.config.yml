@@ -27,7 +27,12 @@ services:
       - type: volume
         source: instant
         target: /instant
-    command: ['sh', '-c', "until nc -vz kibana 5601; do echo Kibana not running yet; sleep 1; done; curl kibana:5601/api/saved_objects/_import?overwrite=true -u elastic:${ES_ELASTIC-dev_password_only} -H 'kbn-xsrf: true' --form file=@/instant/cdr/docker/kibana-export.ndjson"]
+    command:
+      [
+        'sh',
+        '-c',
+        "until nc -vz kibana 5601; do echo Kibana not running yet; sleep 1; done; curl kibana:5601/api/saved_objects/_import?overwrite=true -u elastic:${ES_ELASTIC-dev_password_only} -H 'kbn-xsrf: true' --form file=@/instant/cdr/docker/kibana-export.ndjson"
+      ]
 
   es-index-importer:
     container_name: es-index-importer
@@ -36,7 +41,12 @@ services:
       - type: volume
         source: instant
         target: /instant
-    command: ['sh', '-c', "until nc -vz es-analytics 9200; do echo ES not running yet; sleep 1; done; curl -XPUT --fail-with-body 'http://es-analytics:9200/fhir-enrich-reports' -u elastic:${ES_ELASTIC-dev_password_only} -H 'Content-Type: application/json' -d@/instant/cdr/docker/importer/indexes/fhir-enrich-reports.json"]
+    command:
+      [
+        'sh',
+        '-c',
+        "until nc -vz es-analytics 9200; do echo ES not running yet; sleep 1; done; curl -XPUT --fail-with-body 'http://es-analytics:9200/fhir-report-patient' -u elastic:${ES_ELASTIC-dev_password_only} -H 'Content-Type: application/json' -d@/instant/cdr/docker/importer/indexes/fhir-report-patient.json"
+      ]
 
 volumes:
   instant:

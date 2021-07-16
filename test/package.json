@@ -10,7 +10,7 @@
   },
   "scripts": {
     "bootstrap": "yarn newman run 'CDR.postman_collection.json' --folder 'Bootstrap'",
-    "test": "yarn newman run 'CDR.postman_collection.json' --folder 'Report 1.1 bundle' --folder 'Report 1.2 bundle' --folder 'Report 2.1 bundle'",
+    "test": "yarn newman run 'CDR.postman_collection.json' --folder 'Submit static bundle'",
     "test:1000": "yarn test -n 1000 --delay-request 1000",
     "test:abuse": "yarn test -n 1000",
     "test:abuse-x4": "yarn concurrently \"yarn test:abuse\" \"yarn test:abuse\" \"yarn test:abuse\" \"yarn test:abuse\"",

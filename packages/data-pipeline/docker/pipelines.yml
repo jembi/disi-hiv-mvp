@@ -1,3 +1,9 @@
 - pipeline.id: fhir-raw
   path.config: "/usr/share/logstash/pipeline/fhir-raw.logstash.conf"
   queue.type: persisted
+- pipeline.id: fhir-router
+  path.config: "/usr/share/logstash/pipeline/fhir-router.logstash.conf"
+  queue.type: persisted
+- pipeline.id: fhir-patient
+  path.config: "/usr/share/logstash/pipeline/fhir-patient.logstash.conf"
+  queue.type: persisted

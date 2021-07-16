@@ -1,1 +1,7 @@
-{}
+{
+  "patient": {
+    "fhirID": "123",
+    "gender": "male",
+    "birthDate": "1986-06-04"
+  }
+}
