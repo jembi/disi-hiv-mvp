@@ -1,0 +1,158 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-family: sans-serif;
+  margin-top: 50px;
+}
+
+h3 {
+  font-family: sans-serif;
+  color: #a0a0a0;
+  font-weight: 100;
+}
+
+.container {
+  display: flex;
+  margin: 16px 0;
+  gap: 12px;
+}
+
+.styled-tab {
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.styled-tab.active {
+  border-bottom: 2px solid #7083ac
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.8em;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+}
+
+.styled-table thead tr {
+  text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 6px;
+  text-align: center;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table thead tr:first-of-type {
+  border-bottom: 2px solid #7083ac;
+}
+
+.styled-table tbody tr:first-of-type {
+  border-top: 1px solid #7083ac;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 1px solid #7083ac;
+}
+
+.styled-table tfoot {
+  font-weight: bold;
+}
+
+.table-header {
+  background-color: #92a8d9;
+  font-size: larger;
+}
+
+.table-disagg {
+  background-color: #dae1f2;
+}
+
+.table-indicators-ok {
+  background-color: #add091;
+  text-orientation: sideways;
+}
+
+.table-indicators-nok {
+  background-color: #edb487;
+  text-orientation: sideways;
+}
+
+.table-h1 {
+  font-weight: bold;
+  background-color: #1D345B !important;
+  color: white;
+}
+
+.table-h2 {
+  font-weight: bold;
+  background-color: #5D8AD1 !important;
+}
+
+.table-h3 {
+  font-weight: bold;
+  background-color: #92A8D9 !important;
+}
+
+.table-h4 {
+  font-weight: bold;
+  background-color: #DAE1F2 !important;
+}
+
+.table-h5 {
+  font-weight: bold;
+  background-color: white !important;
+}
+
+.nested-table {
+  margin: 0;
+  box-shadow: none;
+}
+
+.nested-table tr:nth-child(odd) {
+  background-color: white;
+}
+
+.styled-button {
+  padding: 8px 32px;
+  background-color: #7083ac;
+  border: none;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.styled-button:hover {
+  background-color: #92a8d9;
+}
+
+.error {
+  color: red;
+}
+
+.width-5 {
+  width: 5%;
+}
+
+.width-10 {
+  width: 10%;
+}
+
+.force-left-align {
+  text-align: left !important;
+}

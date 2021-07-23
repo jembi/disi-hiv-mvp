@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<style>{#asset /css/styles.css @encoding=utf8}</style>
+
+{{#unless totals.total}}
+    <h3 class="error">0 results returned for given report parameters</h3>
+{{else}}
+<table class="styled-table">
+    <thead>
+        <tr class="table-header">
+            <th colspan="4">New HIV diagnosis by age and sex</th>
+        </tr>
+        <tr>
+            <th class="table-disagg">Age group</th>
+            <th colspan="2" class="table-disagg">Sex</th>
+            <th class="table-disagg">Total</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>Male</th>
+            <th>Female</th>
+            <th>N</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each rows}}
+        <tr>
+            <td>{{ageGroup}}</td>
+            <td>{{males}}</td>
+            <td>{{females}}</td>
+            <td>{{total}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+    <tfoot>
+        {{#with totals}}
+        <tr>
+            <td>Total</td>
+            <td>{{males}}</td>
+            <td>{{females}}</td>
+            <td>{{total}}</td>
+        </tr>
+        {{/with}}
+    </tfoot>
+</table>
+{{/unless}}
