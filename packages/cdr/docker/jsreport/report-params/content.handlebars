@@ -3,109 +3,119 @@
 <script type="text/javascript" src="{#asset jquery.calendars.plus.min.js @encoding=link}"></script>
 <script type="text/javascript" src="{#asset jquery.plugin.min.js @encoding=link}"></script>
 <script type="text/javascript" src="{#asset jquery.calendars.picker.min.js @encoding=link}"></script>
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 
 <link rel="stylesheet" type="text/css" href="{#asset jquery.calendars.picker.css @encoding=link}">
 <style>{#asset /css/styles.css @encoding=utf8}</style>
 
-<h1>Reports</h1>
-
-<span class="error"></span>
-
-<div class="container">
-  <span>Choose a report:</span>
-  <select id="report">
-    <option value="report-1a">Report 1A - Newly Diagnosed HIV</option>
-  </select>
+<div class="header">
+  <span class="headerContent">DISI Reports</span>
 </div>
 
-<div class="container">
-  <span id="tab-1" class="styled-tab" onclick="setTab('tab-1')">Monthly</span>
-  <span id="tab-2" class="styled-tab" onclick="setTab('tab-2')">Quarterly</span>
-  <span id="tab-3" class="styled-tab" onclick="setTab('tab-3')">Custom dates</span>
+<div class="wrapper">
+
+  <div class="box">
+    <span class="error"></span>
+
+    <div class="container">
+      <span>Choose a report:</span>
+      <select id="report">
+        <option value="report-1a">Report 1A - Newly Diagnosed HIV</option>
+      </select>
+    </div>
+
+    <div class="container">
+      <span id="tab-1" class="styled-tab" onclick="setTab('tab-1')">Monthly</span>
+      <span id="tab-2" class="styled-tab" onclick="setTab('tab-2')">Quarterly</span>
+      <span id="tab-3" class="styled-tab" onclick="setTab('tab-3')">Custom dates</span>
+    </div>
+
+    <div id="tab-1-contents" class="container tab">
+      <span>Year:</span>
+      <select id="year">
+        {{!-- dynamically populated --}}
+      </select>
+      <span>Month:</span>
+      <select id="month">
+        <option value="1">January</option>
+        <option value="2">February</option>
+        <option value="3">March</option>
+        <option value="4">April</option>
+        <option value="5">May</option>
+        <option value="6">June</option>
+        <option value="7">July</option>
+        <option value="8">August</option>
+        <option value="9">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+    </div>
+
+    <div id="tab-2-contents" class="container tab">
+      <span>Reporting Quarter:</span>
+      <select id="quarter">
+        <option value="1">Quarter I</option>
+        <option value="2">Quarter II</option>
+        <option value="3">Quarter III</option>
+        <option value="4">Quarter IV</option>
+        <option value="5">Semi-Annual I</option>
+        <option value="6">Semi-Annual II</option>
+        <option value="7">Annual</option>
+      </select>
+    </div>
+
+    <div id="tab-3-contents" class="container tab">
+      <span>From:</span>
+      <input id="from" autocomplete="off"></input>
+      <span>To:</span>
+      <input id="to" autocomplete="off"></input>
+    </div>
+
+    <div class="container">
+      <span>State:</span>
+      <select id="state">
+        <option value="all">All</option>
+        {{#each distinctStates}}
+        <option>{{this}}</option>
+        {{/each}}
+      </select>
+
+      <span>District:</span>
+      <select id="district">
+        <option value="all">All</option>
+        {{#each distinctDistricts}}
+        <option>{{this}}</option>
+        {{/each}}
+      </select>
+
+      <span>City:</span>
+      <select id="city">
+        <option value="all">All</option>
+        {{#each distinctCities}}
+        <option>{{this}}</option>
+        {{/each}}
+      </select>
+
+      <span>Health Facility:</span>
+      <select id="facility">
+        <option value="all">All</option>
+        {{#each facilities}}
+        <option value="{{hfuid}}">{{facility}}</option>
+        {{/each}}
+      </select>
+    </div>
+
+    <button class="styled-button" onclick="render('display')">Display</button>
+    <button class="styled-button" onclick="render('pdf')">Download PDF</button>
+    {{!-- TODO Enable once xls support is added --}}
+    {{!-- <button class="styled-button" onclick="render('xls')">Download XLS</button> --}}
+  </div>
+
+  <div id="render-target"></div>
 </div>
-
-<div id="tab-1-contents" class="container tab">
-  <span>Year:</span>
-  <select id="year">
-    {{!-- dynamically populated --}}
-  </select>
-  <span>Month:</span>
-  <select id="month">
-    <option value="1">January</option>
-    <option value="2">February</option>
-    <option value="3">March</option>
-    <option value="4">April</option>
-    <option value="5">May</option>
-    <option value="6">June</option>
-    <option value="7">July</option>
-    <option value="8">August</option>
-    <option value="9">September</option>
-    <option value="10">October</option>
-    <option value="11">November</option>
-    <option value="12">December</option>
-  </select>
-</div>
-
-<div id="tab-2-contents" class="container tab">
-  <span>Reporting Quarter:</span>
-  <select id="quarter">
-    <option value="1">Quarter I</option>
-    <option value="2">Quarter II</option>
-    <option value="3">Quarter III</option>
-    <option value="4">Quarter IV</option>
-    <option value="5">Semi-Annual I</option>
-    <option value="6">Semi-Annual II</option>
-    <option value="7">Annual</option>
-  </select>
-</div>
-
-<div id="tab-3-contents" class="container tab">
-  <span>From:</span>
-  <input id="from" autocomplete="off"></input>
-  <span>To:</span>
-  <input id="to" autocomplete="off"></input>
-</div>
-
-<div class="container">
-  <span>State:</span>
-  <select id="state">
-    <option value="all">All</option>
-    {{#each distinctStates}}
-    <option>{{this}}</option>
-    {{/each}}
-  </select>
-
-  <span>District:</span>
-  <select id="district">
-    <option value="all">All</option>
-    {{#each distinctDistricts}}
-    <option>{{this}}</option>
-    {{/each}}
-  </select>
-
-  <span>City:</span>
-  <select id="city">
-    <option value="all">All</option>
-    {{#each distinctCities}}
-    <option>{{this}}</option>
-    {{/each}}
-  </select>
-
-  <span>Health Facility:</span>
-  <select id="facility">
-    <option value="all">All</option>
-    {{#each facilities}}
-    <option value="{{hfuid}}">{{facility}}</option>
-    {{/each}}
-  </select>
-</div>
-
-<button class="styled-button" onclick="render('display')">Display</button>
-<button class="styled-button" onclick="render('pdf')">Download PDF</button>
-{{!-- TODO Enable once xls support is added --}}
-{{!-- <button class="styled-button" onclick="render('xls')">Download XLS</button> --}}
-
-<div id="render-target"></div>
 
 <script>
   function setTab(name) {

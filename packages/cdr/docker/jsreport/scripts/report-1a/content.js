@@ -71,57 +71,71 @@ async function beforeRender(req) {
           },
           ranges: [
             {
+              key: '0-4',
               to: 5
             },
             {
+              key: '5-9',
               from: 5,
               to: 10
             },
             {
+              key: '10-14',
               from: 10,
               to: 15
             },
             {
+              key: '15-19',
               from: 15,
               to: 20
             },
             {
+              key: '20-24',
               from: 20,
               to: 25
             },
             {
+              key: '25-29',
               from: 25,
               to: 30
             },
             {
+              key: '30-24',
               from: 30,
               to: 35
             },
             {
+              key: '35-39',
               from: 35,
               to: 40
             },
             {
+              key: '40-44',
               from: 40,
               to: 45
             },
             {
+              key: '45-49',
               from: 45,
               to: 50
             },
             {
+              key: '50-54',
               from: 50,
               to: 55
             },
             {
+              key: '55-59',
               from: 55,
               to: 60
             },
             {
+              key: '60-64',
               from: 60,
               to: 65
             },
             {
+              key: '65+',
               from: 65
             }
           ]
@@ -161,13 +175,12 @@ async function beforeRender(req) {
 
   const results = {
     totals: {
-      total: `${hits.total.value} (100.0%)`
+      total: hits.total.value,
+      males: 0,
+      females: 0
     },
     rows: []
   }
-
-  let malesTotal = 0
-  let femalesTotal = 0
 
   for (const ageBucket of aggs.age.buckets) {
     const males =
@@ -176,7 +189,6 @@ async function beforeRender(req) {
           (genderBucket) => genderBucket.key === 'male'
         ) || {}
       ).doc_count || 0
-    const malesPercent = (males / ageBucket.doc_count) * 100
 
     const females =
       (
@@ -184,29 +196,25 @@ async function beforeRender(req) {
           (genderBucket) => genderBucket.key === 'female'
         ) || {}
       ).doc_count || 0
-    const femalesPercent = (females / ageBucket.doc_count) * 100
-    const totalPercent = (ageBucket.doc_count / hits.total.value) * 100
 
-    malesTotal += males
-    femalesTotal += females
+    results.totals.males += males
+    results.totals.females += females
 
     results.rows.push({
       ageGroup: ageBucket.key,
-      males: `${males} (${(malesPercent || 0).toFixed(1)}%)`,
-      females: `${females} (${(femalesPercent || 0).toFixed(1)}%)`,
-      total: `${ageBucket.doc_count} (${(totalPercent || 0).toFixed(1)}%)`
+      males: males,
+      females: females,
+      malesPercent: (males / ageBucket.doc_count) * 100,
+      femalesPercent: (females / ageBucket.doc_count) * 100,
+      total: ageBucket.doc_count,
+      totalPercent: (ageBucket.doc_count / results.totals.total) * 100
     })
   }
 
-  const malesTotalPercent = (malesTotal / hits.total.value) * 100
-  const femalesTotalPercent = (femalesTotal / hits.total.value) * 100
-
-  results.totals.males = `${malesTotal} (${(malesTotalPercent || 0).toFixed(
-    1
-  )}%)`
-  results.totals.females = `${femalesTotal} (${(
-    femalesTotalPercent || 0
-  ).toFixed(1)}%)`
+  results.totals.malesPercent =
+    (results.totals.males / results.totals.total) * 100
+  results.totals.femalesPercent =
+    (results.totals.females / results.totals.total) * 100
 
   req.data = Object.assign(req.data, results)
 }
