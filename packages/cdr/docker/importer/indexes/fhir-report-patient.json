@@ -7,6 +7,28 @@
           "gender": { "type": "keyword" },
           "birthDate": { "type": "date" }
         }
+      },
+      "hivDiagCondition": {
+        "properties": {
+          "hivPosDate": { "type": "date" },
+          "fhirID": { "type": "keyword" }
+        }
+      },
+      "hivDiagEncounter": {
+        "properties": {
+          "facility": {
+            "properties": {
+              "country": { "type": "keyword" },
+              "city": { "type": "keyword" },
+              "district": { "type": "keyword" },
+              "name": { "type": "keyword" },
+              "state": { "type": "keyword" },
+              "hfuid": { "type": "keyword" },
+              "fhirID": { "type": "keyword" }
+            }
+          },
+          "fhirID": { "type": "keyword" }
+        }
       }
     }
   }

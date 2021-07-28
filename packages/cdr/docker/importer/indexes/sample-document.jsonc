@@ -1,7 +1,23 @@
 {
   "patient": {
-    "fhirID": "123",
     "gender": "male",
-    "birthDate": "1986-06-04"
+    "birthDate": "1954-06-22",
+    "fhirID": "10768"
+  },
+  "hivDiagCondition": {
+    "hivPosDate": "2021-05-18",
+    "fhirID": "10771"
+  },
+  "hivDiagEncounter": {
+    "facility": {
+      "country": "DISI country",
+      "city": "DISI city 1",
+      "district": "DISI district 1",
+      "name": "HIV Organization",
+      "state": "DISI state 1",
+      "hfuid": "12345",
+      "fhirID": "HIVOrganizationExample"
+    },
+    "fhirID": "10767"
   }
 }
