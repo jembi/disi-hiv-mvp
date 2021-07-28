@@ -198,5 +198,19 @@ h3 {
 }
 
 .chart {
-  max-height: 400px;
+  height: 600px;
+}
+
+@media print {
+  body {
+    background-color: white;
+  }
+
+  .box {
+    box-shadow: none;
+  }
+
+  .table-wrapper {
+    box-shadow: none;
+  }
 }
