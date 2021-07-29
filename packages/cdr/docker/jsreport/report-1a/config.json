@@ -1,0 +1,27 @@
+{
+  "shortid": "M2OHznw-n6",
+  "name": "report-1a",
+  "recipe": "chrome-pdf",
+  "engine": "handlebars",
+  "chrome": {
+    "printBackground": true,
+    "format": "A4",
+    "landscape": true,
+    "displayHeaderFooter": false,
+    "waitForJS": true
+  },
+  "creationDate": {
+    "$$date": 1620998660214
+  },
+  "modificationDate": {
+    "$$date": 1621325224159
+  },
+  "_id": "IBJqaIZhMyakGfPN",
+  "data": null,
+  "$entitySet": "templates",
+  "scripts": [
+    {
+      "shortid": "yhXbvB1S-X"
+    }
+  ]
+}
