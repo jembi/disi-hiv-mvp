@@ -199,15 +199,15 @@ async function beforeRender(req) {
       (
         ageBucket.gender.buckets.find(
           (genderBucket) => genderBucket.key === 'male'
-        ) || {}
-      ).distinct.value || 0
+        ) || { distinct: { value: 0 } }
+      ).distinct.value
 
     const females =
       (
         ageBucket.gender.buckets.find(
           (genderBucket) => genderBucket.key === 'female'
-        ) || {}
-      ).distinct.value || 0
+        ) || { distinct: { value: 0 } }
+      ).distinct.value
 
     results.totals.males += males
     results.totals.females += females
