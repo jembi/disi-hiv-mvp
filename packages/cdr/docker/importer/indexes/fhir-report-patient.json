@@ -4,6 +4,7 @@
       "patient": {
         "properties": {
           "fhirID": { "type": "keyword" },
+          "golden_id_fingerprint": { "type": "keyword" },
           "gender": { "type": "keyword" },
           "birthDate": { "type": "date" }
         }

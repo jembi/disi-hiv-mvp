@@ -15,13 +15,6 @@ services:
       - GET_URL=http://fhir:8080/fhir
       - POST_URL=http://logstash:5055/fhir
 
-  reprocess-mediator:
-    image: jembi/reprocess-mediator:latest
-    container_name: reprocess-mediator
-    environment:
-      - ES_URL=http://es-analytics:9200
-      - LOGSTASH_URL=http://logstash:5066/fhir
-
 volumes:
   logstash-pipeline:
     external: true
