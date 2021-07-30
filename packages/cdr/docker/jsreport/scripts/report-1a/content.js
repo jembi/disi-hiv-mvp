@@ -144,6 +144,18 @@ async function beforeRender(req) {
           gender: {
             terms: {
               field: 'patient.gender'
+            },
+            aggs: {
+              distinct: {
+                cardinality: {
+                  field: 'patient.golden_id_fingerprint'
+                }
+              }
+            }
+          },
+          distinct: {
+            cardinality: {
+              field: 'patient.golden_id_fingerprint'
             }
           }
         }
@@ -188,14 +200,14 @@ async function beforeRender(req) {
         ageBucket.gender.buckets.find(
           (genderBucket) => genderBucket.key === 'male'
         ) || {}
-      ).doc_count || 0
+      ).distinct.value || 0
 
     const females =
       (
         ageBucket.gender.buckets.find(
           (genderBucket) => genderBucket.key === 'female'
         ) || {}
-      ).doc_count || 0
+      ).distinct.value || 0
 
     results.totals.males += males
     results.totals.females += females
@@ -204,10 +216,10 @@ async function beforeRender(req) {
       ageGroup: ageBucket.key,
       males: males,
       females: females,
-      malesPercent: (males / ageBucket.doc_count) * 100,
-      femalesPercent: (females / ageBucket.doc_count) * 100,
-      total: ageBucket.doc_count,
-      totalPercent: (ageBucket.doc_count / results.totals.total) * 100
+      malesPercent: (males / ageBucket.distinct.value) * 100,
+      femalesPercent: (females / ageBucket.distinct.value) * 100,
+      total: ageBucket.distinct.value,
+      totalPercent: (ageBucket.distinct.value / results.totals.total) * 100
     })
   }
 

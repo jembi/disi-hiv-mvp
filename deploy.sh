@@ -47,7 +47,7 @@ docker create -it --rm\
   --network host \
   --name instant-openhie \
   --env-file .env \
-  openhie/instant:mongo-cache-fix \
+  openhie/instant:latest \
   $ACTION \
   ${OTHER_FLAGS[@]} \
   ${PACKAGES[@]}

@@ -1,6 +1,7 @@
 {
   "patient": {
     "gender": "male",
+    "golden_id_fingerprint": "c9760126a82b9b1ca44d080b463e393c443ce782",
     "birthDate": "1954-06-22",
     "fhirID": "10768"
   },
