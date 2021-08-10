@@ -13,3 +13,6 @@
 - pipeline.id: fhir-condition
   path.config: "/usr/share/logstash/pipeline/fhir-condition.logstash.conf"
   queue.type: persisted
+- pipeline.id: csv-import
+  path.config: "/usr/share/logstash/pipeline/csv-import.logstash.conf"
+  queue.type: persisted

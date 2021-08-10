@@ -341,6 +341,41 @@
 						"description": "Remove author and ARVTherapySummaryExample section reference"
 					},
 					"response": []
+				},
+				{
+					"name": "Submit random CSV",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Custom test"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "registration.firstName,registration.lastName,registration.gender,registration.birthDate,registration.keyPopulationStatus,registration.clientSourceId,registration.facilityCode,registration.address.country,registration.address.state,registration.address.district,registration.address.city,registration.tel,registration.NID,registration.guardianName,hivDiagnosis.hivPosDate,hivDiagnosis.hivPosFacilityCode,hivDiagnosis.hivPosUID,hivDiagnosis.recencyTestConducted,hivDiagnosis.recencyStatus,entryToCare.enrollmentDate,entryToCare.UID,entryToCare.facilityCode,entryToCare.dateOfFirstClinicalVisit,artInitiation.dateInitiated,artInitiation.regimenLine,artInitiation.regimen,cd4.collectionDate,cd4.result,cd4.percentage,artRegimenSwitch.date,artRegimenSwitch.line,artRegimenSwitch.regimen,viralSuppression.date,viralSuppression.result,viralSuppression.interpretation,viralSuppression.currentStatus,death.date,death.ageAtDeath,death.dateOfLastVisit,death.cause\n{{$randomFirstName}},{{$randomLastName}},{{gender}},{{birthDate}},FSW,12345,facility{{randomClientId}},DISI country,DISI state 1,DISI district 1,DISI city 1,555678889,1234567890,{{$randomFirstName}} {{$randomLastName}},{{hivPositiveDate}},facility{{randomClientId}},11111,Yes,Recent,2010-04-11,22222,facility{{randomClientId}},2010-04-12,2010-05-10,First line,TDF/3TC/DTG,2010-04-12,180,25,2015-11-02,Second line,TDF/3TC/EFV,2010-05-05,1500,Detectable,Non Detectable,,,,\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{openhimHost}}:{{openhimPort}}/csv",
+							"protocol": "http",
+							"host": [
+								"{{openhimHost}}"
+							],
+							"port": "{{openhimPort}}",
+							"path": [
+								"csv"
+							]
+						},
+						"description": "Remove author and ARVTherapySummaryExample section reference"
+					},
+					"response": []
 				}
 			]
 		}

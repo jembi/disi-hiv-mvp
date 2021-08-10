@@ -1,34 +1,91 @@
 {
   "mappings": {
     "properties": {
-      "patient": {
+      "@timestamp": { "type": "date" },
+      "artInitiation": {
         "properties": {
-          "fhirID": { "type": "keyword" },
-          "golden_id_fingerprint": { "type": "keyword" },
-          "gender": { "type": "keyword" },
-          "birthDate": { "type": "date" }
+          "dateInitiated": { "type": "date" },
+          "regimen": { "type": "keyword" },
+          "regimenLine": { "type": "keyword" }
         }
       },
-      "hivDiagCondition": {
+      "artRegimenSwitch": {
+        "properties": {
+          "date": { "type": "date" },
+          "line": { "type": "keyword" },
+          "regimen": { "type": "keyword" }
+        }
+      },
+      "cd4": {
+        "properties": {
+          "collectionDate": { "type": "date" },
+          "percentage": { "type": "long" },
+          "result": { "type": "long" }
+        }
+      },
+      "death": {
+        "properties": {
+          "date": { "type": "date" },
+          "ageAtDeath": { "type": "integer" },
+          "dateOfLastVisit": { "type": "date" },
+          "cause": { "type": "keyword" }
+        }
+      },
+      "entryToCare": {
+        "properties": {
+          "UID": { "type": "keyword" },
+          "dateOfFirstClinicalVisit": { "type": "date" },
+          "enrollmentDate": { "type": "date" },
+          "facilityCode": { "type": "keyword" }
+        }
+      },
+      "hivDiagnosis": {
         "properties": {
           "hivPosDate": { "type": "date" },
-          "fhirID": { "type": "keyword" }
+          "hivPosFacilityCode": { "type": "keyword" },
+          "hivPosUID": { "type": "keyword" },
+          "recencyStatus": { "type": "keyword" },
+          "recencyTestConducted": { "type": "keyword" }
         }
       },
-      "hivDiagEncounter": {
+      "registration": {
         "properties": {
-          "facility": {
+          "NID": { "type": "keyword" },
+          "address": {
             "properties": {
-              "country": { "type": "keyword" },
               "city": { "type": "keyword" },
+              "country": { "type": "keyword" },
               "district": { "type": "keyword" },
-              "name": { "type": "keyword" },
-              "state": { "type": "keyword" },
-              "hfuid": { "type": "keyword" },
-              "fhirID": { "type": "keyword" }
+              "state": { "type": "keyword" }
             }
           },
-          "fhirID": { "type": "keyword" }
+          "birthDate": { "type": "date" },
+          "clientSourceId": { "type": "keyword" },
+          "facility": {
+            "properties": {
+              "city": { "type": "keyword" },
+              "country": { "type": "keyword" },
+              "district": { "type": "keyword" },
+              "state": { "type": "keyword" },
+              "name": { "type": "keyword" }
+            }
+          },
+          "facilityCode": { "type": "keyword" },
+          "firstName": { "type": "keyword" },
+          "gender": { "type": "keyword" },
+          "golden_id_fingerprint": { "type": "keyword" },
+          "guardianName": { "type": "keyword" },
+          "keyPopulationStatus": { "type": "keyword" },
+          "lastName": { "type": "keyword" },
+          "tel": { "type": "keyword" }
+        }
+      },
+      "viralSuppression": {
+        "properties": {
+          "currentStatus": { "type": "keyword" },
+          "date": { "type": "date" },
+          "interpretation": { "type": "keyword" },
+          "result": { "type": "keyword" }
         }
       }
     }

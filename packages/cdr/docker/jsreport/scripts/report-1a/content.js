@@ -14,7 +14,7 @@ async function beforeRender(req) {
         filter: [
           {
             range: {
-              'hivDiagCondition.hivPosDate': {
+              'hivDiagnosis.hivPosDate': {
                 gte: `${from}||/d`,
                 lte: `${to}||/d`
               }
@@ -24,7 +24,7 @@ async function beforeRender(req) {
             ? [
                 {
                   term: {
-                    'hivDiagEncounter.facility.state': state
+                    'registration.facility.state': state
                   }
                 }
               ]
@@ -33,7 +33,7 @@ async function beforeRender(req) {
             ? [
                 {
                   term: {
-                    'hivDiagEncounter.facility.district': district
+                    'registration.facility.district': district
                   }
                 }
               ]
@@ -42,7 +42,7 @@ async function beforeRender(req) {
             ? [
                 {
                   term: {
-                    'hivDiagEncounter.facility.city': city
+                    'registration.facility.city': city
                   }
                 }
               ]
@@ -51,7 +51,7 @@ async function beforeRender(req) {
             ? [
                 {
                   term: {
-                    'hivDiagEncounter.facility.hfuid': facilityId
+                    'registration.facility.hfuid': facilityId
                   }
                 }
               ]
@@ -64,7 +64,7 @@ async function beforeRender(req) {
         range: {
           script: {
             source:
-              "if (doc['patient.birthDate'].size()==0) { return null } ZonedDateTime dob = doc['patient.birthDate'].value; LocalDate end = LocalDate.parse(params.reportPeriodEnd);return dob.toLocalDate().until(end, ChronoUnit.YEARS);",
+              "if (doc['registration.birthDate'].size()==0) { return null } ZonedDateTime dob = doc['registration.birthDate'].value; LocalDate end = LocalDate.parse(params.reportPeriodEnd);return dob.toLocalDate().until(end, ChronoUnit.YEARS);",
             params: {
               reportPeriodEnd: to
             }
@@ -143,19 +143,19 @@ async function beforeRender(req) {
         aggs: {
           gender: {
             terms: {
-              field: 'patient.gender'
+              field: 'registration.gender'
             },
             aggs: {
               distinct: {
                 cardinality: {
-                  field: 'patient.golden_id_fingerprint'
+                  field: 'registration.golden_id_fingerprint'
                 }
               }
             }
           },
           distinct: {
             cardinality: {
-              field: 'patient.golden_id_fingerprint'
+              field: 'registration.golden_id_fingerprint'
             }
           }
         }
@@ -195,19 +195,17 @@ async function beforeRender(req) {
   }
 
   for (const ageBucket of aggs.age.buckets) {
-    const males =
-      (
-        ageBucket.gender.buckets.find(
-          (genderBucket) => genderBucket.key === 'male'
-        ) || { distinct: { value: 0 } }
-      ).distinct.value
+    const males = (
+      ageBucket.gender.buckets.find(
+        (genderBucket) => genderBucket.key === 'male'
+      ) || { distinct: { value: 0 } }
+    ).distinct.value
 
-    const females =
-      (
-        ageBucket.gender.buckets.find(
-          (genderBucket) => genderBucket.key === 'female'
-        ) || { distinct: { value: 0 } }
-      ).distinct.value
+    const females = (
+      ageBucket.gender.buckets.find(
+        (genderBucket) => genderBucket.key === 'female'
+      ) || { distinct: { value: 0 } }
+    ).distinct.value
 
     results.totals.males += males
     results.totals.females += females

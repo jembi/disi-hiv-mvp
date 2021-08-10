@@ -1,24 +1,70 @@
 {
-  "patient": {
-    "gender": "male",
-    "golden_id_fingerprint": "c9760126a82b9b1ca44d080b463e393c443ce782",
-    "birthDate": "1954-06-22",
-    "fhirID": "10768"
-  },
-  "hivDiagCondition": {
-    "hivPosDate": "2021-05-18",
-    "fhirID": "10771"
-  },
-  "hivDiagEncounter": {
+  "registration": {
+    "address": {
+      "country": "DISI country",
+      "city": "DISI city 1",
+      "state": "DISI state 1",
+      "district": "DISI district 1"
+    },
+    "firstName": "Jane",
+    "golden_id_fingerprint": "033b9ec2-edcf-41c1-a650-0829f2ce1c71",
+    "tel": "555678889",
+    "lastName": "Doe",
+    "NID": "1234567890",
     "facility": {
       "country": "DISI country",
       "city": "DISI city 1",
-      "district": "DISI district 1",
-      "name": "HIV Organization",
       "state": "DISI state 1",
-      "hfuid": "12345",
-      "fhirID": "HIVOrganizationExample"
+      "district": "DISI district 1",
+      "name": "Test facility"
     },
-    "fhirID": "10767"
+    "guardianName": "John Smith",
+    "gender": "Female",
+    "facilityCode": "facility1",
+    "clientSourceId": "12345",
+    "keyPopulationStatus": "FSW",
+    "name": null,
+    "birthDate": "1990-05-01"
+  },
+  "viralSuppression": {
+    "currentStatus": "Non Detectable",
+    "interpretation": "Detectable",
+    "result": "1500",
+    "date": "2010-05-05"
+  },
+  "artRegimenSwitch": {
+    "line": "Second line",
+    "date": "2015-11-02",
+    "regimen": "TDF/3TC/EFV"
+  },
+  "cd4": {
+    "collectionDate": "2010-04-12",
+    "percentage": "25",
+    "result": "180"
+  },
+  "@timestamp": "2021-08-10T08:46:04.629Z",
+  "artInitiation": {
+    "regimenLine": "First line",
+    "dateInitiated": "2010-05-10",
+    "regimen": "TDF/3TC/DTG"
+  },
+  "hivDiagnosis": {
+    "hivPosFacilityCode": "facility1",
+    "recencyStatus": "Recent",
+    "recencyTestConducted": "Yes",
+    "hivPosDate": "2010-04-11",
+    "hivPosUID": "11111"
+  },
+  "entryToCare": {
+    "dateOfFirstClinicalVisit": "2010-04-12",
+    "enrollmentDate": "2010-04-11",
+    "UID": "22222",
+    "facilityCode": "facility1"
+  },
+  "death": {
+    "cause": null,
+    "dateOfLastVisit": null,
+    "ageAtDeath": null,
+    "date": null
   }
 }
