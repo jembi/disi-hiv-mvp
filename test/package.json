@@ -14,11 +14,11 @@
     "test:1000": "yarn test -n 1000 --delay-request 1000",
     "test:abuse": "yarn test -n 1000",
     "test:abuse-x4": "yarn concurrently \"yarn test:abuse\" \"yarn test:abuse\" \"yarn test:abuse\" \"yarn test:abuse\"",
-    "bootstrap:qa": "yarn bootstrap --env-var openhimHost=<qa_hostname>",
-    "test:qa": "yarn test --env-var openhimHost=<qa_hostname>",
-    "test:qa:1000": "yarn test:1000 --env-var openhimHost=<qa_hostname>",
-    "bootstrap:stg": "yarn bootstrap --env-var openhimHost=<stg_hostname>",
-    "test:stg": "yarn test --env-var openhimHost=<stg_hostname>",
-    "test:stg:1000": "yarn test:1000 --env-var openhimHost=<stg_hostname>"
+    "bootstrap:qa": "yarn bootstrap --env-var openhimHost=13.245.193.61",
+    "test:qa": "yarn test --env-var openhimHost=13.245.193.61",
+    "test:qa:1000": "yarn test:1000 --env-var openhimHost=13.245.193.61",
+    "bootstrap:stg": "yarn bootstrap --env-var openhimHost=13.244.39.245",
+    "test:stg": "yarn test --env-var openhimHost=13.244.39.245",
+    "test:stg:1000": "yarn test:1000 --env-var openhimHost=13.244.39.245"
   }
 }
