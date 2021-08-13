@@ -16,11 +16,11 @@
     "test:csv:1000": "yarn test:csv -n 1000",
     "test:bundle": "yarn newman run 'CDR.postman_collection.json' --folder 'Submit random bundle'",
     "test:bundle:1000": "yarn test:bundle -n 1000",
-    "bootstrap:qa": "yarn bootstrap --env-var openhimHost=13.245.193.61",
-    "test:qa": "yarn test --env-var openhimHost=13.245.193.61",
-    "test:qa:1000": "yarn test:1000 --env-var openhimHost=13.245.193.61",
-    "bootstrap:stg": "yarn bootstrap --env-var openhimHost=13.244.39.245",
-    "test:stg": "yarn test --env-var openhimHost=13.244.39.245",
-    "test:stg:1000": "yarn test:1000 --env-var openhimHost=13.244.39.245"
+    "bootstrap:qa": "yarn bootstrap --env-var openhimHost=qa.disi-cdr.jembi.org",
+    "test:qa": "yarn test --env-var openhimHost=qa.disi-cdr.jembi.org",
+    "test:qa:1000": "yarn test:1000 --env-var openhimHost=qa.disi-cdr.jembi.org",
+    "bootstrap:stg": "yarn bootstrap --env-var openhimHost=stg.disi-cdr.jembi.org",
+    "test:stg": "yarn test --env-var openhimHost=stg.disi-cdr.jembi.org",
+    "test:stg:1000": "yarn test:1000 --env-var openhimHost=stg.disi-cdr.jembi.org"
   }
 }

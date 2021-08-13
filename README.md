@@ -28,17 +28,17 @@ Central Data Repository (CDR) for Ethiopia. In collaboration with ICAP Ethiopia.
 
 ## QA server quick links
 
-- Kibana <http://13.245.193.61:5601/> - (u: elastic p: dev_password_only)
-- JS Reports <http://13.245.193.61:5488/> - (u: admin p: dev_password_only)
-- OpenHIM <http://13.245.193.61:9000/> - (u: root@openhim.org p: instant101)
-- OpenCR <http://13.245.193.61:3004/crux> - (u: root@intrahealth.org p: intrahealth)
+- Kibana <http://qa.disi-cdr.jembi.org:5601/> - (u: elastic p: dev_password_only)
+- JS Reports <http://qa.disi-cdr.jembi.org:5488/> - (u: admin p: dev_password_only)
+- OpenHIM <http://qa.disi-cdr.jembi.org:9000/> - (u: root@openhim.org p: instant101)
+- OpenCR <http://qa.disi-cdr.jembi.org:3004/crux> - (u: root@intrahealth.org p: intrahealth)
 
 ## Staging server quick links
 
-- Kibana <http://13.244.39.245:5601/> - (u: elastic p: dev_password_only)
-- JS Reports <http://13.244.39.245:5488/> - (u: admin p: dev_password_only)
-- OpenHIM <http://13.244.39.245:9000/> - (u: root@openhim.org p: instant101)
-- OpenCR <http://13.244.39.245:3004/crux> - (u: root@intrahealth.org p: intrahealth)
+- Kibana <http://stg.disi-cdr.jembi.org:5601/> - (u: elastic p: dev_password_only)
+- JS Reports <http://stg.disi-cdr.jembi.org:5488/> - (u: admin p: dev_password_only)
+- OpenHIM <http://stg.disi-cdr.jembi.org:9000/> - (u: root@openhim.org p: instant101)
+- OpenCR <http://stg.disi-cdr.jembi.org:3004/crux> - (u: root@intrahealth.org p: intrahealth)
 
 ## Windows setup only
 
