@@ -5,7 +5,7 @@ const ES_USERNAME = 'elastic'
 const ES_PASSWORD = 'dev_password_only'
 
 async function beforeRender(req) {
-  const { from, to, state, district, city, facilityId } = req.data.params
+  const { from, to, state, district, city, facilityCode } = req.data.params
 
   const esQuery = {
     size: 0,
@@ -47,11 +47,11 @@ async function beforeRender(req) {
                 }
               ]
             : []),
-          ...(facilityId !== 'all' // only include this filter if not 'all'
+          ...(facilityCode !== 'all' // only include this filter if not 'all'
             ? [
                 {
                   term: {
-                    'registration.facility.hfuid': facilityId
+                    'registration.facilityCode': facilityCode
                   }
                 }
               ]
