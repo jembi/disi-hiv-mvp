@@ -100,7 +100,7 @@
       <select id="facility">
         <option value="all">All</option>
         {{#each facilities}}
-        <option value="{{hfuid}}">{{facility}}</option>
+        <option value="{{facilityCode}}">{{facility}}</option>
         {{/each}}
       </select>
     </div>
@@ -146,7 +146,7 @@
       state: $('#state').children("option:selected").val(),
       district: $('#district').children("option:selected").val(),
       city: $('#city').children("option:selected").val(),
-      facilityId: $('#facility').children("option:selected").val()
+      facilityCode: $('#facility').children("option:selected").val()
     }
 
     let from, to

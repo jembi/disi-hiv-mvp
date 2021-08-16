@@ -1,70 +1,101 @@
 {
   "registration": {
-    "address": {
-      "country": "DISI country",
-      "city": "DISI city 1",
-      "state": "DISI state 1",
-      "district": "DISI district 1"
-    },
-    "firstName": "Jane",
-    "golden_id_fingerprint": "033b9ec2-edcf-41c1-a650-0829f2ce1c71",
+    "clientSourceId": "1bbe4f42-af86-4924-bbf0-562e11c10bb7",
+    "keyPopulationStatus": "FSW",
     "tel": "555678889",
-    "lastName": "Doe",
-    "NID": "1234567890",
     "facility": {
       "country": "DISI country",
-      "city": "DISI city 1",
+      "district": "DISI district 2",
+      "state": "DISI state 1",
+      "city": "DISI city 2",
+      "name": "HIV Organization 2"
+    },
+    "NID": "1234567890",
+    "firstName": "Sidney",
+    "guardianName": "Jewell Becker",
+    "gender": "male",
+    "lastName": "Bechtelar",
+    "birthDate": "2004-06-16",
+    "golden_id_fingerprint": "c618a253bfdee5507b46989495196acfa77054da",
+    "facilityCode": "facility2",
+    "address": {
+      "country": "DISI country",
       "state": "DISI state 1",
       "district": "DISI district 1",
-      "name": "Test facility"
-    },
-    "guardianName": "John Smith",
-    "gender": "Female",
-    "facilityCode": "facility1",
-    "clientSourceId": "12345",
-    "keyPopulationStatus": "FSW",
-    "name": null,
-    "birthDate": "1990-05-01"
+      "city": "DISI city 1"
+    }
+  },
+  "@timestamp": "2021-08-16T08:30:45.834Z",
+  "hivDiagnosis": {
+    "recencyTestConducted": "Yes",
+    "hivPosFacilityCode": "facility2",
+    "hivPosUID": "11111",
+    "recencyStatus": "Recent",
+    "hivPosDate": "2019-04-16"
+  },
+  "death": {
+    "date": null,
+    "ageAtDeath": null,
+    "cause": null,
+    "dateOfLastVisit": null
+  },
+  "artInitiation": {
+    "dateInitiated": "2010-05-10",
+    "regimen": "TDF/3TC/DTG",
+    "regimenLine": "First line"
+  },
+  "artRegimenSwitch": {
+    "nested": [
+      {
+        "line": "First line",
+        "regimen": "TDF/3TC/DTG",
+        "date": "2015-11-02"
+      },
+      {
+        "line": "Second line",
+        "regimen": "TDF/3TC/EFV",
+        "date": "2018-01-22"
+      }
+    ]
+  },
+  "cd4": {
+    "nested": [
+      {
+        "percentage": "25",
+        "result": "180",
+        "collectionDate": "2010-04-12"
+      },
+      {
+        "percentage": "30",
+        "result": "200",
+        "collectionDate": "2010-04-12"
+      }
+    ]
   },
   "viralSuppression": {
     "currentStatus": "Non Detectable",
-    "interpretation": "Detectable",
-    "result": "1500",
-    "date": "2010-05-05"
-  },
-  "artRegimenSwitch": {
-    "line": "Second line",
-    "date": "2015-11-02",
-    "regimen": "TDF/3TC/EFV"
-  },
-  "cd4": {
-    "collectionDate": "2010-04-12",
-    "percentage": "25",
-    "result": "180"
-  },
-  "@timestamp": "2021-08-10T08:46:04.629Z",
-  "artInitiation": {
-    "regimenLine": "First line",
-    "dateInitiated": "2010-05-10",
-    "regimen": "TDF/3TC/DTG"
-  },
-  "hivDiagnosis": {
-    "hivPosFacilityCode": "facility1",
-    "recencyStatus": "Recent",
-    "recencyTestConducted": "Yes",
-    "hivPosDate": "2010-04-11",
-    "hivPosUID": "11111"
+    "nested": [
+      {
+        "interpretation": "Detectable",
+        "date": "2010-05-05",
+        "result": "1500"
+      },
+      {
+        "interpretation": "Detectable",
+        "date": "2015-11-02",
+        "result": "600"
+      },
+      {
+        "interpretation": "Non Detectable",
+        "date": "2018-02-23",
+        "result": "200"
+      }
+    ]
   },
   "entryToCare": {
-    "dateOfFirstClinicalVisit": "2010-04-12",
     "enrollmentDate": "2010-04-11",
-    "UID": "22222",
-    "facilityCode": "facility1"
-  },
-  "death": {
-    "cause": null,
-    "dateOfLastVisit": null,
-    "ageAtDeath": null,
-    "date": null
+    "facilityCode": "facility2",
+    "dateOfFirstClinicalVisit": "2010-04-12",
+    "UID": "22222"
   }
 }
