@@ -1,0 +1,17 @@
+{
+    "shortid": "JRtUWE-t44",
+    "name": "report-5a",
+    "recipe": "chrome-pdf",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true
+    },
+    "creationDate": {
+        "$$date": 1629812336594
+    },
+    "modificationDate": {
+        "$$date": 1629821933708
+    },
+    "_id": "47HW7WDrUKF99nMI",
+    "$entitySet": "templates"
+}
