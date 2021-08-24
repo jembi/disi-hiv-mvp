@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fa34a599-deb6-4a4d-a7e3-341eac69f225" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-params/content.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-params/content.handlebars" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-5a/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-5a/config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,7 @@
       <updated>1629265447068</updated>
       <workItem from="1629265450013" duration="4529000" />
       <workItem from="1629699602995" duration="1137000" />
-      <workItem from="1629724604946" duration="2139000" />
+      <workItem from="1629724604946" duration="2479000" />
     </task>
     <servers />
   </component>

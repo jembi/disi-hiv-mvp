@@ -4,7 +4,8 @@
     "recipe": "chrome-pdf",
     "engine": "handlebars",
     "chrome": {
-        "printBackground": true
+        "printBackground": true,
+        "waitForJS": true
     },
     "creationDate": {
         "$$date": 1629812336594
@@ -13,5 +14,10 @@
         "$$date": 1629821933708
     },
     "_id": "47HW7WDrUKF99nMI",
-    "$entitySet": "templates"
+    "$entitySet": "templates",
+    "scripts": [
+        {
+            "shortid": "B7oMzN_qn1"
+        }
+    ]
 }
