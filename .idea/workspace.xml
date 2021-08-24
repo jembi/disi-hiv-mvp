@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa34a599-deb6-4a4d-a7e3-341eac69f225" name="Default Changelist" comment="" />
+    <list default="true" id="fa34a599-deb6-4a4d-a7e3-341eac69f225" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-params/content.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-params/content.handlebars" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +50,7 @@
       <updated>1629265447068</updated>
       <workItem from="1629265450013" duration="4529000" />
       <workItem from="1629699602995" duration="1137000" />
-      <workItem from="1629724604946" duration="1786000" />
+      <workItem from="1629724604946" duration="2139000" />
     </task>
     <servers />
   </component>
