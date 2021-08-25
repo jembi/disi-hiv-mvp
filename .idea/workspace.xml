@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa34a599-deb6-4a4d-a7e3-341eac69f225" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-5a/helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-5a/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-5a/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-5a/content.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-5a/content.handlebars" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +15,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1wt6H2vSU0iLRSS5hHeNJxrdif0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,7 +54,7 @@
       <updated>1629265447068</updated>
       <workItem from="1629265450013" duration="4529000" />
       <workItem from="1629699602995" duration="1137000" />
-      <workItem from="1629724604946" duration="2479000" />
+      <workItem from="1629724604946" duration="5056000" />
     </task>
     <servers />
   </component>
