@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa34a599-deb6-4a4d-a7e3-341eac69f225" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-3a/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-3a/content.handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-3a/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/cdr/docker/jsreport/scripts/report-3a/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/cdr/docker/jsreport/scripts/report-3a/content.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-5a/content.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-5a/content.handlebars" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cdr/docker/jsreport/scripts/report-1a/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cdr/docker/jsreport/scripts/report-1a/content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/cdr/docker/jsreport/scripts/report-5a/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cdr/docker/jsreport/scripts/report-5a/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-params/content.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/packages/cdr/docker/jsreport/report-params/content.handlebars" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +61,7 @@
       <workItem from="1629265450013" duration="4529000" />
       <workItem from="1629699602995" duration="1137000" />
       <workItem from="1629724604946" duration="9192000" />
-      <workItem from="1629976872764" duration="6361000" />
+      <workItem from="1629976872764" duration="8333000" />
     </task>
     <servers />
   </component>
