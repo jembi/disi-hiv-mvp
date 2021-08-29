@@ -31,8 +31,8 @@
         <td>{{cd4Categories}}</td>
         <td>{{males}} ({{formatNumber malesPercent}}%)</td>
         <td>{{females}} ({{formatNumber femalesPercent}}%)</td>
-        <td>{{other}}</td>
-        <td>{{unknown}}</td>
+        <td>{{other}} ({{formatNumber otherPercent}}%)</td>
+        <td>{{unknown}} ({{formatNumber unknownPercent}}%)</td>
         <td>{{total}} ({{formatNumber totalPercent}}%)</td>
       </tr>
       {{/each}}
@@ -44,8 +44,8 @@
         <td>{{cd4Categories}}</td>
         <td>{{males}} ({{formatNumber malesPercent}}%)</td>
         <td>{{females}} ({{formatNumber femalesPercent}}%)</td>
-        <td>{{other}}</td>
-        <td>{{unknown}}</td>
+        <td>{{other}} ({{formatNumber otherPercent}}%)</td>
+        <td>{{unknown}} ({{formatNumber unknownPercent}}%)</td>
         <td>{{total}} (100.0%)</td>
       </tr>
       {{/with}}
@@ -79,7 +79,7 @@
       title.marginBottom = 30;
 
       var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
-      categoryAxis.dataFields.category = "ageGroup";
+      categoryAxis.dataFields.category = "cd4Categories";
       categoryAxis.renderer.minGridDistance = 20;
       var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
       valueAxis.title.text = "HIV +ve %";

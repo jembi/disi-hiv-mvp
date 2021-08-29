@@ -5,174 +5,108 @@ const ES_USERNAME = 'elastic'
 const ES_PASSWORD = 'dev_password_only'
 
 async function beforeRender(req) {
-  const { from, to, state, district, city, facilityId } = req.data.params
+    const { from, to, state, district, city, facilityId } = req.data.params
 
-  const esQuery = {
-    size: 0,
-    query: {
-      bool: {
-        filter: [
-          {
-            range: {
-              'hivDiagnosis.hivPosDate': {
-                gte: `${from}||/d`,
-                lte: `${to}||/d`
-              }
+    const esQuery = {
+        size: 0,
+        query: {
+            bool: {
+                filter: [{
+                        range: {
+                            'hivPositive.artStartDate': {
+                                gte: `${from}||/d`,
+                                lte: `${to}||/d`
+                            }
+                        }
+                    },
+                    ...(state !== 'all' // only include this filter if not 'all'
+                        ?
+                        [{
+                            term: {
+                                'registration.facility.state': state
+                            }
+                        }] : []),
+                    ...(district !== 'all' // only include this filter if not 'all'
+                        ?
+                        [{
+                            term: {
+                                'registration.facility.district': district
+                            }
+                        }] : []),
+                    ...(city !== 'all' // only include this filter if not 'all'
+                        ?
+                        [{
+                            term: {
+                                'registration.facility.city': city
+                            }
+                        }] : []),
+                    ...(facilityId !== 'all' // only include this filter if not 'all'
+                        ?
+                        [{
+                            term: {
+                                'registration.facility.hfuid': facilityId
+                            }
+                        }] : [])
+                ]
             }
-          },
-          ...(state !== 'all' // only include this filter if not 'all'
-            ? [
-                {
-                  term: {
-                    'registration.facility.state': state
-                  }
-                }
-              ]
-            : []),
-          ...(district !== 'all' // only include this filter if not 'all'
-            ? [
-                {
-                  term: {
-                    'registration.facility.district': district
-                  }
-                }
-              ]
-            : []),
-          ...(city !== 'all' // only include this filter if not 'all'
-            ? [
-                {
-                  term: {
-                    'registration.facility.city': city
-                  }
-                }
-              ]
-            : []),
-          ...(facilityId !== 'all' // only include this filter if not 'all'
-            ? [
-                {
-                  term: {
-                    'registration.facility.hfuid': facilityId
-                  }
-                }
-              ]
-            : [])
-        ]
-      }
-    },
-    aggs: {
-      age: {
-        range: {
-          script: {
-            source:
-              "if (doc['registration.birthDate'].size()==0) { return null } ZonedDateTime dob = doc['registration.birthDate'].value; LocalDate end = LocalDate.parse(params.reportPeriodEnd);return dob.toLocalDate().until(end, ChronoUnit.YEARS);",
-            params: {
-              reportPeriodEnd: to
-            }
-          },
-          ranges: [
-            {
-              key: '0-4',
-              to: 5
-            },
-            {
-              key: '5-9',
-              from: 5,
-              to: 10
-            },
-            {
-              key: '10-14',
-              from: 10,
-              to: 15
-            },
-            {
-              key: '15-19',
-              from: 15,
-              to: 20
-            },
-            {
-              key: '20-24',
-              from: 20,
-              to: 25
-            },
-            {
-              key: '25-29',
-              from: 25,
-              to: 30
-            },
-            {
-              key: '30-24',
-              from: 30,
-              to: 35
-            },
-            {
-              key: '35-39',
-              from: 35,
-              to: 40
-            },
-            {
-              key: '40-44',
-              from: 40,
-              to: 45
-            },
-            {
-              key: '45-49',
-              from: 45,
-              to: 50
-            },
-            {
-              key: '50-54',
-              from: 50,
-              to: 55
-            },
-            {
-              key: '55-59',
-              from: 55,
-              to: 60
-            },
-            {
-              key: '60-64',
-              from: 60,
-              to: 65
-            },
-            {
-              key: '65+',
-              from: 65
-            }
-          ]
         },
         aggs: {
-          gender: {
-            terms: {
-              field: 'registration.gender'
-            },
-            aggs: {
-              distinct: {
-                cardinality: {
-                  field: 'registration.golden_id_fingerprint'
+            cd4Categories: {
+                range: {
+                    field: 'hivPositive.cd4ViralLoad',
+                    ranges: [{
+                            key: '< 200',
+                            to: 200
+                        },
+                        {
+                            key: '200 – 349',
+                            from: 200,
+                            to: 349
+                        },
+                        {
+                            key: '350 – 499',
+                            from: 350,
+                            to: 499
+                        },
+                        {
+                            key: '≥500',
+                            from: 500,
+                        },
+                    ]
+                },
+                aggs: {
+                    gender: {
+                        terms: {
+                            field: 'registration.gender'
+                        },
+                        aggs: {
+                            distinct: {
+                                cardinality: {
+                                    field: 'registration.golden_id_fingerprint'
+                                }
+                            }
+                        }
+                    },
+                    distinct: {
+                        cardinality: {
+                            field: 'registration.golden_id_fingerprint'
+                        }
+                    }
                 }
-              }
             }
-          },
-          distinct: {
-            cardinality: {
-              field: 'registration.golden_id_fingerprint'
-            }
-          }
         }
-      }
     }
-  }
 
-  let data
+    let data
 
-  try {
-    const resData = await axios({
-      method: 'post',
-      url: `http://es-analytics:9200/${ES_INDEX}/_search`,
-      data: esQuery,
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Basic ${new Buffer(
+    try {
+        const resData = await axios({
+                    method: 'post',
+                    url: `http://es-analytics:9200/${ES_INDEX}/_search`,
+                    data: esQuery,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: `Basic ${new Buffer(
           `${ES_USERNAME}:${ES_PASSWORD}`
         ).toString('base64')}`
       }
@@ -184,40 +118,61 @@ async function beforeRender(req) {
   }
 
   const { aggregations: aggs, hits } = data
-
+  femalesfemales
   const results = {
     totals: {
       total: hits.total.value,
       males: 0,
-      females: 0
+      females: 0,
+      other: 0,
+      unknown:0
     },
     rows: []
   }
 
-  for (const ageBucket of aggs.age.buckets) {
+  for (const cd4Bucket of aggs.cd4Categories.buckets) {
     const males = (
-      ageBucket.gender.buckets.find(
+      cd4Bucket.gender.buckets.find(
         (genderBucket) => genderBucket.key === 'male'
       ) || { distinct: { value: 0 } }
     ).distinct.value
 
     const females = (
-      ageBucket.gender.buckets.find(
+      cd4Bucket.gender.buckets.find(
         (genderBucket) => genderBucket.key === 'female'
+      ) || { distinct: { value: 0 } }
+    ).distinct.value
+
+    const other = (
+      cd4Bucket.gender.buckets.find(
+        (genderBucket) => genderBucket.key === 'other'
+      ) || { distinct: { value: 0 } }
+    ).distinct.value
+
+    const unknown = (
+      cd4Bucket.gender.buckets.find(
+        (genderBucket) => genderBucket.key === 'unknown'
       ) || { distinct: { value: 0 } }
     ).distinct.value
 
     results.totals.males += males
     results.totals.females += females
+    results.totals.other += other
+    results.totals.unknown += unknown
+
 
     results.rows.push({
-      ageGroup: ageBucket.key,
+      ageGroup: cd4Bucket.key,
       males: males,
       females: females,
-      malesPercent: (males / ageBucket.distinct.value) * 100,
-      femalesPercent: (females / ageBucket.distinct.value) * 100,
-      total: ageBucket.distinct.value,
-      totalPercent: (ageBucket.distinct.value / results.totals.total) * 100
+      other: other,
+      unknown: unknown,
+      malesPercent: (males / cd4Bucket.distinct.value) * 100,
+      femalesPercent: (females / cd4Bucket.distinct.value) * 100,
+      otherPercent: (other / cd4Bucket.distinct.value) * 100,
+      unknownPercent: (unknown / cd4Bucket.distinct.value) * 100,
+      total: cd4Bucket.distinct.value,
+      totalPercent: (cd4Bucket.distinct.value / results.totals.total) * 100
     })
   }
 
@@ -225,6 +180,10 @@ async function beforeRender(req) {
     (results.totals.males / results.totals.total) * 100
   results.totals.femalesPercent =
     (results.totals.females / results.totals.total) * 100
+  results.totals.otherPercent =
+    (results.totals.other / results.totals.total) * 100
+  results.totals.unknownPercent =
+    (results.totals.unknown / results.totals.total) * 100
 
   req.data = Object.assign(req.data, results)
 }
