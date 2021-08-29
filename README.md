@@ -10,6 +10,7 @@ Central Data Repository (CDR) for Ethiopia. In collaboration with ICAP Ethiopia.
 - HAPI FHIR <http://localhost:3447/> - for central storage of OLTP data
 - JS Reports <http://localhost:5488/> - (u: admin p: dev_password_only) - for pixel-perfect PDF reporting
 - OpenHIM <http://localhost:9000/> - (u: root@openhim.org p: instant101) - for transaction logging, routing and scheduled triggers
+- OpenCR <http://localhost:3004/crux> - (u: root@intrahealth.org p: intrahealth) - for matching and linking patient records (MPI)
 
 ## Getting started
 
@@ -27,15 +28,17 @@ Central Data Repository (CDR) for Ethiopia. In collaboration with ICAP Ethiopia.
 
 ## QA server quick links
 
-- Kibana <http://<qa_hostname>:5601/> - (u: elastic p: dev_password_only)
-- JS Reports <http://<qa_hostname>:5488/> - (u: admin p: dev_password_only)
-- OpenHIM <http://<qa_hostname>:9000/> - (u: root@openhim.org p: instant101)
+- Kibana <http://qa.disi-cdr.jembi.org:5601/> - (u: elastic p: dev_password_only)
+- JS Reports <http://qa.disi-cdr.jembi.org:5488/> - (u: admin p: dev_password_only)
+- OpenHIM <http://qa.disi-cdr.jembi.org:9000/> - (u: root@openhim.org p: instant101)
+- OpenCR <http://qa.disi-cdr.jembi.org:3004/crux> - (u: root@intrahealth.org p: intrahealth)
 
 ## Staging server quick links
 
-- Kibana <http://<stg_hostname>:5601/> - (u: elastic p: dev_password_only)
-- JS Reports <http://<stg_hostname>:5488/> - (u: admin p: dev_password_only)
-- OpenHIM <http://<stg_hostname>:9000/> - (u: root@openhim.org p: instant101)
+- Kibana <http://stg.disi-cdr.jembi.org:5601/> - (u: elastic p: dev_password_only)
+- JS Reports <http://stg.disi-cdr.jembi.org:5488/> - (u: admin p: dev_password_only)
+- OpenHIM <http://stg.disi-cdr.jembi.org:9000/> - (u: root@openhim.org p: instant101)
+- OpenCR <http://stg.disi-cdr.jembi.org:3004/crux> - (u: root@intrahealth.org p: intrahealth)
 
 ## Windows setup only
 

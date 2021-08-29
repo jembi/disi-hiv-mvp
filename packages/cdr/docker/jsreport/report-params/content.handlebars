@@ -20,6 +20,7 @@
       <span>Choose a report:</span>
       <select id="report">
         <option value="report-1a">Report 1A - Newly Diagnosed HIV</option>
+        <option value="report-3a">Report 3A - Newly Reported Deaths</option>
       </select>
     </div>
 
@@ -100,7 +101,7 @@
       <select id="facility">
         <option value="all">All</option>
         {{#each facilities}}
-        <option value="{{hfuid}}">{{facility}}</option>
+        <option value="{{facilityCode}}">{{facility}}</option>
         {{/each}}
       </select>
     </div>
@@ -146,7 +147,7 @@
       state: $('#state').children("option:selected").val(),
       district: $('#district').children("option:selected").val(),
       city: $('#city').children("option:selected").val(),
-      facilityId: $('#facility').children("option:selected").val()
+      facilityCode: $('#facility').children("option:selected").val()
     }
 
     let from, to

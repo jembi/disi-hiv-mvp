@@ -14,10 +14,15 @@ async function beforeRender(req) {
         filter: [
           {
             range: {
-              'hivDiagnosis.hivPosDate': {
+              'death.date': {
                 gte: `${from}||/d`,
                 lte: `${to}||/d`
               }
+            }
+          },
+          {
+            exists: {
+              field: 'hivDiagnosis.hivPosDate'
             }
           },
           ...(state !== 'all' // only include this filter if not 'all'
@@ -62,13 +67,7 @@ async function beforeRender(req) {
     aggs: {
       age: {
         range: {
-          script: {
-            source:
-              "if (doc['registration.birthDate'].size()==0) { return null } ZonedDateTime dob = doc['registration.birthDate'].value; LocalDate end = LocalDate.parse(params.reportPeriodEnd);return dob.toLocalDate().until(end, ChronoUnit.YEARS);",
-            params: {
-              reportPeriodEnd: to
-            }
-          },
+          field: 'death.ageAtDeath',
           ranges: [
             {
               key: '0-4',

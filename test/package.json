@@ -11,14 +11,16 @@
   "scripts": {
     "bootstrap": "yarn newman run 'CDR.postman_collection.json' --folder 'Bootstrap'",
     "test": "yarn newman run 'CDR.postman_collection.json' --folder 'Submit random bundle' --folder 'Submit random CSV'",
-    "test:1000": "yarn test -n 1000 --delay-request 1000",
-    "test:abuse": "yarn test -n 1000",
-    "test:abuse-x4": "yarn concurrently \"yarn test:abuse\" \"yarn test:abuse\" \"yarn test:abuse\" \"yarn test:abuse\"",
-    "bootstrap:qa": "yarn bootstrap --env-var openhimHost=<qa_hostname>",
-    "test:qa": "yarn test --env-var openhimHost=<qa_hostname>",
-    "test:qa:1000": "yarn test:1000 --env-var openhimHost=<qa_hostname>",
-    "bootstrap:stg": "yarn bootstrap --env-var openhimHost=<stg_hostname>",
-    "test:stg": "yarn test --env-var openhimHost=<stg_hostname>",
-    "test:stg:1000": "yarn test:1000 --env-var openhimHost=<stg_hostname>"
+    "test:1000": "yarn test -n 1000",
+    "test:csv": "yarn newman run 'CDR.postman_collection.json' --folder 'Submit random CSV'",
+    "test:csv:1000": "yarn test:csv -n 1000",
+    "test:bundle": "yarn newman run 'CDR.postman_collection.json' --folder 'Submit random bundle'",
+    "test:bundle:1000": "yarn test:bundle -n 1000",
+    "bootstrap:qa": "yarn bootstrap --env-var openhimHost=qa.disi-cdr.jembi.org",
+    "test:qa": "yarn test --env-var openhimHost=qa.disi-cdr.jembi.org",
+    "test:qa:1000": "yarn test:1000 --env-var openhimHost=qa.disi-cdr.jembi.org",
+    "bootstrap:stg": "yarn bootstrap --env-var openhimHost=stg.disi-cdr.jembi.org",
+    "test:stg": "yarn test --env-var openhimHost=stg.disi-cdr.jembi.org",
+    "test:stg:1000": "yarn test:1000 --env-var openhimHost=stg.disi-cdr.jembi.org"
   }
 }

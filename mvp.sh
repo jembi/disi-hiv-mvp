@@ -15,17 +15,17 @@ function youSure () { # disable this check by setting env var CI=true
 
 if [ "$1" == "qa" ]; then
   youSure $1
-  DOCKER_HOST=ssh://ubuntu@<qa_hostname> ./deploy.sh -c="packages/data-analytics" -c="packages/cdr" -c="packages/data-pipeline" $2 cdr
+  DOCKER_HOST=ssh://ubuntu@qa.disi-cdr.jembi.org ./deploy.sh -c="packages/data-analytics" -c="packages/cdr" -c="packages/data-pipeline" $2 cdr
   if [ "$2" == "init" ]; then
     # Set host in OpenHIM console config
-    DOCKER_HOST=ssh://ubuntu@<qa_hostname> docker exec -it openhim-console sed -i 's/localhost/<qa_hostname>/g' /usr/share/nginx/html/config/default.json
+    DOCKER_HOST=ssh://ubuntu@qa.disi-cdr.jembi.org docker exec -it openhim-console sed -i 's/localhost/qa.disi-cdr.jembi.org/g' /usr/share/nginx/html/config/default.json
   fi
 elif [ "$1" == "stg" ]; then
   youSure $1
-  DOCKER_HOST=ssh://ubuntu@<stg_hostname> ./deploy.sh -c="packages/data-analytics" -c="packages/cdr" -c="packages/data-pipeline" $2 cdr
+  DOCKER_HOST=ssh://ubuntu@stg.disi-cdr.jembi.org ./deploy.sh -c="packages/data-analytics" -c="packages/cdr" -c="packages/data-pipeline" $2 cdr
   if [ "$2" == "init" ]; then
     # Set host in OpenHIM console config
-    DOCKER_HOST=ssh://ubuntu@<stg_hostname> docker exec -it openhim-console sed -i 's/localhost/<stg_hostname>/g' /usr/share/nginx/html/config/default.json
+    DOCKER_HOST=ssh://ubuntu@stg.disi-cdr.jembi.org docker exec -it openhim-console sed -i 's/localhost/stg.disi-cdr.jembi.org/g' /usr/share/nginx/html/config/default.json
   fi
 else
   ./deploy.sh -c="packages/data-analytics" -c="packages/cdr" -c="packages/data-pipeline" $1 cdr

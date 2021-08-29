@@ -40,7 +40,8 @@ async function beforeRender(req) {
       district: resource.address[0].district,
       city: resource.address[0].city,
       facility: resource.name,
-      hfuid: resource.identifier.find((i) => i.system === SYS_HFUID).value
+      facilityCode: resource.identifier.find((i) => i.system === SYS_HFUID)
+        .value
     }
   })
 
