@@ -13,7 +13,11 @@ async function beforeRender(req) {
             bool: {
                 filter: [{
                         range: {
-                            'hivPositive.date': {
+                            'artInitiation.dateInitiated': {
+                                gte: `${from}||/d`,
+                                lte: `${to}||/d`
+                            },
+                            'artInitiation.regimen': {
                                 gte: `${from}||/d`,
                                 lte: `${to}||/d`
                             }
@@ -24,6 +28,17 @@ async function beforeRender(req) {
                             field: 'hivDiagnosis.hivPosDate'
                         }
                     },
+                    {
+                        exists: {
+                            field: 'entryToCare.UID'
+                        }
+                    },
+                    {
+                        exists: {
+                            field: 'artInitiation.dateInitiated'
+                        }
+                    },
+
                     ...(state !== 'all' // only include this filter if not 'all'
                         ?
                         [{
@@ -58,7 +73,7 @@ async function beforeRender(req) {
         aggs: {
             cd4Categories: {
                 range: {
-                    field: 'hivPositive.cd4ViralLoad',
+                    field: 'cd4.result',
                     ranges: [{
                             key: '< 200',
                             to: 200
@@ -123,7 +138,7 @@ async function beforeRender(req) {
   }
 
   const { aggregations: aggs, hits } = data
-  femalesfemales
+
   const results = {
     totals: {
       total: hits.total.value,
