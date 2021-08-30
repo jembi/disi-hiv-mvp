@@ -5,7 +5,7 @@ const ES_USERNAME = 'elastic'
 const ES_PASSWORD = 'dev_password_only'
 
 async function beforeRender(req) {
-    const { from, to, state, district, city, facilityId } = req.data.params
+    const { from, to, state, district, city, facilityCode } = req.data.params
 
     const esQuery = {
         size: 0,
@@ -13,10 +13,15 @@ async function beforeRender(req) {
             bool: {
                 filter: [{
                         range: {
-                            'hivPositive.artStartDate': {
+                            'hivPositive.date': {
                                 gte: `${from}||/d`,
                                 lte: `${to}||/d`
                             }
+                        }
+                    },
+                    {
+                        exists: {
+                            field: 'hivDiagnosis.hivPosDate'
                         }
                     },
                     ...(state !== 'all' // only include this filter if not 'all'
@@ -40,11 +45,11 @@ async function beforeRender(req) {
                                 'registration.facility.city': city
                             }
                         }] : []),
-                    ...(facilityId !== 'all' // only include this filter if not 'all'
+                    ...(facilityCode !== 'all' // only include this filter if not 'all'
                         ?
                         [{
                             term: {
-                                'registration.facility.hfuid': facilityId
+                                'registration.facilityCode': facilityCode
                             }
                         }] : [])
                 ]
@@ -70,7 +75,7 @@ async function beforeRender(req) {
                         },
                         {
                             key: '≥500',
-                            from: 500,
+                            from: 500
                         },
                     ]
                 },

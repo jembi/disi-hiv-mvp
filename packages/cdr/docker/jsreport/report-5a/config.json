@@ -4,13 +4,14 @@
     "recipe": "chrome-pdf",
     "engine": "handlebars",
     "chrome": {
-        "printBackground": true
+        "printBackground": true,
+        "landscape": false
     },
     "creationDate": {
         "$$date": 1629972544316
     },
     "modificationDate": {
-        "$$date": 1629972699574
+        "$$date": 1630270992664
     },
     "_id": "BUgofsmWqPjxJzYE",
     "$entitySet": "templates",
