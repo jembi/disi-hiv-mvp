@@ -8,7 +8,7 @@
         <table class="styled-table">
             <thead>
             <tr class="table-header">
-                <th colspan="4">Newly Started ART by age and sex</th>
+                <th colspan="6">Newly Started ART by age and sex</th>
             </tr>
             <tr>
                 <th class="table-disagg">Age group</th>
@@ -61,38 +61,38 @@
         am4core.ready(function () {
             const data = JSON.parse(document.getElementById('data-serialized').innerHTML)
 
-            // chartdiv
-            var chart = am4core.create("chartdiv", am4charts.XYChart);
-            chart.data = data.rows
-            chart.legend = new am4charts.Legend();
-            chart.events.on('ready', () => {
-                chartLoaded('chart1')
-            })
+            //chartdiv
+          var chart = am4core.create("chartdiv", am4charts.XYChart);
+          chart.data = data.rows
+          chart.legend = new am4charts.Legend();
+          chart.events.on('ready', () => {
+            chartLoaded('chart1')
+          })
 
-            var title = chart.titles.create();
-            title.text = "Distribution of patients newly started on ART by sex and age";
-            title.fontSize = 25;
-            title.marginBottom = 30;
+          var title = chart.titles.create();
+          title.text = "Distribution of patients newly started on ART by sex and age";
+          title.fontSize = 25;
+          title.marginBottom = 30;
 
-            var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
-            categoryAxis.dataFields.category = "ageGroup";
-            categoryAxis.renderer.minGridDistance = 20;
-            var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
-            valueAxis.title.text = "ART Start %";
-            valueAxis.min = 0
-            valueAxis.max = 100
+          var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+          var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+          categoryAxis.dataFields.category = "ageGroup";
+          categoryAxis.renderer.grid.template.location = 0;
+          categoryAxis.renderer.cellStartLocation = 0.1;
+          categoryAxis.renderer.cellEndLocation = 0.9;
+          categoryAxis.renderer.labels.template.rotation = -90;
+          categoryAxis.renderer.labels.template.dx = -15;
+          categoryAxis.renderer.minGridDistance = 20;
 
-            var series1 = chart.series.push(new am4charts.ColumnSeries());
-            series1.dataFields.valueX = "malesPercent";
-            series1.dataFields.categoryY = "ageGroup";
-            series1.stacked = true
-            series1.name = "Male"
+          var series1 = chart.series.push(new am4charts.ColumnSeries());
+          series1.dataFields.categoryX = "ageGroup";
+          series1.dataFields.valueY = "males";
+          series1.name = "Male"
 
-            var series2 = chart.series.push(new am4charts.ColumnSeries());
-            series2.dataFields.valueX = "femalesPercent";
-            series2.dataFields.categoryY = "ageGroup";
-            series2.stacked = true
-            series2.name = "Female"
+          var series2 = chart.series.push(new am4charts.ColumnSeries());
+          series2.dataFields.categoryX = "ageGroup";
+          series2.dataFields.valueY = "females";
+          series2.name = "Female"
         })
     }
     const scriptsToLoad = [

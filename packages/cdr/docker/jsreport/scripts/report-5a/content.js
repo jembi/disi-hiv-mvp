@@ -1,5 +1,4 @@
 const axios = require('axios')
-
 const ES_INDEX = 'fhir-report-patient'
 const ES_USERNAME = 'elastic'
 const ES_PASSWORD = 'dev_password_only'
@@ -27,12 +26,7 @@ async function beforeRender(req) {
                     },
                     {
                         exists: {
-                            field: 'registration.NID'
-                        }
-                    },
-                    {
-                        exists: {
-                            field: 'artInitiation.dateInitiated'
+                            field: 'entryToCare.UIDD'
                         }
                     },
                     ...(state !== 'all' // only include this filter if not 'all'
