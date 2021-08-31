@@ -212,8 +212,8 @@ async function beforeRender(req) {
     totals: {
       total: hits.total.value,
       less200: 0,
-      between200to349: 0
-      between350to499: 0
+      between200to349: 0,
+      between350to499: 0,
       more500: 0
     },
     rows: []
