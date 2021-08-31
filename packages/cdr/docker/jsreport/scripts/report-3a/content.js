@@ -14,10 +14,15 @@ async function beforeRender(req) {
         filter: [
           {
             range: {
-              'hivDiagnosis.hivPosDate': {
+              'death.date': {
                 gte: `${from}||/d`,
                 lte: `${to}||/d`
               }
+            }
+          },
+          {
+            exists: {
+              field: 'hivDiagnosis.hivPosDate'
             }
           },
           ...(state !== 'all' // only include this filter if not 'all'
@@ -62,13 +67,7 @@ async function beforeRender(req) {
     aggs: {
       age: {
         range: {
-          script: {
-            source:
-              "if (doc['registration.birthDate'].size()==0) { return null } ZonedDateTime dob = doc['registration.birthDate'].value; LocalDate end = LocalDate.parse(params.reportPeriodEnd);return dob.toLocalDate().until(end, ChronoUnit.YEARS);",
-            params: {
-              reportPeriodEnd: to
-            }
-          },
+          field: 'death.ageAtDeath',
           ranges: [
             {
               key: '0-4',
@@ -141,53 +140,30 @@ async function beforeRender(req) {
           ]
         },
         aggs: {
-          cd4: {
-            nested: {
-              path: 'cd4.nested'
+          gender: {
+            terms: {
+              field: 'registration.gender'
             },
             aggs: {
-              cd4: {
-              range: {
-              field: 'cd4.nested.result',
-              ranges: [
-                {
-                  key: '<200',
-                  to: 200
-                },
-                {
-                  key: '200-349',
-                  from: 200,
-                  to: 349
-                },
-                {
-                  key: '350-499',
-                  from: 350,
-                  to: 499
-                },
-                {
-                  key: '>=500',
-                  from: 500
-                }
-              ]
-            },
-            aggs: {
-              
               distinct: {
                 cardinality: {
                   field: 'registration.golden_id_fingerprint'
                 }
               }
             }
+          },
+          distinct: {
+            cardinality: {
+              field: 'registration.golden_id_fingerprint'
+            }
           }
         }
-      }     
+      }
     }
   }
-}
-}
 
   let data
-//Connection to server
+
   try {
     const resData = await axios({
       method: 'post',
@@ -211,54 +187,43 @@ async function beforeRender(req) {
   const results = {
     totals: {
       total: hits.total.value,
-      less200: 0,
-      between200to349: 0
-      between350to499: 0
-      more500: 0
+      males: 0,
+      females: 0
     },
     rows: []
   }
 
   for (const ageBucket of aggs.age.buckets) {
-    const less200 = (
-      ageBucket.cd4.buckets.find(
-        (cd4Bucket) => cd4Bucket.key === '<200'
+    const males = (
+      ageBucket.gender.buckets.find(
+        (genderBucket) => genderBucket.key === 'male'
       ) || { distinct: { value: 0 } }
     ).distinct.value
 
-    const between200to349 = (
-      ageBucket.cd4.buckets.find(
-        (cd4Bucket) => cd4Bucket.key === '200-349'
+    const females = (
+      ageBucket.gender.buckets.find(
+        (genderBucket) => genderBucket.key === 'female'
       ) || { distinct: { value: 0 } }
     ).distinct.value
 
-    const between350to499 = (
-      ageBucket.cd4.buckets.find(
-        (cd4Bucket) => cd4Bucket.key === '350-499'
-      ) || { distinct: { value: 0 } }
-    ).distinct.value
-
-    const more500 = (
-      ageBucket.cd4.buckets.find(
-        (cd4Bucket) => cd4Bucket.key === '>=500'
-      ) || { distinct: { value: 0 } }
-    ).distinct.value
-
-    results.totals.less200 += less200
-    results.totals.between200to349 += between200to349
-    results.totals.between350to499 += between350to499
-    results.totals.more500 += more500
+    results.totals.males += males
+    results.totals.females += females
 
     results.rows.push({
       ageGroup: ageBucket.key,
-      less200: less200,
-      between200to349: between200to349,
-      between350to499: between350to499,
-      more500: more500,
+      males: males,
+      females: females,
+      malesPercent: (males / ageBucket.distinct.value) * 100,
+      femalesPercent: (females / ageBucket.distinct.value) * 100,
       total: ageBucket.distinct.value,
       totalPercent: (ageBucket.distinct.value / results.totals.total) * 100
     })
   }
+
+  results.totals.malesPercent =
+    (results.totals.males / results.totals.total) * 100
+  results.totals.femalesPercent =
+    (results.totals.females / results.totals.total) * 100
 
   req.data = Object.assign(req.data, results)
 }
