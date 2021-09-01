@@ -2,7 +2,6 @@ const axios = require('axios')
 const ES_INDEX = 'fhir-report-patient'
 const ES_USERNAME = 'elastic'
 const ES_PASSWORD = 'dev_password_only'
-
 async function beforeRender(req) {
     const { from, to, state, district, city, facilityCode } = req.data.params
 
@@ -26,7 +25,7 @@ async function beforeRender(req) {
                     },
                     {
                         exists: {
-                            field: 'entryToCare.UIDD'
+                            field: 'entryToCare.UID'
                         }
                     },
                     ...(state !== 'all' // only include this filter if not 'all'
