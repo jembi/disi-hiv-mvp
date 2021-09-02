@@ -241,6 +241,10 @@ async function beforeRender(req) {
       between350to499: between350to499,
       more500: more500,
       total: ageBucket.distinct.value,
+      less200Percent: (less200 / ageBucket.distinct.value) * 100,
+      between200to349Percent: (between200to349 / ageBucket.distinct.value) * 100,
+      between350to499Percent: (between350to499 / ageBucket.distinct.value) * 100,
+      more500Percent: (more500 / ageBucket.distinct.value) * 100,
       totalPercent: (ageBucket.distinct.value / results.totals.total) * 100
     })
   }
