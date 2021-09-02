@@ -71,7 +71,7 @@
       })
 
       var title = chart.titles.create();
-      title.text = "Deaths by age and sex";
+      title.text = "Baseline CD4 count of patients newly started on ART by age";
       title.fontSize = 25;
       title.marginBottom = 30;
 
@@ -79,21 +79,33 @@
       categoryAxis.dataFields.category = "ageGroup";
       categoryAxis.renderer.minGridDistance = 20;
       var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
-      valueAxis.title.text = "Deaths %";
+      valueAxis.title.text = "CD4 %";
       valueAxis.min = 0
       valueAxis.max = 100
 
       var series1 = chart.series.push(new am4charts.ColumnSeries());
-      series1.dataFields.valueX = "malesPercent";
+      series1.dataFields.valueX = "less200Percent";
       series1.dataFields.categoryY = "ageGroup";
       series1.stacked = true
-      series1.name = "Male"
+      series1.name = "less200"
+
+      var series1 = chart.series.push(new am4charts.ColumnSeries());
+      series1.dataFields.valueX = "between200to349Percent";
+      series1.dataFields.categoryY = "ageGroup";
+      series1.stacked = true
+      series1.name = "between200to349"
+
+      var series1 = chart.series.push(new am4charts.ColumnSeries());
+      series1.dataFields.valueX = "between350to499Percent";
+      series1.dataFields.categoryY = "ageGroup";
+      series1.stacked = true
+      series1.name = "between350to499"
 
       var series2 = chart.series.push(new am4charts.ColumnSeries());
-      series2.dataFields.valueX = "femalesPercent";
+      series2.dataFields.valueX = "more500Percent";
       series2.dataFields.categoryY = "ageGroup";
       series2.stacked = true
-      series2.name = "Female"
+      series2.name = "more500"
     })
   }
 
