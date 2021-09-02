@@ -141,14 +141,9 @@ async function beforeRender(req) {
           ]
         },
         aggs: {
-          cd4: {
-            nested: {
-              path: 'cd4.nested'
-            },
-            aggs: {
               cd4: {
               range: {
-              field: 'cd4.nested.result',
+              field: 'cd4.current.result',
               ranges: [
                 {
                   key: '<200',
@@ -169,22 +164,12 @@ async function beforeRender(req) {
                   from: 500
                 }
               ]
-            },
-            aggs: {
-              
-              distinct: {
-                cardinality: {
-                  field: 'registration.golden_id_fingerprint'
-                }
-              }
             }
           }
         }
-      }     
+      }
     }
   }
-}
-}
 
   let data
 //Connection to server
