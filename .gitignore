@@ -1,2 +1,3 @@
 *.pem
 /packages/cdr/docker/jsreport/settings
+.idea/workspace.xml
