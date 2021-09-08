@@ -65,7 +65,8 @@
     "firstName" : "April",
     "gender" : "female",
     "birthDate" : "1950-04-30",
-    "NID" : "1234567890"
+    "NID" : "1234567890",
+    "maritalStatus": "Married Monogamous"
   },
   "cd4" : {
     "current" : {

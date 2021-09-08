@@ -120,7 +120,8 @@
           "guardianName": { "type": "keyword" },
           "keyPopulationStatus": { "type": "keyword" },
           "lastName": { "type": "keyword" },
-          "tel": { "type": "keyword" }
+          "tel": { "type": "keyword" },
+          "maritalStatus": { "type": "keyword" }
         }
       },
       "viralSuppression": {
