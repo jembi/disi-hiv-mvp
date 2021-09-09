@@ -1,12 +1,12 @@
 import express from 'express'
-import fetch from 'node-fetch'
 import asyncHandler from 'express-async-handler'
 import expressRequestId from 'express-request-id'
+
+import { getFHIR, postFHIR } from './fhir.mjs'
 
 const PORT = process.env.PORT || 3000
 const CR_URL = process.env.CR_URL || 'http://localhost:3004/fhir'
 const SHR_URL = process.env.SHR_URL || 'http://localhost:3447/fhir'
-const OPENHIM_CLIENT_ID = process.env.OPENHIM_CLIENT_ID || 'test'
 const PATIENT_REF_TO_USE_IN_SHR =
   process.env.PATIENT_REF_TO_USE_IN_SHR || 'CRUID' // Options are LOCAL or CRUID
 
@@ -125,49 +125,4 @@ async function checkIdentity(req) {
   console.log(
     `Patient reference query results: ${responses.map((res) => res.status)}`
   )
-}
-
-async function getFHIR(ref, baseUrl) {
-  const response = await fetch(
-    `${ref.startsWith('http') ? ref : baseUrl + '/' + ref}`,
-    {
-      method: 'get',
-      headers: {
-        'Content-Type': 'application/fhir+json',
-        'X-OpenHIM-ClientID': OPENHIM_CLIENT_ID
-      }
-    }
-  )
-  return response
-}
-
-async function searchFHIR(resourceType, queryParams, baseUrl) {
-  const response = await fetch(
-    `${baseUrl}/${resourceType}${
-      queryParams ? '?' + new URLSearchParams(queryParams) : ''
-    }`,
-    {
-      method: 'get',
-      headers: {
-        'Content-Type': 'application/fhir+json',
-        'X-OpenHIM-ClientID': OPENHIM_CLIENT_ID
-      }
-    }
-  )
-  return response
-}
-
-async function postFHIR(resource, baseUrl, overridePath) {
-  const response = await fetch(
-    `${baseUrl}${overridePath || '/' + resource.resourceType}`,
-    {
-      method: 'post',
-      body: JSON.stringify(resource),
-      headers: {
-        'Content-Type': 'application/fhir+json',
-        'X-OpenHIM-ClientID': OPENHIM_CLIENT_ID
-      }
-    }
-  )
-  return response
 }
