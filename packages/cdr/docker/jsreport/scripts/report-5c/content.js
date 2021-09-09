@@ -79,14 +79,14 @@ async function beforeRender(req) {
                             to: 200
                         },
                         {
-                            key: '200 – 350',
+                            key: '200 – 349',
                             from: 200,
-                            to: 349
+                            to: 350
                         },
                         {
-                            key: '350 – 500',
+                            key: '350 – 499',
                             from: 350,
-                            to: 499
+                            to: 500
                         },
                         {
                             key: '≥500',
