@@ -141,8 +141,8 @@ async function beforeRender(req) {
           ]
         },
         aggs: {
-              cd4: {
-              range: {
+          cd4: {
+            range: {
               field: 'cd4.current.result',
               ranges: [
                 {
