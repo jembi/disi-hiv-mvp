@@ -129,8 +129,8 @@
     ]
   },
   "artInitiation" : {
-    "dateInitiated" : "2010-05-10",
+    "date" : "2010-05-10",
     "regimen" : "TDF/3TC/DTG",
-    "regimenLine" : "First line"
+    "line" : "First line"
   }
 }

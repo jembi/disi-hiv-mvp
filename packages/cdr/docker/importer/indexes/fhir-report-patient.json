@@ -4,13 +4,21 @@
     "fhir-report-patient-by-art": {}
   },
   "mappings": {
+    "runtime": {
+      "death.ageAtDeath": {
+        "type": "long",
+        "script": {
+          "source": "if (doc['registration.birthDate'].size()==0 || doc['death.date'].size()==0) { return } ZonedDateTime birthDate = doc['registration.birthDate'].value; ZonedDateTime deathDate = doc['death.date'].value; emit(birthDate.until(deathDate, ChronoUnit.YEARS));"
+        }
+      }
+    },
     "properties": {
       "@timestamp": { "type": "date" },
       "artInitiation": {
         "properties": {
-          "dateInitiated": { "type": "date" },
-          "regimen": { "type": "keyword" },
-          "regimenLine": { "type": "keyword" }
+          "date": { "type": "date" },
+          "line": { "type": "keyword" },
+          "regimen": { "type": "keyword" }
         }
       },
       "artRegimenSwitch": {
@@ -78,7 +86,17 @@
           "UID": { "type": "keyword" },
           "dateOfFirstClinicalVisit": { "type": "date" },
           "enrollmentDate": { "type": "date" },
-          "facilityCode": { "type": "keyword" }
+          "facilityCode": { "type": "keyword" },
+          "facility": {
+            "properties": {
+              "city": { "type": "keyword" },
+              "country": { "type": "keyword" },
+              "district": { "type": "keyword" },
+              "state": { "type": "keyword" },
+              "name": { "type": "keyword" },
+              "position": { "type": "geo_point" }
+            }
+          }
         }
       },
       "hivDiagnosis": {
@@ -87,7 +105,17 @@
           "hivPosFacilityCode": { "type": "keyword" },
           "hivPosUID": { "type": "keyword" },
           "recencyStatus": { "type": "keyword" },
-          "recencyTestConducted": { "type": "keyword" }
+          "recencyTestConducted": { "type": "keyword" },
+          "facility": {
+            "properties": {
+              "city": { "type": "keyword" },
+              "country": { "type": "keyword" },
+              "district": { "type": "keyword" },
+              "state": { "type": "keyword" },
+              "name": { "type": "keyword" },
+              "position": { "type": "geo_point" }
+            }
+          }
         }
       },
       "registration": {

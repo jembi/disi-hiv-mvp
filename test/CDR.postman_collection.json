@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b1feeeb5-1b9b-418c-aed1-9b38b01abe24",
+		"_postman_id": "3dd766e6-6d45-45d5-9e98-f50861d7185d",
 		"name": "DISI CDR",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -390,7 +390,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "registration.firstName,registration.lastName,registration.gender,registration.birthDate,registration.keyPopulationStatus,registration.maritalStatus,registration.clientSourceId,registration.facilityCode,registration.address.country,registration.address.state,registration.address.district,registration.address.city,registration.tel,registration.NID,registration.guardianName,hivDiagnosis.hivPosDate,hivDiagnosis.hivPosFacilityCode,hivDiagnosis.hivPosUID,hivDiagnosis.recencyTestConducted,hivDiagnosis.recencyStatus,entryToCare.enrollmentDate,entryToCare.UID,entryToCare.facilityCode,entryToCare.dateOfFirstClinicalVisit,artInitiation.dateInitiated,artInitiation.regimenLine,artInitiation.regimen,cd4.collectionDate,cd4.result,cd4.percentage,artRegimenSwitch.date,artRegimenSwitch.line,artRegimenSwitch.regimen,viralSuppression.date,viralSuppression.result,viralSuppression.interpretation,viralSuppression.currentStatus,death.date,death.ageAtDeath,death.dateOfLastVisit,death.cause\n{{$randomFirstName}},{{$randomLastName}},{{gender}},{{birthDate}},{{popStatus}},{{maritalStatus}},{{$guid}},facility{{randomClientId}},DISI country,DISI state 1,DISI district 1,DISI city 1,555678889,{{$guid}},{{$randomFirstName}} {{$randomLastName}},{{hivPositiveDate}},facility{{randomClientId}},{{$guid}},{{recencyTestConducted}},{{recencyStatus}},{{enrollmentDate}},{{$guid}},facility{{randomClientId}},{{dateOfFirstClinicalVisit}},{{artStartDate}},First line,TDF/3TC/DTG,{{cd4CollectionDates}},{{cd4Results}},{{cd4Percentages}},{{switchDates}},{{switchLines}},{{switchRegimens}},{{vlDates}},{{vlResults}},{{vlInterpretations}},{{currVLInterpretation}},{{deathDate}},{{ageAtDeath}},{{dateOfLastVisit}},{{deathCause}}",
+							"raw": "registration.firstName,registration.lastName,registration.gender,registration.birthDate,registration.keyPopulationStatus,registration.maritalStatus,registration.clientSourceId,registration.facilityCode,registration.address.country,registration.address.state,registration.address.district,registration.address.city,registration.tel,registration.NID,registration.guardianName,hivDiagnosis.hivPosDate,hivDiagnosis.hivPosFacilityCode,hivDiagnosis.hivPosUID,hivDiagnosis.recencyTestConducted,hivDiagnosis.recencyStatus,entryToCare.enrollmentDate,entryToCare.UID,entryToCare.facilityCode,entryToCare.dateOfFirstClinicalVisit,artInitiation.date,artInitiation.line,artInitiation.regimen,cd4.collectionDate,cd4.result,cd4.percentage,artRegimenSwitch.date,artRegimenSwitch.line,artRegimenSwitch.regimen,viralSuppression.date,viralSuppression.result,viralSuppression.interpretation,viralSuppression.currentStatus,death.date,death.ageAtDeath,death.dateOfLastVisit,death.cause\n{{$randomFirstName}},{{$randomLastName}},{{gender}},{{birthDate}},{{popStatus}},{{maritalStatus}},{{$guid}},facility{{randomClientId}},DISI country,DISI state 1,DISI district 1,DISI city 1,555678889,{{$guid}},{{$randomFirstName}} {{$randomLastName}},{{hivPositiveDate}},facility{{randomClientId}},{{$guid}},{{recencyTestConducted}},{{recencyStatus}},{{enrollmentDate}},{{$guid}},facility{{randomClientId}},{{dateOfFirstClinicalVisit}},{{artStartDate}},First line,TDF/3TC/DTG,{{cd4CollectionDates}},{{cd4Results}},{{cd4Percentages}},{{switchDates}},{{switchLines}},{{switchRegimens}},{{vlDates}},{{vlResults}},{{vlInterpretations}},{{currVLInterpretation}},{{deathDate}},{{ageAtDeath}},{{dateOfLastVisit}},{{deathCause}}",
 							"options": {
 								"raw": {
 									"language": "text"
@@ -431,11 +431,11 @@
 					"",
 					"function randomByProbability(options) {",
 					"  const r = Math.random()",
-					"  let cummProb = 0",
-					"  for (let i = 0; i < options.length; i++) {",
-					"    cummProb += options[i][0]",
-					"    if (r < cummProb) {",
-					"      return options[i][1]",
+					"  let cummulativeProb = 0",
+					"  for (let option of options) {",
+					"    cummulativeProb += option[0]",
+					"    if (r < cummulativeProb) {",
+					"      return option[1]",
 					"    }",
 					"  }",
 					"}",
@@ -542,7 +542,7 @@
 					"for (let i = 0; i < numRegSwitch; i++) {",
 					"  switchDates.push(switchDate.format('YYYY-MM-DD'))",
 					"  switchLines.push(lines[i+1])",
-					"  switchLines.push(linesFhir[i+1])",
+					"  switchLinesFhir.push(linesFhir[i+1])",
 					"  switchRegimens.push(regimens[getRandomInt(0, 1)])",
 					"  switchDate = moment(switchDate).add(getRandomInt(60, 240), 'days')",
 					"}",
