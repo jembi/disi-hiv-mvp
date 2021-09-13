@@ -223,7 +223,6 @@ async function beforeRender(req) {
     },
     rows: []
   }
-  console.warn(JSON.stringify(aggs,null,2))
   for (const ageBucket of aggs.age.buckets) {
     const less200 = (
       ageBucket.cd4.buckets.find(
