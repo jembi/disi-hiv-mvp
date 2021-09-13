@@ -14,10 +14,25 @@ async function beforeRender(req) {
         filter: [
           {
             range: {
-              'hivDiagnosis.hivPosDate': {
+              'artInitiation.dateInitiated': {
                 gte: `${from}||/d`,
                 lte: `${to}||/d`
               }
+            }
+          },
+          {
+            exists: {
+              field: 'hivDiagnosis.hivPosDate'
+            }
+          },
+          {
+            exists: {
+              field: 'entryToCare.UID'
+            }
+          },
+          {
+            exists: {
+              field: 'artInitiation.dateInitiated'
             }
           },
           ...(state !== 'all' // only include this filter if not 'all'
