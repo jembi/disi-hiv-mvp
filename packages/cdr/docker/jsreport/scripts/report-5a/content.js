@@ -9,24 +9,54 @@ async function beforeRender(req) {
         size: 0,
         query: {
             bool: {
-                filter: [
+                "should": [
                     {
-                        range: {
-                            'artInitiation.dateInitiated': {
-                                gte: `${from}||/d`,
-                                lte: `${to}||/d`
-                            }
+                        "bool": {
+                            filter: [
+                                {
+                                    range: {
+                                        'artInitiation.dateInitiated': {
+                                            gte: `${from}||/d`,
+                                            lte: `${to}||/d`
+                                        }
+                                    }
+                                },
+                                {
+                                    exists: {
+                                        field: 'hivDiagnosis.hivPosDate'
+                                    }
+                                },
+                                {
+                                    exists: {
+                                        field: 'entryToCare.UID'
+                                    }
+                                }
+                            ]
+
                         }
+
                     },
                     {
-                        exists: {
-                            field: 'hivDiagnosis.hivPosDate'
+                        "bool": {
+                            filter: [
+                                {
+                                    range: {
+                                        'artInitiation.dateInitiated': {
+                                            gte: `${from}||/d`,
+                                            lte: `${to}||/d`
+                                        }
+                                    }
+                                },
+                                {
+                                    exists: {
+                                        field: 'artInitiation.regimen'
+                                    }
+                                }
+
+                            ]
+
                         }
-                    },
-                    {
-                        exists: {
-                            field: 'entryToCare.UID'
-                        }
+
                     },
                     ...(state !== 'all' // only include this filter if not 'all'
                         ? [
@@ -64,7 +94,8 @@ async function beforeRender(req) {
                             }
                         ]
                         : [])
-                ]
+                ],
+                "minimum_should_match": 1
             }
         },
         aggs: {
