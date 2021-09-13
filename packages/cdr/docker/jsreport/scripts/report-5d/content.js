@@ -165,6 +165,11 @@ async function beforeRender(req) {
                 }
               ]
             }
+          },
+          distinct: {
+            cardinality: {
+              field: 'registration.golden_id_fingerprint'
+            }
           }
         }
       }
@@ -203,31 +208,31 @@ async function beforeRender(req) {
     },
     rows: []
   }
-
+  console.warn(JSON.stringify(aggs,null,2))
   for (const ageBucket of aggs.age.buckets) {
     const less200 = (
       ageBucket.cd4.buckets.find(
         (cd4Bucket) => cd4Bucket.key === '<200'
-      ) || { distinct: { value: 0 } }
-    ).distinct.value
+      )
+    ).doc_count
 
     const between200to349 = (
       ageBucket.cd4.buckets.find(
         (cd4Bucket) => cd4Bucket.key === '200-349'
-      ) || { distinct: { value: 0 } }
-    ).distinct.value
+      ) 
+    ).doc_count
 
     const between350to499 = (
       ageBucket.cd4.buckets.find(
         (cd4Bucket) => cd4Bucket.key === '350-499'
-      ) || { distinct: { value: 0 } }
-    ).distinct.value
+      ) 
+    ).doc_count
 
     const more500 = (
       ageBucket.cd4.buckets.find(
         (cd4Bucket) => cd4Bucket.key === '>=500'
-      ) || { distinct: { value: 0 } }
-    ).distinct.value
+      )
+    ).doc_count
 
     results.totals.less200 += less200
     results.totals.between200to349 += between200to349
