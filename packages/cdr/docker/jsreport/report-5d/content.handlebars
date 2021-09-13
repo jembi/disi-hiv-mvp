@@ -16,11 +16,11 @@
         <th colspan="5" class="table-disagg">N(%)</th>
       </tr>
       <tr>
-        <th><200</th>
-        <th>200-349</th>
-        <th>350-499</th>
-        <th>≥500</th>
-        <th>Unknown</th>
+        <th class="table-disagg"><200</th>
+        <th class="table-disagg">200-349</th>
+        <th class="table-disagg">350-499</th>
+        <th class="table-disagg">≥500</th>
+        <th class="table-disagg">Unknown</th>
       </tr>
     </thead>
     <tbody>
@@ -87,25 +87,25 @@
       series1.dataFields.valueX = "less200Percent";
       series1.dataFields.categoryY = "ageGroup";
       series1.stacked = true
-      series1.name = "less200"
+      series1.name = "<200"
 
       var series1 = chart.series.push(new am4charts.ColumnSeries());
       series1.dataFields.valueX = "between200to349Percent";
       series1.dataFields.categoryY = "ageGroup";
       series1.stacked = true
-      series1.name = "between200to349"
+      series1.name = "200-349"
 
       var series1 = chart.series.push(new am4charts.ColumnSeries());
       series1.dataFields.valueX = "between350to499Percent";
       series1.dataFields.categoryY = "ageGroup";
       series1.stacked = true
-      series1.name = "between350to499"
+      series1.name = "350-499"
 
       var series2 = chart.series.push(new am4charts.ColumnSeries());
       series2.dataFields.valueX = "more500Percent";
       series2.dataFields.categoryY = "ageGroup";
       series2.stacked = true
-      series2.name = "more500"
+      series2.name = ">=500"
     })
   }
 
