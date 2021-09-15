@@ -160,21 +160,24 @@
             "properties": {
               "date": { "type": "date" },
               "interpretation": { "type": "keyword" },
-              "result": { "type": "keyword" }
+              "result": { "type": "keyword" },
+              "currentStatus": { "type": "keyword" }
             }
           },
           "initial": {
             "properties": {
               "date": { "type": "date" },
               "interpretation": { "type": "keyword" },
-              "result": { "type": "keyword" }
+              "result": { "type": "keyword" },
+              "currentStatus": { "type": "keyword" }
             }
           },
           "current": {
             "properties": {
               "date": { "type": "date" },
               "interpretation": { "type": "keyword" },
-              "result": { "type": "keyword" }
+              "result": { "type": "keyword" },
+              "currentStatus": { "type": "keyword" }
             }
           }
         }
