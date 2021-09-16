@@ -1,7 +1,9 @@
 {
   "aliases": {
     "fhir-report-patient-by-hiv": {},
-    "fhir-report-patient-by-art": {}
+    "fhir-report-patient-by-art": {},
+    "fhir-report-patient-by-curr-vl": {},
+    "fhir-report-patient-by-death": {}
   },
   "mappings": {
     "runtime": {
