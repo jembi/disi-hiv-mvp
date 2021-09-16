@@ -14,7 +14,7 @@ async function beforeRender(req) {
         filter: [
           {
             range: {
-              'artInitiation.dateInitiated': {
+              'artInitiation.date': {
                 gte: `${from}||/d`,
                 lte: `${to}||/d`
               }
@@ -32,7 +32,7 @@ async function beforeRender(req) {
           },
           {
             exists: {
-              field: 'artInitiation.dateInitiated'
+              field: 'artInitiation.date'
             }
           },
           ...(state !== 'all' // only include this filter if not 'all'
@@ -192,7 +192,7 @@ async function beforeRender(req) {
   }
 
   let data
-//Connection to server
+  //Connection to server
   try {
     const resData = await axios({
       method: 'post',
@@ -224,28 +224,20 @@ async function beforeRender(req) {
     rows: []
   }
   for (const ageBucket of aggs.age.buckets) {
-    const less200 = (
-      ageBucket.cd4.buckets.find(
-        (cd4Bucket) => cd4Bucket.key === '<200'
-      )
+    const less200 = ageBucket.cd4.buckets.find(
+      (cd4Bucket) => cd4Bucket.key === '<200'
     ).doc_count
 
-    const between200to349 = (
-      ageBucket.cd4.buckets.find(
-        (cd4Bucket) => cd4Bucket.key === '200-349'
-      ) 
+    const between200to349 = ageBucket.cd4.buckets.find(
+      (cd4Bucket) => cd4Bucket.key === '200-349'
     ).doc_count
 
-    const between350to499 = (
-      ageBucket.cd4.buckets.find(
-        (cd4Bucket) => cd4Bucket.key === '350-499'
-      ) 
+    const between350to499 = ageBucket.cd4.buckets.find(
+      (cd4Bucket) => cd4Bucket.key === '350-499'
     ).doc_count
 
-    const more500 = (
-      ageBucket.cd4.buckets.find(
-        (cd4Bucket) => cd4Bucket.key === '>=500'
-      )
+    const more500 = ageBucket.cd4.buckets.find(
+      (cd4Bucket) => cd4Bucket.key === '>=500'
     ).doc_count
 
     results.totals.less200 += less200
@@ -261,8 +253,10 @@ async function beforeRender(req) {
       more500: more500,
       total: ageBucket.distinct.value,
       less200Percent: (less200 / ageBucket.distinct.value) * 100,
-      between200to349Percent: (between200to349 / ageBucket.distinct.value) * 100,
-      between350to499Percent: (between350to499 / ageBucket.distinct.value) * 100,
+      between200to349Percent:
+        (between200to349 / ageBucket.distinct.value) * 100,
+      between350to499Percent:
+        (between350to499 / ageBucket.distinct.value) * 100,
       more500Percent: (more500 / ageBucket.distinct.value) * 100,
       totalPercent: (ageBucket.distinct.value / results.totals.total) * 100
     })

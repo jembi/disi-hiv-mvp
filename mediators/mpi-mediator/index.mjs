@@ -1,12 +1,12 @@
 import express from 'express'
-import fetch from 'node-fetch'
 import asyncHandler from 'express-async-handler'
 import expressRequestId from 'express-request-id'
+
+import { getFHIR, postFHIR } from './fhir.mjs'
 
 const PORT = process.env.PORT || 3000
 const CR_URL = process.env.CR_URL || 'http://localhost:3004/fhir'
 const SHR_URL = process.env.SHR_URL || 'http://localhost:3447/fhir'
-const OPENHIM_CLIENT_ID = process.env.OPENHIM_CLIENT_ID || 'test'
 const PATIENT_REF_TO_USE_IN_SHR =
   process.env.PATIENT_REF_TO_USE_IN_SHR || 'CRUID' // Options are LOCAL or CRUID
 
@@ -23,15 +23,14 @@ app.post(
 
     let resBody
     if (patientEntry?.resource) {
-      // submit identity, strip bundle and submit bundle
-      resBody = await submitIdentityThenBundle(
-        patientEntry.resource,
-        patientEntry.fullUrl,
-        req
-      )
+      console.log('Patient resource exists in bundle')
+      const ids = await submitIdentity(patientEntry.resource)
+      const newBundle = modifyBundle(req.body, patientEntry.fullUrl, ids)
+      resBody = await submitBundle(newBundle)
     } else {
-      // check identity exists and submit bundle
-      resBody = await checkIdentityThenSubmitBundle(req, res)
+      console.log('Patient resource does not exist in bundle')
+      await checkIdentity(req)
+      resBody = await submitBundle(req.body)
     }
 
     res.status(200).send(resBody)
@@ -42,9 +41,8 @@ app.listen(PORT, () => {
   console.log(`MPI Orchestrator listening at http://localhost:${PORT}`)
 })
 
-async function submitIdentityThenBundle(patient, patientFullUrl, req) {
-  console.log('Patient resource exists in bundle')
-
+async function submitIdentity(patient) {
+  delete patient.id
   const createIdentityRes = await postFHIR(patient, CR_URL)
   console.log(`Create patient status: ${createIdentityRes.status}`)
 
@@ -53,8 +51,16 @@ async function submitIdentityThenBundle(patient, patientFullUrl, req) {
   console.log(`Local Patient ID: ${localPatientReference}`)
   console.log(`CRUID: ${CRUID}`)
 
-  let strippedBundle = Object.assign({}, req.body)
-  strippedBundle.entry = strippedBundle.entry.filter(
+  return {
+    localPatientReference,
+    CRUID
+  }
+}
+
+function modifyBundle(bundle, patientFullUrl, ids) {
+  // strip out patient resource
+  let newBundle = Object.assign({}, bundle)
+  newBundle.entry = newBundle.entry.filter(
     (entry) => entry.resource.resourceType !== 'Patient'
   )
 
@@ -63,10 +69,10 @@ async function submitIdentityThenBundle(patient, patientFullUrl, req) {
   let replaceValue
   switch (PATIENT_REF_TO_USE_IN_SHR) {
     case 'LOCAL':
-      replaceValue = `${CR_URL}/${localPatientReference}`
+      replaceValue = `${CR_URL}/${ids.localPatientReference}`
       break
     case 'CRUID':
-      replaceValue = `${CR_URL}/${CRUID}`
+      replaceValue = `${CR_URL}/${ids.CRUID}`
       break
     default:
       throw new Error('Invalid value in PATIENT_REF_TO_USE_IN_SHR env var')
@@ -74,19 +80,33 @@ async function submitIdentityThenBundle(patient, patientFullUrl, req) {
   console.log(
     `Replacing ${searchValue} with ${PATIENT_REF_TO_USE_IN_SHR} identifier ${replaceValue}`
   )
-  strippedBundle = JSON.parse(
-    JSON.stringify(strippedBundle).replace(searchValue, replaceValue)
+  newBundle = JSON.parse(
+    JSON.stringify(newBundle).replace(searchValue, replaceValue)
   )
 
-  const submitBundleRes = await postFHIR(strippedBundle, SHR_URL, '/')
+  // convert document bundle to transaction bundle
+  if (newBundle.type === 'document') {
+    console.log(`Converting document bundle to transaction bundle`)
+    newBundle.type = 'transaction'
+    newBundle.entry.forEach((entry) => {
+      entry.request = {
+        method: 'POST'
+      }
+      delete entry.resource.id
+    })
+  }
+
+  return newBundle
+}
+
+async function submitBundle(bundle) {
+  const submitBundleRes = await postFHIR(bundle, SHR_URL, '/')
   console.log(`Submit bundle status: ${submitBundleRes.status}`)
 
   return submitBundleRes.json()
 }
 
-async function checkIdentityThenSubmitBundle(req, res) {
-  console.log('Patient resource does not exist in bundle')
-
+async function checkIdentity(req) {
   const uniquePatientRefs = Array.from(
     new Set(JSON.stringify(req.body).match(/Patient\/[^/^"]*/g))
   )
@@ -105,54 +125,4 @@ async function checkIdentityThenSubmitBundle(req, res) {
   console.log(
     `Patient reference query results: ${responses.map((res) => res.status)}`
   )
-
-  const submitBundleRes = await postFHIR(req.body, SHR_URL, '/')
-  console.log(`Submit bundle status: ${submitBundleRes.status}`)
-
-  return submitBundleRes.json()
-}
-
-async function getFHIR(ref, baseUrl) {
-  const response = await fetch(
-    `${ref.startsWith('http') ? ref : baseUrl + '/' + ref}`,
-    {
-      method: 'get',
-      headers: {
-        'Content-Type': 'application/fhir+json',
-        'X-OpenHIM-ClientID': OPENHIM_CLIENT_ID
-      }
-    }
-  )
-  return response
-}
-
-async function searchFHIR(resourceType, queryParams, baseUrl) {
-  const response = await fetch(
-    `${baseUrl}/${resourceType}${
-      queryParams ? '?' + new URLSearchParams(queryParams) : ''
-    }`,
-    {
-      method: 'get',
-      headers: {
-        'Content-Type': 'application/fhir+json',
-        'X-OpenHIM-ClientID': OPENHIM_CLIENT_ID
-      }
-    }
-  )
-  return response
-}
-
-async function postFHIR(resource, baseUrl, overridePath) {
-  const response = await fetch(
-    `${baseUrl}${overridePath || '/' + resource.resourceType}`,
-    {
-      method: 'post',
-      body: JSON.stringify(resource),
-      headers: {
-        'Content-Type': 'application/fhir+json',
-        'X-OpenHIM-ClientID': OPENHIM_CLIENT_ID
-      }
-    }
-  )
-  return response
 }
