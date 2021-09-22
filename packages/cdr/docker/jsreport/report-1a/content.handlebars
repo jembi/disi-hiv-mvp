@@ -9,17 +9,19 @@
   <table class="styled-table">
     <thead>
       <tr class="table-header">
-        <th colspan="4">New HIV diagnosis by age and sex</th>
+        <th colspan="6">New HIV diagnosis by age and sex</th>
       </tr>
       <tr>
         <th class="table-disagg">Age group</th>
-        <th colspan="2" class="table-disagg">Sex</th>
+        <th colspan="4" class="table-disagg">Sex</th>
         <th class="table-disagg">Total</th>
       </tr>
       <tr>
         <th></th>
         <th>Male</th>
         <th>Female</th>
+        <th>Other</th>
+        <th>Unknown</th>
         <th>N</th>
       </tr>
     </thead>
@@ -29,6 +31,8 @@
         <td>{{ageGroup}}</td>
         <td>{{males}} ({{formatNumber malesPercent}}%)</td>
         <td>{{females}} ({{formatNumber femalesPercent}}%)</td>
+        <td>{{others}} ({{formatNumber othersPercent}}%)</td>
+        <td>{{unknowns}} ({{formatNumber unknownsPercent}}%)</td>
         <td>{{total}} ({{formatNumber totalPercent}}%)</td>
       </tr>
       {{/each}}
@@ -39,6 +43,8 @@
         <td>Total</td>
         <td>{{males}} ({{formatNumber malesPercent}}%)</td>
         <td>{{females}} ({{formatNumber femalesPercent}}%)</td>
+        <td>{{others}} ({{formatNumber othersPercent}}%)</td>
+        <td>{{unknowns}} ({{formatNumber unknownsPercent}}%)</td>
         <td>{{total}} (100.0%)</td>
       </tr>
       {{/with}}
