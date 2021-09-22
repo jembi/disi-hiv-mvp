@@ -21,7 +21,7 @@ async function beforeRender(req) {
                     },
                     {
                         range: {
-                            'artInitiation.dateInitiated': {
+                            'artInitiation.date': {
                                 gte: `${from}||/d`,
                                 lte: `${to}||/d`
                             }
@@ -35,7 +35,7 @@ async function beforeRender(req) {
                     },
                     {
                         exists: {
-                            field: 'artInitiation.dateInitiated'
+                            field: 'artInitiation.date'
                         }
                     },
 
@@ -74,32 +74,32 @@ async function beforeRender(req) {
             days: {
                 range: {
                     script: {
-                        source: "ZonedDateTime hivddz = doc['hivDiagnosis.hivPosDate'].value; ZonedDateTime artddz = doc['artInitiation.dateInitiated'].value; if (doc['hivDiagnosis.hivPosDate'].value==doc['artInitiation.dateInitiated'].value) { return 1 } LocalDate hivd = hivddz.toLocalDate(); LocalDate artd = artddz.toLocalDate(); LocalDate bound7 = hivd.plusDays(6); LocalDate bound14 = hivd.plusDays(14); LocalDate bound28 = hivd.plusDays(28); if(artd.isAfter(hivd) && artd.isBefore(bound7)){ return artd.until(bound7,ChronoUnit.DAYS) } if(artd.isAfter(bound7) && artd.isBefore(bound14)){ return artd.until(bound14,ChronoUnit.DAYS) } if(artd.isAfter(bound14) && artd.isBefore(bound28)){ return artd.until(bound28,ChronoUnit.DAYS) } if(artd.isAfter(bound28)){ return hivd.until(artd,ChronoUnit.DAYS) }",
+                        source: "ZonedDateTime hivddz = doc['hivDiagnosis.hivPosDate'].value; ZonedDateTime artddz = doc['artInitiation.date'].value; if (doc['hivDiagnosis.hivPosDate'].value==doc['artInitiation.date'].value) { return 1 } LocalDate hivd = hivddz.toLocalDate(); LocalDate artd = artddz.toLocalDate(); LocalDate bound7 = hivd.plusDays(6); LocalDate bound14 = hivd.plusDays(14); LocalDate bound28 = hivd.plusDays(28); if(artd.isAfter(hivd) && artd.isBefore(bound7)){ return hivd.until(artd,ChronoUnit.DAYS) } if(artd.isAfter(bound7) && artd.isBefore(bound14)){ return hivd.until(artd,ChronoUnit.DAYS) } if(artd.isAfter(bound14) && artd.isBefore(bound28)){ return hivd.until(artd,ChronoUnit.DAYS) } if(artd.isAfter(bound28)){ return hivd.until(artd,ChronoUnit.DAYS) }",
                         params: {
                             reportPeriodEnd: to
                         }
                     },
                     ranges: [{
-                            key: '1',
+                            key: 'Within 1 day',
                             to: 1
                         },
                         {
-                            key: '1-7',
+                            key: '1-7 days',
                             from: 1,
                             to: 7
                         },
                         {
-                            key: '8-14',
+                            key: '8-14 days',
                             from: 8,
                             to: 14
                         },
                         {
-                            key: '15-28',
+                            key: '15-28 days',
                             from: 15,
                             to: 28
                         },
                         {
-                            key: '28>=',
+                            key: 'Beyond 28 days',
                             from: 28
                         }
                     ]
