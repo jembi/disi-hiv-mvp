@@ -10,8 +10,13 @@
         "$$date": 1631261868422
     },
     "modificationDate": {
-        "$$date": 1631261868422
+        "$$date": 1632290069753
     },
     "_id": "8xwUU44894xSIexF",
-    "$entitySet": "templates"
+    "$entitySet": "templates",
+    "scripts": [
+        {
+            "shortid": "wFrPgl"
+        }
+    ]
 }

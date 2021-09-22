@@ -38,6 +38,7 @@ async function beforeRender(req) {
                             field: 'artInitiation.dateInitiated'
                         }
                     },
+
                     ...(state !== 'all' // only include this filter if not 'all'
                         ?
                         [{
@@ -73,7 +74,10 @@ async function beforeRender(req) {
             days: {
                 range: {
                     script: {
-                        source: "ZonedDateTime hivDiagnosisZonedDate = doc['hivDiagnosis.hivPosDate'];ZonedDateTime initiateZonedDate = doc['artInitiation.dateInitiate'];LocalDate hivDiagnosisDate  = hivDiagnosisZonedDate.toLocalDate();LocalDate initiateDate = initiateZonedDate.toLocalDate();LocalDate bound7Days=hivDiagnosisDate.plusDays(6);LocalDate bound14Days=hivDiagnosisDate.plusDays(14);LocalDate bound28Days=hivDiagnosisDate.plusDays(28);if (doc['hivDiagnosis.hivPosDate'].value==doc['artInitiation.dateInitiated'].value){return 1;}if(initiateDate.isAfter(hivDiagnosisDate) && initiateDate.isBefore(bound7Days)){return initiateDate.until(bound7Days,ChronoUnit.DAYS); }if(initiateDate.isAfter(bound7Days) && initiateDate.isBefore(bound14Days)){return initiateDate.until(bound14Days,ChronoUnit.DAYS); }if(initiateDate.isAfter(bound14Days) && initiateDate.isBefore(bound28Days )){return initiateDate.until(bound28Days,ChronoUnit.DAYS); }if(initiateDate.isAfter(bound28Days)){return hivDiagnosisDate.until(initiateDate,ChronoUnit.DAYS); }"
+                        source: "ZonedDateTime hivddz = doc['hivDiagnosis.hivPosDate'].value; ZonedDateTime artddz = doc['artInitiation.dateInitiated'].value; if (doc['hivDiagnosis.hivPosDate'].value==doc['artInitiation.dateInitiated'].value) { return 1 } LocalDate hivd = hivddz.toLocalDate(); LocalDate artd = artddz.toLocalDate(); LocalDate bound7 = hivd.plusDays(6); LocalDate bound14 = hivd.plusDays(14); LocalDate bound28 = hivd.plusDays(28); if(artd.isAfter(hivd) && artd.isBefore(bound7)){ return artd.until(bound7,ChronoUnit.DAYS) } if(artd.isAfter(bound7) && artd.isBefore(bound14)){ return artd.until(bound14,ChronoUnit.DAYS) } if(artd.isAfter(bound14) && artd.isBefore(bound28)){ return artd.until(bound28,ChronoUnit.DAYS) } if(artd.isAfter(bound28)){ return hivd.until(artd,ChronoUnit.DAYS) }",
+                        params: {
+                            reportPeriodEnd: to
+                        }
                     },
                     ranges: [{
                             key: '1',
@@ -148,7 +152,9 @@ async function beforeRender(req) {
     totals: {
       total: hits.total.value,
       males: 0,
-      females: 0
+      females: 0,
+      others: 0,
+      unknowns: 0
     },
     rows: []
   }
@@ -166,17 +172,35 @@ async function beforeRender(req) {
       ) || { distinct: { value: 0 } }
     ).distinct.value;
 
+    const others = (
+        daysBucket.gender.buckets.find(
+            (genderBucket) => genderBucket.key === 'other'
+        ) || { distinct: { value: 0 } }
+    ).distinct.value;
+
+    const unknowns = (
+        daysBucket.gender.buckets.find(
+            (genderBucket) => genderBucket.key === 'unknown'
+        ) || { distinct: { value: 0 } }
+    ).distinct.value;
+
     results.totals.males += males
     results.totals.females += females
+    results.totals.others += others
+    results.totals.unknowns += unknowns
 
     results.rows.push({
       daysGroup: daysBucket.key,
       males: males,
       females: females,
-      malesPercent: (males / ageBucket.distinct.value) * 100,
-      femalesPercent: (females / ageBucket.distinct.value) * 100,
-      total: ageBucket.distinct.value,
-      totalPercent: (ageBucket.distinct.value / results.totals.total) * 100
+      others: others,
+      unknowns: unknowns,
+      malesPercent: (males / daysBucket.distinct.value) * 100,
+      femalesPercent: (females / daysBucket.distinct.value) * 100,
+      othersPercent: (others / daysBucket.distinct.value) * 100,
+      unknownsPercent: (unknowns / daysBucket.distinct.value) * 100,
+      total: daysBucket.distinct.value,
+      totalPercent: (daysBucket.distinct.value / results.totals.total) * 100
     });
   }
 
@@ -184,6 +208,10 @@ async function beforeRender(req) {
     (results.totals.males / results.totals.total) * 100
   results.totals.femalesPercent =
     (results.totals.females / results.totals.total) * 100
+  results.totals.othersPercent =
+    (results.totals.others / results.totals.total) * 100
+  results.totals.unknownsPercent =
+    (results.totals.unknowns / results.totals.total) * 100
 
   req.data = Object.assign(req.data, results)
 

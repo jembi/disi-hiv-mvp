@@ -1,6 +1,14 @@
 {
-    "_id": "39rOX39UrcOGWNOX",
     "shortid": "wFrPgl",
-    "$entitySet": "folders",
-    "name": "report-1e"
+    "name": "report-1e",
+    "creationDate": {
+        "$$date": 1629357845122
+    },
+    "modificationDate": {
+        "$$date": 1629357845122
+    },
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "39rOX39UrcOGWNOX",
+    "$entitySet": "scripts"
 }
