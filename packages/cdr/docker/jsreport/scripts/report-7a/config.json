@@ -1,0 +1,14 @@
+{
+    "shortid": "s3etWz2neO",
+    "name": "report-7a",
+    "creationDate": {
+        "$$date": 1631597664189
+    },
+    "modificationDate": {
+        "$$date": 1631597664189
+    },
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "abbjV2U2MtCXcSk1",
+    "$entitySet": "scripts"
+}
