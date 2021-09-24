@@ -77,7 +77,7 @@ async function beforeRender(req) {
                         source: " long cd4 = doc['cd4.initial.result'].value; if (doc['cd4.current.result'].size() == 0) { return null; } if (cd4 < 200) {return cd4;} if (cd4 > 199 && cd4 < 350) { return cd4; } if (cd4 > 349 && cd4 < 500) { return cd4; } if (cd4 > 499) {  return cd4; } "
                     },
                     ranges: [{
-                            key: '< 200',
+                            key: 'less than 200',
                             to: 200
                         },
                         {
