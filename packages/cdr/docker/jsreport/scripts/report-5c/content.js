@@ -11,13 +11,23 @@ async function beforeRender(req) {
         size: 0,
         query: {
             bool: {
+                should: [{
+                    range: {
+                        'artRegimenSwitch.initial.date': {
+                            gte: `${from}||/d`,
+                            lte: `${to}||/d`
+                        }
+                    },
+                    range: {
+                        'hivDiagnosis.hivPosDate': {
+                            gte: `${from}||/d`,
+                            lte: `${to}||/d`
+                        }
+                    }
+                }],
                 filter: [{
                         range: {
-                            'artInitiation.dateInitiated': {
-                                gte: `${from}||/d`,
-                                lte: `${to}||/d`
-                            },
-                            'artInitiation.regimen': {
+                            'hivDiagnosis.hivPosDate': {
                                 gte: `${from}||/d`,
                                 lte: `${to}||/d`
                             }
@@ -25,20 +35,10 @@ async function beforeRender(req) {
                     },
                     {
                         exists: {
-                            field: 'hivDiagnosis.hivPosDate'
+                            field: 'cd4.current.result'
                         }
-                    },
-                    {
-                        exists: {
-                            field: 'entryToCare.UID'
-                        }
-                    },
-                    {
-                        exists: {
-                            field: 'artInitiation.dateInitiated'
-                        }
-                    },
 
+                    },
                     ...(state !== 'all' // only include this filter if not 'all'
                         ?
                         [{
@@ -71,9 +71,14 @@ async function beforeRender(req) {
             }
         },
         aggs: {
-            cd4Categories: {
+            cd4: {
                 range: {
-                    field: 'cd4.result',
+                    script: {
+                        source: "Integer cd4 = doc['cd4.current.result'].size();  if (doc['cd4.current.result'].size()==0) { return null;  } ",
+                        params: {
+                            reportPeriodEnd: to
+                        }
+                    },
                     ranges: [{
                             key: '< 200',
                             to: 200
@@ -92,6 +97,10 @@ async function beforeRender(req) {
                             key: '≥500',
                             from: 500
                         },
+                        {
+                            key: 'Unknown',
+                            to: -20
+                        }
                     ]
                 },
                 aggs: {
@@ -144,55 +153,54 @@ async function beforeRender(req) {
       total: hits.total.value,
       males: 0,
       females: 0,
-      other: 0,
-      unknown:0
+      others: 0,
+      unknowns: 0
     },
     rows: []
   }
 
-  for (const cd4Bucket of aggs.cd4Categories.buckets) {
+  for (const cd4Bucket of aggs.cd4.buckets) {
     const males = (
-      cd4Bucket.gender.buckets.find(
+        cd4Bucket.gender.buckets.find(
         (genderBucket) => genderBucket.key === 'male'
       ) || { distinct: { value: 0 } }
     ).distinct.value
 
     const females = (
-      cd4Bucket.gender.buckets.find(
+        cd4Bucket.gender.buckets.find(
         (genderBucket) => genderBucket.key === 'female'
       ) || { distinct: { value: 0 } }
     ).distinct.value
 
-    const other = (
-      cd4Bucket.gender.buckets.find(
+    const others = (
+        cd4Bucket.gender.buckets.find(
         (genderBucket) => genderBucket.key === 'other'
       ) || { distinct: { value: 0 } }
     ).distinct.value
 
-    const unknown = (
-      cd4Bucket.gender.buckets.find(
+    const unknowns = (
+        cd4Bucket.gender.buckets.find(
         (genderBucket) => genderBucket.key === 'unknown'
       ) || { distinct: { value: 0 } }
     ).distinct.value
 
     results.totals.males += males
     results.totals.females += females
-    results.totals.other += other
-    results.totals.unknown += unknown
-
+    results.totals.others += others
+    results.totals.unknowns += unknowns
 
     results.rows.push({
-      ageGroup: cd4Bucket.key,
+      cd4Group: cd4Bucket.key,
       males: males,
       females: females,
-      other: other,
-      unknown: unknown,
+      others: others,
+      unknowns: unknowns,
       malesPercent: (males / cd4Bucket.distinct.value) * 100,
       femalesPercent: (females / cd4Bucket.distinct.value) * 100,
-      otherPercent: (other / cd4Bucket.distinct.value) * 100,
-      unknownPercent: (unknown / cd4Bucket.distinct.value) * 100,
+      othersPercent: (others / cd4Bucket.distinct.value) * 100,
+      unknownsPercent: (unknowns / cd4Bucket.distinct.value) * 100,
       total: cd4Bucket.distinct.value,
-      totalPercent: (cd4Bucket.distinct.value / results.totals.total) * 100
+      totalPercent: (cd4Bucket  .distinct.value / results.totals.total) * 100
     })
   }
 
@@ -200,10 +208,10 @@ async function beforeRender(req) {
     (results.totals.males / results.totals.total) * 100
   results.totals.femalesPercent =
     (results.totals.females / results.totals.total) * 100
-  results.totals.otherPercent =
-    (results.totals.other / results.totals.total) * 100
-  results.totals.unknownPercent =
-    (results.totals.unknown / results.totals.total) * 100
+  results.totals.othersPercent =
+    (results.totals.others / results.totals.total) * 100
+  results.totals.unknownsPercent =
+    (results.totals.unknowns / results.totals.total) * 100
 
   req.data = Object.assign(req.data, results)
 }

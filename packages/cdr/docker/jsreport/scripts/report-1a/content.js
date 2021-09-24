@@ -189,7 +189,9 @@ async function beforeRender(req) {
     totals: {
       total: hits.total.value,
       males: 0,
-      females: 0
+      females: 0,
+      others: 0,
+      unknowns: 0
     },
     rows: []
   }
@@ -207,15 +209,33 @@ async function beforeRender(req) {
       ) || { distinct: { value: 0 } }
     ).distinct.value
 
+    const others = (
+      ageBucket.gender.buckets.find(
+        (genderBucket) => genderBucket.key === 'other'
+      ) || { distinct: { value: 0 } }
+    ).distinct.value
+
+    const unknowns = (
+      ageBucket.gender.buckets.find(
+        (genderBucket) => genderBucket.key === 'unknown'
+      ) || { distinct: { value: 0 } }
+    ).distinct.value
+
     results.totals.males += males
     results.totals.females += females
+    results.totals.others += others
+    results.totals.unknowns += unknowns
 
     results.rows.push({
       ageGroup: ageBucket.key,
       males: males,
       females: females,
+      others: others,
+      unknowns: unknowns,
       malesPercent: (males / ageBucket.distinct.value) * 100,
       femalesPercent: (females / ageBucket.distinct.value) * 100,
+      othersPercent: (others / ageBucket.distinct.value) * 100,
+      unknownsPercent: (unknowns / ageBucket.distinct.value) * 100,
       total: ageBucket.distinct.value,
       totalPercent: (ageBucket.distinct.value / results.totals.total) * 100
     })
@@ -225,6 +245,10 @@ async function beforeRender(req) {
     (results.totals.males / results.totals.total) * 100
   results.totals.femalesPercent =
     (results.totals.females / results.totals.total) * 100
+  results.totals.othersPercent =
+    (results.totals.others / results.totals.total) * 100
+  results.totals.unknownsPercent =
+    (results.totals.unknowns / results.totals.total) * 100
 
   req.data = Object.assign(req.data, results)
 }

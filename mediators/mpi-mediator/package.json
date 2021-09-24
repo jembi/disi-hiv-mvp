@@ -7,7 +7,8 @@
   "scripts": {
     "start": "nodemon index.mjs",
     "docker:build": "docker build -t jembi/mpi-mediator .",
-    "docker:push": "docker push jembi/mpi-mediator"
+    "docker:push": "docker push jembi/mpi-mediator",
+    "docker:recreate": "docker-compose -f ../../packages/cdr/docker/docker-compose.yml -p instant up -d mpi-mediator"
   },
   "dependencies": {
     "express": "^4.17.1",
