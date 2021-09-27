@@ -10,13 +10,11 @@
         "$$date": 1621243924877
     },
     "modificationDate": {
-        "$$date": 1632328478224
+        "$$date": 1630056456491
     },
     "_id": "hJihV9aVe2Zs7CZi",
     "$entitySet": "templates",
-    "scripts": [
-        {
-            "shortid": "CMuLz7MgjP"
-        }
-    ]
+    "scripts": [{
+        "shortid": "CMuLz7MgjP"
+    }]
 }

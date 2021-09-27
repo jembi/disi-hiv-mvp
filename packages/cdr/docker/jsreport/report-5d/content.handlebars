@@ -9,30 +9,28 @@
   <table class="styled-table">
     <thead>
       <tr class="table-header">
-        <th colspan="6">Deaths by age and sex</th>
+        <th colspan="6">Baseline CD4 count of patients newly started on ART by age</th>
       </tr>
       <tr>
-        <th class="table-disagg">Age group</th>
-        <th colspan="4" class="table-disagg">Sex</th>
-        <th class="table-disagg">Total</th>
+        <th rowspan="2" class="table-disagg">Age group</th>
+        <th colspan="5" class="table-disagg">N(%)</th>
       </tr>
       <tr>
-        <th></th>
-        <th>Male</th>
-        <th>Female</th>
-        <th>Other</th>
-        <th>Unknown</th>
-        <th>N</th>
+        <th class="table-disagg"><200</th>
+        <th class="table-disagg">200-349</th>
+        <th class="table-disagg">350-499</th>
+        <th class="table-disagg">≥500</th>
+        <th class="table-disagg">Unknown</th>
       </tr>
     </thead>
     <tbody>
       {{#each rows}}
       <tr>
         <td>{{ageGroup}}</td>
-        <td>{{males}} ({{formatNumber malesPercent}}%)</td>
-        <td>{{females}} ({{formatNumber femalesPercent}}%)</td>
-        <td>{{others}} ({{formatNumber othersPercent}}%)</td>
-        <td>{{unknowns}} ({{formatNumber unknownsPercent}}%)</td>
+        <td>{{less200}} ({{formatNumber less200Percent}}%)</td>
+        <td>{{between200to349}} ({{formatNumber between200to349Percent}}%)</td>
+        <td>{{between350to499}} ({{formatNumber between350to499Percent}}%)</td>
+        <td>{{more500}} ({{formatNumber more500Percent}}%)</td>
         <td>{{total}} ({{formatNumber totalPercent}}%)</td>
       </tr>
       {{/each}}
@@ -41,10 +39,10 @@
       {{#with totals}}
       <tr>
         <td>Total</td>
-        <td>{{males}} ({{formatNumber malesPercent}}%)</td>
-        <td>{{females}} ({{formatNumber femalesPercent}}%)</td>
-        <td>{{others}} ({{formatNumber othersPercent}}%)</td>
-        <td>{{unknowns}} ({{formatNumber unknownsPercent}}%)</td>
+        <td>{{less200}} ({{formatNumber less200Percent}}%)</td>
+        <td>{{between200to349}} ({{formatNumber between200to349Percent}}%)</td>
+        <td>{{between350to499}} ({{formatNumber between350to499Percent}}%)</td>
+        <td>{{more500}} ({{formatNumber more500Percent}}%)</td>
         <td>{{total}} (100.0%)</td>
       </tr>
       {{/with}}
@@ -73,7 +71,7 @@
       })
 
       var title = chart.titles.create();
-      title.text = "Deaths by age and sex";
+      title.text = "Baseline CD4 count of patients newly started on ART by age";
       title.fontSize = 25;
       title.marginBottom = 30;
 
@@ -81,21 +79,33 @@
       categoryAxis.dataFields.category = "ageGroup";
       categoryAxis.renderer.minGridDistance = 20;
       var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
-      valueAxis.title.text = "Deaths %";
+      valueAxis.title.text = "CD4 %";
       valueAxis.min = 0
       valueAxis.max = 100
 
       var series1 = chart.series.push(new am4charts.ColumnSeries());
-      series1.dataFields.valueX = "malesPercent";
+      series1.dataFields.valueX = "less200Percent";
       series1.dataFields.categoryY = "ageGroup";
       series1.stacked = true
-      series1.name = "Male"
+      series1.name = "<200"
+
+      var series1 = chart.series.push(new am4charts.ColumnSeries());
+      series1.dataFields.valueX = "between200to349Percent";
+      series1.dataFields.categoryY = "ageGroup";
+      series1.stacked = true
+      series1.name = "200-349"
+
+      var series1 = chart.series.push(new am4charts.ColumnSeries());
+      series1.dataFields.valueX = "between350to499Percent";
+      series1.dataFields.categoryY = "ageGroup";
+      series1.stacked = true
+      series1.name = "350-499"
 
       var series2 = chart.series.push(new am4charts.ColumnSeries());
-      series2.dataFields.valueX = "femalesPercent";
+      series2.dataFields.valueX = "more500Percent";
       series2.dataFields.categoryY = "ageGroup";
       series2.stacked = true
-      series2.name = "Female"
+      series2.name = ">=500"
     })
   }
 
