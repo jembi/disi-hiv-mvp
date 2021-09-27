@@ -160,8 +160,14 @@ async function beforeRender(req) {
     results.totals.other += other
     results.totals.unknown += unknown
 
+    var cor = '#020100';
+    if(supBucket.key === 'Unsuppressed')
+      cor = '#235789'
+    else if (supBucket.key === 'Suppressed')
+      cor = '#F1D302'        
+        
     results.rows.push({
-      ageGroup: supBucket.key,
+      supGroup: supBucket.key,
       males: males,
       females: females,
       other: other,
@@ -170,8 +176,9 @@ async function beforeRender(req) {
       malesPercent: (males / supBucket.distinct.value) * 100,
       femalesPercent: (females / supBucket.distinct.value) * 100,
       otherPercent: (other / supBucket.distinct.value) * 100,
-      unknowPercent: (unknown / supBucket.distinct.value) * 100,
-      totalPercent: (supBucket.distinct.value / results.totals.total) * 100
+      unknownPercent: (unknown / supBucket.distinct.value) * 100,
+      totalPercent: (supBucket.distinct.value / results.totals.total) * 100,
+      color: cor 
     })
   }
 
