@@ -35,7 +35,7 @@ async function beforeRender(req) {
                     },
                     {
                         exists: {
-                            field: 'cd4.current.result'
+                            field: 'cd4.initial.result'
                         }
 
                     },
@@ -73,9 +73,7 @@ async function beforeRender(req) {
         aggs: {
             cd4: {
                 range: {
-                    script: {
-                        source: " long cd4 = doc['cd4.initial.result'].value; if (doc['cd4.current.result'].size() == 0) { return null; } if (cd4 < 200) {return cd4;} if (cd4 > 199 && cd4 < 350) { return cd4; } if (cd4 > 349 && cd4 < 500) { return cd4; } if (cd4 > 499) {  return cd4; } "
-                    },
+                    field: 'cd4.initial.result',
                     ranges: [{
                             key: 'less than 200',
                             to: 200
