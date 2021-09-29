@@ -65,7 +65,8 @@
     "firstName" : "April",
     "gender" : "female",
     "birthDate" : "1950-04-30",
-    "NID" : "1234567890"
+    "NID" : "1234567890",
+    "maritalStatus": "Married Monogamous"
   },
   "cd4" : {
     "current" : {
@@ -128,8 +129,8 @@
     ]
   },
   "artInitiation" : {
-    "dateInitiated" : "2010-05-10",
+    "date" : "2010-05-10",
     "regimen" : "TDF/3TC/DTG",
-    "regimenLine" : "First line"
+    "line" : "First line"
   }
 }
