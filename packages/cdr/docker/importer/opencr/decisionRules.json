@@ -34,8 +34,8 @@
         "uValue": 0.002686552465359233,
         "fhirpath": "name.where(use='official').given",
         "espath": "given",
-        "null_handling": "moderate",
-        "null_handling_both": "moderate"
+        "nullHandling": "moderate",
+        "nullHandlingBothFields": "moderate"
       },
       "family": {
         "algorithm": "jaro-winkler-similarity",
@@ -44,8 +44,8 @@
         "uValue": 0.003195007486329648,
         "fhirpath": "name.where(use='official').family",
         "espath": "family",
-        "null_handling": "moderate",
-        "null_handling_both": "moderate"
+        "nullHandling": "moderate",
+        "nullHandlingBothFields": "moderate"
       },
       "phone": {
         "algorithm": "jaro-winkler-similarity",
@@ -64,8 +64,8 @@
         "uValue": 0.4984368262606999,
         "fhirpath": "gender",
         "espath": "gender",
-        "null_handling": "moderate",
-        "null_handling_both": "moderate"
+        "nullHandling": "moderate",
+        "nullHandlingBothFields": "moderate"
       },
       "birthDate": {
         "algorithm": "jaro-winkler-similarity",
@@ -74,8 +74,8 @@
         "uValue": 0.005779577760352688,
         "fhirpath": "birthDate",
         "espath": "birthDate",
-        "null_handling": "moderate",
-        "null_handling_both": "moderate"
+        "nullHandling": "moderate",
+        "nullHandlingBothFields": "moderate"
       }
     },
     "potentialMatchThreshold": 105,
