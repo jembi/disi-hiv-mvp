@@ -1,6 +1,6 @@
-# ICAP CDR
+# DISI CDR
 
-Central Data Repository (CDR) for Ethiopia. In collaboration with ICAP Ethiopia.
+Central Data Repository (CDR) MVP for DISI.
 
 ## Components
 
@@ -12,12 +12,18 @@ Central Data Repository (CDR) for Ethiopia. In collaboration with ICAP Ethiopia.
 - OpenHIM <http://localhost:9000/> - (u: root@openhim.org p: instant101) - for transaction logging, routing and scheduled triggers
 - OpenCR <http://localhost:3004/crux> - (u: root@intrahealth.org p: intrahealth) - for matching and linking patient records (MPI)
 
-## Getting started
+## Getting started with a dev environment
 
-1. Start the entire stack: `./mvp.sh init` - requires [docker](https://docs.docker.com/get-docker/) and [docker compose](https://docs.docker.com/compose/install/)
-2. Log into the OpenHIM here <http://localhost:9000/#!/> (u: root@openhim.org p: instant101), navigate to 'Channels', click on 'Poll FHIR Extractor' then click on the save button (Bug alert: polling channels aren't started correctly when they are automatically imported)
-3. Use postman to execute some transactions, see saved postman collection here `test/CDR.postman_collection.json` OR use the command line: `cd test && yarn bootstrap && sleep 10 && yarn test:1000`
+The DISI MVP uses Instant OpenHIE to launch. Included is a script which launches the required packages to start up the entire stack. The follow are the setup steps.
+
+1. Start the entire stack: `./mvp.sh init` - requires [docker](https://docs.docker.com/get-docker/), [docker compose](https://docs.docker.com/compose/install/) and [yarn](https://classic.yarnpkg.com/lang/en/docs/install/) to be installed
+2. Wait until everything is started, then bootstrap the metadata by executing: `cd test && yarn bootstrap`
+3. Use postman to execute some transactions, see saved postman collection here `test/CDR.postman_collection.json` OR use the command line: `cd test && yarn && yarn test:1000`
 4. Navigate to <http://localhost:5601/app/kibana#/dashboards> and view the dashboards - also explore data via 'Discover' section.
+
+## Setting up a server
+
+See [server setup](server-setup.md)
 
 ## Other tips
 
