@@ -72,7 +72,7 @@ async function beforeRender(req) {
     aggs: {
       suppression: {
         terms: {
-          field: 'viralSuppression.currentStatus'
+          field: 'viralSuppression.initial.interpretation'
         },
         aggs: {
           gender: {
@@ -161,9 +161,9 @@ async function beforeRender(req) {
     results.totals.unknown += unknown
 
     var cor = '#020100';
-    if(supBucket.key === 'Unsuppressed')
+    if(supBucket.key === 'Non Detectable')
       cor = '#235789'
-    else if (supBucket.key === 'Suppressed')
+    else if (supBucket.key === 'Detectable')
       cor = '#F1D302'        
         
     results.rows.push({
