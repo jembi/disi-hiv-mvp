@@ -1,0 +1,23 @@
+{
+    "shortid": "YIcX9DPHmR",
+    "name": "report-5a",
+    "recipe": "chrome-pdf",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true,
+        "landscape": false
+    },
+    "creationDate": {
+        "$$date": 1629972544316
+    },
+    "modificationDate": {
+        "$$date": 1630270992664
+    },
+    "_id": "BUgofsmWqPjxJzYE",
+    "$entitySet": "templates",
+    "scripts": [
+        {
+            "shortid": "E2HOJBdp6"
+        }
+    ]
+}
