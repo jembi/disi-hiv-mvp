@@ -110,7 +110,7 @@
       chart.data = data.rows
       chart.legend = new am4charts.Legend();
       chart.events.on('ready', () => {
-        chartLoaded('chart3')
+        chartLoaded('chart2')
       })
 
       var title = chart.titles.create();
@@ -181,7 +181,7 @@
   loadNextScript()
 
   // wait for the charts to load and animations to complete
-  const waitingForCharts = ['chart1', 'chart2', 'chart3']
+  const waitingForCharts = ['chart1', 'chart2']
   function chartLoaded(name) {
     if (waitingForCharts.indexOf(name) > -1) {
       waitingForCharts.splice(waitingForCharts.indexOf(name), 1)
