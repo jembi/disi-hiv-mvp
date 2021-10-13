@@ -14,7 +14,7 @@ async function beforeRender(req) {
         filter: [
           {
             range: {
-              'artInitiation.date ': {
+              'artInitiation.date': {
                 gte: `${from}||/d`,
                 lte: `${to}||/d`
               }
@@ -93,7 +93,7 @@ async function beforeRender(req) {
   }
 
   let data
-//Connection to server
+  //Connection to server
   try {
     const resData = await axios({
       method: 'post',
@@ -111,7 +111,7 @@ async function beforeRender(req) {
   } catch (err) {
     return console.error(err)
   }
- 
+
   const { aggregations: aggs, hits } = data
 
   const results = {
@@ -123,7 +123,7 @@ async function beforeRender(req) {
       unknown: 0
     },
     rows: []
-  } 
+  }
 
   for (const supBucket of aggs.suppression.buckets) {
     const males = (
@@ -155,12 +155,10 @@ async function beforeRender(req) {
     results.totals.other += other
     results.totals.unknown += unknown
 
-    var cor = '#020100';
-    if(supBucket.key === 'Non Detectable')
-      cor = '#235789'
-    else if (supBucket.key === 'Detectable')
-      cor = '#F1D302'        
-        
+    var cor = '#020100'
+    if (supBucket.key === 'Non Detectable') cor = '#235789'
+    else if (supBucket.key === 'Detectable') cor = '#F1D302'
+
     results.rows.push({
       supGroup: supBucket.key,
       males: males,
@@ -173,7 +171,7 @@ async function beforeRender(req) {
       otherPercent: (other / supBucket.distinct.value) * 100,
       unknownPercent: (unknown / supBucket.distinct.value) * 100,
       totalPercent: (supBucket.distinct.value / results.totals.total) * 100,
-      color: cor 
+      color: cor
     })
   }
 
