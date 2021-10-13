@@ -13,13 +13,7 @@ async function beforeRender(req) {
             bool: {
                 should: [{
                     range: {
-                        'artRegimenSwitch.initial.date': {
-                            gte: `${from}||/d`,
-                            lte: `${to}||/d`
-                        }
-                    },
-                    range: {
-                        'hivDiagnosis.hivPosDate': {
+                        'artInitiation.date': {
                             gte: `${from}||/d`,
                             lte: `${to}||/d`
                         }
