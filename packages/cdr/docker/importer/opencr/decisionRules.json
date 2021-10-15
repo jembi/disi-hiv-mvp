@@ -54,16 +54,16 @@
         "uValue":  0.0006522479820177501,
         "fhirpath": "telecom.where(system='phone').value",
         "espath": "phone",
-        "null_handling": "moderate",
-        "null_handling_both": "moderate"
+        "nullHandling": "moderate",
+        "nullHandlingBothFields": "moderate"
       },
-      "gender": {
+      "nationalid": {
         "algorithm": "jaro-winkler-similarity",
         "threshold": 0.92,
-        "mValue": 0.9999999693202468,
-        "uValue": 0.4984368262606999,
-        "fhirpath": "gender",
-        "espath": "gender",
+        "mValue": 0.96981867422615142,
+        "uValue": 0.000002236498107684365,
+        "fhirpath": "identifier.where(system='http://openhie.org/fhir/hiv-casereporting/identifier/nid').value",
+        "espath": "nationalid",
         "nullHandling": "moderate",
         "nullHandlingBothFields": "moderate"
       },
