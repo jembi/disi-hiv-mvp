@@ -9,6 +9,3 @@
 cd test
 # Add test metadata
 yarn bootstrap
-sleep 10
-# Pump in some test data via csv
-yarn test:csv:1000
