@@ -1,20 +1,23 @@
 {
   "name": "fhir-extractor",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon index.mjs",
+    "start": "node index.mjs",
     "docker:build": "docker build -t jembi/fhir-extractor .",
     "docker:push": "docker push jembi/fhir-extractor"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
-    "node-fetch": "^2.6.1"
+    "moment": "^2.29.1",
+    "openhim-mediator-utils": "^0.2.3",
+    "pino": "^6.13.1",
+    "pino-pretty": "^6.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7",
     "prettier": "^2.2.1"
   }
 }

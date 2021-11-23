@@ -1,0 +1,34 @@
+{
+  "urn": "urn:mediator:fhir-extractor",
+  "version": "1.0.0",
+  "name": "Fhir Extractor Mediator",
+  "description": "Fhir Extractor Mediator",
+  "defaultChannelConfig": [
+    {
+      "name": "Fhir Extractor Route",
+      "urlPattern": "^/fhir-extract$",
+      "routes": [
+        {
+          "name": "Fhir Extract Endpoint",
+          "host": "fhir-extractor",
+          "port": "3000",
+          "primary": true,
+          "type": "http"
+        }
+      ],
+      "allow": ["instant"],
+      "methods": ["GET"],
+      "type": "http"
+    }
+  ],
+  "endpoints": [
+    {
+      "name": "Fhir Extract Endpoint",
+      "host": "fhir-extractor",
+      "path": "/fhir-extract",
+      "port": "3000",
+      "primary": true,
+      "type": "http"
+    }
+  ]
+}
