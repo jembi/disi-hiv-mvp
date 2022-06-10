@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Reporting Hospital 1.1",
+    "id": "274cdadd0a6e421ab9971be0f5f3e181",
+    "hfuid": "HF0000011"
+  },
+  {
+    "name": "Reporting Hospital 1.2",
+    "id": "6330af28a1cd47cc93e287fffe08f929",
+    "hfuid": "HF0000012"
+  },
+  {
+    "name": "Reporting Hospital 1.3",
+    "id": "fe09198ff34f4e39825b071ef923ba60",
+    "hfuid": "HF0000013"
+  },
+  {
+    "name": "Reporting Hospital 1.4",
+    "id": "5c063d30fbbb4d7dbd12cfb446bbc2d7",
+    "hfuid": "HF0000014"
+  },
+  {
+    "name": "Reporting Hospital 2.1",
+    "id": "07fd2d85db364cfb9f7c45eb492108a8",
+    "hfuid": "HF0000021"
+  },
+  {
+    "name": "Reporting Hospital 2.2",
+    "id": "6226602bc93542dd94bf2f93083727a9",
+    "hfuid": "HF0000022"
+  },
+  {
+    "name": "Reporting Hospital 2.3",
+    "id": "2bd56cb6c25f41d89b224c6270c71560",
+    "hfuid": "HF0000023"
+  },
+  {
+    "name": "Reporting Hospital 3.1",
+    "id": "44ac999780d04bc589a3776ec91264e0",
+    "hfuid": "HF0000031"
+  },
+  {
+    "name": "Reporting Hospital 3.2",
+    "id": "263c23d1467d47fe8fc6721aa5b50d02",
+    "hfuid": "HF0000032"
+  },
+  {
+    "name": "Reporting Hospital 4.1",
+    "id": "692ec0303e75431ab81d1cc675ed34b5",
+    "hfuid": "HF0000041"
+  },
+  {
+    "name": "Reporting Hospital 4.2",
+    "id": "e267fdfee71244478a3e6f0228349c81",
+    "hfuid": "HF0000042"
+  },
+  {
+    "name": "Reporting Hospital 5.1",
+    "id": "ce4ca3a4631f46cea0b706ac28b22e64"
+    ,
+    "hfuid": "HF0000051"
+  },
+  {
+    "name": "Reporting Hospital 5.2",
+    "id": "4ddbd5d566894737b0bc90c23fec496e",
+    "hfuid": "HF0000052"
+  },
+  {
+    "name": "Reporting Hospital 6.1",
+    "id": "eba96111066146e988b489bffbe22696",
+    "hfuid": "HF0000061"
+  },
+  {
+    "name": "Reporting Hospital 6.2",
+    "id": "3032125511654acfac85569be83df3b8",
+    "hfuid": "HF0000062"
+  },
+  {
+    "name": "Reporting Hospital 7.1",
+    "id": "db73ae9b2c6e4d34a2d6b0b671de0d0e",
+    "hfuid": "HF0000071"
+  },
+  {
+    "name": "Reporting Hospital 7.2",
+    "id": "68005a1579224e3a9daf2ad8baaed92d",
+    "hfuid": "HF0000072"
+  },
+  {
+    "name": "Reporting Hospital 8.1",
+    "id": "52259cb74338439ba0a53be7e7996bc1",
+    "hfuid": "HF0000081"
+  },
+  {
+    "name": "Reporting Hospital 9.1",
+    "id": "766fdb3e342a465c93be0deb2e242f60",
+    "hfuid": "HF0000091"
+  },
+  {
+    "name": "Reporting Hospital 10.1",
+    "id": "a9176b866e934a5bb42080d80bcac780",
+    "hfuid": "HF00000101"
+  },
+  {
+    "name": "Reporting Hospital 10.2",
+    "id": "9a67287d4c6245f485da8ea7e55a883b",
+    "hfuid": "HF00000102"
+  },
+  {
+    "name": "Reporting Hospital 11.1",
+    "id": "0eff65d56cb14b9096d749a60d2926dc",
+    "hfuid": "HF00000111"
+  },
+  {
+    "name": "Reporting Hospital 11.2",
+    "id": "0fff9f29f02b4db19115c77c24f31045",
+    "hfuid": "HF00000112"
+  },
+  {
+    "name": "Reporting Hospital 12.1",
+    "id": "587792053d36488789b20fbd3f825d98",
+    "hfuid": "HF00000121"
+  },
+  {
+    "name": "Reporting Hospital 13.1",
+    "id": "0d7b6a750b5a4cd89181702a381388d7"
+    ,
+    "hfuid": "HF00000131"
+  },
+  {
+    "name": "Reporting Hospital 13.2",
+    "id": "18fc203e2406428c98e2bbce1082e896",
+    "hfuid": "HF00000132"
+  },
+  {
+    "name": "Reporting Hospital 14.1",
+    "id": "a8f485295f9d4c0db8fe3c70f893afa4",
+    "hfuid": "HF00000141"
+  },
+  {
+    "name": "Reporting Hospital 14.2",
+    "id": "a07c8491efe24d149b2b76603708e43f",
+    "hfuid": "HF00000142"
+  },
+  {
+    "name": "Reporting Hospital 17.1",
+    "id": "b03c3bc74d504328b93daf3f0db4edf1",
+    "hfuid": "HF00000171"
+  },
+  {
+    "name": "Reporting Hospital 17.2",
+    "id": "52f6ffa5dbdc4e27b8cbfe5d68fecf00",
+    "hfuid": "HF00000172"
+  },
+  {
+    "name": "Ras Desta Hospital",
+    "id": "e99091b2371441ad881665742ad643f3"
+  },
+  {
+    "name": "Selam Health Center",
+    "id": "11552c743af84c98b082b41c87183399"
+  },
+  {
+    "name": "Test Health-facility",
+    "id": "5a5c2ef2cc234d05923d8c9a00384017"
+  },
+  {
+    "name": "Ras Desta Hospital",
+    "id": "fcdb06e4d1004734abefe48c82ede13b"
+  },
+  {
+    "name": "Kirkos Health Center",
+    "id": "74391a5d3031419bb1f676a3470bf239"
+  },
+  {
+    "name": "Teklehaymanot medium clinic",
+    "id": "009a6a861c1b45778c0cbedadefe52a4"
+  },
+  {
+    "name": "22 Maazoria Higher Clinic",
+    "id": "878066e1-cca1-406e-ab74-fe49040aeec0"
+  },
+  {
+    "name": "3S Pedatric Specality Clinc",
+    "id": "90e0848e-0674-4f3d-af15-8b2f43530453"
+  },
+  {
+    "name": "Dj Balcha Hospital",
+    "id": "18d5a42102424a9586867549b5abb350"
+  },
+  {
+    "name": "Wojel Health Center",
+    "id": "b6e9f3f4307c4d12914a4ceba24f9217"
+  },
+  {
+    "name": "Kenate Biya Health Center",
+    "id": "7c18655bec4542fd8d323045b8d953d4"
+  },
+  {
+    "name": "Kelewan District Hospital",
+    "id": "1490b3ca120c457b998b8d5b719d8378"
+  }
+]
