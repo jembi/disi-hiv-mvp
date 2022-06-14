@@ -99,43 +99,29 @@ class InputHash{
                     
                     for (var i = 0; i <= numberOfEncounters; i++) {
                         Encounters.Data.REPORTING_PERIOD = base.getInputReportingPeriod(INPUT_DATA.values, row + i, 3);
-                        Encounters.Data.MRN = base.getInputFieldValue(INPUT_DATA.values, row, i, 10, false);
-                        Encounters.Data.DYNAMIC_MRN = Encounters.Data.MRN + "-" + DYNAMIC_MRN_POSTFIX;
-                        Encounters.Data.UAN = base.getInputFieldValue(INPUT_DATA.values, row, i, 39, false).trim() != "" ? base.getInputFieldValue(INPUT_DATA.values, row, i, 39, false) + DYNAMIC_UAN_POSTFIX : "";
-                        Encounters.Data.GENDER = base.getInputFieldValue(INPUT_DATA.values, row, i, 8, false);
-                        Encounters.Data.REGISTRATION_DATE = base.getInputDate(INPUT_DATA.values, row, i, 11);
-                        Encounters.Data.DATE_OF_BIRTH = base.getInputDate(INPUT_DATA.values, row, i, 12);
-                        Encounters.Data.HIV_POSITIVE_DATE = base.getInputDate(INPUT_DATA.values, row, i, 21);
-                        Encounters.Data.HIV_TRACKER_ART_STATUS = base.getInputFieldValueForHivTrackerArtStatus(INPUT_DATA.values, row, i, 23);
-                        Encounters.Data.FINAL_OUTCOME_KNOWN_STATUS = base.getInputFinalOutcome(INPUT_DATA.values, row + i, 24);
-                        Encounters.Data.ENTRY_POINT = base.getInputEntryPoint(INPUT_DATA.values, row + i, new Array(26, 27));
-                        Encounters.Data.LINKED_TO_CARE_AND_TREATMENT_STATUS = base.getInputFieldValueForLinkedToCareAndTreatmentStatus(INPUT_DATA.values, row, i, 28);
-                        Encounters.Data.LINKED_TO_CARE_AND_TREATMENT_DATE = base.getInputDate(INPUT_DATA.values, row, i, 29);
-                        Encounters.Data.REASON_FOR_NOT_STARTING_ART_ON_SAME_DAY = base.getInputReasonNotStartedArtSameDay(INPUT_DATA.values, row + i, 30);
-                        Encounters.Data.PLAN_FOR_NEXT_STEP = base.getInputFieldValue(INPUT_DATA.values, row, i, 31, false);
-                        Encounters.Data.FINAL_OUTCOME_KNOWN = base.getInputFieldValue(INPUT_DATA.values, row, i, 32, true);
-                        Encounters.Data.FINAL_OUTCOME_KNOWN_DATE = base.getInputDate(INPUT_DATA.values, row, i, 33);
-                        Encounters.Data.NAME_OF_REFERRED_FACILITY = base.getInputFieldValue(INPUT_DATA.values, row, i, 34, false);
-                        Encounters.Data.ART_STATUS = base.getInputArtStarted(INPUT_DATA.values, row + i, 36);
-                        Encounters.Data.ART_START_DATE = base.getInputDate(INPUT_DATA.values, row, i, 37);
-                        Encounters.Data.TRANSFER_STATUS = base.getInputTrasnferStatus(INPUT_DATA.values, row + i, 38);
-                        Encounters.Data.HIV_CONFIRMED_DATE = base.getInputDate(INPUT_DATA.values, row, i, 40);
-                        Encounters.Data.VISIT_TYPE = base.getInputFieldValue(INPUT_DATA.values, row, i, 41, false);
-                        Encounters.Data.PREGNANT = base.getInputFieldValue(INPUT_DATA.values, row, i, 43, true);
-                        Encounters.Data.BREASTFEEDING = base.getInputFieldValue(INPUT_DATA.values, row, i, 44, true);
-                        Encounters.Data.BODY_WEIGHT = base.getInputFieldValue(INPUT_DATA.values, row, i, 45, false);
-                        Encounters.Data.NUTRITION_STATUS = base.getInputFieldValue(INPUT_DATA.values, row, i, 46, false);
-                        Encounters.Data.ARV_REGIMEN_DOSE_DAYS = base.getInputFieldValue(INPUT_DATA.values, row, i, 49);
-                        Encounters.Data.ARV_REGIMEN_DISPENSE_CODE = base.getInputFieldValue(INPUT_DATA.values, row, i, 50);
-                        Encounters.Data.ENCOUNTER_DATE = base.getInputDate(INPUT_DATA.values, row, i, 51);
-                        Encounters.Data.FOLLOW_UP_STATUS = base.getInputFollowupStatus(INPUT_DATA.values, row + i, 52);
-                        Encounters.Data.NEXT_ENCOUNTER_DATE = base.getInputDate(INPUT_DATA.values, row, i, 53);
-                        Encounters.Data.ADHERENCE_STATUS = base.getInputFieldValue(INPUT_DATA.values, row, i, 54, false);
 
-                        Encounters.Data.TPT_START_DATE = base.getInputDate(INPUT_DATA.values, row, i, 99);
-                        Encounters.Data.TPT_STATUS = base.getInputTptStatus(INPUT_DATA.values, row + i, new Array(100, 101));
-                        Encounters.Data.TPT_END_DATE = Encounters.Data.TPT_STATUS != "" ?
-                            Encounters.Data.TPT_STATUS == "completed" ? base.getInputDate(INPUT_DATA.values, row, i, 100) : base.getInputDate(INPUT_DATA.values, row, i, 101) : "";
+                        Encounters.Data.Registration.DYNAMIC_MRN = Encounters.Data.MRN + "-" + DYNAMIC_MRN_POSTFIX;
+                        Encounters.Data.Registration.GENDER = base.getInputFieldValue(INPUT_DATA.values, row, i, 6, false);
+                        Encounters.Data.Registration.DATE_OF_BIRTH = base.getInputDate(INPUT_DATA.values, row, i, 7);
+                        Encounters.Data.Registration.MRN = base.getInputFieldValue(INPUT_DATA.values, row, i, 9, false);
+                        Encounters.Data.Registration.REGISTRATION_DATE = base.getInputDate(INPUT_DATA.values, row, i, 10);
+                        
+                        Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DATE = base.getInputDate(INPUT_DATA.values, row, i, 23);
+                        Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DIAG_FAC_CODE = base.getInputFieldValue(INPUT_DATA.values, row, i, 24, false);
+                        Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DIAG_FAC_NAME = base.getInputFieldValue(INPUT_DATA.values, row, i, 25, false);
+                        Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_TESTING_UNIQUE_ID = base.getInputFieldValue(INPUT_DATA.values, row, i, 26, false);
+                        
+                        Encounters.Data.Entry_To_Care.DATE_CLIENT_ENROLLED_TO_CARE = base.getInputDate(INPUT_DATA.values, row, i, 31);
+                        Encounters.Data.Entry_To_Care.CLIENT_UNIQUE_ID_ASSIGNED_AT_ENROLLMENT = base.getInputFieldValue(INPUT_DATA.values, row, i, 32, false).trim() != "" ? 
+                            base.getInputFieldValue(INPUT_DATA.values, row, i, 32, false) + DYNAMIC_UAN_POSTFIX : "";
+                        Encounters.Data.Entry_To_Care.ENROLLING_FAC_SITE_CODE = base.getInputFieldValue(INPUT_DATA.values, row, i, 33, false);
+                        Encounters.Data.Entry_To_Care.ENROLLING_FAC_SITE_NAME = base.getInputFieldValue(INPUT_DATA.values, row, i, 34, false);
+                        Encounters.Data.Entry_To_Care.DATE_OF_FIRST_CLINICAL_VISIT = base.getInputDate(INPUT_DATA.values, row, i, 35);
+                        
+                     
+                        Encounters.Data.ART_Initiation.DATE_CLIENT_INITIATED_ON_ART = base.getInputDate(INPUT_DATA.values, row, i, 36);
+                        Encounters.Data.ART_Initiation.ART_REGIMEN_LINE_CLIENT_INITIATED_ON = base.getInputFieldValue(INPUT_DATA.values, row, i, 37, false);
+                        Encounters.Data.ART_Initiation.DATE_CLIENT_INITIATED_ON_ART = base.getInputFieldValue(INPUT_DATA.values, row, i, 38, false);
 
                         callback(i);
                     }
