@@ -17,7 +17,16 @@ class Encounters{
             DYNAMIC_MRN: null,
             GENDER: null,
             REGISTRATION_DATE: null,
-            DATE_OF_BIRTH: null
+            DATE_OF_BIRTH: null,
+            FIRST_NAME: null,
+            LAST_NAME: null,
+            
+            Address: {
+                COUNTRY: null,
+                PROVINCE: null,
+                DISTRICT: null,
+                CITY: null
+            }
         },
 
         HIV_Diagnosis: {

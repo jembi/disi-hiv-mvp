@@ -5,7 +5,7 @@ const Scenarios = require("../Scenarios");
 
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
 const IS_LINE_LISTING_REPORT = false;
-const FEATURE_NAME = "report-1a";
+const FEATURE_NAME = "1A";
 const REPORT_SPECFIC_FILTERS = []; //add any additional report filters
 
 function main()
@@ -93,32 +93,20 @@ function prepareData(reportDataSets)
 function generateInputDataHash(callback)
 {
     var inputDataTable = Encounters.REPORTING_FACILITY_ORG_ID;
-    inputDataTable += "|randomRegistrationDate  |" + Encounters.Data.REGISTRATION_DATE + "|\n";
-    inputDataTable += "|randomClientMRN  |" + Encounters.Data.DYNAMIC_MRN + "|\n";
-    inputDataTable += "|gender  |" + Encounters.Data.GENDER + "|\n";
-    inputDataTable += "|pregnant  |" + Encounters.Data.PREGNANT + "|\n";
-    inputDataTable += "|breastfeeding  |" + Encounters.Data.BREASTFEEDING + "|\n";
-    inputDataTable += "|encounterDate  |" + Encounters.Data.ENCOUNTER_DATE + "|\n";
-    inputDataTable += "|randomDispenseCode  |" + Encounters.Data.ARV_REGIMEN_DISPENSE_CODE + "|\n";
-    inputDataTable += "|daysSupply  |" + Encounters.Data.ARV_REGIMEN_DOSE_DAYS + "|\n";
-    inputDataTable += "|artStartDate  |" + Encounters.Data.ART_START_DATE + "|\n";
-    inputDataTable += "|randomClientUAN  |" + Encounters.Data.UAN + "|\n";
-    inputDataTable += "|hivPositiveDate  |" + Encounters.Data.HIV_POSITIVE_DATE + "|\n";
-    inputDataTable += "|hivTrackerStartedArt  |" + Encounters.Data.HIV_TRACKER_ART_STATUS + "|\n";
-    inputDataTable += "|randomNextEncounterDate  |" + Encounters.Data.NEXT_ENCOUNTER_DATE + "|\n";
-    inputDataTable += "|artStatus  |" + Encounters.Data.ART_STATUS + "|\n";
-    inputDataTable += "|birthDate  |" + Encounters.Data.DATE_OF_BIRTH + "|\n";
-    inputDataTable += "|followUpStatus  |" + Encounters.Data.FOLLOW_UP_STATUS + "|\n";
-    inputDataTable += "|whyEligible  |" + Encounters.Data.TRANSFER_STATUS + "|\n";
-    inputDataTable += "|outcomeCode  |" + Encounters.Data.FINAL_OUTCOME_KNOWN_STATUS + "|\n";
-    inputDataTable += "|outcomeKnown  |" + Encounters.Data.FINAL_OUTCOME_KNOWN + "|\n";
-    inputDataTable += "|finalOutcomeKnownDate  |" + Encounters.Data.FINAL_OUTCOME_KNOWN_DATE + "|\n";
-    inputDataTable += "|randomLocationCodeText  |" + Encounters.Data.ENTRY_POINT + "|\n";
-    inputDataTable += "|linkedToCareTreatmentStatus  |" + Encounters.Data.LINKED_TO_CARE_AND_TREATMENT_STATUS + "|\n";
-    inputDataTable += "|linkedToCareTreatmentDate  |" + Encounters.Data.LINKED_TO_CARE_AND_TREATMENT_DATE + "|\n";
-    inputDataTable += "|tptStartDate  |" + Encounters.Data.TPT_START_DATE + "|\n";
-    inputDataTable += "|tptEndDate  |" + Encounters.Data.TPT_END_DATE + "|\n";
-    inputDataTable += "|tptStatus  |" + Encounters.Data.TPT_STATUS + "|\n";
+    inputDataTable += "|firstName  |" + Encounters.Data.Registration.FIRST_NAME + "|\n";
+    inputDataTable += "|lastName  |" + Encounters.Data.Registration.LAST_NAME + "|\n";
+    inputDataTable += "|gender  |" + Encounters.Data.Registration.GENDER + "|\n";
+    inputDataTable += "|dateOfBirth  |" + Encounters.Data.Registration.DATE_OF_BIRTH + "|\n";
+    inputDataTable += "|clientID  |" + Encounters.Data.Registration.DYNAMIC_MRN + "|\n";
+    inputDataTable += "|registrationDate  |" + Encounters.Data.Registration.REGISTRATION_DATE + "|\n";
+    inputDataTable += "|addressCountry  |" + Encounters.Data.Registration.Address.COUNTRY + "|\n";
+    inputDataTable += "|addressProvince  |" + Encounters.Data.Registration.Address.PROVINCE + "|\n";
+    inputDataTable += "|addressDistrict  |" + Encounters.Data.Registration.Address.DISTRICT + "|\n";
+    inputDataTable += "|addressCity  |" + Encounters.Data.Registration.Address.CITY + "|\n";
+    inputDataTable += "|hivPositiveDate  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DATE + "|\n";
+    inputDataTable += "|hivPositiveDiagnosisFacilityCode  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DIAG_FAC_CODE + "|\n";
+    inputDataTable += "|hivPositiveDiagnosisFacilityName  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DIAG_FAC_NAME + "|\n";
+    inputDataTable += "|hivPositiveTestingUID  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_TESTING_UNIQUE_ID  + "|\n";
 
     callback(inputDataTable);
 }
