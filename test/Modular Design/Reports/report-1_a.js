@@ -5,7 +5,7 @@ const Scenarios = require("../Scenarios");
 
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
 const IS_LINE_LISTING_REPORT = false;
-const FEATURE_NAME = "1.1";
+const FEATURE_NAME = "report-1a";
 const REPORT_SPECFIC_FILTERS = []; //add any additional report filters
 
 function main()

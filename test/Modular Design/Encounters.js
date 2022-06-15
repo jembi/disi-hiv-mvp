@@ -46,6 +46,36 @@ class Encounters{
             DATE_CLIENT_INITIATED_ON_ART: null,
             ART_REGIMEN_CLIENT_INITIATED_ON: null,
             ART_REGIMEN_LINE_CLIENT_INITIATED_ON: null
+        },
+
+        CD4: {
+            BASELINE: {
+                COLLECTION_DATE: null,
+                RESULT: null,
+                PERCENTAGE: null
+            },
+            SUBSEQUENT: {
+                ALL_COLLECTION_DATES: null,
+                ALL_RESULTS: null,
+                ALL_PERCENTAGES: null
+            }
+        },
+
+        VIRAL_SUPPRESSION: {
+            BASELINE: {
+                COLLECTION_DATE: null,
+                RESULT: null,
+                RESULT_INTERPRETATION: null
+            },
+            SUBSEQUENT: {
+                ALL_COLLECTION_DATES: null,
+                ALL_RESULTS: null,
+                ALL_RESULT_INTERPRETATIONS: null
+            },
+            MOST_RECENT_COLLECTION_DATE: null,
+            MOST_RECENT_RESULT: null,
+            MOST_RECENT_RESULT_INTERPRETATION: null,
+            CURRENT_SUPRESSION_STATUS: null,
         }
     };
 }
