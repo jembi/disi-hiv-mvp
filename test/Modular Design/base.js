@@ -1,7 +1,7 @@
 const moment = require('moment');
 const googleApi = require("./googleApi");
 const fs = require('fs');
-const LOCAL_CUCUMBER_FEATURES_DIR = "../../test/features/scenarios/reports/";
+const LOCAL_CUCUMBER_FEATURES_DIR = "../../../test/features/scenarios/reports/";
 const UTC_Offset = "+02:00";
 const organisations = require("./organisations.json");
 const STRING_DATE_FORMAT = "YYYY-MM-DD";
@@ -51,7 +51,7 @@ class Base{
 
   setCucumberInputDatatableInitial(report, isJsReportFilterParam) {
     for (var i = 0; i < organisations.length; i++) {
-      if (organisations[i].name == "Reporting Hospital " + report) {
+      if (organisations[i].name == "Reporting Facility " + report) {
         switch (isJsReportFilterParam) {
           case true:
             return organisations[i].hfuid;

@@ -109,8 +109,8 @@ class Scenarios
     generateScenarios()
     {
         const base = Encounters.baseModule;
-        const SCENARIO = "Scenario: " + Encounters.Data.DYNAMIC_MRN;
-        const DYNAMIC_MRN = Encounters.Data.DYNAMIC_MRN;
+        const SCENARIO = "Scenario: " + Encounters.Data.Registration.DYNAMIC_MRN;
+        const DYNAMIC_MRN = Encounters.Data.Registration.DYNAMIC_MRN;
         const NUMBER_OF_ENCOUNTERS_FOR_MRN = Encounters.totalEncountersForMrn;
         const REPORTING_PERIOD = Encounters.Data.REPORTING_PERIOD;
         const MUST_ENCOUNTER_BE_REPORTED_ON = Encounters.mustEncounterBeReportedOn;
@@ -133,7 +133,7 @@ class Scenarios
         }
         else
         {
-            then = "Then there should be a row identified by \"facility\" of \"Reporting Hospital " + FEATURE_NAME + "\" with the following fields and values"
+            then = "Then there should be a row identified by \"facility\" of \"Reporting Facility " + FEATURE_NAME + "\" with the following fields and values"
         }
 
         if (!base.getFeatureNameCaptured())

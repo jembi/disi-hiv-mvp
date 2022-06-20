@@ -98,16 +98,16 @@ class InputHash{
                     const row = j;
                     
                     for (var i = 0; i <= numberOfEncounters; i++) {
-                        Encounters.Data.Registration.DYNAMIC_MRN = Encounters.Data.MRN + "-" + DYNAMIC_MRN_POSTFIX;
-
                         Encounters.Data.REPORTING_PERIOD = base.getInputReportingPeriod(INPUT_DATA.values, row + i, 3);
-                        
+                        Encounters.Data.Registration.MRN = base.getInputFieldValue(INPUT_DATA.values, row, i, 10, false);
+                        Encounters.Data.Registration.DYNAMIC_MRN = Encounters.Data.Registration.MRN + "-" + DYNAMIC_MRN_POSTFIX;
+
                         Encounters.Data.Registration.FIRST_NAME = base.getInputFieldValue(INPUT_DATA.values, row, i, 4, false);
                         Encounters.Data.Registration.LAST_NAME = base.getInputFieldValue(INPUT_DATA.values, row, i, 5, false);
                         Encounters.Data.Registration.GENDER = base.getInputFieldValue(INPUT_DATA.values, row, i, 6, false);
                         Encounters.Data.Registration.DATE_OF_BIRTH = base.getInputDate(INPUT_DATA.values, row, i, 7);
-                        Encounters.Data.Registration.MRN = base.getInputFieldValue(INPUT_DATA.values, row, i, 9, false);
-                        Encounters.Data.Registration.REGISTRATION_DATE = base.getInputDate(INPUT_DATA.values, row, i, 10);
+                        Encounters.Data.Registration.REGISTRATION_DATE = base.getInputDate(INPUT_DATA.values, row, i, 9);
+                        
                         Encounters.Data.Registration.Address.COUNTRY = base.getInputFieldValue(INPUT_DATA.values, row, i, 15, false);
                         Encounters.Data.Registration.Address.PROVINCE = base.getInputFieldValue(INPUT_DATA.values, row, i, 16, false);
                         Encounters.Data.Registration.Address.DISTRICT = base.getInputFieldValue(INPUT_DATA.values, row, i, 17, false);
