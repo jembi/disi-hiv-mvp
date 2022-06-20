@@ -6,7 +6,9 @@
   "license": "MIT",
   "dependencies": {
     "@apideck/postman-to-k6": "rcrichton/postman-to-k6",
+    "@cucumber/cucumber": "^8.3.0",
     "concurrently": "^6.0.2",
+    "cucumber": "^6.0.7",
     "googleapis": "^103.0.0",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.3",
