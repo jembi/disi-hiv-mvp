@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon index.mjs",
-    "docker:build": "docker build -t jembi/fhir-extractor .",
-    "docker:push": "docker push jembi/fhir-extractor"
+    "docker:build": "docker build -t jembi/fhir-extractor-mvp .",
+    "docker:push": "docker push jembi/fhir-extractor-mvp"
   },
   "dependencies": {
     "express": "^4.17.1",

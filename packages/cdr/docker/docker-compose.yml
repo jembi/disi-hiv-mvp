@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   reprocess-mediator:
-    image: jembi/reprocess-mediator:latest
+    image: jembi/reprocess-mediator-mvp:latest
     container_name: reprocess-mediator
     environment:
       - ES_URL=http://es-analytics:9200

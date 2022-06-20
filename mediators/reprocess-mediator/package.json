@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon index.mjs",
-    "docker:build": "docker build -t jembi/reprocess-mediator .",
-    "docker:push": "docker push jembi/reprocess-mediator"
+    "docker:build": "docker build -t jembi/reprocess-mediator-mvp .",
+    "docker:push": "docker push jembi/reprocess-mediator-mvp"
   },
   "dependencies": {
     "express": "^4.17.1",

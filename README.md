@@ -41,10 +41,10 @@ See [server setup](server-setup.md)
 
 ## Staging server quick links
 
-- Kibana <http://stg.disi-cdr.jembi.org:5601/> - (u: elastic p: dev_password_only)
-- JS Reports <http://stg.disi-cdr.jembi.org:5488/> - (u: admin p: dev_password_only)
-- OpenHIM <http://stg.disi-cdr.jembi.org:9000/> - (u: root@openhim.org p: instant101)
-- OpenCR <http://stg.disi-cdr.jembi.org:3004/crux> - (u: root@intrahealth.org p: intrahealth)
+- Kibana <https://kibana.gicsandbox.org/> - (u: elastic p: dev_password_only)
+- JS Reports <https://jsreports.gicsandbox.org/> - (u: admin p: dev_password_only)
+- OpenHIM <https://openhim-console.gicsandbox.org/> - (u: root@openhim.org p: instant101)
+- OpenCR <https://opencr.gicsandbox.org/crux> - (u: root@intrahealth.org p: intrahealth)
 
 ## Windows setup only
 
