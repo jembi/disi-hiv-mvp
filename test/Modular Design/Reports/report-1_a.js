@@ -13,12 +13,12 @@ const rowDisaggregationKeys = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29",
 
 const jsReportsVariables = [
     "|males|", 
+    "|malesPercent|",
     "|females|", 
-    "|others|", 
-    "|unknowns|",
-    "|malesPercent|", 
     "|femalesPercent|",
+    "|others|", 
     "|othersPercent|", 
+    "|unknowns|",
     "|unknownsPercent|", 
     "|total|", 
     "|totalPercent|"];
@@ -69,23 +69,21 @@ function prepareData(reportDataSets)
         {
             if (Encounters.inputDataLastRowReached)
             {
-                generateExpectedOutcomeDataHash(reportDataSets[1] /*eexpected outcome dataset*/, function(expectedOutcomeDataHash)
-                {
-                    let scenario = new Scenarios(
-                        inputDataHash,
-                        currentEncounterCallback,
-                        FEATURE_NAME,
-                        REPORT_SPECFIC_FILTERS,
-                        IS_LINE_LISTING_REPORT,
-                        "ageGroup",
-                        rowDisaggregationKeys,
-                        true,
-                        getTotals(reportDataSets[1]),
-                        expectedOutcomeDataHash
-                    );
+                let scenario = new Scenarios(
+                    inputDataHash,
+                    currentEncounterCallback,
+                    FEATURE_NAME,
+                    REPORT_SPECFIC_FILTERS,
+                    IS_LINE_LISTING_REPORT,
+                    "ageGroup",
+                    rowDisaggregationKeys,
+                    true,
+                    getTotals(reportDataSets[1]),
+                    jsReportsVariables,
+                    reportDataSets[1]
+                );
 
-                    scenario.generateScenarios();
-                });
+                scenario.generateScenarios();
 
                 Encounters.baseModule.generateFeatureFile(UPLOAD_FILES_TO_GOOGLE_DRIVE, FEATURE_NAME, function (){ 
                     console.log("Execution completed!\n");
@@ -130,37 +128,11 @@ function generateInputDataHash(callback)
     callback(inputDataTable);
 }
 
-function generateExpectedOutcomeDataHash(expectedOutcomeData, callback)
-{
-    const OUTCOME_DATA_LAST_ROW = expectedOutcomeData.values.length;
-    const base = Encounters.baseModule;
-
-    for (var x = 0; x < OUTCOME_DATA_LAST_ROW; x++) {
-        const value = expectedOutcomeData.values[x];
-
-        if (x == OUTCOME_DATA_LAST_ROW - 1) {
-            var expectedOutcometable = "|field|value|\n";
-
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|males|", value[1]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|females|", value[2]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|others|", value[3]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|unknowns|", value[4]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|malesPercent|", );
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|femalesPercent|", );
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|othersPercent|", );
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|unknownsPercent|", );
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|total|", value[5]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|totalPercent|", );
-  
-            callback(expectedOutcometable);
-        }
-    }
-}
-
 function getTotals(expectedOutcomeData)
 {
     const base = Encounters.baseModule;
-
+    const TOTAL_ROW = 17;
+    const START_COLUMN_INDEX = 1; //Tx_Current for male
 }
 
 main();

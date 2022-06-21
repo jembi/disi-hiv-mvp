@@ -3,7 +3,7 @@ const Encounters = require("./Encounters");
 class Scenarios
 {
     #inputHash = null;
-    #expectedOutcomeHash = null;
+    #jsReportsVariablesForExpectedOutcomeHash = null;
     #currentEncounterIndex = null;
     #feature = null;
     #reportFilters = null;
@@ -12,6 +12,7 @@ class Scenarios
     #aggregateReportFieldLevelTotals = null;
     #rowDisaggregationKey = null;
     #rowDisaggregationKeyValue = null;
+    #outcomeDataset = null;
 
     #CUCUMBER = {
         GIVEN_STATEMENT: null,
@@ -23,7 +24,7 @@ class Scenarios
     constructor(inputDataHash, encounterIndex, featureName, reportFilters, isLineListingReport, 
         keyForDisaggregation, keyValueForDisaggregation,
         mustVerifyFieldLevelTotalsForAggregateReport = null, 
-        fieldLevelTotalsForAggregateReport = null, expectedOutcomeDataHash = null){
+        fieldLevelTotalsForAggregateReport = null, jsReportsVars = null, expectedOutcomeDataset = null){
     
         this.#CUCUMBER.GIVEN_STATEMENT = "Given I set FHIR bundle parameters";
         this.#CUCUMBER.WHEN_STATEMENT = "When I POST the FHIR bundle to the IOL";
@@ -32,10 +33,14 @@ class Scenarios
     
         this.#setInputHash(inputDataHash);
 
-        if (expectedOutcomeDataHash != null)
+        if (jsReportsVars != null)
         {
-            this.#setExpectedOutcomeHash(expectedOutcomeDataHash);
-            
+            this.#setJsReportsVariablesForExpectedOutcomeHash(jsReportsVars);
+        }
+
+        if (expectedOutcomeDataset != null)
+        {
+            this.#setOutcomeDataset(expectedOutcomeDataset);
         }
 
         this.#setRowDisaggregationKey(keyForDisaggregation);
@@ -55,6 +60,13 @@ class Scenarios
         {
             this.#setAggregateReportFieldLevelTotals(fieldLevelTotalsForAggregateReport);
         }
+    }
+
+    #getOutcomeDataset() {
+        return this.#outcomeDataset;
+    }
+    #setOutcomeDataset(data) {
+        this.#outcomeDataset = data;
     }
 
     #getRowDisaggregationKey() {
@@ -113,11 +125,11 @@ class Scenarios
         this.#inputHash = data;
     }
 
-    #getExpectedOutcomeHash() {
-        return this.#expectedOutcomeHash;
+    #getJsReportsVariablesForExpectedOutcomeHash() {
+        return this.#jsReportsVariablesForExpectedOutcomeHash;
     }
-    #setExpectedOutcomeHash(data) {
-        this.#expectedOutcomeHash = data;
+    #setJsReportsVariablesForExpectedOutcomeHash(data) {
+        this.#jsReportsVariablesForExpectedOutcomeHash = data;
     }
 
     #getCurrentEncounterIndex() {
@@ -134,25 +146,9 @@ class Scenarios
         const DYNAMIC_MRN = Encounters.Data.Registration.DYNAMIC_MRN;
         const NUMBER_OF_ENCOUNTERS_FOR_MRN = Encounters.totalEncountersForMrn;
         const REPORTING_PERIOD = Encounters.Data.REPORTING_PERIOD;
-        const MUST_ENCOUNTER_BE_REPORTED_ON = Encounters.mustEncounterBeReportedOn;
         const CURRENT_ENCOUNTER_INDEX = this.#getCurrentEncounterIndex();
         const FEATURE_NAME = this.#getFeature();
         const REPORT_FILTERS = this.#getReportFilters(); 
-
-        var then = null;
-
-        if (this.#getProcessAsLineListingReport())
-        {
-            if (MUST_ENCOUNTER_BE_REPORTED_ON)
-            {
-                then = "Then there should be a row identified by \"mrn\" of \"" + DYNAMIC_MRN + "\" with the following fields and values"
-            }
-            else
-            {
-                then = "Then there should NOT be a row identified by \"mrn\" of \"" + DYNAMIC_MRN + "\"";
-            }
-        }
-       
 
         if (!base.getFeatureNameCaptured())
         {
@@ -165,58 +161,53 @@ class Scenarios
         base.setCucumberTestScenarios(this.#getInputHash());
         base.setCucumberTestScenarios(this.#CUCUMBER.WHEN_STATEMENT + "\n");
 
-        if (this.#getProcessAsLineListingReport())
-        {
-            base.setCucumberTestScenarios(NUMBER_OF_ENCOUNTERS_FOR_MRN == 0 ? this.#CUCUMBER.AND_STATEMENT + "\n" : (CURRENT_ENCOUNTER_INDEX == NUMBER_OF_ENCOUNTERS_FOR_MRN) ? this.#CUCUMBER.AND_STATEMENT + "\n" : "" + "\n");
-            
-            base.setCucumberTestScenarios(NUMBER_OF_ENCOUNTERS_FOR_MRN == 0 ? base.prepareJsReportParams(FEATURE_NAME, DYNAMIC_MRN, REPORTING_PERIOD, REPORT_FILTERS, this.#getProcessAsLineListingReport()) + "\n" : (CURRENT_ENCOUNTER_INDEX == NUMBER_OF_ENCOUNTERS_FOR_MRN) ? 
-                base.prepareJsReportParams(FEATURE_NAME, DYNAMIC_MRN, REPORTING_PERIOD, REPORT_FILTERS, this.#getProcessAsLineListingReport()) + "\n" : "" + "\n");
-            
-            base.setCucumberTestScenarios(NUMBER_OF_ENCOUNTERS_FOR_MRN == 0 ? then + "\n" : (CURRENT_ENCOUNTER_INDEX == NUMBER_OF_ENCOUNTERS_FOR_MRN) ? then + "\n" : "" + "\n");
+        const IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT = CURRENT_ENCOUNTER_INDEX == NUMBER_OF_ENCOUNTERS_FOR_MRN && Encounters.inputDataLastRowReachedForAggReportWithMultiEncountersForSameMrn ? true : false;
 
-            if (MUST_ENCOUNTER_BE_REPORTED_ON)
-            {
-                base.setCucumberTestScenarios(NUMBER_OF_ENCOUNTERS_FOR_MRN == 0 ? 
-                    this.#getExpectedOutcomeHash() +  "\n" : (CURRENT_ENCOUNTER_INDEX == NUMBER_OF_ENCOUNTERS_FOR_MRN) ? 
-                    this.#getExpectedOutcomeHash() + "\n" : "" + "\n");
-            }
-            else
-            {
-                base.setCucumberTestScenarios("" + "\n");
-            }
-        }
-        else
+        if (Encounters.inputDataLastRowReached || IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT)
         {
-            const IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT = CURRENT_ENCOUNTER_INDEX == NUMBER_OF_ENCOUNTERS_FOR_MRN && Encounters.inputDataLastRowReachedForAggReportWithMultiEncountersForSameMrn ? true : false;
+            base.setCucumberTestScenarios("\n");
+            base.setCucumberTestScenarios(this.#CUCUMBER.AND_STATEMENT + "\n");
+            base.setCucumberTestScenarios(base.prepareJsReportParams(this.#getFeature(), DYNAMIC_MRN, REPORTING_PERIOD, this.#getProcessAsLineListingReport()) + "\n");
 
-            if (Encounters.inputDataLastRowReached || IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT)
+            for (var y = 0; y < this.#getRowDisaggregationKeyValue().length; y++) 
             {
                 base.setCucumberTestScenarios("\n");
-                base.setCucumberTestScenarios(this.#CUCUMBER.AND_STATEMENT + "\n");
-                base.setCucumberTestScenarios(base.prepareJsReportParams(this.#getFeature(), DYNAMIC_MRN, REPORTING_PERIOD, this.#getProcessAsLineListingReport()) + "\n");
 
-                for (var y = 0; y < this.#getRowDisaggregationKeyValue().length; y++) 
+                const then = "Then there should be a row identified by \"" + this.#getRowDisaggregationKey() + "\" of \"" + this.#getRowDisaggregationKeyValue()[y] + "\" with the following fields and values"
+
+                if (Encounters.inputDataLastRowReached || IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT)
                 {
-                    base.setCucumberTestScenarios("\n");
-
-                    then = "Then there should be a row identified by \"" + this.#getRowDisaggregationKey() + "\" of \"" + this.#getRowDisaggregationKeyValue()[y] + "\" with the following fields and values"
-
-                    if (Encounters.inputDataLastRowReached || IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT)
-                    {
-                        base.setCucumberTestScenarios(then != null ? then  + "\n" : "\n");
-                        base.setCucumberTestScenarios(then != null ? this.#getExpectedOutcomeHash() + "" + "\n" : "" + "\n");
-                    }
-                }
-
-                if (this.#getVerifyAggregateFieldLevelTotals())
-                {
-                    base.setCucumberTestScenarios(this.#CUCUMBER.TOTALS_THEN_STATEMENT + "\n");
-                    base.setCucumberTestScenarios(this.#getAggregateReportFieldLevelTotals() + "" + "\n");
+                    base.setCucumberTestScenarios(then != null ? then  + "\n" : "\n");
+                    base.setCucumberTestScenarios(then != null ? this.generateExpectedOutcomeDataHash(y) + "" + "\n" : "" + "\n");
                 }
             }
-        }
 
-        then = null;
+            if (this.#getVerifyAggregateFieldLevelTotals())
+            {
+                base.setCucumberTestScenarios(this.#CUCUMBER.TOTALS_THEN_STATEMENT + "\n");
+                base.setCucumberTestScenarios(this.#getAggregateReportFieldLevelTotals() + "" + "\n");
+            }
+        }
+    }
+
+    generateExpectedOutcomeDataHash(index)
+    {
+        const OUTCOME_DATA_LAST_ROW = this.#getOutcomeDataset().values.length;
+        const base = Encounters.baseModule;
+
+        for (var x = 0; x < OUTCOME_DATA_LAST_ROW; x++) {
+            const value = this.#getOutcomeDataset().values[x];
+
+            if (value[0] == this.#getRowDisaggregationKeyValue()[index]) {
+                var expectedOutcometable = "|field|value|\n";
+                
+                for (var y = 0; y < this.#getJsReportsVariablesForExpectedOutcomeHash().length; y++) {
+                    expectedOutcometable += base.displayOutcomeJSReportVariable(this.#getJsReportsVariablesForExpectedOutcomeHash()[y], value[y + 1]);
+                }
+
+                return expectedOutcometable;
+            }
+        }
     }
 }
 
