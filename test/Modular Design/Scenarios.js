@@ -10,6 +10,8 @@ class Scenarios
     #processAsLineListingReport = null;
     #verifyAggregateFieldLevelTotals = null;
     #aggregateReportFieldLevelTotals = null;
+    #rowDisaggregationKey = null;
+    #rowDisaggregationKeyValue = null;
 
     #CUCUMBER = {
         GIVEN_STATEMENT: null,
@@ -19,7 +21,9 @@ class Scenarios
     }
 
     constructor(inputDataHash, encounterIndex, featureName, reportFilters, isLineListingReport, 
-        mustVerifyFieldLevelTotalsForAggregateReport = null, fieldLevelTotalsForAggregateReport = null, expectedOutcomeDataHash = null){
+        keyForDisaggregation, keyValueForDisaggregation,
+        mustVerifyFieldLevelTotalsForAggregateReport = null, 
+        fieldLevelTotalsForAggregateReport = null, expectedOutcomeDataHash = null){
     
         this.#CUCUMBER.GIVEN_STATEMENT = "Given I set FHIR bundle parameters";
         this.#CUCUMBER.WHEN_STATEMENT = "When I POST the FHIR bundle to the IOL";
@@ -33,6 +37,9 @@ class Scenarios
             this.#setExpectedOutcomeHash(expectedOutcomeDataHash);
             
         }
+
+        this.#setRowDisaggregationKey(keyForDisaggregation);
+        this.#setRowDisaggregationKeyValue(keyValueForDisaggregation);
 
         this.#setCurrentEncounterIndex(encounterIndex);
         this.#setFeature(featureName);
@@ -48,6 +55,20 @@ class Scenarios
         {
             this.#setAggregateReportFieldLevelTotals(fieldLevelTotalsForAggregateReport);
         }
+    }
+
+    #getRowDisaggregationKey() {
+        return this.#rowDisaggregationKey;
+    }
+    #setRowDisaggregationKey(data) {
+        this.#rowDisaggregationKey = data;
+    }
+
+    #getRowDisaggregationKeyValue() {
+        return this.#rowDisaggregationKeyValue;
+    }
+    #setRowDisaggregationKeyValue(data) {
+        this.#rowDisaggregationKeyValue = data;
     }
 
     #getAggregateReportFieldLevelTotals() {
@@ -131,10 +152,7 @@ class Scenarios
                 then = "Then there should NOT be a row identified by \"mrn\" of \"" + DYNAMIC_MRN + "\"";
             }
         }
-        else
-        {
-            then = "Then there should be a row identified by \"facility\" of \"Reporting Facility " + FEATURE_NAME + "\" with the following fields and values"
-        }
+       
 
         if (!base.getFeatureNameCaptured())
         {
@@ -169,16 +187,26 @@ class Scenarios
         }
         else
         {
-            base.setCucumberTestScenarios("\n");
-
             const IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT = CURRENT_ENCOUNTER_INDEX == NUMBER_OF_ENCOUNTERS_FOR_MRN && Encounters.inputDataLastRowReachedForAggReportWithMultiEncountersForSameMrn ? true : false;
 
             if (Encounters.inputDataLastRowReached || IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT)
             {
+                base.setCucumberTestScenarios("\n");
                 base.setCucumberTestScenarios(this.#CUCUMBER.AND_STATEMENT + "\n");
                 base.setCucumberTestScenarios(base.prepareJsReportParams(this.#getFeature(), DYNAMIC_MRN, REPORTING_PERIOD, this.#getProcessAsLineListingReport()) + "\n");
-                base.setCucumberTestScenarios(then != null ? then  + "\n" : "\n");
-                base.setCucumberTestScenarios(then != null ? this.#getExpectedOutcomeHash() + "" + "\n" : "" + "\n");
+
+                for (var y = 0; y < this.#getRowDisaggregationKeyValue().length; y++) 
+                {
+                    base.setCucumberTestScenarios("\n");
+
+                    then = "Then there should be a row identified by \"" + this.#getRowDisaggregationKey() + "\" of \"" + this.#getRowDisaggregationKeyValue()[y] + "\" with the following fields and values"
+
+                    if (Encounters.inputDataLastRowReached || IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT)
+                    {
+                        base.setCucumberTestScenarios(then != null ? then  + "\n" : "\n");
+                        base.setCucumberTestScenarios(then != null ? this.#getExpectedOutcomeHash() + "" + "\n" : "" + "\n");
+                    }
+                }
 
                 if (this.#getVerifyAggregateFieldLevelTotals())
                 {

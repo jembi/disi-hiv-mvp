@@ -8,6 +8,21 @@ const IS_LINE_LISTING_REPORT = false;
 const FEATURE_NAME = "1A";
 const REPORT_SPECFIC_FILTERS = []; //add any additional report filters
 
+const rowDisaggregationKeys = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", 
+    "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65+"];
+
+const jsReportsVariables = [
+    "|males|", 
+    "|females|", 
+    "|others|", 
+    "|unknowns|",
+    "|malesPercent|", 
+    "|femalesPercent|",
+    "|othersPercent|", 
+    "|unknownsPercent|", 
+    "|total|", 
+    "|totalPercent|"];
+
 function main()
 {
     let report = new Report(
@@ -62,8 +77,10 @@ function prepareData(reportDataSets)
                         FEATURE_NAME,
                         REPORT_SPECFIC_FILTERS,
                         IS_LINE_LISTING_REPORT,
-                        null,
-                        null,
+                        "ageGroup",
+                        rowDisaggregationKeys,
+                        true,
+                        getTotals(reportDataSets[1]),
                         expectedOutcomeDataHash
                     );
 
@@ -81,7 +98,9 @@ function prepareData(reportDataSets)
                     currentEncounterCallback,
                     FEATURE_NAME,
                     REPORT_SPECFIC_FILTERS,
-                    IS_LINE_LISTING_REPORT
+                    IS_LINE_LISTING_REPORT,
+                    "ageGroup",
+                    rowDisaggregationKeys
                 );
 
                 scenario.generateScenarios();
@@ -122,26 +141,26 @@ function generateExpectedOutcomeDataHash(expectedOutcomeData, callback)
         if (x == OUTCOME_DATA_LAST_ROW - 1) {
             var expectedOutcometable = "|field|value|\n";
 
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|facility|", "Reporting Hospital " + FEATURE_NAME);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|hivPos|", value[1]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|initArt|", value[2]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|percentInitArt|", value[3]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|artSameDay|", value[4]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|art1stWeek|", value[5]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|art8thDayBeyond|", value[6]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|notInitArt|", value[7]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|percentNotInitArt|", value[8]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|confimedReferral|", value[9]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|hivPosOnArt|", value[10]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|declined|", value[11]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|died|", value[12]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|startedArtOtherFacility|", value[13]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|lostToFollowUp|", value[14]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|other|", value[15]);
+            expectedOutcometable += base.displayOutcomeJSReportVariable("|males|", value[1]);
+            expectedOutcometable += base.displayOutcomeJSReportVariable("|females|", value[2]);
+            expectedOutcometable += base.displayOutcomeJSReportVariable("|others|", value[3]);
+            expectedOutcometable += base.displayOutcomeJSReportVariable("|unknowns|", value[4]);
+            expectedOutcometable += base.displayOutcomeJSReportVariable("|malesPercent|", );
+            expectedOutcometable += base.displayOutcomeJSReportVariable("|femalesPercent|", );
+            expectedOutcometable += base.displayOutcomeJSReportVariable("|othersPercent|", );
+            expectedOutcometable += base.displayOutcomeJSReportVariable("|unknownsPercent|", );
+            expectedOutcometable += base.displayOutcomeJSReportVariable("|total|", value[5]);
+            expectedOutcometable += base.displayOutcomeJSReportVariable("|totalPercent|", );
   
             callback(expectedOutcometable);
         }
     }
+}
+
+function getTotals(expectedOutcomeData)
+{
+    const base = Encounters.baseModule;
+
 }
 
 main();

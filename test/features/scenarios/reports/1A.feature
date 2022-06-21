@@ -1,5 +1,5 @@
 Feature: 1A
-      Scenario: MRN00001A-3-171-041038
+      Scenario: MRN00001A-3-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -7,7 +7,7 @@ Feature: 1A
                   | lastName                         | Kebel                            |
                   | gender                           | male                             |
                   | dateOfBirth                      | 2000-11-15                       |
-                  | clientID                         | MRN00001A-3-171-041038           |
+                  | clientID                         | MRN00001A-3-172-122007           |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -18,8 +18,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A3                    |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-4-171-041038
+      Scenario: MRN00001A-4-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -27,7 +26,7 @@ Feature: 1A
                   | lastName                         | Ebrahim                          |
                   | gender                           | female                           |
                   | dateOfBirth                      | 1985-11-15                       |
-                  | clientID                         | MRN00001A-4-171-041038           |
+                  | clientID                         | MRN00001A-4-172-122007           |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -38,8 +37,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A4                    |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-5-171-041038
+      Scenario: MRN00001A-5-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -47,7 +45,7 @@ Feature: 1A
                   | lastName                         | Tesfay                           |
                   | gender                           | male                             |
                   | dateOfBirth                      | 1954-11-15                       |
-                  | clientID                         | MRN00001A-5-171-041038           |
+                  | clientID                         | MRN00001A-5-172-122007           |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -58,8 +56,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A5                    |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-6-171-041038
+      Scenario: MRN00001A-6-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -67,7 +64,7 @@ Feature: 1A
                   | lastName                         | Zeleke                           |
                   | gender                           | female                           |
                   | dateOfBirth                      | 1954-09-22                       |
-                  | clientID                         | MRN00001A-6-171-041038           |
+                  | clientID                         | MRN00001A-6-172-122007           |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -78,8 +75,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A6                    |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-7-171-041038
+      Scenario: MRN00001A-7-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -87,7 +83,7 @@ Feature: 1A
                   | lastName                         | Engida                           |
                   | gender                           | unknown                          |
                   | dateOfBirth                      | 1959-11-15                       |
-                  | clientID                         | MRN00001A-7-171-041038           |
+                  | clientID                         | MRN00001A-7-172-122007           |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -98,8 +94,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A7                    |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-8-171-041038
+      Scenario: MRN00001A-8-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -107,7 +102,7 @@ Feature: 1A
                   | lastName                         | Abu                              |
                   | gender                           | male                             |
                   | dateOfBirth                      | 1964-01-15                       |
-                  | clientID                         | MRN00001A-8-171-041038           |
+                  | clientID                         | MRN00001A-8-172-122007           |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -118,8 +113,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A8                    |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-9-171-041038
+      Scenario: MRN00001A-9-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -127,7 +121,7 @@ Feature: 1A
                   | lastName                         | Aklilu                           |
                   | gender                           | female                           |
                   | dateOfBirth                      | 1968-03-15                       |
-                  | clientID                         | MRN00001A-9-171-041038           |
+                  | clientID                         | MRN00001A-9-172-122007           |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -138,8 +132,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A9                    |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-10-171-041038
+      Scenario: MRN00001A-10-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -147,7 +140,7 @@ Feature: 1A
                   | lastName                         | Yerga                            |
                   | gender                           | female                           |
                   | dateOfBirth                      | 1979-01-15                       |
-                  | clientID                         | MRN00001A-10-171-041038          |
+                  | clientID                         | MRN00001A-10-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -158,8 +151,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A10                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-11-171-041038
+      Scenario: MRN00001A-11-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -167,7 +159,7 @@ Feature: 1A
                   | lastName                         | Bahta                            |
                   | gender                           | male                             |
                   | dateOfBirth                      | 1974-01-15                       |
-                  | clientID                         | MRN00001A-11-171-041038          |
+                  | clientID                         | MRN00001A-11-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -178,8 +170,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A11                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-12-171-041038
+      Scenario: MRN00001A-12-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -187,7 +178,7 @@ Feature: 1A
                   | lastName                         | Hailu                            |
                   | gender                           | unknown                          |
                   | dateOfBirth                      | 1999-01-15                       |
-                  | clientID                         | MRN00001A-12-171-041038          |
+                  | clientID                         | MRN00001A-12-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -199,7 +190,6 @@ Feature: 1A
                   | hivPositiveTestingUID            |                                  |
             When I POST the FHIR bundle to the IOL
 
-
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -207,7 +197,7 @@ Feature: 1A
                   | lastName                         |                                  |
                   | gender                           | unknown                          |
                   | dateOfBirth                      | 1999-01-15                       |
-                  | clientID                         | MRN00001A-12-171-041038          |
+                  | clientID                         | MRN00001A-12-172-122007          |
                   | registrationDate                 |                                  |
                   | addressCountry                   |                                  |
                   | addressProvince                  |                                  |
@@ -218,8 +208,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A12                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-14-171-041038
+      Scenario: MRN00001A-14-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -227,7 +216,7 @@ Feature: 1A
                   | lastName                         | Menas                            |
                   | gender                           | unknown                          |
                   | dateOfBirth                      | 1988-11-15                       |
-                  | clientID                         | MRN00001A-14-171-041038          |
+                  | clientID                         | MRN00001A-14-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -239,7 +228,6 @@ Feature: 1A
                   | hivPositiveTestingUID            |                                  |
             When I POST the FHIR bundle to the IOL
 
-
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -247,7 +235,7 @@ Feature: 1A
                   | lastName                         |                                  |
                   | gender                           | unknown                          |
                   | dateOfBirth                      | 1988-11-15                       |
-                  | clientID                         | MRN00001A-14-171-041038          |
+                  | clientID                         | MRN00001A-14-172-122007          |
                   | registrationDate                 |                                  |
                   | addressCountry                   |                                  |
                   | addressProvince                  |                                  |
@@ -258,8 +246,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A14                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-16-171-041038
+      Scenario: MRN00001A-16-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -267,7 +254,7 @@ Feature: 1A
                   | lastName                         | Adisu                            |
                   | gender                           | unknown                          |
                   | dateOfBirth                      | 1976-03-13                       |
-                  | clientID                         | MRN00001A-16-171-041038          |
+                  | clientID                         | MRN00001A-16-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -279,7 +266,6 @@ Feature: 1A
                   | hivPositiveTestingUID            |                                  |
             When I POST the FHIR bundle to the IOL
 
-
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -287,7 +273,7 @@ Feature: 1A
                   | lastName                         |                                  |
                   | gender                           | unknown                          |
                   | dateOfBirth                      | 1976-03-13                       |
-                  | clientID                         | MRN00001A-16-171-041038          |
+                  | clientID                         | MRN00001A-16-172-122007          |
                   | registrationDate                 |                                  |
                   | addressCountry                   |                                  |
                   | addressProvince                  |                                  |
@@ -298,8 +284,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A16                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-18-171-041038
+      Scenario: MRN00001A-18-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -307,7 +292,7 @@ Feature: 1A
                   | lastName                         | Natnael                          |
                   | gender                           | female                           |
                   | dateOfBirth                      | 2001-10-13                       |
-                  | clientID                         | MRN00001A-18-171-041038          |
+                  | clientID                         | MRN00001A-18-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -318,8 +303,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A18                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-19-171-041038
+      Scenario: MRN00001A-19-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -327,7 +311,7 @@ Feature: 1A
                   | lastName                         | Yieshak                          |
                   | gender                           | female                           |
                   | dateOfBirth                      | 1994-07-13                       |
-                  | clientID                         | MRN00001A-19-171-041038          |
+                  | clientID                         | MRN00001A-19-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -338,8 +322,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A19                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-20-171-041038
+      Scenario: MRN00001A-20-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -347,7 +330,7 @@ Feature: 1A
                   | lastName                         | Beselot                          |
                   | gender                           | male                             |
                   | dateOfBirth                      | 1991-07-15                       |
-                  | clientID                         | MRN00001A-20-171-041038          |
+                  | clientID                         | MRN00001A-20-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -358,8 +341,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A20                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-21-171-041038
+      Scenario: MRN00001A-21-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -367,7 +349,7 @@ Feature: 1A
                   | lastName                         | Ezkeiel                          |
                   | gender                           | unknown                          |
                   | dateOfBirth                      | 1994-01-15                       |
-                  | clientID                         | MRN00001A-21-171-041038          |
+                  | clientID                         | MRN00001A-21-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -378,8 +360,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A21                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-22-171-041038
+      Scenario: MRN00001A-22-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -387,7 +368,7 @@ Feature: 1A
                   | lastName                         | Fentahun                         |
                   | gender                           | male                             |
                   | dateOfBirth                      | 2002-09-13                       |
-                  | clientID                         | MRN00001A-22-171-041038          |
+                  | clientID                         | MRN00001A-22-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -398,8 +379,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A22                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-23-171-041038
+      Scenario: MRN00001A-23-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -407,7 +387,7 @@ Feature: 1A
                   | lastName                         | Tewachew                         |
                   | gender                           | female                           |
                   | dateOfBirth                      | 2016-12-13                       |
-                  | clientID                         | MRN00001A-23-171-041038          |
+                  | clientID                         | MRN00001A-23-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -418,8 +398,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A23                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-24-171-041038
+      Scenario: MRN00001A-24-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -427,7 +406,7 @@ Feature: 1A
                   | lastName                         | Abebe                            |
                   | gender                           | female                           |
                   | dateOfBirth                      | 2019-01-15                       |
-                  | clientID                         | MRN00001A-24-171-041038          |
+                  | clientID                         | MRN00001A-24-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -438,8 +417,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A24                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-25-171-041038
+      Scenario: MRN00001A-25-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -447,7 +425,7 @@ Feature: 1A
                   | lastName                         | Daniels                          |
                   | gender                           | male                             |
                   | dateOfBirth                      | 2007-10-15                       |
-                  | clientID                         | MRN00001A-25-171-041038          |
+                  | clientID                         | MRN00001A-25-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -458,8 +436,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A25                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-26-171-041038
+      Scenario: MRN00001A-26-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -467,7 +444,7 @@ Feature: 1A
                   | lastName                         | Bergena                          |
                   | gender                           | other                            |
                   | dateOfBirth                      | 2000-11-15                       |
-                  | clientID                         | MRN00001A-26-171-041038          |
+                  | clientID                         | MRN00001A-26-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -478,8 +455,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A26                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-27-171-041038
+      Scenario: MRN00001A-27-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -487,7 +463,7 @@ Feature: 1A
                   | lastName                         | Alemayehu                        |
                   | gender                           | female                           |
                   | dateOfBirth                      | 1954-11-15                       |
-                  | clientID                         | MRN00001A-27-171-041038          |
+                  | clientID                         | MRN00001A-27-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -498,8 +474,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A27                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-28-171-041038
+      Scenario: MRN00001A-28-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -507,7 +482,7 @@ Feature: 1A
                   | lastName                         | Zewge                            |
                   | gender                           | male                             |
                   | dateOfBirth                      | 1954-09-22                       |
-                  | clientID                         | MRN00001A-28-171-041038          |
+                  | clientID                         | MRN00001A-28-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -518,8 +493,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A28                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-29-171-041038
+      Scenario: MRN00001A-29-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -527,7 +501,7 @@ Feature: 1A
                   | lastName                         | Tsium                            |
                   | gender                           | female                           |
                   | dateOfBirth                      | 1959-11-15                       |
-                  | clientID                         | MRN00001A-29-171-041038          |
+                  | clientID                         | MRN00001A-29-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -538,8 +512,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A29                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-30-171-041038
+      Scenario: MRN00001A-30-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -547,7 +520,7 @@ Feature: 1A
                   | lastName                         | Senbeta                          |
                   | gender                           | unknown                          |
                   | dateOfBirth                      | 1964-01-15                       |
-                  | clientID                         | MRN00001A-30-171-041038          |
+                  | clientID                         | MRN00001A-30-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -558,8 +531,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A30                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-31-171-041038
+      Scenario: MRN00001A-31-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -567,7 +539,7 @@ Feature: 1A
                   | lastName                         | Dadi                             |
                   | gender                           | male                             |
                   | dateOfBirth                      | 1968-03-15                       |
-                  | clientID                         | MRN00001A-31-171-041038          |
+                  | clientID                         | MRN00001A-31-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -578,8 +550,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A31                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-32-171-041038
+      Scenario: MRN00001A-32-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -587,7 +558,7 @@ Feature: 1A
                   | lastName                         | Tadesse                          |
                   | gender                           | other                            |
                   | dateOfBirth                      | 1971-07-15                       |
-                  | clientID                         | MRN00001A-32-171-041038          |
+                  | clientID                         | MRN00001A-32-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -598,8 +569,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A32                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-33-171-041038
+      Scenario: MRN00001A-33-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -607,7 +577,7 @@ Feature: 1A
                   | lastName                         | Behailu                          |
                   | gender                           | female                           |
                   | dateOfBirth                      | 1974-01-15                       |
-                  | clientID                         | MRN00001A-33-171-041038          |
+                  | clientID                         | MRN00001A-33-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -618,8 +588,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A33                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-34-171-041038
+      Scenario: MRN00001A-34-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -627,7 +596,7 @@ Feature: 1A
                   | lastName                         | Beyene                           |
                   | gender                           | male                             |
                   | dateOfBirth                      | 2004-01-15                       |
-                  | clientID                         | MRN00001A-34-171-041038          |
+                  | clientID                         | MRN00001A-34-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -638,8 +607,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A34                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-35-171-041038
+      Scenario: MRN00001A-35-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -647,7 +615,7 @@ Feature: 1A
                   | lastName                         | Dereje                           |
                   | gender                           | unknown                          |
                   | dateOfBirth                      | 1999-01-15                       |
-                  | clientID                         | MRN00001A-35-171-041038          |
+                  | clientID                         | MRN00001A-35-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -658,8 +626,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A35                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-36-171-041038
+      Scenario: MRN00001A-36-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -667,7 +634,7 @@ Feature: 1A
                   | lastName                         | Ketema                           |
                   | gender                           | unknown                          |
                   | dateOfBirth                      | 1988-11-15                       |
-                  | clientID                         | MRN00001A-36-171-041038          |
+                  | clientID                         | MRN00001A-36-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -678,8 +645,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A36                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-37-171-041038
+      Scenario: MRN00001A-37-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -687,7 +653,7 @@ Feature: 1A
                   | lastName                         | Tadesse                          |
                   | gender                           | unknown                          |
                   | dateOfBirth                      | 1976-03-13                       |
-                  | clientID                         | MRN00001A-37-171-041038          |
+                  | clientID                         | MRN00001A-37-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -698,8 +664,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A37                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-38-171-041038
+      Scenario: MRN00001A-38-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -707,7 +672,7 @@ Feature: 1A
                   | lastName                         | Mezgebe                          |
                   | gender                           | female                           |
                   | dateOfBirth                      | 2001-10-13                       |
-                  | clientID                         | MRN00001A-38-171-041038          |
+                  | clientID                         | MRN00001A-38-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -718,8 +683,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A38                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-39-171-041038
+      Scenario: MRN00001A-39-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -727,7 +691,7 @@ Feature: 1A
                   | lastName                         | Menelik                          |
                   | gender                           | female                           |
                   | dateOfBirth                      | 1994-07-13                       |
-                  | clientID                         | MRN00001A-39-171-041038          |
+                  | clientID                         | MRN00001A-39-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -738,8 +702,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A39                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-40-171-041038
+      Scenario: MRN00001A-40-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -747,7 +710,7 @@ Feature: 1A
                   | lastName                         | Fufa                             |
                   | gender                           | other                            |
                   | dateOfBirth                      | 1991-07-15                       |
-                  | clientID                         | MRN00001A-40-171-041038          |
+                  | clientID                         | MRN00001A-40-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -758,8 +721,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A40                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-41-171-041038
+      Scenario: MRN00001A-41-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -767,7 +729,7 @@ Feature: 1A
                   | lastName                         | Kebede                           |
                   | gender                           | unknown                          |
                   | dateOfBirth                      | 2016-12-26                       |
-                  | clientID                         | MRN00001A-41-171-041038          |
+                  | clientID                         | MRN00001A-41-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -778,8 +740,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A41                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-42-171-041038
+      Scenario: MRN00001A-42-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -787,7 +748,7 @@ Feature: 1A
                   | lastName                         | Mechal                           |
                   | gender                           | male                             |
                   | dateOfBirth                      | 2018-11-25                       |
-                  | clientID                         | MRN00001A-42-171-041038          |
+                  | clientID                         | MRN00001A-42-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -798,8 +759,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A42                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-43-171-041038
+      Scenario: MRN00001A-43-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -807,7 +767,7 @@ Feature: 1A
                   | lastName                         | Shimelis                         |
                   | gender                           | female                           |
                   | dateOfBirth                      | 1986-04-13                       |
-                  | clientID                         | MRN00001A-43-171-041038          |
+                  | clientID                         | MRN00001A-43-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -818,8 +778,7 @@ Feature: 1A
                   | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
                   | hivPositiveTestingUID            | HIVPOS00001A43                   |
             When I POST the FHIR bundle to the IOL
-
-      Scenario: MRN00001A-44-171-041038
+      Scenario: MRN00001A-44-172-122007
             Given I set FHIR bundle parameters
                   | key                              | value                            |
                   | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
@@ -827,7 +786,7 @@ Feature: 1A
                   | lastName                         | Fetene                           |
                   | gender                           | female                           |
                   | dateOfBirth                      | 2018-09-11                       |
-                  | clientID                         | MRN00001A-44-171-041038          |
+                  | clientID                         | MRN00001A-44-172-122007          |
                   | registrationDate                 | 2022-05-01                       |
                   | addressCountry                   | QA Country                       |
                   | addressProvince                  | QA State                         |
@@ -849,12 +808,131 @@ Feature: 1A
                   | from       | 2022-04-21 |
                   | to         | 2022-07-20 |
 
-            Then there should be a row identified by "facility" of "Reporting Facility 1A" with the following fields and values
-                  | field          | value                 |
-                  | facility       | Reporting Hospital 1A |
-                  | hivPos         | 11                    |
-                  | initArt        | 14                    |
-                  | percentInitArt | 3                     |
-                  | artSameDay     | 10                    |
-                  | art1stWeek     | 38                    |
 
+            Then there should be a row identified by "ageGroup" of "0-4" with the following fields and values
+                  | field    | value |
+                  | males    | 11    |
+                  | females  | 14    |
+                  | others   | 3     |
+                  | unknowns | 10    |
+                  | total    | 38    |
+
+
+            Then there should be a row identified by "ageGroup" of "5-9" with the following fields and values
+                  | field    | value |
+                  | males    | 11    |
+                  | females  | 14    |
+                  | others   | 3     |
+                  | unknowns | 10    |
+                  | total    | 38    |
+
+
+            Then there should be a row identified by "ageGroup" of "10-14" with the following fields and values
+                  | field    | value |
+                  | males    | 11    |
+                  | females  | 14    |
+                  | others   | 3     |
+                  | unknowns | 10    |
+                  | total    | 38    |
+
+
+            Then there should be a row identified by "ageGroup" of "15-19" with the following fields and values
+                  | field    | value |
+                  | males    | 11    |
+                  | females  | 14    |
+                  | others   | 3     |
+                  | unknowns | 10    |
+                  | total    | 38    |
+
+
+            Then there should be a row identified by "ageGroup" of "20-24" with the following fields and values
+                  | field    | value |
+                  | males    | 11    |
+                  | females  | 14    |
+                  | others   | 3     |
+                  | unknowns | 10    |
+                  | total    | 38    |
+
+
+            Then there should be a row identified by "ageGroup" of "25-29" with the following fields and values
+                  | field    | value |
+                  | males    | 11    |
+                  | females  | 14    |
+                  | others   | 3     |
+                  | unknowns | 10    |
+                  | total    | 38    |
+
+
+            Then there should be a row identified by "ageGroup" of "30-34" with the following fields and values
+                  | field    | value |
+                  | males    | 11    |
+                  | females  | 14    |
+                  | others   | 3     |
+                  | unknowns | 10    |
+                  | total    | 38    |
+
+
+            Then there should be a row identified by "ageGroup" of "35-39" with the following fields and values
+                  | field    | value |
+                  | males    | 11    |
+                  | females  | 14    |
+                  | others   | 3     |
+                  | unknowns | 10    |
+                  | total    | 38    |
+
+
+            Then there should be a row identified by "ageGroup" of "40-44" with the following fields and values
+                  | field    | value |
+                  | males    | 11    |
+                  | females  | 14    |
+                  | others   | 3     |
+                  | unknowns | 10    |
+                  | total    | 38    |
+
+
+            Then there should be a row identified by "ageGroup" of "45-49" with the following fields and values
+                  | field    | value |
+                  | males    | 11    |
+                  | females  | 14    |
+                  | others   | 3     |
+                  | unknowns | 10    |
+                  | total    | 38    |
+
+
+            Then there should be a row identified by "ageGroup" of "50-54" with the following fields and values
+                  | field    | value |
+                  | males    | 11    |
+                  | females  | 14    |
+                  | others   | 3     |
+                  | unknowns | 10    |
+                  | total    | 38    |
+
+
+            Then there should be a row identified by "ageGroup" of "55-59" with the following fields and values
+                  | field    | value |
+                  | males    | 11    |
+                  | females  | 14    |
+                  | others   | 3     |
+                  | unknowns | 10    |
+                  | total    | 38    |
+
+
+            Then there should be a row identified by "ageGroup" of "60-64" with the following fields and values
+                  | field    | value |
+                  | males    | 11    |
+                  | females  | 14    |
+                  | others   | 3     |
+                  | unknowns | 10    |
+                  | total    | 38    |
+
+
+            Then there should be a row identified by "ageGroup" of "65+" with the following fields and values
+                  | field    | value |
+                  | males    | 11    |
+                  | females  | 14    |
+                  | others   | 3     |
+                  | unknowns | 10    |
+                  | total    | 38    |
+
+            Then there should be a total for fields
+null

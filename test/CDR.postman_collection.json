@@ -350,9 +350,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{openhimHost}}",
+							"raw": "{{openhimUrlQA}}",
 							"host": [
-								"{{openhimHost}}"
+								"{{openhimUrlQA}}"
 							]
 						},
 						"description": "Remove author and ARVTherapySummaryExample section reference"
@@ -740,8 +740,8 @@
 	],
 	"variable": [
 		{
-			"key": "openhimHost",
-			"value": "http://stg.disi-cdr.jembi.org:5001/fhir"
+			"key": "openhimUrlQA",
+			"value": "https://oh-route.gicsandbox.org/fhir"
 		}
 	]
 }
