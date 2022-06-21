@@ -133,6 +133,22 @@ function getTotals(expectedOutcomeData)
     const base = Encounters.baseModule;
     const TOTAL_ROW = 17;
     const START_COLUMN_INDEX = 1; //Tx_Current for male
+
+    var currentColumn = START_COLUMN_INDEX;
+
+    var totalsPerColummn = "";
+
+    for (var j = 0; j < 9; j++) 
+    {
+        const TOTAL_VALUE = expectedOutcomeData.values[TOTAL_ROW][currentColumn];
+        
+        totalsPerColummn += base.displayOutcomeJSReportVariable(jsReportsVariables[j], TOTAL_VALUE);
+
+        currentColumn++;
+    }
+    
+
+    return "|field|value|\n" + totalsPerColummn;
 }
 
 main();
