@@ -22,6 +22,7 @@ class Encounters{
             LAST_NAME: null,
             FAC_CODE: null,
             FAC_NAME: null,
+            NATIONAL_ID: null,
             
             Address: {
                 COUNTRY: null,

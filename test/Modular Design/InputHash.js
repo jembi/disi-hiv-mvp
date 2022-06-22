@@ -99,6 +99,7 @@ class InputHash{
                         Encounters.Data.Registration.DATE_OF_BIRTH = base.getInputDate(INPUT_DATA.values, row, i, 7);
                         Encounters.Data.Registration.REGISTRATION_DATE = base.getInputDate(INPUT_DATA.values, row, i, 9);
                         Encounters.Data.Registration.FAC_CODE = base.getInputFieldValue(INPUT_DATA.values, row, i, 13, false);
+                        Encounters.Data.Registration.NATIONAL_ID = base.getInputFieldValue(INPUT_DATA.values, row, i, 21, false);
                         
                         Encounters.Data.Registration.Address.COUNTRY = base.getInputFieldValue(INPUT_DATA.values, row, i, 15, false);
                         Encounters.Data.Registration.Address.PROVINCE = base.getInputFieldValue(INPUT_DATA.values, row, i, 16, false);

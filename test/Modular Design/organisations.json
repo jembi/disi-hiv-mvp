@@ -1,32 +1,32 @@
 [
   {
     "name": "Reporting Facility 1A",
-    "id": "274cdadd0a6e421ab9971be0f5f3e181",
+    "id": "HIVOrganizationExample",
     "hfuid": "HF000001A"
   },
   {
     "name": "Reporting Facility 3A",
-    "id": "6330af28a1cd47cc93e287fffe08f929",
+    "id": "HIVOrganizationExample",
     "hfuid": "HF000003A"
   },
   {
     "name": "Reporting Facility 5A",
-    "id": "fe09198ff34f4e39825b071ef923ba60",
+    "id": "HIVOrganizationExample",
     "hfuid": "HF000005A"
   },
   {
     "name": "Reporting Facility 5C",
-    "id": "5c063d30fbbb4d7dbd12cfb446bbc2d7",
+    "id": "HIVOrganizationExample",
     "hfuid": "HF000005C"
   },
   {
     "name": "Reporting Facility 5D",
-    "id": "07fd2d85db364cfb9f7c45eb492108a8",
+    "id": "HIVOrganizationExample",
     "hfuid": "HF000005D"
   },
   {
     "name": "Reporting Facility 5F",
-    "id": "6226602bc93542dd94bf2f93083727a9",
+    "id": "HIVOrganizationExample",
     "hfuid": "HF000005F"
   }
 ]
