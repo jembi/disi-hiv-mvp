@@ -7,7 +7,6 @@ class Scenarios
     #currentEncounterIndex = null;
     #feature = null;
     #reportFilters = null;
-    #processAsLineListingReport = null;
     #verifyAggregateFieldLevelTotals = null;
     #aggregateReportFieldLevelTotals = null;
     #rowDisaggregationKey = null;
@@ -21,7 +20,7 @@ class Scenarios
         TOTALS_THEN_STATEMENT: null
     }
 
-    constructor(inputDataHash, encounterIndex, featureName, reportFilters, isLineListingReport, 
+    constructor(inputDataHash, encounterIndex, featureName, reportFilters,  
         keyForDisaggregation, keyValueForDisaggregation,
         mustVerifyFieldLevelTotalsForAggregateReport = null, 
         fieldLevelTotalsForAggregateReport = null, jsReportsVars = null, expectedOutcomeDataset = null){
@@ -49,7 +48,6 @@ class Scenarios
         this.#setCurrentEncounterIndex(encounterIndex);
         this.#setFeature(featureName);
         this.#setReportFilters(reportFilters);
-        this.#setProcessAsLineListingReport(isLineListingReport);
         
         if (mustVerifyFieldLevelTotalsForAggregateReport != null)
         {
@@ -95,13 +93,6 @@ class Scenarios
     }
     #setVerifyAggregateFieldLevelTotals(data) {
         this.#verifyAggregateFieldLevelTotals = data;
-    }
-
-    #getProcessAsLineListingReport() {
-        return this.#processAsLineListingReport;
-    }
-    #setProcessAsLineListingReport(data) {
-        this.#processAsLineListingReport = data;
     }
 
     #getReportFilters() {
@@ -167,7 +158,7 @@ class Scenarios
         {
             base.setCucumberTestScenarios("\n");
             base.setCucumberTestScenarios(this.#CUCUMBER.AND_STATEMENT + "\n");
-            base.setCucumberTestScenarios(base.prepareJsReportParams(this.#getFeature(), DYNAMIC_MRN, REPORTING_PERIOD, this.#getProcessAsLineListingReport()) + "\n");
+            base.setCucumberTestScenarios(base.prepareJsReportParams(this.#getFeature(), DYNAMIC_MRN, REPORTING_PERIOD) + "\n");
 
             for (var y = 0; y < this.#getRowDisaggregationKeyValue().length; y++) 
             {

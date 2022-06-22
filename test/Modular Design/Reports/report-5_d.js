@@ -4,21 +4,24 @@ const Encounters = require("../Encounters");
 const Scenarios = require("../Scenarios");
 
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
-const FEATURE_NAME = "1A";
+const FEATURE_NAME = "5D";
 const REPORT_SPECFIC_FILTERS = []; //add any additional report filters
 const ROW_DISAGGREGATION_KEY = "ageGroup";
 const ROW_DISAGGREGATION_KEY_VALUES = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", 
     "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65+"];
 
 const jsReportsVariables = [
-    "|males|", 
-    "|malesPercent|",
-    "|females|", 
-    "|femalesPercent|",
-    "|others|", 
-    "|othersPercent|", 
-    "|unknowns|",
-    "|unknownsPercent|", 
+    "|less200|", 
+    "|less200Percent|",
+    "|between200to349|",
+    "|between200to349Percent|",
+    "|between350to499|", 
+    "|between350to499Percent|",
+    "|more500|",
+    "|more500Percent|",
+    "|unknowns|", 
+    "|unknownsPercent|",
+    "|totalPercent|",
     "|total|", 
     "|totalPercent|"];
 
@@ -134,7 +137,7 @@ function getTotals(expectedOutcomeData)
 
     var totalsPerColummn = "";
 
-    for (var j = 0; j < 9; j++) 
+    for (var j = 0; j < 13; j++) 
     {
         const TOTAL_VALUE = expectedOutcomeData.values[TOTAL_ROW][currentColumn];
         

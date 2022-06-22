@@ -395,17 +395,12 @@ getInputReasonNotStartedArtSameDay(data, rowInt, colInt)
     })
   }
 
-  prepareJsReportParams(featureName, mrn, period, reportSpecifcFilters, isLineList)
+  prepareJsReportParams(featureName, mrn, period, reportSpecifcFilters)
   {
     var jsReportParams = this.prepareInitialJsReportParams(featureName);
 
     jsReportParams += "|from|" + period[0] + "|\n";
     jsReportParams += "|to|" + period[1] + "|\n";
-
-    if (isLineList)
-    {
-      jsReportParams += "|id|" + mrn + "|\n";
-    }
 
     if (reportSpecifcFilters != null)
     {

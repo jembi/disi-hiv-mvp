@@ -4,11 +4,10 @@ const Encounters = require("../Encounters");
 const Scenarios = require("../Scenarios");
 
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
-const FEATURE_NAME = "1A";
+const FEATURE_NAME = "5F";
 const REPORT_SPECFIC_FILTERS = []; //add any additional report filters
-const ROW_DISAGGREGATION_KEY = "ageGroup";
-const ROW_DISAGGREGATION_KEY_VALUES = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", 
-    "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65+"];
+const ROW_DISAGGREGATION_KEY = "supGroup";
+const ROW_DISAGGREGATION_KEY_VALUES = ["suppressed", "unSuppressed", "notKnown"];
 
 const jsReportsVariables = [
     "|males|", 
@@ -127,7 +126,7 @@ function generateInputDataHash(callback)
 function getTotals(expectedOutcomeData)
 {
     const base = Encounters.baseModule;
-    const TOTAL_ROW = 17;
+    const TOTAL_ROW = 6;
     const START_COLUMN_INDEX = 1; 
 
     var currentColumn = START_COLUMN_INDEX;

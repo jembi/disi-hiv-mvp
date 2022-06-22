@@ -4,14 +4,12 @@ const Encounters = require("./Encounters");
 class InputHash{
     #dataSet = null;
     #uploadToGoogleDrive = null;
-    #isLineList = null;
     #feature = null;
     #baseModule = null;
 
-    constructor(dataSet, featureName, isLineListingReport, uploadFeatureToGoogleDrive){
+    constructor(dataSet, featureName, uploadFeatureToGoogleDrive){
         this.#setDataset(dataSet);
         this.#setUploadToGoogleDrive(uploadFeatureToGoogleDrive);
-        this.#setIsLineList(isLineListingReport);
         this.#setFeatureName(featureName);
     }
 
@@ -27,13 +25,6 @@ class InputHash{
     }
     #setUploadToGoogleDrive(data){
         this.#uploadToGoogleDrive = data;
-    }
-
-    #getIsLineList(){
-        return this.#isLineList;
-    }
-    #setIsLineList(data){
-        this.#isLineList = data;
     }
 
     #getFeatureName(){
@@ -83,7 +74,7 @@ class InputHash{
                     const mustBeReportedOn = (INPUT_DATA.values[j][2] == "R" ? true : false);
                     const numberOfEncounters = base.isMRNWithMultipleEncounter(INPUT_DATA.values, j, INPUT_DATA_LAST_ROW, 10);
 
-                    if (j == INPUT_DATA_LAST_ROW - 2 && !this.#getIsLineList() && numberOfEncounters > 0)
+                    if (j == INPUT_DATA_LAST_ROW - 2 && numberOfEncounters > 0)
                     {
                         Encounters.inputDataLastRowReachedForAggReportWithMultiEncountersForSameMrn = true;
                     }
