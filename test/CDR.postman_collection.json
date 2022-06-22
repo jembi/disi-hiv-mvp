@@ -350,9 +350,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{openhimUrlQA}}",
+							"raw": "{{openhimUrl}}",
 							"host": [
-								"{{openhimUrlQA}}"
+								"{{openhimUrl}}"
 							]
 						},
 						"description": "Remove author and ARVTherapySummaryExample section reference"
@@ -614,8 +614,8 @@
 					"pm.variables.set('artLine', artInitiationRegimenLine)",
 					"",
 					"for (let x = 0; x < artRegimenLinesForFHIR.length; x++) {",
-					"    if (artRegimenLinesForFHIR[x][1] == artInitiationRegimenLine) {",
-					"        var FHIRRegimenLine = artRegimenLinesForFHIR[x][0]",
+					"    if (artRegimenLinesForFHIR[x][0] == artInitiationRegimenLine) {",
+					"        var FHIRRegimenLine = artRegimenLinesForFHIR[x][1]",
 					"        ",
 					"        pm.variables.set('artLineFhir', FHIRRegimenLine)",
 					"    }",
@@ -624,8 +624,25 @@
 					"pm.variables.set('artRegimen', artInitiationRegimen)",
 					"",
 					"",
+					"const deathCausesForFHIR = [",
+					"    ['HIV Related', 'HIV'],",
+					"    ['Non HIV Related', 'NON-HIV']",
+					"]",
 					"",
-					"const age = Math.floor(Math.random() * 70)",
+					"pm.variables.set('deathDate', dateOfDeath)",
+					"pm.variables.set('ageAtDeath', ageAtDeath)",
+					"pm.variables.set('deathCause', deathCause)",
+					"",
+					"for (let x = 0; x < deathCausesForFHIR.length; x++) {",
+					"    if (deathCausesForFHIR[x][0] == artInitiationRegimenLine) {",
+					"        var FHIRDeathCause = deathCausesForFHIR[x][1]",
+					"        ",
+					"        pm.variables.set('deathCauseFhir', FHIRDeathCause)",
+					"    }",
+					"}",
+					"",
+					"pm.variables.set('dateOfLastVisit', deathDateLastClinicalVisit)",
+					"",
 					"",
 					"",
 					"",
@@ -655,22 +672,7 @@
 					"",
 					"",
 					"",
-					"const deathCauses = ['HIV Related', 'Non HIV related']",
-					"const deathCausesFhir = ['HIV', 'NON-HIV']",
-					"if (Math.random() > 0.9) {",
-					"  const deathDate = moment(visitDate).add(getRandomInt(5, 30), 'days')",
-					"  pm.variables.set('deathDate', deathDate.format('YYYY-MM-DD'))",
-					"  pm.variables.set('ageAtDeath', age)",
-					"  const deathIndex = getRandomInt(0, 1)",
-					"  pm.variables.set('deathCause', deathCauses[deathIndex])",
-					"  pm.variables.set('deathCauseFhir', deathCausesFhir[deathIndex])",
-					"  pm.variables.set('dateOfLastVisit', moment(visitDate).add(getRandomInt(240, 260), 'days').toISOString())",
-					"} else {",
-					"  pm.variables.set('deathDate', '')",
-					"  pm.variables.set('ageAtDeath', '')",
-					"  pm.variables.set('deathCause', '')",
-					"  pm.variables.set('dateOfLastVisit', '')",
-					"}",
+					"",
 					"",
 					"const numCD4Counts = getRandomInt(0, 5)",
 					"let cd4Date = moment(visitDate)",
@@ -769,7 +771,7 @@
 	],
 	"variable": [
 		{
-			"key": "openhimUrlQA",
+			"key": "openhimUrl",
 			"value": "https://oh-route.gicsandbox.org/fhir"
 		}
 	]

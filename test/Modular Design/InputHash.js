@@ -120,7 +120,12 @@ class InputHash{
                      
                         Encounters.Data.ART_Initiation.DATE_CLIENT_INITIATED_ON_ART = base.getInputDate(INPUT_DATA.values, row, i, 36);
                         Encounters.Data.ART_Initiation.ART_REGIMEN_LINE_CLIENT_INITIATED_ON = base.getInputFieldValue(INPUT_DATA.values, row, i, 37, false);
-                        Encounters.Data.ART_Initiation.DATE_CLIENT_INITIATED_ON_ART = base.getInputFieldValue(INPUT_DATA.values, row, i, 38, false);
+                        Encounters.Data.ART_Initiation.ART_REGIMEN_CLIENT_INITIATED_ON = base.getInputFieldValue(INPUT_DATA.values, row, i, 38, false);
+
+                        Encounters.Data.Death.DATE_OF_DEATH = base.getInputDate(INPUT_DATA.values, row, i, 58);
+                        Encounters.Data.Death.AGE_AT_DEATH = base.getInputFieldValue(INPUT_DATA.values, row, i, 59, false);
+                        Encounters.Data.Death.DATE_OF_LAST_CLINICAL_VISIT_BEFORE_DEATH = base.getInputDate(INPUT_DATA.values, row, i, 60);
+                        Encounters.Data.Death.CAUSE_OF_DEATH = base.getInputFieldValue(INPUT_DATA.values, row, i, 61, false);
 
                         callback(i);
                     }

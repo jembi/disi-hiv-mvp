@@ -66,11 +66,14 @@ class Base{
   prepareInitialJsReportParams(featureName) {
     return `
       |field|value|
-      |report|` + featureName + `|
-      |region|all|
-      |subcity|all|
-      |facilityId|` + this.setCucumberInputDatatableInitial(featureName, true) + `|
+      |report|` + featureName.toLowerCase() + `|
+      |state|all|
+      |district|all|
+      |city|all|
+      |facilityCode|all|
       `;
+
+      //|facilityCode|` + this.setCucumberInputDatatableInitial(featureName, true) + `|
   }
 
   getInputArtStarted(data, rowInt, colInt) {

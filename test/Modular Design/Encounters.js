@@ -20,8 +20,8 @@ class Encounters{
             DATE_OF_BIRTH: null,
             FIRST_NAME: null,
             LAST_NAME: null,
-            FAC_CODE,
-            FAC_NAME,
+            FAC_CODE: null,
+            FAC_NAME: null,
             
             Address: {
                 COUNTRY: null,
