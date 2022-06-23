@@ -28,5 +28,10 @@
     "name": "Reporting Facility 5F",
     "id": "HIVOrganizationExample",
     "hfuid": "HF000005F"
+  },
+  {
+    "name": "HIV Organization",
+    "id": "HIVOrganizationExample",
+    "hfuid": "HF000005F"
   }
 ]

@@ -1,843 +1,1221 @@
 Feature: 1A
-      Scenario: MRN00001A-3-173-122415
+      Scenario: MRN00001A-3-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Abiy                             |
-                  | lastName                         | Kebel                            |
-                  | gender                           | male                             |
-                  | dateOfBirth                      | 2000-11-15                       |
-                  | clientID                         | MRN00001A-3-173-122415           |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A3                    |
+                  | key                                  | value                  |
+                  | orgId                                | HIVOrganizationExample |
+                  | firstName                            | Abiy                   |
+                  | lastName                             | Kebel                  |
+                  | gender                               | male                   |
+                  | dateOfBirth                          | 2000-11-15             |
+                  | registrationFacilityCode             | HIVOrganizationExample |
+                  | clientID                             | MRN00001A-3-174-124449 |
+                  | registrationDate                     | 2022-05-01             |
+                  | NID                                  | MRN00001A-3            |
+                  | addressCountry                       | QA Country             |
+                  | addressProvince                      | QA State               |
+                  | addressDistrict                      | QA District            |
+                  | addressCity                          | QA Ward                |
+                  | hivPositiveDate                      | 2022-05-01             |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A  |
+                  | hivPositiveTestingUID                | HIVPOS00001A3          |
+                  | dateClientEnrolledToCare             |                        |
+                  | enrolledToCareUID                    |                        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample |
+                  | enrolledToCareFacName                |                        |
+                  | enrolledToCareDateFirstClinicalVisit |                        |
+                  | artInitiationDate                    |                        |
+                  | artInitiationRegimenLine             |                        |
+                  | artInitiationRegimen                 |                        |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-4-173-122415
+      Scenario: MRN00001A-4-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Abeba                            |
-                  | lastName                         | Ebrahim                          |
-                  | gender                           | female                           |
-                  | dateOfBirth                      | 1985-11-15                       |
-                  | clientID                         | MRN00001A-4-173-122415           |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-07-21                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A4                    |
+                  | key                                  | value                  |
+                  | orgId                                | HIVOrganizationExample |
+                  | firstName                            | Abeba                  |
+                  | lastName                             | Ebrahim                |
+                  | gender                               | female                 |
+                  | dateOfBirth                          | 1985-11-15             |
+                  | registrationFacilityCode             | HIVOrganizationExample |
+                  | clientID                             | MRN00001A-4-174-124449 |
+                  | registrationDate                     | 2022-05-01             |
+                  | NID                                  | MRN00001A-4            |
+                  | addressCountry                       | QA Country             |
+                  | addressProvince                      | QA State               |
+                  | addressDistrict                      | QA District            |
+                  | addressCity                          | QA Ward                |
+                  | hivPositiveDate                      | 2022-04-20             |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A  |
+                  | hivPositiveTestingUID                | HIVPOS00001A4          |
+                  | dateClientEnrolledToCare             |                        |
+                  | enrolledToCareUID                    |                        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample |
+                  | enrolledToCareFacName                |                        |
+                  | enrolledToCareDateFirstClinicalVisit |                        |
+                  | artInitiationDate                    |                        |
+                  | artInitiationRegimenLine             |                        |
+                  | artInitiationRegimen                 |                        |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-5-173-122415
+      Scenario: MRN00001A-5-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Abeba                            |
-                  | lastName                         | Tesfay                           |
-                  | gender                           | male                             |
-                  | dateOfBirth                      | 1954-11-15                       |
-                  | clientID                         | MRN00001A-5-173-122415           |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A5                    |
+                  | key                                  | value                  |
+                  | orgId                                | HIVOrganizationExample |
+                  | firstName                            | Abeba                  |
+                  | lastName                             | Tesfay                 |
+                  | gender                               | male                   |
+                  | dateOfBirth                          | 1954-11-15             |
+                  | registrationFacilityCode             | HIVOrganizationExample |
+                  | clientID                             | MRN00001A-5-174-124449 |
+                  | registrationDate                     | 2022-05-01             |
+                  | NID                                  | MRN00001A-5            |
+                  | addressCountry                       | QA Country             |
+                  | addressProvince                      | QA State               |
+                  | addressDistrict                      | QA District            |
+                  | addressCity                          | QA Ward                |
+                  | hivPositiveDate                      | 2022-05-01             |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A  |
+                  | hivPositiveTestingUID                | HIVPOS00001A5          |
+                  | dateClientEnrolledToCare             |                        |
+                  | enrolledToCareUID                    |                        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample |
+                  | enrolledToCareFacName                |                        |
+                  | enrolledToCareDateFirstClinicalVisit |                        |
+                  | artInitiationDate                    |                        |
+                  | artInitiationRegimenLine             |                        |
+                  | artInitiationRegimen                 |                        |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-6-173-122415
+      Scenario: MRN00001A-6-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Abeba                            |
-                  | lastName                         | Zeleke                           |
-                  | gender                           | female                           |
-                  | dateOfBirth                      | 1954-09-22                       |
-                  | clientID                         | MRN00001A-6-173-122415           |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-07-21                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A6                    |
+                  | key                                  | value                  |
+                  | orgId                                | HIVOrganizationExample |
+                  | firstName                            | Abeba                  |
+                  | lastName                             | Zeleke                 |
+                  | gender                               | female                 |
+                  | dateOfBirth                          | 1954-09-22             |
+                  | registrationFacilityCode             | HIVOrganizationExample |
+                  | clientID                             | MRN00001A-6-174-124449 |
+                  | registrationDate                     | 2022-05-01             |
+                  | NID                                  | MRN00001A-6            |
+                  | addressCountry                       | QA Country             |
+                  | addressProvince                      | QA State               |
+                  | addressDistrict                      | QA District            |
+                  | addressCity                          | QA Ward                |
+                  | hivPositiveDate                      | 2022-05-01             |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A  |
+                  | hivPositiveTestingUID                | HIVPOS00001A6          |
+                  | dateClientEnrolledToCare             |                        |
+                  | enrolledToCareUID                    |                        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample |
+                  | enrolledToCareFacName                |                        |
+                  | enrolledToCareDateFirstClinicalVisit |                        |
+                  | artInitiationDate                    |                        |
+                  | artInitiationRegimenLine             |                        |
+                  | artInitiationRegimen                 |                        |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-7-173-122415
+      Scenario: MRN00001A-7-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Abebech                          |
-                  | lastName                         | Engida                           |
-                  | gender                           | unknown                          |
-                  | dateOfBirth                      | 1959-11-15                       |
-                  | clientID                         | MRN00001A-7-173-122415           |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A7                    |
+                  | key                                  | value                  |
+                  | orgId                                | HIVOrganizationExample |
+                  | firstName                            | Abebech                |
+                  | lastName                             | Engida                 |
+                  | gender                               | unknown                |
+                  | dateOfBirth                          | 1959-11-15             |
+                  | registrationFacilityCode             | HIVOrganizationExample |
+                  | clientID                             | MRN00001A-7-174-124449 |
+                  | registrationDate                     | 2022-05-01             |
+                  | NID                                  | MRN00001A-7            |
+                  | addressCountry                       | QA Country             |
+                  | addressProvince                      | QA State               |
+                  | addressDistrict                      | QA District            |
+                  | addressCity                          | QA Ward                |
+                  | hivPositiveDate                      | 2022-05-01             |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A  |
+                  | hivPositiveTestingUID                | HIVPOS00001A7          |
+                  | dateClientEnrolledToCare             |                        |
+                  | enrolledToCareUID                    |                        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample |
+                  | enrolledToCareFacName                |                        |
+                  | enrolledToCareDateFirstClinicalVisit |                        |
+                  | artInitiationDate                    |                        |
+                  | artInitiationRegimenLine             |                        |
+                  | artInitiationRegimen                 |                        |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-8-173-122415
+      Scenario: MRN00001A-8-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Abebech                          |
-                  | lastName                         | Abu                              |
-                  | gender                           | male                             |
-                  | dateOfBirth                      | 1964-01-15                       |
-                  | clientID                         | MRN00001A-8-173-122415           |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A8                    |
+                  | key                                  | value                  |
+                  | orgId                                | HIVOrganizationExample |
+                  | firstName                            | Abebech                |
+                  | lastName                             | Abu                    |
+                  | gender                               | male                   |
+                  | dateOfBirth                          | 1964-01-15             |
+                  | registrationFacilityCode             | HIVOrganizationExample |
+                  | clientID                             | MRN00001A-8-174-124449 |
+                  | registrationDate                     | 2022-05-01             |
+                  | NID                                  | MRN00001A-8            |
+                  | addressCountry                       | QA Country             |
+                  | addressProvince                      | QA State               |
+                  | addressDistrict                      | QA District            |
+                  | addressCity                          | QA Ward                |
+                  | hivPositiveDate                      | 2022-05-01             |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A  |
+                  | hivPositiveTestingUID                | HIVPOS00001A8          |
+                  | dateClientEnrolledToCare             |                        |
+                  | enrolledToCareUID                    |                        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample |
+                  | enrolledToCareFacName                |                        |
+                  | enrolledToCareDateFirstClinicalVisit |                        |
+                  | artInitiationDate                    |                        |
+                  | artInitiationRegimenLine             |                        |
+                  | artInitiationRegimen                 |                        |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-9-173-122415
+      Scenario: MRN00001A-9-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Aron                             |
-                  | lastName                         | Aklilu                           |
-                  | gender                           | female                           |
-                  | dateOfBirth                      | 1968-03-15                       |
-                  | clientID                         | MRN00001A-9-173-122415           |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A9                    |
+                  | key                                  | value                  |
+                  | orgId                                | HIVOrganizationExample |
+                  | firstName                            | Aron                   |
+                  | lastName                             | Aklilu                 |
+                  | gender                               | female                 |
+                  | dateOfBirth                          | 1968-03-15             |
+                  | registrationFacilityCode             | HIVOrganizationExample |
+                  | clientID                             | MRN00001A-9-174-124449 |
+                  | registrationDate                     | 2022-05-01             |
+                  | NID                                  | MRN00001A-9            |
+                  | addressCountry                       | QA Country             |
+                  | addressProvince                      | QA State               |
+                  | addressDistrict                      | QA District            |
+                  | addressCity                          | QA Ward                |
+                  | hivPositiveDate                      | 2022-05-01             |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A  |
+                  | hivPositiveTestingUID                | HIVPOS00001A9          |
+                  | dateClientEnrolledToCare             |                        |
+                  | enrolledToCareUID                    |                        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample |
+                  | enrolledToCareFacName                |                        |
+                  | enrolledToCareDateFirstClinicalVisit |                        |
+                  | artInitiationDate                    |                        |
+                  | artInitiationRegimenLine             |                        |
+                  | artInitiationRegimen                 |                        |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-10-173-122415
+      Scenario: MRN00001A-10-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Dawit                            |
-                  | lastName                         | Yerga                            |
-                  | gender                           | female                           |
-                  | dateOfBirth                      | 1979-01-15                       |
-                  | clientID                         | MRN00001A-10-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A10                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Dawit                   |
+                  | lastName                             | Yerga                   |
+                  | gender                               | female                  |
+                  | dateOfBirth                          | 1979-01-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-10-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-10            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A10          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-11-173-122415
+      Scenario: MRN00001A-11-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Tesfa                            |
-                  | lastName                         | Bahta                            |
-                  | gender                           | male                             |
-                  | dateOfBirth                      | 1974-01-15                       |
-                  | clientID                         | MRN00001A-11-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A11                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Tesfa                   |
+                  | lastName                             | Bahta                   |
+                  | gender                               | male                    |
+                  | dateOfBirth                          | 1974-01-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-11-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-11            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A11          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-12-173-122415
+      Scenario: MRN00001A-12-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Eleazar                          |
-                  | lastName                         | Hailu                            |
-                  | gender                           | unknown                          |
-                  | dateOfBirth                      | 1999-01-15                       |
-                  | clientID                         | MRN00001A-12-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  |                                  |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName |                                  |
-                  | hivPositiveTestingUID            |                                  |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Eleazar                 |
+                  | lastName                             | Hailu                   |
+                  | gender                               | unknown                 |
+                  | dateOfBirth                          | 1999-01-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-12-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-12            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      |                         |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     |                         |
+                  | hivPositiveTestingUID                |                         |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
 
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        |                                  |
-                  | lastName                         |                                  |
-                  | gender                           | unknown                          |
-                  | dateOfBirth                      | 1999-01-15                       |
-                  | clientID                         | MRN00001A-12-173-122415          |
-                  | registrationDate                 |                                  |
-                  | registrationFacilityCode         |                                  |
-                  | addressCountry                   |                                  |
-                  | addressProvince                  |                                  |
-                  | addressDistrict                  |                                  |
-                  | addressCity                      |                                  |
-                  | hivPositiveDate                  | 2022-06-01                       |
-                  | hivPositiveDiagnosisFacilityCode |                                  |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A12                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            |                         |
+                  | lastName                             |                         |
+                  | gender                               | unknown                 |
+                  | dateOfBirth                          | 1999-01-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-12-174-124449 |
+                  | registrationDate                     |                         |
+                  | NID                                  | MRN00001A-12            |
+                  | addressCountry                       |                         |
+                  | addressProvince                      |                         |
+                  | addressDistrict                      |                         |
+                  | addressCity                          |                         |
+                  | hivPositiveDate                      | 2022-06-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A12          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-14-173-122415
+      Scenario: MRN00001A-14-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Roni                             |
-                  | lastName                         | Menas                            |
-                  | gender                           | unknown                          |
-                  | dateOfBirth                      | 1988-11-15                       |
-                  | clientID                         | MRN00001A-14-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  |                                  |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName |                                  |
-                  | hivPositiveTestingUID            |                                  |
-            When I POST the FHIR bundle to the IOL
-
-            Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        |                                  |
-                  | lastName                         |                                  |
-                  | gender                           | unknown                          |
-                  | dateOfBirth                      | 1988-11-15                       |
-                  | clientID                         | MRN00001A-14-173-122415          |
-                  | registrationDate                 |                                  |
-                  | registrationFacilityCode         |                                  |
-                  | addressCountry                   |                                  |
-                  | addressProvince                  |                                  |
-                  | addressDistrict                  |                                  |
-                  | addressCity                      |                                  |
-                  | hivPositiveDate                  | 2022-07-01                       |
-                  | hivPositiveDiagnosisFacilityCode |                                  |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A14                   |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-16-173-122415
-            Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Negus                            |
-                  | lastName                         | Adisu                            |
-                  | gender                           | unknown                          |
-                  | dateOfBirth                      | 1976-03-13                       |
-                  | clientID                         | MRN00001A-16-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  |                                  |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName |                                  |
-                  | hivPositiveTestingUID            |                                  |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Roni                    |
+                  | lastName                             | Menas                   |
+                  | gender                               | unknown                 |
+                  | dateOfBirth                          | 1988-11-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-14-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-14            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      |                         |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     |                         |
+                  | hivPositiveTestingUID                |                         |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
 
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        |                                  |
-                  | lastName                         |                                  |
-                  | gender                           | unknown                          |
-                  | dateOfBirth                      | 1976-03-13                       |
-                  | clientID                         | MRN00001A-16-173-122415          |
-                  | registrationDate                 |                                  |
-                  | registrationFacilityCode         |                                  |
-                  | addressCountry                   |                                  |
-                  | addressProvince                  |                                  |
-                  | addressDistrict                  |                                  |
-                  | addressCity                      |                                  |
-                  | hivPositiveDate                  | 2022-07-20                       |
-                  | hivPositiveDiagnosisFacilityCode |                                  |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A16                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            |                         |
+                  | lastName                             |                         |
+                  | gender                               | unknown                 |
+                  | dateOfBirth                          | 1988-11-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-14-174-124449 |
+                  | registrationDate                     |                         |
+                  | NID                                  | MRN00001A-14            |
+                  | addressCountry                       |                         |
+                  | addressProvince                      |                         |
+                  | addressDistrict                      |                         |
+                  | addressCity                          |                         |
+                  | hivPositiveDate                      | 2022-06-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A14          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-18-173-122415
+      Scenario: MRN00001A-16-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Fassil                           |
-                  | lastName                         | Natnael                          |
-                  | gender                           | female                           |
-                  | dateOfBirth                      | 2001-10-13                       |
-                  | clientID                         | MRN00001A-18-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A18                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Negus                   |
+                  | lastName                             | Adisu                   |
+                  | gender                               | unknown                 |
+                  | dateOfBirth                          | 1976-03-13              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-16-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-16            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      |                         |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     |                         |
+                  | hivPositiveTestingUID                |                         |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-19-173-122415
+
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Yetabresh                        |
-                  | lastName                         | Yieshak                          |
-                  | gender                           | female                           |
-                  | dateOfBirth                      | 1994-07-13                       |
-                  | clientID                         | MRN00001A-19-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A19                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            |                         |
+                  | lastName                             |                         |
+                  | gender                               | unknown                 |
+                  | dateOfBirth                          | 1976-03-13              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-16-174-124449 |
+                  | registrationDate                     |                         |
+                  | NID                                  | MRN00001A-16            |
+                  | addressCountry                       |                         |
+                  | addressProvince                      |                         |
+                  | addressDistrict                      |                         |
+                  | addressCity                          |                         |
+                  | hivPositiveDate                      | 2022-06-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A16          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-20-173-122415
+      Scenario: MRN00001A-18-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Mimi                             |
-                  | lastName                         | Beselot                          |
-                  | gender                           | male                             |
-                  | dateOfBirth                      | 1991-07-15                       |
-                  | clientID                         | MRN00001A-20-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A20                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Fassil                  |
+                  | lastName                             | Natnael                 |
+                  | gender                               | female                  |
+                  | dateOfBirth                          | 2001-10-13              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-18-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-18            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A18          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-21-173-122415
+      Scenario: MRN00001A-19-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Abigel                           |
-                  | lastName                         | Ezkeiel                          |
-                  | gender                           | unknown                          |
-                  | dateOfBirth                      | 1994-01-15                       |
-                  | clientID                         | MRN00001A-21-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A21                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Yetabresh               |
+                  | lastName                             | Yieshak                 |
+                  | gender                               | female                  |
+                  | dateOfBirth                          | 1994-07-13              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-19-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-19            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A19          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-22-173-122415
+      Scenario: MRN00001A-20-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Kasha                            |
-                  | lastName                         | Fentahun                         |
-                  | gender                           | male                             |
-                  | dateOfBirth                      | 2002-09-13                       |
-                  | clientID                         | MRN00001A-22-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A22                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Mimi                    |
+                  | lastName                             | Beselot                 |
+                  | gender                               | male                    |
+                  | dateOfBirth                          | 1991-07-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-20-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-20            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A20          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-23-173-122415
+      Scenario: MRN00001A-21-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Sarka                            |
-                  | lastName                         | Tewachew                         |
-                  | gender                           | female                           |
-                  | dateOfBirth                      | 2016-12-13                       |
-                  | clientID                         | MRN00001A-23-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A23                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Abigel                  |
+                  | lastName                             | Ezkeiel                 |
+                  | gender                               | unknown                 |
+                  | dateOfBirth                          | 1994-01-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-21-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-21            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A21          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-24-173-122415
+      Scenario: MRN00001A-22-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Saketa                           |
-                  | lastName                         | Abebe                            |
-                  | gender                           | female                           |
-                  | dateOfBirth                      | 2019-01-15                       |
-                  | clientID                         | MRN00001A-24-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A24                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Kasha                   |
+                  | lastName                             | Fentahun                |
+                  | gender                               | male                    |
+                  | dateOfBirth                          | 2002-09-13              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-22-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-22            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A22          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-25-173-122415
+      Scenario: MRN00001A-23-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Dagim                            |
-                  | lastName                         | Daniels                          |
-                  | gender                           | male                             |
-                  | dateOfBirth                      | 2007-10-15                       |
-                  | clientID                         | MRN00001A-25-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A25                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Sarka                   |
+                  | lastName                             | Tewachew                |
+                  | gender                               | female                  |
+                  | dateOfBirth                          | 2016-12-13              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-23-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-23            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A23          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-26-173-122415
+      Scenario: MRN00001A-24-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Tadesse                          |
-                  | lastName                         | Bergena                          |
-                  | gender                           | other                            |
-                  | dateOfBirth                      | 2000-11-15                       |
-                  | clientID                         | MRN00001A-26-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A26                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Saketa                  |
+                  | lastName                             | Abebe                   |
+                  | gender                               | female                  |
+                  | dateOfBirth                          | 2019-01-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-24-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-24            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A24          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-27-173-122415
+      Scenario: MRN00001A-25-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Taye                             |
-                  | lastName                         | Alemayehu                        |
-                  | gender                           | female                           |
-                  | dateOfBirth                      | 1954-11-15                       |
-                  | clientID                         | MRN00001A-27-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A27                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Dagim                   |
+                  | lastName                             | Daniels                 |
+                  | gender                               | male                    |
+                  | dateOfBirth                          | 2007-10-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-25-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-25            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A25          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-28-173-122415
+      Scenario: MRN00001A-26-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Debritu                          |
-                  | lastName                         | Zewge                            |
-                  | gender                           | male                             |
-                  | dateOfBirth                      | 1954-09-22                       |
-                  | clientID                         | MRN00001A-28-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A28                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Tadesse                 |
+                  | lastName                             | Bergena                 |
+                  | gender                               | other                   |
+                  | dateOfBirth                          | 2000-11-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-26-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-26            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A26          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-29-173-122415
+      Scenario: MRN00001A-27-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Denkayehu                        |
-                  | lastName                         | Tsium                            |
-                  | gender                           | female                           |
-                  | dateOfBirth                      | 1959-11-15                       |
-                  | clientID                         | MRN00001A-29-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A29                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Taye                    |
+                  | lastName                             | Alemayehu               |
+                  | gender                               | female                  |
+                  | dateOfBirth                          | 1954-11-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-27-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-27            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A27          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-30-173-122415
+      Scenario: MRN00001A-28-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Derebu                           |
-                  | lastName                         | Senbeta                          |
-                  | gender                           | unknown                          |
-                  | dateOfBirth                      | 1964-01-15                       |
-                  | clientID                         | MRN00001A-30-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A30                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Debritu                 |
+                  | lastName                             | Zewge                   |
+                  | gender                               | male                    |
+                  | dateOfBirth                          | 1954-09-22              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-28-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-28            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A28          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-31-173-122415
+      Scenario: MRN00001A-29-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Birtukan                         |
-                  | lastName                         | Dadi                             |
-                  | gender                           | male                             |
-                  | dateOfBirth                      | 1968-03-15                       |
-                  | clientID                         | MRN00001A-31-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A31                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Denkayehu               |
+                  | lastName                             | Tsium                   |
+                  | gender                               | female                  |
+                  | dateOfBirth                          | 1959-11-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-29-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-29            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A29          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-32-173-122415
+      Scenario: MRN00001A-30-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Dugassa                          |
-                  | lastName                         | Tadesse                          |
-                  | gender                           | other                            |
-                  | dateOfBirth                      | 1971-07-15                       |
-                  | clientID                         | MRN00001A-32-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A32                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Derebu                  |
+                  | lastName                             | Senbeta                 |
+                  | gender                               | unknown                 |
+                  | dateOfBirth                          | 1964-01-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-30-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-30            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A30          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-33-173-122415
+      Scenario: MRN00001A-31-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Takele                           |
-                  | lastName                         | Behailu                          |
-                  | gender                           | female                           |
-                  | dateOfBirth                      | 1974-01-15                       |
-                  | clientID                         | MRN00001A-33-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A33                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Birtukan                |
+                  | lastName                             | Dadi                    |
+                  | gender                               | male                    |
+                  | dateOfBirth                          | 1968-03-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-31-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-31            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A31          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-34-173-122415
+      Scenario: MRN00001A-32-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Abebe                            |
-                  | lastName                         | Beyene                           |
-                  | gender                           | male                             |
-                  | dateOfBirth                      | 2004-01-15                       |
-                  | clientID                         | MRN00001A-34-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A34                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Dugassa                 |
+                  | lastName                             | Tadesse                 |
+                  | gender                               | other                   |
+                  | dateOfBirth                          | 1971-07-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-32-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-32            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A32          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-35-173-122415
+      Scenario: MRN00001A-33-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Negussie                         |
-                  | lastName                         | Dereje                           |
-                  | gender                           | unknown                          |
-                  | dateOfBirth                      | 1999-01-15                       |
-                  | clientID                         | MRN00001A-35-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A35                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Takele                  |
+                  | lastName                             | Behailu                 |
+                  | gender                               | female                  |
+                  | dateOfBirth                          | 1974-01-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-33-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-33            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A33          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-36-173-122415
+      Scenario: MRN00001A-34-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Abdulbasit                       |
-                  | lastName                         | Ketema                           |
-                  | gender                           | unknown                          |
-                  | dateOfBirth                      | 1988-11-15                       |
-                  | clientID                         | MRN00001A-36-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A36                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Abebe                   |
+                  | lastName                             | Beyene                  |
+                  | gender                               | male                    |
+                  | dateOfBirth                          | 2004-01-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-34-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-34            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A34          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-37-173-122415
+      Scenario: MRN00001A-35-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Kasha                            |
-                  | lastName                         | Tadesse                          |
-                  | gender                           | unknown                          |
-                  | dateOfBirth                      | 1976-03-13                       |
-                  | clientID                         | MRN00001A-37-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A37                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Negussie                |
+                  | lastName                             | Dereje                  |
+                  | gender                               | unknown                 |
+                  | dateOfBirth                          | 1999-01-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-35-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-35            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A35          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-38-173-122415
+      Scenario: MRN00001A-36-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Bisrat                           |
-                  | lastName                         | Mezgebe                          |
-                  | gender                           | female                           |
-                  | dateOfBirth                      | 2001-10-13                       |
-                  | clientID                         | MRN00001A-38-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A38                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Abdulbasit              |
+                  | lastName                             | Ketema                  |
+                  | gender                               | unknown                 |
+                  | dateOfBirth                          | 1988-11-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-36-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-36            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A36          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-39-173-122415
+      Scenario: MRN00001A-37-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Dereje                           |
-                  | lastName                         | Menelik                          |
-                  | gender                           | female                           |
-                  | dateOfBirth                      | 1994-07-13                       |
-                  | clientID                         | MRN00001A-39-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A39                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Kasha                   |
+                  | lastName                             | Tadesse                 |
+                  | gender                               | unknown                 |
+                  | dateOfBirth                          | 1976-03-13              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-37-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-37            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A37          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-40-173-122415
+      Scenario: MRN00001A-38-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Desalegn                         |
-                  | lastName                         | Fufa                             |
-                  | gender                           | other                            |
-                  | dateOfBirth                      | 1991-07-15                       |
-                  | clientID                         | MRN00001A-40-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A40                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Bisrat                  |
+                  | lastName                             | Mezgebe                 |
+                  | gender                               | female                  |
+                  | dateOfBirth                          | 2001-10-13              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-38-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-38            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A38          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-41-173-122415
+      Scenario: MRN00001A-39-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Elias                            |
-                  | lastName                         | Kebede                           |
-                  | gender                           | unknown                          |
-                  | dateOfBirth                      | 2016-12-26                       |
-                  | clientID                         | MRN00001A-41-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A41                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Dereje                  |
+                  | lastName                             | Menelik                 |
+                  | gender                               | female                  |
+                  | dateOfBirth                          | 1994-07-13              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-39-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-39            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A39          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-42-173-122415
+      Scenario: MRN00001A-40-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Engida                           |
-                  | lastName                         | Mechal                           |
-                  | gender                           | male                             |
-                  | dateOfBirth                      | 2018-11-25                       |
-                  | clientID                         | MRN00001A-42-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A42                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Desalegn                |
+                  | lastName                             | Fufa                    |
+                  | gender                               | other                   |
+                  | dateOfBirth                          | 1991-07-15              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-40-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-40            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A40          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-43-173-122415
+      Scenario: MRN00001A-41-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Teferra                          |
-                  | lastName                         | Shimelis                         |
-                  | gender                           | female                           |
-                  | dateOfBirth                      | 1986-04-13                       |
-                  | clientID                         | MRN00001A-43-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A43                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Elias                   |
+                  | lastName                             | Kebede                  |
+                  | gender                               | unknown                 |
+                  | dateOfBirth                          | 2016-12-26              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-41-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-41            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A41          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00001A-44-173-122415
+      Scenario: MRN00001A-42-174-124449
             Given I set FHIR bundle parameters
-                  | key                              | value                            |
-                  | orgId                            | 274cdadd0a6e421ab9971be0f5f3e181 |
-                  | firstName                        | Tekleab                          |
-                  | lastName                         | Fetene                           |
-                  | gender                           | female                           |
-                  | dateOfBirth                      | 2018-09-11                       |
-                  | clientID                         | MRN00001A-44-173-122415          |
-                  | registrationDate                 | 2022-05-01                       |
-                  | registrationFacilityCode         | FAC1A                            |
-                  | addressCountry                   | QA Country                       |
-                  | addressProvince                  | QA State                         |
-                  | addressDistrict                  | QA District                      |
-                  | addressCity                      | QA Ward                          |
-                  | hivPositiveDate                  | 2022-05-01                       |
-                  | hivPositiveDiagnosisFacilityCode | FAC1A                            |
-                  | hivPositiveDiagnosisFacilityName | Reporting Facility 1A            |
-                  | hivPositiveTestingUID            | HIVPOS00001A44                   |
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Engida                  |
+                  | lastName                             | Mechal                  |
+                  | gender                               | male                    |
+                  | dateOfBirth                          | 2018-11-25              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-42-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-42            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A42          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
+            When I POST the FHIR bundle to the IOL
+      Scenario: MRN00001A-43-174-124449
+            Given I set FHIR bundle parameters
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Teferra                 |
+                  | lastName                             | Shimelis                |
+                  | gender                               | female                  |
+                  | dateOfBirth                          | 1986-04-13              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-43-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-43            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A43          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
+            When I POST the FHIR bundle to the IOL
+      Scenario: MRN00001A-44-174-124449
+            Given I set FHIR bundle parameters
+                  | key                                  | value                   |
+                  | orgId                                | HIVOrganizationExample  |
+                  | firstName                            | Tekleab                 |
+                  | lastName                             | Fetene                  |
+                  | gender                               | female                  |
+                  | dateOfBirth                          | 2018-09-11              |
+                  | registrationFacilityCode             | HIVOrganizationExample  |
+                  | clientID                             | MRN00001A-44-174-124449 |
+                  | registrationDate                     | 2022-05-01              |
+                  | NID                                  | MRN00001A-44            |
+                  | addressCountry                       | QA Country              |
+                  | addressProvince                      | QA State                |
+                  | addressDistrict                      | QA District             |
+                  | addressCity                          | QA Ward                 |
+                  | hivPositiveDate                      | 2022-05-01              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 1A   |
+                  | hivPositiveTestingUID                | HIVPOS00001A44          |
+                  | dateClientEnrolledToCare             |                         |
+                  | enrolledToCareUID                    |                         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample  |
+                  | enrolledToCareFacName                |                         |
+                  | enrolledToCareDateFirstClinicalVisit |                         |
+                  | artInitiationDate                    |                         |
+                  | artInitiationRegimenLine             |                         |
+                  | artInitiationRegimen                 |                         |
             When I POST the FHIR bundle to the IOL
 
             And I check JSReports using the following report filters

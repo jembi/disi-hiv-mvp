@@ -2,6 +2,7 @@ const Report = require("../Report");
 const InputHash = require("../InputHash");
 const Encounters = require("../Encounters");
 const Scenarios = require("../Scenarios");
+const Death = require("../Extended Modules/DEATH");
 
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
 const FEATURE_NAME = "3A";
@@ -63,6 +64,8 @@ function prepareData(reportDataSets)
     
     hash.enumerateEncountersForInputDataset(function(currentEncounterCallback)
     {
+        new Death(extendedModuleParams).setData();
+
         generateInputDataHash(function(inputDataHash)
         {
             if (Encounters.inputDataLastRowReached)
