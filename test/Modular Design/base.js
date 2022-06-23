@@ -70,10 +70,8 @@ class Base{
       |state|all|
       |district|all|
       |city|all|
-      |facilityCode|all|
+      |facilityCode|` + this.setCucumberInputDatatableInitial(featureName, true) + `|
       `;
-
-      //|facilityCode|` + this.setCucumberInputDatatableInitial(featureName, true) + `|
   }
 
   getInputArtStarted(data, rowInt, colInt) {
