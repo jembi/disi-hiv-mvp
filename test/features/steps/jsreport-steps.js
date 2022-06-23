@@ -23,7 +23,7 @@ Then('there should be a row identified by {string} of {string} with the followin
 
     //var result = parseInt(String(row[hash.field]).replace("'", null));
 
-    expect(parseInt(result), hash.field).to.equal(parseInt(hash.value))
+    expect(Math.round(result), hash.field).to.equal(Math.round(hash.value))
   })
 })
 
