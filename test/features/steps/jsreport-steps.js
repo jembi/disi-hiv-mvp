@@ -2,13 +2,13 @@ const { Then, When } = require('@cucumber/cucumber')
 const { expect } = require('chai')
 const { getReport } = require('../helpers/api-helpers')
 
-When('I check JSReports using the following report filters', {timeout : 10 * 1000}, async function (table) {
+When('I check JSReports using the following report filters', {timeout : 30 * 1000}, async function (table) {
   const params = {}
   table.hashes().forEach(hash => {
     params[hash.field] = hash.value
   })
 
-  await new Promise(r => setTimeout(r, 8000));
+  await new Promise(r => setTimeout(r, 20000));
 
   const { data } = await getReport(params)
   this.output = data
@@ -19,9 +19,11 @@ Then('there should be a row identified by {string} of {string} with the followin
   expect(row, 'Could not find row').to.not.be.undefined
 
   table.hashes().forEach(hash => {
-    //var result = String(row[hash.field]).replace(/\bb\*(.*?)\*/g, "'");
+    var result = String(row[hash.field]).replace(/\bb\*(.*?)\*/g, "'");
 
-    expect(row[hash.field], hash.field).to.equal(Math.round(hash.value, 0))
+    //var result = parseInt(String(row[hash.field]).replace("'", null));
+
+    expect(parseInt(result), hash.field).to.equal(parseInt(hash.value))
   })
 })
 
