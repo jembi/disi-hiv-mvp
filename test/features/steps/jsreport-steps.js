@@ -2,26 +2,26 @@ const { Then, When } = require('@cucumber/cucumber')
 const { expect } = require('chai')
 const { getReport } = require('../helpers/api-helpers')
 
-When('I check JSReports using the following report filters', async function (table) {
+When('I check JSReports using the following report filters', {timeout : 10 * 1000}, async function (table) {
   const params = {}
   table.hashes().forEach(hash => {
     params[hash.field] = hash.value
   })
 
-  await new Promise(r => setTimeout(r, 2000));
+  await new Promise(r => setTimeout(r, 8000));
 
   const { data } = await getReport(params)
   this.output = data
 })
 
-Then('there should be a row identified by {string} of {string} with the following fields and values', async function (field, value, table) {
+Then('there should be a row identified by {string} of {string} with the following fields and values', function (field, value, table) {
   const row = this.output.rows.find(r => r[field] === value)
   expect(row, 'Could not find row').to.not.be.undefined
 
   table.hashes().forEach(hash => {
-    var result = String(row[hash.field]).replace(/\bb\*(.*?)\*/g, "'");
+    //var result = String(row[hash.field]).replace(/\bb\*(.*?)\*/g, "'");
 
-    expect(result, hash.field).to.equal(hash.value)
+    expect(row[hash.field], hash.field).to.equal(Math.round(hash.value, 0))
   })
 })
 
