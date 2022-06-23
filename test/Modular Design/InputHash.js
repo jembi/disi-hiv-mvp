@@ -45,11 +45,11 @@ class InputHash{
     {
         let base = new Base();
 
-        base.setInputDateColFilters(new Array(
-            11 /* Encounters.Data.REGISTRATION_DATE */,
-            21 /* Encounters.Data.HIV_POSITIVE_DATE */,
-            37 /* Encounters.Data.ART_START_DATE */
-        )); //Check previous encounters for a date value if current encounter has no value
+        //base.setInputDateColFilters(new Array(
+        //    11 /* Encounters.Data.REGISTRATION_DATE */,
+        //    21 /* Encounters.Data.HIV_POSITIVE_DATE */,
+       //     37 /* Encounters.Data.ART_START_DATE */
+       // )); //Check previous encounters for a date value if current encounter has no value
 
         this.#setBaseModule(base);
         
@@ -74,10 +74,10 @@ class InputHash{
                     const mustBeReportedOn = (INPUT_DATA.values[j][2] == "R" ? true : false);
                     const numberOfEncounters = base.isMRNWithMultipleEncounter(INPUT_DATA.values, j, INPUT_DATA_LAST_ROW, 10);
 
-                    if (j == INPUT_DATA_LAST_ROW - 2 && numberOfEncounters > 0)
+                    /*if (j == INPUT_DATA_LAST_ROW - 2) // && numberOfEncounters > 0)
                     {
                         Encounters.inputDataLastRowReachedForAggReportWithMultiEncountersForSameMrn = true;
-                    }
+                    }*/
 
                     Encounters.inputDataValues = INPUT_DATA.values;
                     Encounters.inputDataRowNr = j;

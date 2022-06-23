@@ -19,7 +19,7 @@ class Base{
 
     this.featureNameCaptured = false;
     this.cucumberTestScenarios = null;
-    this.inputDateColFilters = null;
+    //this.inputDateColFilters = null;
   }
 
   getFeatureNameCaptured() {
@@ -42,12 +42,12 @@ class Base{
     }
   }
 
-  getInputDateColFilters() {
+  /*getInputDateColFilters() {
     return this.inputDateColFilters;
   }
   setInputDateColFilters(data) {
       this.inputDateColFilters = data;
-  }
+  }*/
 
   setCucumberInputDatatableInitial(report, isJsReportFilterParam) {
     for (var i = 0; i < organisations.length; i++) {
@@ -296,10 +296,10 @@ getInputReasonNotStartedArtSameDay(data, rowInt, colInt)
   }
 
   getInputDate(data, rowInt, encounterIndex, colInt) {
-    const INPUT_DATE_FILTERS = this.getInputDateColFilters();
+    //const INPUT_DATE_FILTERS = this.getInputDateColFilters();
     const VALUE_FOR_GIVEN_ENCOUNTER = this.getStringOrNullValue(data[rowInt + encounterIndex][colInt]).trim();
 
-    var inputDateFilterFound = false;
+    /*var inputDateFilterFound = false;
 
     for (var x = 0; x < INPUT_DATE_FILTERS.length; x++){
       if (colInt == INPUT_DATE_FILTERS[x])
@@ -320,7 +320,9 @@ getInputReasonNotStartedArtSameDay(data, rowInt, colInt)
     else
     {
       return VALUE_FOR_GIVEN_ENCOUNTER != "" ? moment(VALUE_FOR_GIVEN_ENCOUNTER).utc(UTC_Offset).format(STRING_DATE_FORMAT) : "";
-    }
+    }*/
+
+    return VALUE_FOR_GIVEN_ENCOUNTER != "" ? moment(VALUE_FOR_GIVEN_ENCOUNTER).utc(UTC_Offset).format(STRING_DATE_FORMAT) : "";
   }
 
   getOutcomeDate(outcomeDatasetDate) {

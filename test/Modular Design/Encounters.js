@@ -5,7 +5,7 @@ class Encounters{
     static totalEncountersForMrn = null;
     static inputDataLastRowReached = null;
     static mustEncounterBeReportedOn = null;
-    static inputDataLastRowReachedForAggReportWithMultiEncountersForSameMrn = null;
+    //static inputDataLastRowReachedForAggReportWithMultiEncountersForSameMrn = null;
     static REPORTING_FACILITY_ORG_ID = null;
     static baseModule = null;
 

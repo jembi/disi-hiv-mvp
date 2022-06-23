@@ -14,7 +14,7 @@ When('I check JSReports using the following report filters', async function (tab
   this.output = data
 })
 
-Then('there should be a row identified by {string} of {string} with the following fields and values', function (field, value, table) {
+Then('there should be a row identified by {string} of {string} with the following fields and values', async function (field, value, table) {
   const row = this.output.rows.find(r => r[field] === value)
   expect(row, 'Could not find row').to.not.be.undefined
 

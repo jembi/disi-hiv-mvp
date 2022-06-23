@@ -148,13 +148,16 @@ class Scenarios
         }
 
         base.setCucumberTestScenarios(CURRENT_ENCOUNTER_INDEX == 0 ? SCENARIO + "\n" : "" + "\n");
+
         base.setCucumberTestScenarios(this.#CUCUMBER.GIVEN_STATEMENT + "\n");
         base.setCucumberTestScenarios(this.#getInputHash());
         base.setCucumberTestScenarios(this.#CUCUMBER.WHEN_STATEMENT + "\n");
 
-        const IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT = CURRENT_ENCOUNTER_INDEX == NUMBER_OF_ENCOUNTERS_FOR_MRN && Encounters.inputDataLastRowReachedForAggReportWithMultiEncountersForSameMrn ? true : false;
+        //const IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT = CURRENT_ENCOUNTER_INDEX == NUMBER_OF_ENCOUNTERS_FOR_MRN && Encounters.inputDataLastRowReachedForAggReportWithMultiEncountersForSameMrn ? true : false;
 
-        if (Encounters.inputDataLastRowReached || IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT)
+        //const IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT = Encounters.inputDataLastRowReachedForAggReportWithMultiEncountersForSameMrn ? true : false;
+
+        if (Encounters.inputDataLastRowReached) // || IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT)
         {
             base.setCucumberTestScenarios("\n");
             base.setCucumberTestScenarios(this.#CUCUMBER.AND_STATEMENT + "\n");
