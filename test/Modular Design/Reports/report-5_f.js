@@ -2,12 +2,13 @@ const Report = require("../Report");
 const InputHash = require("../InputHash");
 const Encounters = require("../Encounters");
 const Scenarios = require("../Scenarios");
+const Viral_Load = require("../Extended Modules/Viral_Load");
 
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
 const FEATURE_NAME = "5F";
 const REPORT_SPECFIC_FILTERS = []; //add any additional report filters
 const ROW_DISAGGREGATION_KEY = "supGroup";
-const ROW_DISAGGREGATION_KEY_VALUES = ["suppressed", "unSuppressed", "notKnown"];
+const ROW_DISAGGREGATION_KEY_VALUES = ["Detectable", "Non Detectable", "Unknown"];
 
 const jsReportsVariables = [
     "|males|", 
@@ -16,8 +17,8 @@ const jsReportsVariables = [
     "|femalesPercent|",
     "|others|", 
     "|othersPercent|", 
-    "|unknowns|",
-    "|unknownsPercent|", 
+    "|unknown|",
+    "|unknownPercent|", 
     "|total|", 
     "|totalPercent|"];
 
@@ -62,6 +63,15 @@ function prepareData(reportDataSets)
     
     hash.enumerateEncountersForInputDataset(function(currentEncounterCallback)
     {
+        const base = Encounters.baseModule;
+        const extendedModuleParams = new Array(base, 
+            reportDataSets[0].values, 
+            Encounters.inputDataRowNr, 
+            currentEncounterCallback
+        );
+
+        new Viral_Load(extendedModuleParams).setData();
+
         generateInputDataHash(function(inputDataHash)
         {
             if (Encounters.inputDataLastRowReached)
@@ -109,17 +119,33 @@ function generateInputDataHash(callback)
     inputDataTable += "|lastName  |" + Encounters.Data.Registration.LAST_NAME + "|\n";
     inputDataTable += "|gender  |" + Encounters.Data.Registration.GENDER + "|\n";
     inputDataTable += "|dateOfBirth  |" + Encounters.Data.Registration.DATE_OF_BIRTH + "|\n";
-    inputDataTable += "|clientID  |" + Encounters.Data.Registration.DYNAMIC_MRN + "|\n";
-    inputDataTable += "|registrationDate  |" + Encounters.Data.Registration.REGISTRATION_DATE + "|\n";
     inputDataTable += "|registrationFacilityCode  |" + Encounters.Data.Registration.FAC_CODE + "|\n";
+    inputDataTable += "|registrationDate  |" + Encounters.Data.Registration.REGISTRATION_DATE + "|\n";
+    inputDataTable += "|NID  |" + Encounters.Data.Registration.NATIONAL_ID + "|\n";
     inputDataTable += "|addressCountry  |" + Encounters.Data.Registration.Address.COUNTRY + "|\n";
     inputDataTable += "|addressProvince  |" + Encounters.Data.Registration.Address.PROVINCE + "|\n";
     inputDataTable += "|addressDistrict  |" + Encounters.Data.Registration.Address.DISTRICT + "|\n";
     inputDataTable += "|addressCity  |" + Encounters.Data.Registration.Address.CITY + "|\n";
+
     inputDataTable += "|hivPositiveDate  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DATE + "|\n";
     inputDataTable += "|hivPositiveDiagnosisFacilityCode  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DIAG_FAC_CODE + "|\n";
     inputDataTable += "|hivPositiveDiagnosisFacilityName  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DIAG_FAC_NAME + "|\n";
     inputDataTable += "|hivPositiveTestingUID  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_TESTING_UNIQUE_ID  + "|\n";
+
+    inputDataTable += "|dateClientEnrolledToCare  |" + Encounters.Data.Entry_To_Care.DATE_CLIENT_ENROLLED_TO_CARE  + "|\n";
+    inputDataTable += "|enrolledToCareUID  |" + Encounters.Data.Entry_To_Care.CLIENT_UNIQUE_ID_ASSIGNED_AT_ENROLLMENT  + "|\n";
+    inputDataTable += "|enrolledToCareFacCode  |" + Encounters.Data.Entry_To_Care.ENROLLING_FAC_SITE_CODE  + "|\n";
+    inputDataTable += "|enrolledToCareFacName  |" + Encounters.Data.Entry_To_Care.ENROLLING_FAC_SITE_NAME  + "|\n";
+    inputDataTable += "|enrolledToCareDateFirstClinicalVisit  |" + Encounters.Data.Entry_To_Care.DATE_OF_FIRST_CLINICAL_VISIT  + "|\n";
+
+    inputDataTable += "|artInitiationDate  |" + Encounters.Data.ART_Initiation.DATE_CLIENT_INITIATED_ON_ART  + "|\n";
+    inputDataTable += "|artInitiationRegimenLine  |" + Encounters.Data.ART_Initiation.ART_REGIMEN_LINE_CLIENT_INITIATED_ON  + "|\n";
+    inputDataTable += "|artInitiationRegimen  |" + Encounters.Data.ART_Initiation.ART_REGIMEN_CLIENT_INITIATED_ON  + "|\n";
+
+    inputDataTable += "|vlDate  |" + Encounters.Data.VIRAL_SUPPRESSION.BASELINE.COLLECTION_DATE  + "|\n";
+    inputDataTable += "|vlResult  |" + Encounters.Data.VIRAL_SUPPRESSION.BASELINE.RESULT  + "|\n";
+    inputDataTable += "|vlInterpretation  |" + Encounters.Data.VIRAL_SUPPRESSION.BASELINE.RESULT_INTERPRETATION   + "|\n";
+    inputDataTable += "|currVLSupression  |" + Encounters.Data.VIRAL_SUPPRESSION.CURRENT_SUPRESSION_STATUS   + "|\n";
 
     callback(inputDataTable);
 }
