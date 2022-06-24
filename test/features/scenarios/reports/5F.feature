@@ -1,5 +1,5 @@
 Feature: 5F
-      Scenario: MRN00005F-233-175-023152
+      Scenario: MRN00005F-233-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -19,7 +19,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F233        |
                   | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5F-0001175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0001175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -31,7 +31,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-234-175-023152
+      Scenario: MRN00005F-234-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -51,7 +51,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F234        |
                   | dateClientEnrolledToCare             | 2022-06-20             |
-                  | enrolledToCareUID                    | 2022-5F-0002175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0002175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -63,7 +63,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable             |
                   | currVLSupression                     | Unsuppressed           |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-235-175-023152
+      Scenario: MRN00005F-235-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -83,7 +83,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     |                        |
                   | hivPositiveTestingUID                |                        |
                   | dateClientEnrolledToCare             | 2022-06-08             |
-                  | enrolledToCareUID                    | 2022-5F-0003175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0003175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -95,7 +95,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-236-175-023152
+      Scenario: MRN00005F-236-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -115,7 +115,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F236        |
                   | dateClientEnrolledToCare             | 2022-06-21             |
-                  | enrolledToCareUID                    | 2022-5F-0004175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0004175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-04-20             |
@@ -127,7 +127,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-237-175-023152
+      Scenario: MRN00005F-237-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -159,7 +159,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-238-175-023152
+      Scenario: MRN00005F-238-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -179,7 +179,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F238        |
                   | dateClientEnrolledToCare             | 2022-05-19             |
-                  | enrolledToCareUID                    | 2022-5F-0006175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0006175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit |                        |
@@ -191,7 +191,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-239-175-023152
+      Scenario: MRN00005F-239-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -211,7 +211,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F239        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0007175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0007175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -223,7 +223,7 @@ Feature: 5F
                   | vlInterpretation                     |                        |
                   | currVLSupression                     |                        |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-240-175-023152
+      Scenario: MRN00005F-240-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -243,7 +243,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F240        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0008175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0008175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -255,7 +255,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable             |
                   | currVLSupression                     | Unsuppressed           |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-241-175-023152
+      Scenario: MRN00005F-241-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -275,7 +275,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F241        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0009175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0009175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -287,7 +287,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable             |
                   | currVLSupression                     | Unsuppressed           |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-242-175-023152
+      Scenario: MRN00005F-242-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample      |
@@ -307,7 +307,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F       |
                   | hivPositiveTestingUID                | HIVPOS00005F242             |
                   | dateClientEnrolledToCare             | 2022-05-15                  |
-                  | enrolledToCareUID                    | 2022-5F-0010175023152       |
+                  | enrolledToCareUID                    | 2022-5F-0010175024115       |
                   | enrolledToCareFacCode                | HIVOrganizationExample      |
                   | enrolledToCareFacName                | Reporting Facility 5F       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01                  |
@@ -319,7 +319,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable                  |
                   | currVLSupression                     | Unsuppressed                |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-243-175-023152
+      Scenario: MRN00005F-243-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -339,7 +339,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F243        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0011175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0011175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -351,7 +351,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-244-175-023152
+      Scenario: MRN00005F-244-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -371,7 +371,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F244        |
                   | dateClientEnrolledToCare             | 2022-05-22             |
-                  | enrolledToCareUID                    | 2022-5F-0012175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0012175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -383,7 +383,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-245-175-023152
+      Scenario: MRN00005F-245-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -435,7 +435,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F245        |
                   | dateClientEnrolledToCare             | 2022-06-01             |
-                  | enrolledToCareUID                    | 2022-5F-0013175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0013175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -447,7 +447,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-245-175-023152
+      Scenario: MRN00005F-245-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -467,7 +467,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F245        |
                   | dateClientEnrolledToCare             | 2022-06-01             |
-                  | enrolledToCareUID                    | 2022-5F-0013175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0013175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -479,7 +479,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-247-175-023152
+      Scenario: MRN00005F-247-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -531,7 +531,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F247        |
                   | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5F-0014175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0014175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -543,7 +543,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-247-175-023152
+      Scenario: MRN00005F-247-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -563,7 +563,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F247        |
                   | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5F-0014175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0014175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -575,7 +575,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-249-175-023152
+      Scenario: MRN00005F-249-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -627,7 +627,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F249        |
                   | dateClientEnrolledToCare             | 2022-05-10             |
-                  | enrolledToCareUID                    | 2022-5F-0015175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0015175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -639,7 +639,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-249-175-023152
+      Scenario: MRN00005F-249-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -659,7 +659,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F249        |
                   | dateClientEnrolledToCare             | 2022-05-10             |
-                  | enrolledToCareUID                    | 2022-5F-0015175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0015175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -671,7 +671,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-251-175-023152
+      Scenario: MRN00005F-251-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -723,7 +723,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F251        |
                   | dateClientEnrolledToCare             | 2022-05-31             |
-                  | enrolledToCareUID                    | 2022-5F-0016175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0016175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -735,7 +735,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-251-175-023152
+      Scenario: MRN00005F-251-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -755,7 +755,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F251        |
                   | dateClientEnrolledToCare             | 2022-05-31             |
-                  | enrolledToCareUID                    | 2022-5F-0016175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0016175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -767,7 +767,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-253-175-023152
+      Scenario: MRN00005F-253-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -787,7 +787,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F253        |
                   | dateClientEnrolledToCare             | 2022-05-11             |
-                  | enrolledToCareUID                    | 2022-5F-0017175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0017175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -799,7 +799,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-254-175-023152
+      Scenario: MRN00005F-254-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -819,7 +819,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F254        |
                   | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5F-0018175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0018175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -831,7 +831,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-255-175-023152
+      Scenario: MRN00005F-255-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -851,7 +851,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F255        |
                   | dateClientEnrolledToCare             | 2022-06-20             |
-                  | enrolledToCareUID                    | 2022-5F-0019175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0019175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -863,7 +863,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-256-175-023152
+      Scenario: MRN00005F-256-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -883,7 +883,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F256        |
                   | dateClientEnrolledToCare             | 2022-06-08             |
-                  | enrolledToCareUID                    | 2022-5F-0020175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0020175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -895,7 +895,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-257-175-023152
+      Scenario: MRN00005F-257-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -915,7 +915,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F257        |
                   | dateClientEnrolledToCare             | 2022-06-21             |
-                  | enrolledToCareUID                    | 2022-5F-0021175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0021175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -927,7 +927,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-258-175-023152
+      Scenario: MRN00005F-258-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -979,7 +979,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F258        |
                   | dateClientEnrolledToCare             | 2022-06-19             |
-                  | enrolledToCareUID                    | 2022-5F-0022175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0022175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -989,9 +989,9 @@ Feature: 5F
                   | vlDate                               | 2022-05-05             |
                   | vlResult                             | 999                    |
                   | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Unsuppressed           |
+                  | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-258-175-023152
+      Scenario: MRN00005F-258-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1011,7 +1011,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F258        |
                   | dateClientEnrolledToCare             | 2022-06-19             |
-                  | enrolledToCareUID                    | 2022-5F-0022175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0022175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1021,9 +1021,9 @@ Feature: 5F
                   | vlDate                               | 2022-05-05             |
                   | vlResult                             | 999                    |
                   | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Unsuppressed           |
+                  | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-260-175-023152
+      Scenario: MRN00005F-260-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1075,7 +1075,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F260        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0023175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0023175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1087,7 +1087,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-260-175-023152
+      Scenario: MRN00005F-260-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1107,7 +1107,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F260        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0023175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0023175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1119,7 +1119,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-262-175-023152
+      Scenario: MRN00005F-262-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1171,7 +1171,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F262        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0024175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0024175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1183,7 +1183,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-262-175-023152
+      Scenario: MRN00005F-262-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1203,7 +1203,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F262        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0024175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0024175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1215,7 +1215,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-264-175-023152
+      Scenario: MRN00005F-264-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1267,7 +1267,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F264        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0025175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0025175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1279,7 +1279,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-264-175-023152
+      Scenario: MRN00005F-264-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1299,7 +1299,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F264        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0025175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0025175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1311,7 +1311,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-266-175-023152
+      Scenario: MRN00005F-266-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1331,7 +1331,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F266        |
                   | dateClientEnrolledToCare             | 2022-05-10             |
-                  | enrolledToCareUID                    | 2022-5F-0026175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0026175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1341,9 +1341,9 @@ Feature: 5F
                   | vlDate                               | 2022-05-05             |
                   | vlResult                             | 999                    |
                   | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Unsuppressed           |
+                  | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-267-175-023152
+      Scenario: MRN00005F-267-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1363,7 +1363,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F267        |
                   | dateClientEnrolledToCare             | 2022-05-11             |
-                  | enrolledToCareUID                    | 2022-5F-0027175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0027175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1375,7 +1375,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable             |
                   | currVLSupression                     | Unsuppressed           |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-268-175-023152
+      Scenario: MRN00005F-268-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1395,7 +1395,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F268        |
                   | dateClientEnrolledToCare             | 2022-05-22             |
-                  | enrolledToCareUID                    | 2022-5F-0028175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0028175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1407,7 +1407,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable             |
                   | currVLSupression                     | Unsuppressed           |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-269-175-023152
+      Scenario: MRN00005F-269-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1427,7 +1427,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F269        |
                   | dateClientEnrolledToCare             | 2022-06-01             |
-                  | enrolledToCareUID                    | 2022-5F-0029175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0029175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1437,9 +1437,9 @@ Feature: 5F
                   | vlDate                               | 2022-05-05             |
                   | vlResult                             | 999                    |
                   | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Unsuppressed           |
+                  | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-270-175-023152
+      Scenario: MRN00005F-270-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1459,7 +1459,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F270        |
                   | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5F-0030175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0030175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1471,7 +1471,7 @@ Feature: 5F
                   | vlInterpretation                     | Non Detectable         |
                   | currVLSupression                     | Suppressed             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-271-175-023152
+      Scenario: MRN00005F-271-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1491,7 +1491,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F271        |
                   | dateClientEnrolledToCare             | 2022-05-10             |
-                  | enrolledToCareUID                    | 2022-5F-0031175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0031175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1503,7 +1503,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable             |
                   | currVLSupression                     | Unsuppressed           |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-272-175-023152
+      Scenario: MRN00005F-272-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample      |
@@ -1523,7 +1523,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F       |
                   | hivPositiveTestingUID                | HIVPOS00005F272             |
                   | dateClientEnrolledToCare             | 2022-05-31                  |
-                  | enrolledToCareUID                    | 2022-5F-0032175023152       |
+                  | enrolledToCareUID                    | 2022-5F-0032175024115       |
                   | enrolledToCareFacCode                | HIVOrganizationExample      |
                   | enrolledToCareFacName                | Reporting Facility 5F       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01                  |
@@ -1535,7 +1535,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable                  |
                   | currVLSupression                     | Unsuppressed                |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-273-175-023152
+      Scenario: MRN00005F-273-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample      |
@@ -1555,7 +1555,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F       |
                   | hivPositiveTestingUID                | HIVPOS00005F273             |
                   | dateClientEnrolledToCare             | 2022-05-11                  |
-                  | enrolledToCareUID                    | 2022-5F-0033175023152       |
+                  | enrolledToCareUID                    | 2022-5F-0033175024115       |
                   | enrolledToCareFacCode                | HIVOrganizationExample      |
                   | enrolledToCareFacName                | Reporting Facility 5F       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01                  |
@@ -1567,7 +1567,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable                  |
                   | currVLSupression                     | Unsuppressed                |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-274-175-023152
+      Scenario: MRN00005F-274-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample      |
@@ -1587,7 +1587,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F       |
                   | hivPositiveTestingUID                | HIVPOS00005F274             |
                   | dateClientEnrolledToCare             | 2022-05-22                  |
-                  | enrolledToCareUID                    | 2022-5F-0034175023152       |
+                  | enrolledToCareUID                    | 2022-5F-0034175024115       |
                   | enrolledToCareFacCode                | HIVOrganizationExample      |
                   | enrolledToCareFacName                | Reporting Facility 5F       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01                  |
@@ -1599,7 +1599,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable                  |
                   | currVLSupression                     | Unsuppressed                |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-275-175-023152
+      Scenario: MRN00005F-275-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1619,7 +1619,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F275        |
                   | dateClientEnrolledToCare             | 2022-06-01             |
-                  | enrolledToCareUID                    | 2022-5F-0035175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0035175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1631,7 +1631,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable             |
                   | currVLSupression                     | Unsuppressed           |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-276-175-023152
+      Scenario: MRN00005F-276-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1651,7 +1651,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F276        |
                   | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5F-0036175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0036175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1663,7 +1663,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable             |
                   | currVLSupression                     | Unsuppressed           |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-277-175-023152
+      Scenario: MRN00005F-277-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1683,7 +1683,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F277        |
                   | dateClientEnrolledToCare             | 2022-05-10             |
-                  | enrolledToCareUID                    | 2022-5F-0037175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0037175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1695,7 +1695,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable             |
                   | currVLSupression                     | Unsuppressed           |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-278-175-023152
+      Scenario: MRN00005F-278-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1715,7 +1715,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F278        |
                   | dateClientEnrolledToCare             | 2022-05-31             |
-                  | enrolledToCareUID                    | 2022-5F-0038175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0038175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1727,7 +1727,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable             |
                   | currVLSupression                     | Unsuppressed           |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-279-175-023152
+      Scenario: MRN00005F-279-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1747,7 +1747,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F279        |
                   | dateClientEnrolledToCare             | 2022-05-11             |
-                  | enrolledToCareUID                    | 2022-5F-0039175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0039175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1759,7 +1759,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable             |
                   | currVLSupression                     | Unsuppressed           |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-280-175-023152
+      Scenario: MRN00005F-280-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1779,7 +1779,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F280        |
                   | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5F-0040175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0040175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1791,7 +1791,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable             |
                   | currVLSupression                     | Unsuppressed           |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-281-175-023152
+      Scenario: MRN00005F-281-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                   |
                   | orgId                                | HIVOrganizationExample  |
@@ -1811,7 +1811,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F   |
                   | hivPositiveTestingUID                | HIVPOS00005F281         |
                   | dateClientEnrolledToCare             | 2022-06-20              |
-                  | enrolledToCareUID                    | 2022-5F-0041175023152   |
+                  | enrolledToCareUID                    | 2022-5F-0041175024115   |
                   | enrolledToCareFacCode                | HIVOrganizationExample  |
                   | enrolledToCareFacName                | Reporting Facility 5F   |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01              |
@@ -1823,7 +1823,7 @@ Feature: 5F
                   | vlInterpretation                     | Detectable              |
                   | currVLSupression                     | Unsuppressed            |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-282-175-023152
+      Scenario: MRN00005F-282-175-024115
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1843,7 +1843,7 @@ Feature: 5F
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
                   | hivPositiveTestingUID                | HIVPOS00005F282        |
                   | dateClientEnrolledToCare             | 2022-06-08             |
-                  | enrolledToCareUID                    | 2022-5F-0042175023152  |
+                  | enrolledToCareUID                    | 2022-5F-0042175024115  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5F  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1869,13 +1869,46 @@ Feature: 5F
 
 
             Then there should be a row identified by "supGroup" of "Detectable" with the following fields and values
-            undefined
+                  | field          | value |
+                  | males          | 6     |
+                  | malesPercent   | 33    |
+                  | females        | 11    |
+                  | femalesPercent | 61    |
+                  | others         | 1     |
+                  | othersPercent  | 6     |
+                  | unknown        | 0     |
+                  | unknownPercent | 0     |
+                  | total          | 18    |
+                  | totalPercent   | 47    |
+
 
             Then there should be a row identified by "supGroup" of "Non Detectable" with the following fields and values
-            undefined
+                  | field          | value |
+                  | males          | 4     |
+                  | malesPercent   | 25    |
+                  | females        | 2     |
+                  | femalesPercent | 13    |
+                  | others         | 2     |
+                  | othersPercent  | 13    |
+                  | unknown        | 8     |
+                  | unknownPercent | 50    |
+                  | total          | 16    |
+                  | totalPercent   | 42    |
+
 
             Then there should be a row identified by "supGroup" of "Unknown" with the following fields and values
-            undefined
+                  | field          | value |
+                  | males          | 1     |
+                  | malesPercent   | 25    |
+                  | females        | 1     |
+                  | femalesPercent | 25    |
+                  | others         | 1     |
+                  | othersPercent  | 25    |
+                  | unknown        | 1     |
+                  | unknownPercent | 25    |
+                  | total          | 4     |
+                  | totalPercent   | 11    |
+
             Then there should be a total for fields
                   | field          | value |
                   | males          | 11    |
