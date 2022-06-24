@@ -111,13 +111,13 @@ function generateInputDataHash(callback)
     inputDataTable += "|gender  |" + Encounters.Data.Registration.GENDER + "|\n";
     inputDataTable += "|dateOfBirth  |" + Encounters.Data.Registration.DATE_OF_BIRTH + "|\n";
     inputDataTable += "|registrationFacilityCode  |" + Encounters.Data.Registration.FAC_CODE + "|\n";
-    //inputDataTable += "|clientID  |" + Encounters.Data.Registration.DYNAMIC_MRN + "|\n";
     inputDataTable += "|registrationDate  |" + Encounters.Data.Registration.REGISTRATION_DATE + "|\n";
     inputDataTable += "|NID  |" + Encounters.Data.Registration.NATIONAL_ID + "|\n";
     inputDataTable += "|addressCountry  |" + Encounters.Data.Registration.Address.COUNTRY + "|\n";
     inputDataTable += "|addressProvince  |" + Encounters.Data.Registration.Address.PROVINCE + "|\n";
     inputDataTable += "|addressDistrict  |" + Encounters.Data.Registration.Address.DISTRICT + "|\n";
     inputDataTable += "|addressCity  |" + Encounters.Data.Registration.Address.CITY + "|\n";
+
     inputDataTable += "|hivPositiveDate  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DATE + "|\n";
     inputDataTable += "|hivPositiveDiagnosisFacilityCode  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DIAG_FAC_CODE + "|\n";
     inputDataTable += "|hivPositiveDiagnosisFacilityName  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DIAG_FAC_NAME + "|\n";
@@ -154,7 +154,6 @@ function getTotals(expectedOutcomeData)
 
         currentColumn++;
     }
-    
 
     return "|field|value|\n" + totalsPerColummn;
 }

@@ -1272,7 +1272,7 @@ Feature: 1A
                   | totalPercent    | 8     |
 
 
-            Then there should be a row identified by "ageGroup" of "30-34" with the following fields and values
+            Then there should be a row identified by "ageGroup" of "30-24" with the following fields and values
                   | field           | value |
                   | males           | 1     |
                   | malesPercent    | 25    |

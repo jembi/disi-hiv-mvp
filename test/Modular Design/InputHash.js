@@ -45,12 +45,6 @@ class InputHash{
     {
         let base = new Base();
 
-        //base.setInputDateColFilters(new Array(
-        //    11 /* Encounters.Data.REGISTRATION_DATE */,
-        //    21 /* Encounters.Data.HIV_POSITIVE_DATE */,
-       //     37 /* Encounters.Data.ART_START_DATE */
-       // )); //Check previous encounters for a date value if current encounter has no value
-
         this.#setBaseModule(base);
         
         const INPUT_DATA = this.#getDataset();
@@ -73,11 +67,6 @@ class InputHash{
                 if(INPUT_DATA.values[j][2] == "R" || INPUT_DATA.values[j][2] == "NR"){     
                     const mustBeReportedOn = (INPUT_DATA.values[j][2] == "R" ? true : false);
                     const numberOfEncounters = base.isMRNWithMultipleEncounter(INPUT_DATA.values, j, INPUT_DATA_LAST_ROW, 10);
-
-                    /*if (j == INPUT_DATA_LAST_ROW - 2) // && numberOfEncounters > 0)
-                    {
-                        Encounters.inputDataLastRowReachedForAggReportWithMultiEncountersForSameMrn = true;
-                    }*/
 
                     Encounters.inputDataValues = INPUT_DATA.values;
                     Encounters.inputDataRowNr = j;
@@ -122,8 +111,6 @@ class InputHash{
                         Encounters.Data.ART_Initiation.DATE_CLIENT_INITIATED_ON_ART = base.getInputDate(INPUT_DATA.values, row, i, 36);
                         Encounters.Data.ART_Initiation.ART_REGIMEN_LINE_CLIENT_INITIATED_ON = base.getInputFieldValue(INPUT_DATA.values, row, i, 37, false);
                         Encounters.Data.ART_Initiation.ART_REGIMEN_CLIENT_INITIATED_ON = base.getInputFieldValue(INPUT_DATA.values, row, i, 38, false);
-
-                       
 
                         callback(i);
                     }

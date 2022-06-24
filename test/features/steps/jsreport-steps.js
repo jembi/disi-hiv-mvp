@@ -21,21 +21,19 @@ Then('there should be a row identified by {string} of {string} with the followin
   table.hashes().forEach(hash => {
     var result = String(row[hash.field]).replace(/\bb\*(.*?)\*/g, "'");
 
-    //var result = parseInt(String(row[hash.field]).replace("'", null));
-
     expect(Math.round(result), hash.field).to.equal(Math.round(hash.value))
   })
 })
 
 Then('there should be a total for fields', function (table) {
   table.hashes().forEach(hash => {
-    var result = this.output.totals[hash.field];
+    var result = String(this.output.totals[hash.field]).replace(/\bb\*(.*?)\*/g, "'");
     
     if (Array.isArray(result)) {
       result = result.join(',')
     }
 
-    expect(String(result).replace(/\bb\*(.*?)\*/g, "'"), hash.field).to.equal(hash.value)
+    expect(Math.round(result), hash.field).to.equal(Math.round(hash.value))
   })
 })
 
