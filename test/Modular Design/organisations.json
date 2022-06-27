@@ -33,5 +33,10 @@
     "name": "HIV Organization",
     "id": "HIVOrganizationExample",
     "hfuid": "all"
+  },
+  {
+    "name": "HIV-DASHBOARD",
+    "id": "HIVOrganizationExample",
+    "hfuid": "all"
   }
 ]
