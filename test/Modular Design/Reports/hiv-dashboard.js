@@ -93,7 +93,7 @@ function prepareData(reportDataSets)
         if (Encounters.inputDataLastRowReached)
         {
             //For verification without the need to run an actual test against the expected outcome data.
-            displaySummaryTotals();
+            //displaySummaryTotals();
 
             console.log("\nExecution completed!\n");
 

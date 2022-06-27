@@ -1,16 +1,11 @@
 Feature: HIV-Dashboard
-        And I check GoogleSheets
+    Scenario: Summary Totals
+        When I check GoogleSheets
 
-        Then there should be a row identified by "ageGroup" of "0-4" with the following fields and values
-            | field           | value |
-            | males           | 1     |
-            | malesPercent    | 33    |
-            | females         | 2     |
-            | femalesPercent  | 67    |
-            | others          | 0     |
-            | othersPercent   | 0     |
-            | unknowns        | 0     |
-            | unknownsPercent | 0     |
-            | total           | 3     |
-            | totalPercent    | 8     |
-
+        Then there should be a total for GoogleSheet Summary fields
+            | field                             | value |
+            | HIV+ve people                     | 194   |
+            | People who entered care           | 150   |
+            | HIV +ve people on ART             | 148   |
+            | HIV +ve people virally suppressed | 16    |
+            | HIV+ve people that have died      | 32    |

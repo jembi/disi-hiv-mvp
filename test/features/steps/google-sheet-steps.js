@@ -19,24 +19,29 @@ const getData = async function(callback){
 }
 
 When('I check GoogleSheets', async function () {
-  await new Promise(r => setTimeout(r, 2000));
+  var datasetsAcquired = false;
 
-  getData(function (dataCallback) {
-    if (dataCallback) {
-      const { data } = dataCallback
+  const REPORT_DATASET = await new Promise((resolve) => {
+    getData(function (datasetsCallback) {
+      datasetsAcquired = true;
+        
+      resolve(datasetsCallback);
+    });
+  });
 
-      this.output = data
-    }
-  })
+  if (datasetsAcquired)
+  {
+    this.output = REPORT_DATASET
+  }
 })
 
-Then('there should be a summary total for fields with values', function (table) {
-  const row = this.output.rows.find(r => r[field] === value)
-  expect(row, 'Could not find row').to.not.be.undefined
-
+Then('there should be a total for GoogleSheet Summary fields', function (table) {
   table.hashes().forEach(hash => {
-    var result = String(row[hash.field]).replace(/\bb\*(.*?)\*/g, "'");
+    const row = this.output.values.find(r => r[0] === hash.field)
+    expect(row, 'Could not find row').to.not.be.undefined
 
-    expect(Math.round(result), hash.field).to.equal(Math.round(hash.value))
+    const result = String(row[1]).replace(/\bb\*(.*?)\*/g, "'");
+
+    expect(result, hash.field).to.equal(hash.value)
   })
 })
