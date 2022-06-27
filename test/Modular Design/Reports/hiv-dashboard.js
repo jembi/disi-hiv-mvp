@@ -92,9 +92,12 @@ function prepareData(reportDataSets)
 
         if (Encounters.inputDataLastRowReached)
         {
+            //For verification without the need to run an actual test against the expected outcome data.
             displaySummaryTotals();
 
             console.log("\nExecution completed!\n");
+
+            Totals = null;
         }
     }); 
 }
@@ -196,8 +199,6 @@ function displaySummaryTotals()
     console.log("HIV+ve people on ART -> " + Totals.Summary.HIV_POSITIVE_PEOPLE_ON_ART.length);
     console.log("HIV+ve people virally suppressed -> " + Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.length);
     console.log("HIV+ve people that have died -> " + Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_DIED.length);
-
-    Totals = null;
 }
 
 main();
