@@ -45,3 +45,14 @@ Then('there should be a total for GoogleSheet Summary fields', function (table) 
     expect(result, hash.field).to.equal(hash.value)
   })
 })
+
+Then('there should be a total for GoogleSheet Dashboard Chart fields', function (table) {
+  table.hashes().forEach(hash => {
+    const row = this.output.values.find(r => r[0] === hash.field)
+    expect(row, 'Could not find row').to.not.be.undefined
+
+    const result = String(row[1]).replace(/\bb\*(.*?)\*/g, "'");
+
+    expect(result, hash.field).to.equal(hash.value)
+  })
+})

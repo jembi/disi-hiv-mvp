@@ -119,7 +119,35 @@ function generateExpectedOutcomeDataHashForSummaryTotals(expectedOutcomeData)
     for (var x = 0; x < 5; x++) {
         const value = expectedOutcomeData.values[x];
 
-        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + value[0], "|" + value[1]);
+        var actualValue = 0;
+
+        switch (x)
+        {
+            case 0:
+                actualValue = Totals.Summary.HIV_POSITIVE_PEOPLE.length;
+                
+                break;
+            case 1:
+                actualValue = Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE.length;
+               
+                break;
+            case 2:
+                actualValue = Totals.Summary.HIV_POSITIVE_PEOPLE_ON_ART.length;
+               
+                break;
+            case 3:
+                actualValue = Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.length;
+                
+                break;
+            case 4:
+                actualValue = Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_DIED.length;
+                
+                break;
+            default:
+                break;
+        }
+
+        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + value[0], "|" + actualValue);
     }
 
     base.setCucumberTestScenarios("Scenario: Summary Totals" + "\n");
@@ -166,9 +194,13 @@ function generateExpectedOutcomeDataHashForDashboardTotals(expectedOutcomeData)
 
         for (var y = 0; y < ROW_DISAGGREGATION_KEY_VALUES.length; y++) 
         {
+            var genderValues = [];
+
             for (var j = 0; j < 4; j++)
             {
-                const VALUE = expectedOutcomeData.values[indexRow][currentColumn];
+                //const VALUE = expectedOutcomeData.values[indexRow][currentColumn];
+
+                genderValues.push(expectedOutcomeData.values[indexRow][currentColumn]);
 
                 var gender = null;
                 
@@ -190,7 +222,10 @@ function generateExpectedOutcomeDataHashForDashboardTotals(expectedOutcomeData)
                         break;
                 }
 
-                expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + ROW_DISAGGREGATION_KEY_VALUES[y] + "_" + gender + "|", VALUE);
+                if (j == 3)
+                {
+                    expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + ROW_DISAGGREGATION_KEY_VALUES[y] + "|", genderValues);
+                }
 
                 currentColumn++;
             }
@@ -201,7 +236,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals(expectedOutcomeData)
 
     base.setCucumberTestScenarios("Scenario: Dashboard Totals" + "\n");
     base.setCucumberTestScenarios("When I check GoogleSheets" + "\n");
-    base.setCucumberTestScenarios("Then there should be a total for GoogleSheet Summary fields" + "\n");
+    base.setCucumberTestScenarios("Then there should be a total for GoogleSheet Dashboard Chart fields" + "\n");
     base.setCucumberTestScenarios(expectedOutcometable);
 }
 
