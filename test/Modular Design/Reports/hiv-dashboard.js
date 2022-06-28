@@ -7,6 +7,8 @@ const Viral_Load = require("../Extended Modules/Viral_Load");
 
 const FEATURE_NAME = "HIV-DASHBOARD";
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
+const ROW_DISAGGREGATION_KEY_VALUES = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", 
+    "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65+"];
 
 class Totals{
     static Summary = {
@@ -93,9 +95,6 @@ function prepareData(reportDataSets)
 
         if (Encounters.inputDataLastRowReached)
         {
-            //For verification without the need to run an actual test against the expected outcome data.
-            //displaySummaryTotals();
-
             base.setCucumberTestScenarios("Feature: " + FEATURE_NAME + "\n");
 
             generateExpectedOutcomeDataHashForSummaryTotals(reportDataSets[1]);
@@ -163,8 +162,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals(expectedOutcomeData)
     const NEWLY_STARTED_ART_ROW = 13;
     const DEATHS_ROW = 17;
     const START_COLUMN_INDEX = 1; 
-    const ROW_DISAGGREGATION_KEY_VALUES = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", 
-    "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65+"];
+    
 
     var expectedOutcometable = "|field|value|\n";
     var currentColumn = START_COLUMN_INDEX;
@@ -198,8 +196,6 @@ function generateExpectedOutcomeDataHashForDashboardTotals(expectedOutcomeData)
 
             for (var j = 0; j < 4; j++)
             {
-                //const VALUE = expectedOutcomeData.values[indexRow][currentColumn];
-
                 genderValues.push(expectedOutcomeData.values[indexRow][currentColumn]);
 
                 var gender = null;
@@ -327,16 +323,6 @@ function calculateTotalHivPositivePeopleVirallySupressed(reportingStartDate, rep
             }
         }  
     }
-}
-
-function displaySummaryTotals()
-{
-    console.log("\nHIV-Dashboard Totals:\n");
-    console.log("HIV+ve people -> " + Totals.Summary.HIV_POSITIVE_PEOPLE.length);
-    console.log("HIV+ve people who entered care -> " + Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE.length);
-    console.log("HIV+ve people on ART -> " + Totals.Summary.HIV_POSITIVE_PEOPLE_ON_ART.length);
-    console.log("HIV+ve people virally suppressed -> " + Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.length);
-    console.log("HIV+ve people that have died -> " + Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_DIED.length);
 }
 
 main();
