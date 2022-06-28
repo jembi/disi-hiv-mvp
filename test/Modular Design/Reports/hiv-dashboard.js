@@ -18,6 +18,39 @@ class Totals{
         HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED: [],
         HIV_POSITIVE_PEOPLE_WHO_DIED: []
     }
+
+    static Gender = {
+        HIV_POSITIVE_PEOPLE: {
+            Male: [],
+            Female: [],
+            Other: [],
+            Unknown: []
+        },
+        HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE: {
+            Male: [],
+            Female: [],
+            Other: [],
+            Unknown: []
+        },
+        HIV_POSITIVE_PEOPLE_ON_ART: {
+            Male: [],
+            Female: [],
+            Other: [],
+            Unknown: []
+        },
+        HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED: {
+            Male: [],
+            Female: [],
+            Other: [],
+            Unknown: []
+        },
+        HIV_POSITIVE_PEOPLE_WHO_DIED: {
+            Male: [],
+            Female: [],
+            Other: [],
+            Unknown: []
+        }
+    }
 }
 
 function checkIfDateIsBetweenTwoDates(from, to, dateToCheck)
@@ -236,6 +269,138 @@ function generateExpectedOutcomeDataHashForDashboardTotals(expectedOutcomeData)
     base.setCucumberTestScenarios(expectedOutcometable);
 }
 
+/*function handleGenderTotalsForGivenSummaryDiaggregationKey(disaggregationKey)
+{
+    switch (disaggregationKey)
+    {
+        case "HIV_POSITIVE_PEOPLE":
+            break;
+        default:
+            break;
+    }
+}*/
+
+function handleTotalsByGenderDisaggregation(summaryDisaggregationKey)
+{
+    switch (Encounters.Data.Registration.GENDER)
+    {
+        case "male":
+            switch (summaryDisaggregationKey)
+            {
+                case "HIV_POSITIVE_PEOPLE":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE.Male.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE.Male.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_ON_ART":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_ON_ART.Male.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.Male.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_WHO_DIED":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_DIED.Male.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                default:
+                    break;
+            }
+        
+            break;
+        case "female":
+            switch (summaryDisaggregationKey)
+            {
+                case "HIV_POSITIVE_PEOPLE":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE.Female.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE.Female.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_ON_ART":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_ON_ART.Female.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.Female.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_WHO_DIED":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_DIED.Female.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                default:
+                    break;
+            }
+
+            break;
+        case "other":
+            switch (summaryDisaggregationKey)
+            {
+                case "HIV_POSITIVE_PEOPLE":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE.Other.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE.Other.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_ON_ART":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_ON_ART.Other.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.Other.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_WHO_DIED":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_DIED.Other.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                default:
+                    break;
+            }
+
+            break;
+        case "unknown":
+            switch (summaryDisaggregationKey)
+            {
+                case "HIV_POSITIVE_PEOPLE":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE.Unknown.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE.Unknown.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_ON_ART":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_ON_ART.Unknown.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.Unknown.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                case "HIV_POSITIVE_PEOPLE_WHO_DIED":
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_DIED.Unknown.push(Encounters.Data.Registration.MRN);
+
+                    break;
+                default:
+                    break;
+            }
+
+            break;
+        default:
+            break;
+    }
+}
+
 function calculateTotalHivPositivePeople(reportingStartDate, reportingEndDate)
 {
     if (Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DATE)
@@ -246,6 +411,8 @@ function calculateTotalHivPositivePeople(reportingStartDate, reportingEndDate)
         {
             if (!Totals.Summary.HIV_POSITIVE_PEOPLE.includes(Encounters.Data.Registration.MRN))
             {
+                handleTotalsByGenderDisaggregation("HIV_POSITIVE_PEOPLE");
+
                 Totals.Summary.HIV_POSITIVE_PEOPLE.push(Encounters.Data.Registration.MRN);
             }
         }
@@ -262,6 +429,8 @@ function calculateTotalHivPositiveDeaths(reportingStartDate, reportingEndDate)
         {
             if (!Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_DIED.includes(Encounters.Data.Registration.MRN))
             {
+                handleTotalsByGenderDisaggregation("HIV_POSITIVE_PEOPLE_WHO_DIED");
+                
                 Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_DIED.push(Encounters.Data.Registration.MRN);
             }
         }
@@ -280,6 +449,8 @@ function calculateTotalHivPositivePeopleEnrolledIntoCare(reportingStartDate, rep
         {
             if (!Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE.includes(Encounters.Data.Registration.MRN))
             {
+                handleTotalsByGenderDisaggregation("HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE");
+                
                 Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE.push(Encounters.Data.Registration.MRN);
             }
         }
@@ -299,6 +470,8 @@ function calculateTotalHivPositivePeopleOnART(reportingStartDate, reportingEndDa
         {
             if (!Totals.Summary.HIV_POSITIVE_PEOPLE_ON_ART.includes(Encounters.Data.Registration.MRN))
             {
+                handleTotalsByGenderDisaggregation("HIV_POSITIVE_PEOPLE_ON_ART");
+                
                 Totals.Summary.HIV_POSITIVE_PEOPLE_ON_ART.push(Encounters.Data.Registration.MRN);
             }
         }  
@@ -319,6 +492,8 @@ function calculateTotalHivPositivePeopleVirallySupressed(reportingStartDate, rep
         {
             if (!Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.includes(Encounters.Data.Registration.MRN))
             {
+                handleTotalsByGenderDisaggregation("HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED");
+                
                 Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.push(Encounters.Data.Registration.MRN);
             }
         }  
