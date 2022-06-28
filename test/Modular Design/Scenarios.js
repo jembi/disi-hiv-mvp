@@ -135,11 +135,9 @@ class Scenarios
         const base = Encounters.baseModule;
         const SCENARIO = "Scenario: " + Encounters.Data.Registration.DYNAMIC_MRN;
         const DYNAMIC_MRN = Encounters.Data.Registration.DYNAMIC_MRN;
-        const NUMBER_OF_ENCOUNTERS_FOR_MRN = Encounters.totalEncountersForMrn;
         const REPORTING_PERIOD = Encounters.Data.REPORTING_PERIOD;
         const CURRENT_ENCOUNTER_INDEX = this.#getCurrentEncounterIndex();
-        const FEATURE_NAME = this.#getFeature();
-        const REPORT_FILTERS = this.#getReportFilters(); 
+        const FEATURE_NAME = this.#getFeature(); 
 
         if (!base.getFeatureNameCaptured())
         {

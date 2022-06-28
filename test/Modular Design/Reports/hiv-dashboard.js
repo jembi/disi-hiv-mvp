@@ -95,11 +95,34 @@ function prepareData(reportDataSets)
             //For verification without the need to run an actual test against the expected outcome data.
             //displaySummaryTotals();
 
-            console.log("\nExecution completed!\n");
+            generateExpectedOutcomeDataHashForSummaryTotals(reportDataSets[1]);
+
+            Encounters.baseModule.generateFeatureFile(UPLOAD_FILES_TO_GOOGLE_DRIVE, FEATURE_NAME, function (){ 
+                console.log("Execution completed!\n");
+            });
 
             Totals = null;
         }
     }); 
+}
+
+function generateExpectedOutcomeDataHashForSummaryTotals(expectedOutcomeData)
+{
+    const base = Encounters.baseModule;
+
+    var expectedOutcometable = "|field|value|\n";
+
+    for (var x = 0; x < 5; x++) {
+        const value = expectedOutcomeData.values[x];
+
+        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + value[0], "|" + value[1]);
+    }
+
+    base.setCucumberTestScenarios("Feature: " + FEATURE_NAME + "\n");
+    base.setCucumberTestScenarios("Scenario: Summary Totals" + "\n");
+    base.setCucumberTestScenarios("When I check GoogleSheets" + "\n");
+    base.setCucumberTestScenarios("Then there should be a total for GoogleSheet Summary fields" + "\n");
+    base.setCucumberTestScenarios(expectedOutcometable);
 }
 
 function calculateTotalHivPositivePeople(reportingStartDate, reportingEndDate)
