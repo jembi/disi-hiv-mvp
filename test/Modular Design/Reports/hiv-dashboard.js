@@ -68,9 +68,10 @@ function prepareData(reportDataSets)
 
     hash.enumerateEncountersForInputDataset(function(currentEncounterCallback)
     {
+        const base = Encounters.baseModule;
+        
         if(Encounters.mustEncounterBeReportedOn)
         {
-            const base = Encounters.baseModule;
             const extendedModuleParams = new Array(base, 
                 reportDataSets[0].values, 
                 Encounters.inputDataRowNr, 
@@ -95,7 +96,10 @@ function prepareData(reportDataSets)
             //For verification without the need to run an actual test against the expected outcome data.
             //displaySummaryTotals();
 
+            base.setCucumberTestScenarios("Feature: " + FEATURE_NAME + "\n");
+
             generateExpectedOutcomeDataHashForSummaryTotals(reportDataSets[1]);
+            generateExpectedOutcomeDataHashForDashboardTotals(reportDataSets[1]);
 
             Encounters.baseModule.generateFeatureFile(UPLOAD_FILES_TO_GOOGLE_DRIVE, FEATURE_NAME, function (){ 
                 console.log("Execution completed!\n");
@@ -118,8 +122,84 @@ function generateExpectedOutcomeDataHashForSummaryTotals(expectedOutcomeData)
         expectedOutcometable += base.displayOutcomeJSReportVariable("|" + value[0], "|" + value[1]);
     }
 
-    base.setCucumberTestScenarios("Feature: " + FEATURE_NAME + "\n");
     base.setCucumberTestScenarios("Scenario: Summary Totals" + "\n");
+    base.setCucumberTestScenarios("When I check GoogleSheets" + "\n");
+    base.setCucumberTestScenarios("Then there should be a total for GoogleSheet Summary fields" + "\n");
+    base.setCucumberTestScenarios(expectedOutcometable);
+}
+
+function generateExpectedOutcomeDataHashForDashboardTotals(expectedOutcomeData)
+{
+    const base = Encounters.baseModule;
+    const NEW_HIV_DIAGNOSIS_ROW = 9;
+    const NEWLY_STARTED_ART_ROW = 13;
+    const DEATHS_ROW = 17;
+    const START_COLUMN_INDEX = 1; 
+    const ROW_DISAGGREGATION_KEY_VALUES = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", 
+    "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65+"];
+
+    var expectedOutcometable = "|field|value|\n";
+    var currentColumn = START_COLUMN_INDEX;
+
+    for (var x = 0; x < 3; x++) //Number of charts in HIV Dashboard
+    {
+        var indexRow = 0;
+        var chartName = null;
+
+        switch (x)
+        {
+            case 0:
+                indexRow = NEW_HIV_DIAGNOSIS_ROW;
+                chartName = "New HIV diagnosis";
+                break;
+            case 1:
+                indexRow = NEWLY_STARTED_ART_ROW;
+                chartName = "Newly started ART";
+                break;
+            case 2:
+                indexRow = DEATHS_ROW;
+                chartName = "Deaths";
+                break;
+            default:
+                break;
+        }
+
+        for (var y = 0; y < ROW_DISAGGREGATION_KEY_VALUES.length; y++) 
+        {
+            for (var j = 0; j < 4; j++)
+            {
+                const VALUE = expectedOutcomeData.values[indexRow][currentColumn];
+
+                var gender = null;
+                
+                switch (j)
+                {
+                    case 0:
+                        gender = "female";
+                        break;
+                    case 1:
+                        gender = "male";
+                        break;
+                    case 2:
+                        gender = "other";
+                        break;
+                    case 3:
+                        gender = "unknown";
+                        break;
+                    default:
+                        break;
+                }
+
+                expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + ROW_DISAGGREGATION_KEY_VALUES[y] + "_" + gender + "|", VALUE);
+
+                currentColumn++;
+            }
+        }
+
+        currentColumn = START_COLUMN_INDEX;
+    }
+
+    base.setCucumberTestScenarios("Scenario: Dashboard Totals" + "\n");
     base.setCucumberTestScenarios("When I check GoogleSheets" + "\n");
     base.setCucumberTestScenarios("Then there should be a total for GoogleSheet Summary fields" + "\n");
     base.setCucumberTestScenarios(expectedOutcometable);

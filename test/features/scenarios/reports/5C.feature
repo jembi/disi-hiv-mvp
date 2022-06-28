@@ -1,5 +1,5 @@
 Feature: 5C
-      Scenario: MRN00005C-137-178-083029
+      Scenario: MRN00005C-137-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -19,7 +19,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C137        |
                   | dateClientEnrolledToCare             | 2022-05-10             |
-                  | enrolledToCareUID                    | 2022-5C-0001178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0001179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -30,7 +30,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-138-178-083029
+      Scenario: MRN00005C-138-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample      |
@@ -50,7 +50,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C       |
                   | hivPositiveTestingUID                | HIVPOS00005C138             |
                   | dateClientEnrolledToCare             | 2022-05-31                  |
-                  | enrolledToCareUID                    | 2022-5C-0002178083029       |
+                  | enrolledToCareUID                    | 2022-5C-0002179094930       |
                   | enrolledToCareFacCode                | HIVOrganizationExample      |
                   | enrolledToCareFacName                | Reporting Facility 5C       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01                  |
@@ -61,7 +61,7 @@ Feature: 5C
                   | cd4Result                            | 300                         |
                   | cd4Percentage                        | 30                          |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-139-178-083029
+      Scenario: MRN00005C-139-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -81,7 +81,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     |                        |
                   | hivPositiveTestingUID                |                        |
                   | dateClientEnrolledToCare             | 2022-05-11             |
-                  | enrolledToCareUID                    | 2022-5C-0003178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0003179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -92,7 +92,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-140-178-083029
+      Scenario: MRN00005C-140-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -112,7 +112,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C140        |
                   | dateClientEnrolledToCare             | 2022-05-22             |
-                  | enrolledToCareUID                    | 2022-5C-0004178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0004179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-04-20             |
@@ -123,7 +123,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-141-178-083029
+      Scenario: MRN00005C-141-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample      |
@@ -154,7 +154,7 @@ Feature: 5C
                   | cd4Result                            | 300                         |
                   | cd4Percentage                        | 30                          |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-142-178-083029
+      Scenario: MRN00005C-142-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample      |
@@ -174,7 +174,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C       |
                   | hivPositiveTestingUID                | HIVPOS00005C142             |
                   | dateClientEnrolledToCare             | 2022-06-10                  |
-                  | enrolledToCareUID                    | 2022-5C-0006178083029       |
+                  | enrolledToCareUID                    | 2022-5C-0006179094930       |
                   | enrolledToCareFacCode                | HIVOrganizationExample      |
                   | enrolledToCareFacName                | Reporting Facility 5C       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01                  |
@@ -185,7 +185,7 @@ Feature: 5C
                   | cd4Result                            |                             |
                   | cd4Percentage                        |                             |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-143-178-083029
+      Scenario: MRN00005C-143-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample      |
@@ -205,7 +205,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C       |
                   | hivPositiveTestingUID                | HIVPOS00005C143             |
                   | dateClientEnrolledToCare             | 2022-06-20                  |
-                  | enrolledToCareUID                    | 2022-5C-0007178083029       |
+                  | enrolledToCareUID                    | 2022-5C-0007179094930       |
                   | enrolledToCareFacCode                | HIVOrganizationExample      |
                   | enrolledToCareFacName                | Reporting Facility 5C       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01                  |
@@ -216,7 +216,7 @@ Feature: 5C
                   | cd4Result                            | 180                         |
                   | cd4Percentage                        | 18                          |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-144-178-083029
+      Scenario: MRN00005C-144-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -236,7 +236,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C144        |
                   | dateClientEnrolledToCare             | 2022-06-08             |
-                  | enrolledToCareUID                    | 2022-5C-0008178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0008179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -247,7 +247,7 @@ Feature: 5C
                   | cd4Result                            | 199                    |
                   | cd4Percentage                        | 19.9                   |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-145-178-083029
+      Scenario: MRN00005C-145-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -267,18 +267,18 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C145        |
                   | dateClientEnrolledToCare             | 2022-06-21             |
-                  | enrolledToCareUID                    | 2022-5C-0009178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0009179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
                   | artInitiationDate                    | 2022-05-01             |
                   | artInitiationRegimenLine             | Second Line            |
                   | artInitiationRegimen                 | AZT + 3TC + LPV/r      |
-                  | cd4CollectionDate                    | 2022-05-01             |
+                  | cd4CollectionDate                    |                        |
                   | cd4Result                            |                        |
                   | cd4Percentage                        |                        |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-146-178-083029
+      Scenario: MRN00005C-146-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -298,7 +298,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C146        |
                   | dateClientEnrolledToCare             | 2022-06-19             |
-                  | enrolledToCareUID                    | 2022-5C-0010178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0010179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -309,7 +309,7 @@ Feature: 5C
                   | cd4Result                            | 170                    |
                   | cd4Percentage                        | 17                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-147-178-083029
+      Scenario: MRN00005C-147-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -329,7 +329,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C147        |
                   | dateClientEnrolledToCare             | 2022-05-19             |
-                  | enrolledToCareUID                    | 2022-5C-0011178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0011179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -340,7 +340,7 @@ Feature: 5C
                   | cd4Result                            | 350                    |
                   | cd4Percentage                        | 35                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-148-178-083029
+      Scenario: MRN00005C-148-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -360,7 +360,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C148        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5C-0012178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0012179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -371,7 +371,7 @@ Feature: 5C
                   | cd4Result                            | 400                    |
                   | cd4Percentage                        | 40                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-149-178-083029
+      Scenario: MRN00005C-149-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -391,7 +391,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C149        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5C-0013178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0013179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -402,7 +402,7 @@ Feature: 5C
                   | cd4Result                            | 450                    |
                   | cd4Percentage                        | 45                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-150-178-083029
+      Scenario: MRN00005C-150-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -422,7 +422,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C150        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5C-0014178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0014179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -433,7 +433,7 @@ Feature: 5C
                   | cd4Result                            | 480                    |
                   | cd4Percentage                        | 48                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-151-178-083029
+      Scenario: MRN00005C-151-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -453,7 +453,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C151        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5C-0015178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0015179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -464,7 +464,7 @@ Feature: 5C
                   | cd4Result                            | 370                    |
                   | cd4Percentage                        | 37                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-152-178-083029
+      Scenario: MRN00005C-152-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -484,7 +484,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C152        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5C-0016178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0016179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -495,7 +495,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-153-178-083029
+      Scenario: MRN00005C-153-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -515,7 +515,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C153        |
                   | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5C-0017178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0017179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -526,7 +526,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-154-178-083029
+      Scenario: MRN00005C-154-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -546,7 +546,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C154        |
                   | dateClientEnrolledToCare             | 2022-05-10             |
-                  | enrolledToCareUID                    | 2022-5C-0018178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0018179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -557,7 +557,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-155-178-083029
+      Scenario: MRN00005C-155-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -603,12 +603,12 @@ Feature: 5C
                   | addressProvince                      | QA State                    |
                   | addressDistrict                      | QA District                 |
                   | addressCity                          | QA Ward                     |
-                  | hivPositiveDate                      |                             |
+                  | hivPositiveDate                      | 2022-05-01                  |
                   | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample      |
-                  | hivPositiveDiagnosisFacilityName     |                             |
-                  | hivPositiveTestingUID                |                             |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C       |
+                  | hivPositiveTestingUID                | HIVPOS00005C155             |
                   | dateClientEnrolledToCare             | 2022-05-31                  |
-                  | enrolledToCareUID                    | 2022-5C-0019178083029       |
+                  | enrolledToCareUID                    | 2022-5C-0019179094930       |
                   | enrolledToCareFacCode                | HIVOrganizationExample      |
                   | enrolledToCareFacName                | Reporting Facility 5C       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01                  |
@@ -619,7 +619,7 @@ Feature: 5C
                   | cd4Result                            | 300                         |
                   | cd4Percentage                        | 30                          |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-155-178-083029
+      Scenario: MRN00005C-155-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample      |
@@ -634,12 +634,12 @@ Feature: 5C
                   | addressProvince                      | QA State                    |
                   | addressDistrict                      | QA District                 |
                   | addressCity                          | QA Ward                     |
-                  | hivPositiveDate                      |                             |
+                  | hivPositiveDate                      | 2022-05-01                  |
                   | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample      |
-                  | hivPositiveDiagnosisFacilityName     |                             |
-                  | hivPositiveTestingUID                |                             |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C       |
+                  | hivPositiveTestingUID                | HIVPOS00005C155             |
                   | dateClientEnrolledToCare             | 2022-05-31                  |
-                  | enrolledToCareUID                    | 2022-5C-0019178083029       |
+                  | enrolledToCareUID                    | 2022-5C-0019179094930       |
                   | enrolledToCareFacCode                | HIVOrganizationExample      |
                   | enrolledToCareFacName                | Reporting Facility 5C       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01                  |
@@ -650,7 +650,7 @@ Feature: 5C
                   | cd4Result                            | 300                         |
                   | cd4Percentage                        | 30                          |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-157-178-083029
+      Scenario: MRN00005C-157-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -665,10 +665,10 @@ Feature: 5C
                   | addressProvince                      | QA State               |
                   | addressDistrict                      | QA District            |
                   | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      |                        |
+                  | hivPositiveDate                      | 2022-05-01             |
                   | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     |                        |
-                  | hivPositiveTestingUID                |                        |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
+                  | hivPositiveTestingUID                | HIVPOS00005C157        |
                   | dateClientEnrolledToCare             |                        |
                   | enrolledToCareUID                    |                        |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
@@ -701,7 +701,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C157        |
                   | dateClientEnrolledToCare             | 2022-05-11             |
-                  | enrolledToCareUID                    | 2022-5C-0020178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0020179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -712,7 +712,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-157-178-083029
+      Scenario: MRN00005C-157-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -732,7 +732,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C157        |
                   | dateClientEnrolledToCare             | 2022-05-11             |
-                  | enrolledToCareUID                    | 2022-5C-0020178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0020179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -743,7 +743,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-159-178-083029
+      Scenario: MRN00005C-159-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -758,10 +758,10 @@ Feature: 5C
                   | addressProvince                      | QA State               |
                   | addressDistrict                      | QA District            |
                   | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      |                        |
+                  | hivPositiveDate                      | 2022-05-01             |
                   | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     |                        |
-                  | hivPositiveTestingUID                |                        |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
+                  | hivPositiveTestingUID                | HIVPOS00005C159        |
                   | dateClientEnrolledToCare             |                        |
                   | enrolledToCareUID                    |                        |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
@@ -794,7 +794,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C159        |
                   | dateClientEnrolledToCare             | 2022-05-22             |
-                  | enrolledToCareUID                    | 2022-5C-0021178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0021179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -805,7 +805,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-159-178-083029
+      Scenario: MRN00005C-159-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -825,7 +825,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C159        |
                   | dateClientEnrolledToCare             | 2022-05-22             |
-                  | enrolledToCareUID                    | 2022-5C-0021178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0021179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -836,7 +836,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-161-178-083029
+      Scenario: MRN00005C-161-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -851,10 +851,10 @@ Feature: 5C
                   | addressProvince                      | QA State               |
                   | addressDistrict                      | QA District            |
                   | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      |                        |
+                  | hivPositiveDate                      | 2022-05-01             |
                   | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     |                        |
-                  | hivPositiveTestingUID                |                        |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
+                  | hivPositiveTestingUID                | HIVPOS00005C161        |
                   | dateClientEnrolledToCare             |                        |
                   | enrolledToCareUID                    |                        |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
@@ -887,7 +887,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C       |
                   | hivPositiveTestingUID                | HIVPOS00005C161             |
                   | dateClientEnrolledToCare             | 2022-06-01                  |
-                  | enrolledToCareUID                    | 2022-5C-0022178083029       |
+                  | enrolledToCareUID                    | 2022-5C-0022179094930       |
                   | enrolledToCareFacCode                | HIVOrganizationExample      |
                   | enrolledToCareFacName                | Reporting Facility 5C       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01                  |
@@ -898,7 +898,7 @@ Feature: 5C
                   | cd4Result                            | 300                         |
                   | cd4Percentage                        | 30                          |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-161-178-083029
+      Scenario: MRN00005C-161-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample      |
@@ -918,7 +918,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C       |
                   | hivPositiveTestingUID                | HIVPOS00005C161             |
                   | dateClientEnrolledToCare             | 2022-06-01                  |
-                  | enrolledToCareUID                    | 2022-5C-0022178083029       |
+                  | enrolledToCareUID                    | 2022-5C-0022179094930       |
                   | enrolledToCareFacCode                | HIVOrganizationExample      |
                   | enrolledToCareFacName                | Reporting Facility 5C       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01                  |
@@ -929,7 +929,7 @@ Feature: 5C
                   | cd4Result                            | 300                         |
                   | cd4Percentage                        | 30                          |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-163-178-083029
+      Scenario: MRN00005C-163-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -949,7 +949,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C163        |
                   | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5C-0023178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0023179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -960,7 +960,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-164-178-083029
+      Scenario: MRN00005C-164-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -980,18 +980,18 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C164        |
                   | dateClientEnrolledToCare             | 2022-06-20             |
-                  | enrolledToCareUID                    | 2022-5C-0024178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0024179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
                   | artInitiationDate                    | 2022-05-01             |
                   | artInitiationRegimenLine             | Second Line            |
                   | artInitiationRegimen                 | d4T + 3TC + EFV        |
-                  | cd4CollectionDate                    | 2022-05-01             |
+                  | cd4CollectionDate                    |                        |
                   | cd4Result                            |                        |
                   | cd4Percentage                        |                        |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-165-178-083029
+      Scenario: MRN00005C-165-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1011,7 +1011,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C165        |
                   | dateClientEnrolledToCare             | 2022-06-08             |
-                  | enrolledToCareUID                    | 2022-5C-0025178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0025179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1022,7 +1022,7 @@ Feature: 5C
                   | cd4Result                            | 400                    |
                   | cd4Percentage                        | 40                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-166-178-083029
+      Scenario: MRN00005C-166-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1042,7 +1042,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C166        |
                   | dateClientEnrolledToCare             | 2022-06-21             |
-                  | enrolledToCareUID                    | 2022-5C-0026178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0026179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1053,7 +1053,7 @@ Feature: 5C
                   | cd4Result                            | 400                    |
                   | cd4Percentage                        | 40                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-167-178-083029
+      Scenario: MRN00005C-167-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1073,7 +1073,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C167        |
                   | dateClientEnrolledToCare             | 2022-06-19             |
-                  | enrolledToCareUID                    | 2022-5C-0027178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0027179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1084,7 +1084,7 @@ Feature: 5C
                   | cd4Result                            | 400                    |
                   | cd4Percentage                        | 40                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-168-178-083029
+      Scenario: MRN00005C-168-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1105,7 +1105,7 @@ Feature: 5C
                   | hivPositiveTestingUID                | HIVPOS00005C168        |
                   | dateClientEnrolledToCare             |                        |
                   | enrolledToCareUID                    |                        |
-                  | enrolledToCareFacCode                |                        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit |                        |
                   | artInitiationDate                    |                        |
@@ -1135,7 +1135,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C168        |
                   | dateClientEnrolledToCare             | 2022-05-19             |
-                  | enrolledToCareUID                    | 2022-5C-0028178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0028179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1146,7 +1146,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-168-178-083029
+      Scenario: MRN00005C-168-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1166,7 +1166,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C168        |
                   | dateClientEnrolledToCare             | 2022-05-19             |
-                  | enrolledToCareUID                    | 2022-5C-0028178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0028179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1177,7 +1177,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-170-178-083029
+      Scenario: MRN00005C-170-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1228,18 +1228,18 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C170        |
                   | dateClientEnrolledToCare             | 2022-05-10             |
-                  | enrolledToCareUID                    | 2022-5C-0029178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0029179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
                   | artInitiationDate                    | 2022-05-01             |
                   | artInitiationRegimenLine             | First Line             |
                   | artInitiationRegimen                 | d4T + 3TC + LPV/r      |
-                  | cd4CollectionDate                    | 2022-05-01             |
+                  | cd4CollectionDate                    |                        |
                   | cd4Result                            |                        |
                   | cd4Percentage                        |                        |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-170-178-083029
+      Scenario: MRN00005C-170-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1259,18 +1259,18 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C170        |
                   | dateClientEnrolledToCare             | 2022-05-10             |
-                  | enrolledToCareUID                    | 2022-5C-0029178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0029179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
                   | artInitiationDate                    | 2022-05-01             |
                   | artInitiationRegimenLine             | First Line             |
                   | artInitiationRegimen                 | d4T + 3TC + LPV/r      |
-                  | cd4CollectionDate                    | 2022-05-01             |
+                  | cd4CollectionDate                    |                        |
                   | cd4Result                            |                        |
                   | cd4Percentage                        |                        |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-172-178-083029
+      Scenario: MRN00005C-172-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1321,7 +1321,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C172        |
                   | dateClientEnrolledToCare             | 2022-05-31             |
-                  | enrolledToCareUID                    | 2022-5C-0030178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0030179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1332,7 +1332,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-172-178-083029
+      Scenario: MRN00005C-172-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1352,7 +1352,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C172        |
                   | dateClientEnrolledToCare             | 2022-05-31             |
-                  | enrolledToCareUID                    | 2022-5C-0030178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0030179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1363,7 +1363,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-174-178-083029
+      Scenario: MRN00005C-174-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1414,7 +1414,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C174        |
                   | dateClientEnrolledToCare             | 2022-05-11             |
-                  | enrolledToCareUID                    | 2022-5C-0031178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0031179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1425,7 +1425,7 @@ Feature: 5C
                   | cd4Result                            | 500                    |
                   | cd4Percentage                        | 50                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-174-178-083029
+      Scenario: MRN00005C-174-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1445,7 +1445,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C174        |
                   | dateClientEnrolledToCare             | 2022-05-11             |
-                  | enrolledToCareUID                    | 2022-5C-0031178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0031179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1456,7 +1456,7 @@ Feature: 5C
                   | cd4Result                            | 500                    |
                   | cd4Percentage                        | 50                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-176-178-083029
+      Scenario: MRN00005C-176-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1476,7 +1476,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C176        |
                   | dateClientEnrolledToCare             | 2022-05-22             |
-                  | enrolledToCareUID                    | 2022-5C-0032178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0032179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1487,7 +1487,7 @@ Feature: 5C
                   | cd4Result                            | 500                    |
                   | cd4Percentage                        | 50                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-177-178-083029
+      Scenario: MRN00005C-177-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1507,18 +1507,18 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C177        |
                   | dateClientEnrolledToCare             | 2022-06-01             |
-                  | enrolledToCareUID                    | 2022-5C-0033178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0033179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
                   | artInitiationDate                    | 2022-05-01             |
                   | artInitiationRegimenLine             | First Line             |
                   | artInitiationRegimen                 | TDF + FTC + EFV        |
-                  | cd4CollectionDate                    | 2022-05-01             |
+                  | cd4CollectionDate                    |                        |
                   | cd4Result                            |                        |
                   | cd4Percentage                        |                        |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-178-178-083029
+      Scenario: MRN00005C-178-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1538,7 +1538,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C178        |
                   | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5C-0034178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0034179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1549,7 +1549,7 @@ Feature: 5C
                   | cd4Result                            | 500                    |
                   | cd4Percentage                        | 50                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-179-178-083029
+      Scenario: MRN00005C-179-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1569,7 +1569,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C179        |
                   | dateClientEnrolledToCare             | 2022-05-10             |
-                  | enrolledToCareUID                    | 2022-5C-0035178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0035179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1580,7 +1580,7 @@ Feature: 5C
                   | cd4Result                            | 500                    |
                   | cd4Percentage                        | 50                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-180-178-083029
+      Scenario: MRN00005C-180-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1600,7 +1600,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C180        |
                   | dateClientEnrolledToCare             | 2022-05-31             |
-                  | enrolledToCareUID                    | 2022-5C-0036178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0036179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1611,7 +1611,7 @@ Feature: 5C
                   | cd4Result                            | 500                    |
                   | cd4Percentage                        | 50                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-181-178-083029
+      Scenario: MRN00005C-181-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1631,7 +1631,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C181        |
                   | dateClientEnrolledToCare             | 2022-05-11             |
-                  | enrolledToCareUID                    | 2022-5C-0037178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0037179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1642,7 +1642,7 @@ Feature: 5C
                   | cd4Result                            | 500                    |
                   | cd4Percentage                        | 50                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-182-178-083029
+      Scenario: MRN00005C-182-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1662,7 +1662,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C182        |
                   | dateClientEnrolledToCare             | 2022-05-22             |
-                  | enrolledToCareUID                    | 2022-5C-0038178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0038179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
@@ -1673,7 +1673,7 @@ Feature: 5C
                   | cd4Result                            | 300                    |
                   | cd4Percentage                        | 30                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005C-183-178-083029
+      Scenario: MRN00005C-183-179-094930
             Given I set FHIR bundle parameters
                   | key                                  | value                  |
                   | orgId                                | HIVOrganizationExample |
@@ -1693,7 +1693,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C  |
                   | hivPositiveTestingUID                | HIVPOS00005C183        |
                   | dateClientEnrolledToCare             | 2022-06-01             |
-                  | enrolledToCareUID                    | 2022-5C-0039178083029  |
+                  | enrolledToCareUID                    | 2022-5C-0039179094930  |
                   | enrolledToCareFacCode                | HIVOrganizationExample |
                   | enrolledToCareFacName                | Reporting Facility 5C  |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
