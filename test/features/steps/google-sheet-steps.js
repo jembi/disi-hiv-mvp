@@ -47,11 +47,20 @@ Then('there should be a total for GoogleSheet Summary fields', function (table) 
 })
 
 Then('there should be a total for GoogleSheet Dashboard Chart fields', function (table) {
-  table.hashes().forEach(hash => {
-    const row = this.output.values.find(r => r[0] === hash.field)
+  var genderValues = [];
+
+  table.hashes().forEach((hash, index) => {
+    const trimmedHashFieldName = hash.field.split("_")[0];
+
+    const row = this.output.values.find(r => r[0] === trimmedHashFieldName)
     expect(row, 'Could not find row').to.not.be.undefined
 
-    const result = String(row[1]).replace(/\bb\*(.*?)\*/g, "'");
+    for (var x = 0; x < 4; x++) //loop through all age disaggregations
+    {
+      genderValues.push(row[1 + x]);
+    }
+
+    const result = String(genderValues).replace(/\bb\*(.*?)\*/g, "'");
 
     expect(result, hash.field).to.equal(hash.value)
   })
