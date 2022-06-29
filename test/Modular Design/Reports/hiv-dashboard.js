@@ -10,6 +10,9 @@ const FEATURE_NAME = "HIV-DASHBOARD";
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
 const AGE_DISAGGREGATION = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", 
     "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65+"];
+const NUMBER_OF_CHARTS_IN_HIV_DASHBOARD = 3;
+const NUMBER_OF_SUMMARY_TOTAL_CATEGORIES = 5;
+const NUMBER_OF_GENDERS_FOR_CHART_DISAGGREGATION = 4;
 
 class Totals{
     static Summary = {
@@ -73,6 +76,7 @@ class Gender {
         const REPORTING_PERIOD_END_DATE = moment(Encounters.Data.REPORTING_PERIOD[1], Base.STRING_DATE_FORMAT);
         const AGE_AT_END_OF_REPORTING_PERIOD = Math.round(moment.duration(REPORTING_PERIOD_END_DATE.diff(Encounters.Data.Registration.DATE_OF_BIRTH)).asYears());
 
+        //age in years
         if (AGE_AT_END_OF_REPORTING_PERIOD < 5)
             return "0-4";
         else if (AGE_AT_END_OF_REPORTING_PERIOD < 10)
@@ -99,7 +103,7 @@ class Gender {
             return "55-59";
         else if (AGE_AT_END_OF_REPORTING_PERIOD < 65)
             return "60-64";
-        else // AGE_AT_END_OF_REPORTING_PERIOD >= 65:
+        else
             return "65+"; 
     }
 }
@@ -200,7 +204,7 @@ function generateExpectedOutcomeDataHashForSummaryTotals(expectedOutcomeData)
 
     var expectedOutcometable = "|field|value|\n";
 
-    for (var x = 0; x < 5; x++) {
+    for (var x = 0; x < NUMBER_OF_SUMMARY_TOTAL_CATEGORIES; x++) {
         const value = expectedOutcomeData.values[x];
 
         var actualValue = 0;
@@ -243,31 +247,22 @@ function generateExpectedOutcomeDataHashForSummaryTotals(expectedOutcomeData)
 function generateExpectedOutcomeDataHashForDashboardTotals(expectedOutcomeData)
 {
     const base = Encounters.baseModule;
-    const NEW_HIV_DIAGNOSIS_ROW = 9;
-    const NEWLY_STARTED_ART_ROW = 13;
-    const DEATHS_ROW = 17;
-    const START_COLUMN_INDEX = 1; 
     
     var expectedOutcometable = "|field|value|\n";
-    var currentColumn = START_COLUMN_INDEX;
 
-    for (var x = 0; x < 3; x++) //Number of charts in HIV Dashboard
+    for (var x = 0; x < NUMBER_OF_CHARTS_IN_HIV_DASHBOARD; x++)
     {
-        var indexRow = 0;
         var chartName = null;
 
         switch (x)
         {
             case 0:
-                indexRow = NEW_HIV_DIAGNOSIS_ROW;
                 chartName = "New HIV diagnosis";
                 break;
             case 1:
-                indexRow = NEWLY_STARTED_ART_ROW;
                 chartName = "Newly started ART";
                 break;
             case 2:
-                indexRow = DEATHS_ROW;
                 chartName = "Deaths";
                 break;
             default:
@@ -278,7 +273,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals(expectedOutcomeData)
         {
             var genderValues = [];
 
-            for (var j = 0; j < 4; j++)
+            for (var j = 0; j < NUMBER_OF_GENDERS_FOR_CHART_DISAGGREGATION; j++)
             {
                 var gender = null;
                 var value = null;
@@ -328,15 +323,9 @@ function generateExpectedOutcomeDataHashForDashboardTotals(expectedOutcomeData)
                 if (j == 3)
                 {
                     expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + AGE_DISAGGREGATION[y] + "|", genderValues);
-
-                    
                 }
-
-                currentColumn++;
             }
         }
-
-        currentColumn = START_COLUMN_INDEX;
     }
 
     base.setCucumberTestScenarios("Scenario: Dashboard Totals" + "\n");
