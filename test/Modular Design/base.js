@@ -4,9 +4,10 @@ const fs = require('fs');
 const LOCAL_CUCUMBER_FEATURES_DIR = "../../../test/features/scenarios/reports/";
 const UTC_Offset = "+02:00";
 const organisations = require("./organisations.json");
-const STRING_DATE_FORMAT = "YYYY-MM-DD";
+
 
 class Base{
+  static STRING_DATE_FORMAT = "YYYY-MM-DD";
   static DAY_OF_YEAR_POSTFIX = this.getEpochDayOfYearNumber();
   static HH_MM_SS = moment(Date.now()).utc(UTC_Offset).format("hhmmss");
 
@@ -78,8 +79,8 @@ class Base{
     const REPORTING_PERIOD = data[rowInt][colInt].split("-");
     var array = new Array();
 
-    array[0] = moment(REPORTING_PERIOD[0]).utc(UTC_Offset).format(STRING_DATE_FORMAT);
-    array[1] = moment(REPORTING_PERIOD[1]).utc(UTC_Offset).format(STRING_DATE_FORMAT);
+    array[0] = moment(REPORTING_PERIOD[0]).utc(UTC_Offset).format(this.STRING_DATE_FORMAT);
+    array[1] = moment(REPORTING_PERIOD[1]).utc(UTC_Offset).format(this.STRING_DATE_FORMAT);
 
     return array
   }
@@ -87,13 +88,13 @@ class Base{
   getInputDate(data, rowInt, encounterIndex, colInt) {
     const VALUE_FOR_GIVEN_ENCOUNTER = this.getStringOrNullValue(data[rowInt + encounterIndex][colInt]).trim();
 
-    return VALUE_FOR_GIVEN_ENCOUNTER != "" ? moment(VALUE_FOR_GIVEN_ENCOUNTER).utc(UTC_Offset).format(STRING_DATE_FORMAT) : "";
+    return VALUE_FOR_GIVEN_ENCOUNTER != "" ? moment(VALUE_FOR_GIVEN_ENCOUNTER).utc(UTC_Offset).format(this.STRING_DATE_FORMAT) : "";
   }
 
   getOutcomeDate(outcomeDatasetDate) {
     const VALUE_FOR_GIVEN_ENCOUNTER = this.getStringOrNullValue(outcomeDatasetDate).trim();
 
-    return VALUE_FOR_GIVEN_ENCOUNTER != "" ? moment(VALUE_FOR_GIVEN_ENCOUNTER).utc(UTC_Offset).format(STRING_DATE_FORMAT) : "";
+    return VALUE_FOR_GIVEN_ENCOUNTER != "" ? moment(VALUE_FOR_GIVEN_ENCOUNTER).utc(UTC_Offset).format(this.STRING_DATE_FORMAT) : "";
   }
 
   displayOutcomeJSReportVariable(jsReportField, value) {
