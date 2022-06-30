@@ -162,6 +162,14 @@ function prepareData(reportDataSets)
     hash.enumerateEncountersForInputDataset(function(currentEncounterCallback)
     {
         const base = Encounters.baseModule;
+        const extendedModuleParams = new Array(base, 
+            reportDataSets[0].values, 
+            Encounters.inputDataRowNr, 
+            currentEncounterCallback
+        );
+
+        new Death(extendedModuleParams).setData();
+        new Viral_Load(extendedModuleParams).setData();
 
         if (SUBMIT_ALL_INPUT_DATA)
         {
@@ -181,15 +189,6 @@ function prepareData(reportDataSets)
 
         if(Encounters.mustEncounterBeReportedOn)
         {
-            const extendedModuleParams = new Array(base, 
-                reportDataSets[0].values, 
-                Encounters.inputDataRowNr, 
-                currentEncounterCallback
-            );
-
-            new Death(extendedModuleParams).setData();
-            new Viral_Load(extendedModuleParams).setData();
-
             const REPORTING_PERIOD_START_DATE = moment(Encounters.Data.REPORTING_PERIOD[0], base.form);
             const REPORTING_PERIOD_END_DATE = moment(Encounters.Data.REPORTING_PERIOD[1], Base.STRING_DATE_FORMAT);
 
