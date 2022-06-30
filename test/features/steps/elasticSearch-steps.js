@@ -1,7 +1,7 @@
-const { Before } = require('@cucumber/cucumber')
+const { When } = require('@cucumber/cucumber')
 const { esPost } = require('../helpers/api-helpers')
 
-Before({ tags: "@ES" }, async function () {
+When('I delete all report data in elasticsearch', async function () {
   const query = {
     'query': {
      'match_all' : {}
