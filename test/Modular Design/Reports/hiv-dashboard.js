@@ -3,16 +3,19 @@ const Base = require("../base");
 const Report = require("../Report");
 const InputHash = require("../InputHash");
 const Encounters = require("../Encounters");
+const Scenarios = require("../Scenarios");
 const Death = require("../Extended Modules/DEATH");
 const Viral_Load = require("../Extended Modules/Viral_Load");
 
 const FEATURE_NAME = "HIV-DASHBOARD";
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
+const REPORT_SPECFIC_FILTERS = []; //add any additional report filters
 const AGE_DISAGGREGATION = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", 
     "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65+"];
 const NUMBER_OF_CHARTS_IN_HIV_DASHBOARD = 3;
 const NUMBER_OF_SUMMARY_TOTAL_CATEGORIES = 5;
 const NUMBER_OF_GENDERS_FOR_CHART_DISAGGREGATION = 4;
+const SUBMIT_ALL_INPUT_DATA = true; //Using postman, every record in the input dataset is submitted to the CDR
 
 class Totals{
     static Summary = {
@@ -160,6 +163,22 @@ function prepareData(reportDataSets)
     {
         const base = Encounters.baseModule;
 
+        if (SUBMIT_ALL_INPUT_DATA)
+        {
+            generateInputDataHash(function(inputDataHash)
+            {
+                let scenario = new Scenarios(
+                    inputDataHash,
+                    currentEncounterCallback,
+                    FEATURE_NAME,
+                    REPORT_SPECFIC_FILTERS,
+                    false
+                );
+
+                scenario.generateScenarios();
+            });
+        }
+
         if(Encounters.mustEncounterBeReportedOn)
         {
             const extendedModuleParams = new Array(base, 
@@ -183,8 +202,11 @@ function prepareData(reportDataSets)
 
         if (Encounters.inputDataLastRowReached)
         {
-            base.setCucumberTestScenarios("Feature: " + FEATURE_NAME + "\n");
-
+            if (!SUBMIT_ALL_INPUT_DATA)
+            {
+                base.setCucumberTestScenarios("Feature: " + FEATURE_NAME + "\n");
+            }
+        
             generateExpectedOutcomeDataHashForSummaryTotals(reportDataSets[1]);
             generateExpectedOutcomeDataHashForDashboardTotals(reportDataSets[1]);
 
@@ -238,8 +260,13 @@ function generateExpectedOutcomeDataHashForSummaryTotals(expectedOutcomeData)
         expectedOutcometable += base.displayOutcomeJSReportVariable("|" + value[0], "|" + actualValue);
     }
 
-    base.setCucumberTestScenarios("Scenario: Summary Totals" + "\n");
-    base.setCucumberTestScenarios("When I check GoogleSheets" + "\n");
+   
+    if (!SUBMIT_ALL_INPUT_DATA)
+    {    
+        base.setCucumberTestScenarios("Scenario: Summary Totals" + "\n");
+    }
+
+    base.setCucumberTestScenarios("And I check GoogleSheets" + "\n");
     base.setCucumberTestScenarios("Then there should be a total for GoogleSheet Summary fields" + "\n");
     base.setCucumberTestScenarios(expectedOutcometable);
 }
@@ -328,8 +355,12 @@ function generateExpectedOutcomeDataHashForDashboardTotals(expectedOutcomeData)
         }
     }
 
-    base.setCucumberTestScenarios("Scenario: Dashboard Totals" + "\n");
-    base.setCucumberTestScenarios("When I check GoogleSheets" + "\n");
+    if (!SUBMIT_ALL_INPUT_DATA)
+    {    
+        base.setCucumberTestScenarios("Scenario: Dashboard Totals" + "\n");
+    }
+    
+    base.setCucumberTestScenarios("And I check GoogleSheets" + "\n");
     base.setCucumberTestScenarios("Then there should be a total for GoogleSheet Dashboard Chart fields" + "\n");
     base.setCucumberTestScenarios(expectedOutcometable);
 }
@@ -441,6 +472,49 @@ function calculateTotalHivPositivePeopleVirallySupressed(reportingStartDate, rep
             }
         }  
     }
+}
+
+function generateInputDataHash(callback)
+{
+    var inputDataTable = Encounters.REPORTING_FACILITY_ORG_ID;
+    inputDataTable += "|firstName  |" + Encounters.Data.Registration.FIRST_NAME + "|\n";
+    inputDataTable += "|lastName  |" + Encounters.Data.Registration.LAST_NAME + "|\n";
+    inputDataTable += "|gender  |" + Encounters.Data.Registration.GENDER + "|\n";
+    inputDataTable += "|dateOfBirth  |" + Encounters.Data.Registration.DATE_OF_BIRTH + "|\n";
+    inputDataTable += "|registrationFacilityCode  |" + Encounters.Data.Registration.FAC_CODE + "|\n";
+    inputDataTable += "|registrationDate  |" + Encounters.Data.Registration.REGISTRATION_DATE + "|\n";
+    inputDataTable += "|NID  |" + Encounters.Data.Registration.NATIONAL_ID + "|\n";
+    inputDataTable += "|addressCountry  |" + Encounters.Data.Registration.Address.COUNTRY + "|\n";
+    inputDataTable += "|addressProvince  |" + Encounters.Data.Registration.Address.PROVINCE + "|\n";
+    inputDataTable += "|addressDistrict  |" + Encounters.Data.Registration.Address.DISTRICT + "|\n";
+    inputDataTable += "|addressCity  |" + Encounters.Data.Registration.Address.CITY + "|\n";
+
+    inputDataTable += "|hivPositiveDate  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DATE + "|\n";
+    inputDataTable += "|hivPositiveDiagnosisFacilityCode  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DIAG_FAC_CODE + "|\n";
+    inputDataTable += "|hivPositiveDiagnosisFacilityName  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DIAG_FAC_NAME + "|\n";
+    inputDataTable += "|hivPositiveTestingUID  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_TESTING_UNIQUE_ID  + "|\n";
+
+    inputDataTable += "|dateClientEnrolledToCare  |" + Encounters.Data.Entry_To_Care.DATE_CLIENT_ENROLLED_TO_CARE  + "|\n";
+    inputDataTable += "|enrolledToCareUID  |" + Encounters.Data.Entry_To_Care.CLIENT_UNIQUE_ID_ASSIGNED_AT_ENROLLMENT  + "|\n";
+    inputDataTable += "|enrolledToCareFacCode  |" + Encounters.Data.Entry_To_Care.ENROLLING_FAC_SITE_CODE  + "|\n";
+    inputDataTable += "|enrolledToCareFacName  |" + Encounters.Data.Entry_To_Care.ENROLLING_FAC_SITE_NAME  + "|\n";
+    inputDataTable += "|enrolledToCareDateFirstClinicalVisit  |" + Encounters.Data.Entry_To_Care.DATE_OF_FIRST_CLINICAL_VISIT  + "|\n";
+
+    inputDataTable += "|artInitiationDate  |" + Encounters.Data.ART_Initiation.DATE_CLIENT_INITIATED_ON_ART  + "|\n";
+    inputDataTable += "|artInitiationRegimenLine  |" + Encounters.Data.ART_Initiation.ART_REGIMEN_LINE_CLIENT_INITIATED_ON  + "|\n";
+    inputDataTable += "|artInitiationRegimen  |" + Encounters.Data.ART_Initiation.ART_REGIMEN_CLIENT_INITIATED_ON  + "|\n";
+
+    inputDataTable += "|dateOfDeath  |" + Encounters.Data.Death.DATE_OF_DEATH  + "|\n";
+    inputDataTable += "|ageAtDeath  |" + Encounters.Data.Death.AGE_AT_DEATH  + "|\n";
+    inputDataTable += "|deathDateLastClinicalVisit  |" + Encounters.Data.Death.DATE_OF_LAST_CLINICAL_VISIT_BEFORE_DEATH  + "|\n";
+    inputDataTable += "|deathCause  |" + Encounters.Data.Death.CAUSE_OF_DEATH  + "|\n";
+
+    inputDataTable += "|vlDate  |" + Encounters.Data.VIRAL_SUPPRESSION.BASELINE.COLLECTION_DATE  + "|\n";
+    inputDataTable += "|vlResult  |" + Encounters.Data.VIRAL_SUPPRESSION.BASELINE.RESULT  + "|\n";
+    inputDataTable += "|vlInterpretation  |" + Encounters.Data.VIRAL_SUPPRESSION.BASELINE.RESULT_INTERPRETATION   + "|\n";
+    inputDataTable += "|currVLSupression  |" + Encounters.Data.VIRAL_SUPPRESSION.CURRENT_SUPRESSION_STATUS   + "|\n";
+
+    callback(inputDataTable);
 }
 
 main();

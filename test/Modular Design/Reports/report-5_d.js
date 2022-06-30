@@ -85,6 +85,7 @@ function prepareData(reportDataSets)
                     currentEncounterCallback,
                     FEATURE_NAME,
                     REPORT_SPECFIC_FILTERS,
+                    true,
                     ROW_DISAGGREGATION_KEY,
                     ROW_DISAGGREGATION_KEY_VALUES,
                     true,
@@ -106,6 +107,7 @@ function prepareData(reportDataSets)
                     currentEncounterCallback,
                     FEATURE_NAME,
                     REPORT_SPECFIC_FILTERS,
+                    true,
                     ROW_DISAGGREGATION_KEY,
                     ROW_DISAGGREGATION_KEY_VALUES
                 );

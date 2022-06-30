@@ -12,6 +12,7 @@ class Scenarios
     #rowDisaggregationKey = null;
     #rowDisaggregationKeyValue = null;
     #outcomeDataset = null;
+    #expectedOutcomeRequired = null;
 
     #CUCUMBER = {
         GIVEN_STATEMENT: null,
@@ -21,7 +22,8 @@ class Scenarios
     }
 
     constructor(inputDataHash, encounterIndex, featureName, reportFilters,  
-        keyForDisaggregation, keyValueForDisaggregation,
+        mustIncludeExpectedOutcomeInFeatureFile = null,
+        keyForDisaggregation = null, keyValueForDisaggregation = null,
         mustVerifyFieldLevelTotalsForAggregateReport = null, 
         fieldLevelTotalsForAggregateReport = null, jsReportsVars = null, expectedOutcomeDataset = null){
     
@@ -32,32 +34,51 @@ class Scenarios
     
         this.#setInputHash(inputDataHash);
 
-        if (jsReportsVars != null)
+        if (mustIncludeExpectedOutcomeInFeatureFile)
+        {
+            this.#setExpectedOutcomeRequired(mustIncludeExpectedOutcomeInFeatureFile);
+        }
+
+        if (jsReportsVars)
         {
             this.#setJsReportsVariablesForExpectedOutcomeHash(jsReportsVars);
         }
 
-        if (expectedOutcomeDataset != null)
+        if (expectedOutcomeDataset)
         {
             this.#setOutcomeDataset(expectedOutcomeDataset);
         }
 
-        this.#setRowDisaggregationKey(keyForDisaggregation);
-        this.#setRowDisaggregationKeyValue(keyValueForDisaggregation);
+        if (keyForDisaggregation)
+        {
+            this.#setRowDisaggregationKey(keyForDisaggregation);
+        }
+        
+        if (keyValueForDisaggregation)
+        {
+            this.#setRowDisaggregationKeyValue(keyValueForDisaggregation);
+        }
 
         this.#setCurrentEncounterIndex(encounterIndex);
         this.#setFeature(featureName);
         this.#setReportFilters(reportFilters);
         
-        if (mustVerifyFieldLevelTotalsForAggregateReport != null)
+        if (mustVerifyFieldLevelTotalsForAggregateReport)
         {
             this.#setVerifyAggregateFieldLevelTotals(mustVerifyFieldLevelTotalsForAggregateReport);
         }
 
-        if (fieldLevelTotalsForAggregateReport != null)
+        if (fieldLevelTotalsForAggregateReport)
         {
             this.#setAggregateReportFieldLevelTotals(fieldLevelTotalsForAggregateReport);
         }
+    }
+
+    #getExpectedOutcomeRequired() {
+        return this.#expectedOutcomeRequired;
+    }
+    #setExpectedOutcomeRequired(data) {
+        this.#expectedOutcomeRequired = data;
     }
 
     #getOutcomeDataset() {
@@ -149,30 +170,33 @@ class Scenarios
         base.setCucumberTestScenarios(this.#CUCUMBER.GIVEN_STATEMENT + "\n");
         base.setCucumberTestScenarios(this.#getInputHash());
         base.setCucumberTestScenarios(this.#CUCUMBER.WHEN_STATEMENT + "\n");
+        base.setCucumberTestScenarios("\n");
 
-        if (Encounters.inputDataLastRowReached)
+        if (this.#getExpectedOutcomeRequired())
         {
-            base.setCucumberTestScenarios("\n");
-            base.setCucumberTestScenarios(this.#CUCUMBER.AND_STATEMENT + "\n");
-            base.setCucumberTestScenarios(base.prepareJsReportParams(this.#getFeature(), DYNAMIC_MRN, REPORTING_PERIOD) + "\n");
-
-            for (var y = 0; y < this.#getRowDisaggregationKeyValue().length; y++) 
+            if (Encounters.inputDataLastRowReached)
             {
-                base.setCucumberTestScenarios("\n");
+                base.setCucumberTestScenarios(this.#CUCUMBER.AND_STATEMENT + "\n");
+                base.setCucumberTestScenarios(base.prepareJsReportParams(this.#getFeature(), DYNAMIC_MRN, REPORTING_PERIOD) + "\n");
 
-                const then = "Then there should be a row identified by \"" + this.#getRowDisaggregationKey() + "\" of \"" + this.#getRowDisaggregationKeyValue()[y] + "\" with the following fields and values"
-
-                if (Encounters.inputDataLastRowReached || IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT)
+                for (var y = 0; y < this.#getRowDisaggregationKeyValue().length; y++) 
                 {
-                    base.setCucumberTestScenarios(then != null ? then  + "\n" : "\n");
-                    base.setCucumberTestScenarios(then != null ? this.generateExpectedOutcomeDataHash(y) + "" + "\n" : "" + "\n");
-                }
-            }
+                    base.setCucumberTestScenarios("\n");
 
-            if (this.#getVerifyAggregateFieldLevelTotals())
-            {
-                base.setCucumberTestScenarios(this.#CUCUMBER.TOTALS_THEN_STATEMENT + "\n");
-                base.setCucumberTestScenarios(this.#getAggregateReportFieldLevelTotals() + "" + "\n");
+                    const then = "Then there should be a row identified by \"" + this.#getRowDisaggregationKey() + "\" of \"" + this.#getRowDisaggregationKeyValue()[y] + "\" with the following fields and values"
+
+                    if (Encounters.inputDataLastRowReached || IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT)
+                    {
+                        base.setCucumberTestScenarios(then != null ? then  + "\n" : "\n");
+                        base.setCucumberTestScenarios(then != null ? this.generateExpectedOutcomeDataHash(y) + "" + "\n" : "" + "\n");
+                    }
+                }
+
+                if (this.#getVerifyAggregateFieldLevelTotals())
+                {
+                    base.setCucumberTestScenarios(this.#CUCUMBER.TOTALS_THEN_STATEMENT + "\n");
+                    base.setCucumberTestScenarios(this.#getAggregateReportFieldLevelTotals() + "" + "\n");
+                }
             }
         }
     }
