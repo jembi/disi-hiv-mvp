@@ -14,6 +14,7 @@ const REPORT_SPECFIC_FILTERS = []; //add any additional report filters
 const AGE_DISAGGREGATION = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", 
     "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65+"];
 const CD4_DISAGGREGATION = ["less than 200", "200 – 349", "350 – 499", "≥500", "Unknown"];
+const VL_DISAGGREGATION = ["Suppressed", "Unsuppressed", "Unknown"];
 const NUMBER_OF_CHARTS_IN_HIV_DASHBOARD = 6;
 const NUMBER_OF_SUMMARY_TOTAL_CATEGORIES = 5;
 const NUMBER_OF_GENDERS_FOR_CHART_DISAGGREGATION = 4;
@@ -34,6 +35,7 @@ class Totals{
         HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE_GENDER_DISAGGREGATION: [],
         HIV_POSITIVE_PEOPLE_ON_ART_GENDER_DISAGGREGATION: [],
         HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED_GENDER_DISAGGREGATION: [],
+        HIV_POSITIVE_PEOPLE_WHO_VIRALLY_UNSUPPRESSED_GENDER_DISAGGREGATION: [],
         HIV_POSITIVE_PEOPLE_WHO_DIED_GENDER_DISAGGREGATION: [],
         HIV_POSITIVE_PEOPLE_ON_ART_BASELINE_CD4_GENDER_DISAGGREGATION: [],
     }
@@ -158,16 +160,89 @@ class CD4_Totals {
     {
         const BASELINE_CD4_RESULT = Encounters.Data.CD4.BASELINE.RESULT
 
-        if (BASELINE_CD4_RESULT < 200)
-            return "less than 200";
-        else if (BASELINE_CD4_RESULT < 350)
-            return "200 – 349";
-        else if (BASELINE_CD4_RESULT < 500)
-            return "350 – 499";
-        else if (BASELINE_CD4_RESULT >= 500)
-            return "≥500";
+        if (BASELINE_CD4_RESULT != undefined) {
+            if (String(BASELINE_CD4_RESULT).trim() != "")
+            {
+                if (BASELINE_CD4_RESULT < 200)
+                    return "less than 200";
+                else if (BASELINE_CD4_RESULT < 350)
+                    return "200 – 349";
+                else if (BASELINE_CD4_RESULT < 500)
+                    return "350 – 499";
+                else //if (BASELINE_CD4_RESULT >= 500)
+                    return "≥500";
+            }
+            else
+            {
+                return "Unknown";
+            }
+        }
         else
+        {
             return "Unknown";
+        }
+    }
+}
+
+class VL_Totals {
+    #DISAGGREGATION = {
+        Suppressed: [],
+        Unsuppressed: [],
+        Unknown: []
+    }
+
+    getVLCounts() {
+        return this.#DISAGGREGATION;
+    }
+
+    processDisaggregation()
+    {
+        const VL_GROUP = this.#verifyVLGroup()
+
+        switch (VL_GROUP)
+        {
+            case "suppressed":
+                this.#DISAGGREGATION.Suppressed.push(VL_GROUP, Encounters.Data.Registration.MRN );    
+                
+                break;
+            case "unsuppressed":
+                this.#DISAGGREGATION.Unsuppressed.push(VL_GROUP, Encounters.Data.Registration.MRN);  
+
+                break;
+            case "unknown":
+                this.#DISAGGREGATION.Unknown.push(VL_GROUP, Encounters.Data.Registration.MRN);        
+
+                break;
+            default:
+                break;
+        }
+    }
+
+    #verifyVLGroup()
+    {
+        const MOST_RECENT_RESULT = Encounters.Data.VIRAL_SUPPRESSION.MOST_RECENT_RESULT
+
+        if (MOST_RECENT_RESULT != undefined) {
+            if (String(MOST_RECENT_RESULT).trim() != "")
+            {
+                if (MOST_RECENT_RESULT < 1000)
+                {
+                    return "suppressed";
+                }
+                else
+                {
+                    return "unsuppressed";
+                } 
+            }
+            else
+            {
+                return "Unknown";
+            }
+        }
+        else
+        {
+            return "Unknown";
+        }
     }
 }
 
@@ -479,6 +554,66 @@ function generateExpectedOutcomeDataHashForDashboardTotals(expectedOutcomeData)
                 }
             }
         }
+
+        if (x == 5)
+        {
+            for (var y = 0; y < VL_DISAGGREGATION.length; y++) 
+            {
+                var genderValues = [];
+
+                for (var j = 0; j < NUMBER_OF_GENDERS_FOR_CHART_DISAGGREGATION; j++)
+                {
+                    var gender = null;
+                    var value = null;
+
+                    switch (j)
+                    {
+                        case 0:
+                            gender = "Female"
+
+                            break;
+                        case 1:
+                            gender = "Male"
+
+                            break;
+                        case 2:
+                            gender = "Other"
+
+                            break;
+                        case 3:
+                            gender = "Unknown"
+
+                            break;
+                        default:
+                            break;
+                    }
+
+                    switch (x)
+                    {
+                        case 5:
+                            if (y == 0)
+                            {    
+                                value = Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED_GENDER_DISAGGREGATION.filter(obj => eval("obj." + gender + "[0]") === VL_DISAGGREGATION[y]).length;
+                            }
+                            else if (y == 1)
+                            {    
+                                value = Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_UNSUPPRESSED_GENDER_DISAGGREGATION.filter(obj => eval("obj." + gender + "[0]") === VL_DISAGGREGATION[y]).length;
+                            }
+                            
+                            break;
+                        default:
+                            break;
+                    }
+
+                    genderValues.push(value);
+
+                    if (j == 3)
+                    {
+                        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + VL_DISAGGREGATION[y] + "|", genderValues);
+                    }
+                }
+            }
+        }
     }
 
     if (!SUBMIT_ALL_INPUT_DATA)
@@ -581,20 +716,28 @@ function calculateTotalHivPositivePeopleVirallySupressed(reportingStartDate, rep
     if (Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DATE 
         && Encounters.Data.Entry_To_Care.CLIENT_UNIQUE_ID_ASSIGNED_AT_ENROLLMENT
         && Encounters.Data.ART_Initiation.DATE_CLIENT_INITIATED_ON_ART
-        && Encounters.Data.VIRAL_SUPPRESSION.MOST_RECENT_COLLECTION_DATE
-        && parseInt(Encounters.Data.VIRAL_SUPPRESSION.MOST_RECENT_RESULT) < 1000)
+        && Encounters.Data.VIRAL_SUPPRESSION.MOST_RECENT_COLLECTION_DATE)
     {
         if (checkIfDateIsBetweenTwoDates(reportingStartDate, 
             reportingEndDate, 
             moment(Encounters.Data.ART_Initiation.DATE_CLIENT_INITIATED_ON_ART, Base.STRING_DATE_FORMAT)))
         {
-            if (!Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.includes(Encounters.Data.Registration.MRN))
+            if (parseInt(Encounters.Data.VIRAL_SUPPRESSION.MOST_RECENT_RESULT) < 1000)
             {
-                let genderDisaggregation = new Gender_Totals();
+                if (!Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.includes(Encounters.Data.Registration.MRN))
+                {
+                    let genderDisaggregation = new VL_Totals();
+                    genderDisaggregation.processDisaggregation();
+                    Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED_GENDER_DISAGGREGATION.push(genderDisaggregation.getVLCounts());
+                    
+                    Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.push(Encounters.Data.Registration.MRN);
+                }
+            }
+            else
+            {
+                let genderDisaggregation = new VL_Totals();
                 genderDisaggregation.processDisaggregation();
-                Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED_GENDER_DISAGGREGATION.push(genderDisaggregation.getGenderCounts());
-                
-                Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.push(Encounters.Data.Registration.MRN);
+                Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_UNSUPPRESSED_GENDER_DISAGGREGATION.push(genderDisaggregation.getVLCounts());
             }
         }  
     }
