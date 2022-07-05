@@ -4,7 +4,7 @@ const { esPost } = require('../helpers/api-helpers')
 When('I delete all report data in elasticsearch', async function () {
   const query = {
     'query': {
-     'match_all' : {}
+      'match_all' : {}
     }
   }
   
