@@ -265,6 +265,8 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
                 break;
         }
 
+        //const expectedOutcomeForJSReports = "I check JSReports for the HIV Dashboard named \"" + chartName + "\" using the following report filters" + "\n";
+
         if (x < 3)
         {
             for (var y = 0; y < AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS.length; y++) 
@@ -301,6 +303,11 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
                     {
                         googleSheetsExpectedOutcometable += base.displayOutcomeGoogleSheetsVariable("|" + chartName + "_" + AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", genderValues);
                     }
+
+                    //const then = "Then there should be a row identified by \"ageGroup\" of \"" + AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "\" with the following fields and values"
+
+                    //jsReportsExpectedOutcometable += then + "\n";
+                    //jsReportsExpectedOutcometable += base.displayOutcomeJSReportVariable("|" + GENDER + "|", genderValues);
                 }
             }
         }
@@ -398,6 +405,8 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
     base.setCucumberTestScenarios("And I check GoogleSheets" + "\n");
     base.setCucumberTestScenarios("Then there should be a total for GoogleSheet Dashboard Chart fields" + "\n");
     base.setCucumberTestScenarios(googleSheetsExpectedOutcometable);
+
+    //console.log(jsReportsExpectedOutcometable)
 }
 
 function calculateTotalHivPositivePeople(reportingStartDate, reportingEndDate)
