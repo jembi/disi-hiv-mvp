@@ -14,7 +14,7 @@ const REPORT_SPECFIC_FILTERS = []; //add any additional report filters
 const AGE_DISAGGREGATION = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", 
     "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65+"];
 const CD4_DISAGGREGATION = ["less than 200", "200 – 349", "350 – 499", "≥500", "Unknown"];
-const VL_DISAGGREGATION = ["Suppressed", "Unsuppressed", "Unknown"];
+const VL_DISAGGREGATION = ["VL Status"];
 const NUMBER_OF_CHARTS_IN_HIV_DASHBOARD = 6;
 const NUMBER_OF_SUMMARY_TOTAL_CATEGORIES = 5;
 const NUMBER_OF_GENDERS_FOR_CHART_DISAGGREGATION = 4;
@@ -35,9 +35,12 @@ class Totals{
         HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE_GENDER_DISAGGREGATION: [],
         HIV_POSITIVE_PEOPLE_ON_ART_GENDER_DISAGGREGATION: [],
         HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED_GENDER_DISAGGREGATION: [],
-        HIV_POSITIVE_PEOPLE_WHO_VIRALLY_UNSUPPRESSED_GENDER_DISAGGREGATION: [],
         HIV_POSITIVE_PEOPLE_WHO_DIED_GENDER_DISAGGREGATION: [],
         HIV_POSITIVE_PEOPLE_ON_ART_BASELINE_CD4_GENDER_DISAGGREGATION: [],
+    }
+
+    static VL = {
+        HIV_POSITIVE_PEOPLE_VIRAL_STATUS_DISAGGREGATION: []
     }
 }
 
@@ -202,15 +205,15 @@ class VL_Totals {
         switch (VL_GROUP)
         {
             case "suppressed":
-                this.#DISAGGREGATION.Suppressed.push(VL_GROUP, Encounters.Data.Registration.MRN );    
+                this.#DISAGGREGATION.Suppressed.push("VL Status", Encounters.Data.Registration.MRN );    
                 
                 break;
             case "unsuppressed":
-                this.#DISAGGREGATION.Unsuppressed.push(VL_GROUP, Encounters.Data.Registration.MRN);  
+                this.#DISAGGREGATION.Unsuppressed.push("VL Status", Encounters.Data.Registration.MRN);  
 
                 break;
             case "unknown":
-                this.#DISAGGREGATION.Unknown.push(VL_GROUP, Encounters.Data.Registration.MRN);        
+                this.#DISAGGREGATION.Unknown.push("VL Status", Encounters.Data.Registration.MRN);        
 
                 break;
             default:
@@ -236,12 +239,12 @@ class VL_Totals {
             }
             else
             {
-                return "Unknown";
+                return "unknown";
             }
         }
         else
         {
-            return "Unknown";
+            return "unknown";
         }
     }
 }
@@ -351,7 +354,9 @@ function prepareData(reportDataSets)
             });
 
             Totals = null;
-            Gender = null;
+            Gender_Totals = null;
+            VL_Totals = null;
+            CD4_Totals = null;
         }
     }); 
 }
@@ -511,7 +516,6 @@ function generateExpectedOutcomeDataHashForDashboardTotals(expectedOutcomeData)
                 for (var j = 0; j < NUMBER_OF_GENDERS_FOR_CHART_DISAGGREGATION; j++)
                 {
                     var gender = null;
-                    var value = null;
 
                     switch (j)
                     {
@@ -535,15 +539,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals(expectedOutcomeData)
                             break;
                     }
 
-                    switch (x)
-                    {
-                        case 4:
-                            value = Totals.Gender.HIV_POSITIVE_PEOPLE_ON_ART_BASELINE_CD4_GENDER_DISAGGREGATION.filter(obj => eval("obj." + gender + "[0]") === CD4_DISAGGREGATION[y]).length;
-                            
-                            break;
-                        default:
-                            break;
-                    }
+                    const value = Totals.Gender.HIV_POSITIVE_PEOPLE_ON_ART_BASELINE_CD4_GENDER_DISAGGREGATION.filter(obj => eval("obj." + gender + "[0]") === CD4_DISAGGREGATION[y]).length;
 
                     genderValues.push(value);
 
@@ -559,57 +555,37 @@ function generateExpectedOutcomeDataHashForDashboardTotals(expectedOutcomeData)
         {
             for (var y = 0; y < VL_DISAGGREGATION.length; y++) 
             {
-                var genderValues = [];
+                var vlStatusValues = [];
 
-                for (var j = 0; j < NUMBER_OF_GENDERS_FOR_CHART_DISAGGREGATION; j++)
+                for (var j = 0; j < 3; j++)
                 {
-                    var gender = null;
-                    var value = null;
+                    var vlStatus = null;
 
                     switch (j)
                     {
                         case 0:
-                            gender = "Female"
+                            vlStatus = "Suppressed"
 
                             break;
                         case 1:
-                            gender = "Male"
+                            vlStatus = "Unsuppressed"
 
                             break;
                         case 2:
-                            gender = "Other"
-
-                            break;
-                        case 3:
-                            gender = "Unknown"
+                            vlStatus = "Unknown"
 
                             break;
                         default:
                             break;
                     }
 
-                    switch (x)
-                    {
-                        case 5:
-                            if (y == 0)
-                            {    
-                                value = Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED_GENDER_DISAGGREGATION.filter(obj => eval("obj." + gender + "[0]") === VL_DISAGGREGATION[y]).length;
-                            }
-                            else if (y == 1)
-                            {    
-                                value = Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_UNSUPPRESSED_GENDER_DISAGGREGATION.filter(obj => eval("obj." + gender + "[0]") === VL_DISAGGREGATION[y]).length;
-                            }
-                            
-                            break;
-                        default:
-                            break;
-                    }
+                    const value = Totals.VL.HIV_POSITIVE_PEOPLE_VIRAL_STATUS_DISAGGREGATION.filter(obj => eval("obj." + vlStatus + "[0]") === VL_DISAGGREGATION[y]).length;
 
-                    genderValues.push(value);
+                    vlStatusValues.push(value);
 
-                    if (j == 3)
+                    if (j == 2)
                     {
-                        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + VL_DISAGGREGATION[y] + "|", genderValues);
+                        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + VL_DISAGGREGATION[y] + "|", vlStatusValues);
                     }
                 }
             }
@@ -725,19 +701,16 @@ function calculateTotalHivPositivePeopleVirallySupressed(reportingStartDate, rep
             if (parseInt(Encounters.Data.VIRAL_SUPPRESSION.MOST_RECENT_RESULT) < 1000)
             {
                 if (!Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.includes(Encounters.Data.Registration.MRN))
-                {
-                    let genderDisaggregation = new VL_Totals();
-                    genderDisaggregation.processDisaggregation();
-                    Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED_GENDER_DISAGGREGATION.push(genderDisaggregation.getVLCounts());
-                    
+                {   
                     Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.push(Encounters.Data.Registration.MRN);
                 }
             }
-            else
-            {
+
+            if (!Object.values(Totals.VL.HIV_POSITIVE_PEOPLE_VIRAL_STATUS_DISAGGREGATION).some(value => value === Encounters.Data.Registration.MRN))
+            {   
                 let genderDisaggregation = new VL_Totals();
                 genderDisaggregation.processDisaggregation();
-                Totals.Gender.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_UNSUPPRESSED_GENDER_DISAGGREGATION.push(genderDisaggregation.getVLCounts());
+                Totals.VL.HIV_POSITIVE_PEOPLE_VIRAL_STATUS_DISAGGREGATION.push(genderDisaggregation.getVLCounts());
             }
         }  
     }
