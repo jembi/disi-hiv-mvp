@@ -45,7 +45,7 @@ class Cumulative_HIV_Cases {
         const MONTH_YEAR = moment(Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DATE).format("MMM, yyyy")
 
         if (MONTH_YEAR != undefined) {
-            if (String(BASELINE_CD4_RESULT).trim() != "")
+            if (String(MONTH_YEAR).trim() != "")
             {
                 return MONTH_YEAR;
             }
