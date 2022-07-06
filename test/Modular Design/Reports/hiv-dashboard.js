@@ -7,9 +7,9 @@ const Scenarios = require("../Scenarios");
 const Death = require("../Extended Modules/DEATH");
 const Viral_Load = require("../Extended Modules/Viral_Load");
 const CD4 = require("../Extended Modules/CD4");
-const Gender_Totals = require('./Helpers/Gender_Totals')
-const CD4_Totals = require('./Helpers/CD4_Totals')
-const VL_Totals = require('./Helpers/VL_Totals')
+const Gender_Totals = require('./HIV Dashboard Helpers/Gender_Totals')
+const CD4_Totals = require('./HIV Dashboard Helpers/CD4_Totals')
+const VL_Totals = require('./HIV Dashboard Helpers/VL_Totals')
 
 const FEATURE_NAME = "HIV-DASHBOARD";
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
