@@ -1,9 +1,21 @@
 const axios = require('axios')
 
-const getReport = async (params) => {
+const getReport = async (params, isForKibanaDashboard, chartName = null) => {
   const { JSREPORT_SERVER, JS_USERNAME, JS_PASSWORD } = process.env
+
+  var template = null;
+
+  if (isForKibanaDashboard)
+  {
+    template = `report-${params.report}-test`;
+  }
+  else
+  {
+    template = `${params.report}-${chartName}-test`;
+  }
+
   var data = JSON.stringify({
-    template: { name: `report-${params.report}-test` },
+    template: { name: template },
     data: {
       params: {
         ...params,

@@ -10,7 +10,19 @@ When('I check JSReports using the following report filters', {timeout : 30 * 100
 
   await new Promise(r => setTimeout(r, 20000));
 
-  const { data } = await getReport(params)
+  const { data } = await getReport(params, false)
+  this.output = data
+})
+
+When('I check JSReports for the HIV Dashboard named {string} using the following report filters', {timeout : 30 * 1000}, async function (field, value, table) {
+  const params = {}
+  table.hashes().forEach(hash => {
+    params[hash.field] = hash.value
+  })
+
+  await new Promise(r => setTimeout(r, 20000));
+
+  const { data } = await getReport(params, true)
   this.output = data
 })
 
