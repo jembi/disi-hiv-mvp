@@ -234,7 +234,8 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
 {
     const base = Encounters.baseModule;
     
-    var expectedOutcometable = "|field|value|\n";
+    var googleSheetsExpectedOutcometable = "|field|value|\n";
+    //var jsReportsExpectedOutcometable = "|field|value|\n";
 
     for (var x = 0; x < NUMBER_OF_CHARTS_IN_HIV_DASHBOARD; x++)
     {
@@ -298,7 +299,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
 
                     if (j == 3)
                     {
-                        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", genderValues);
+                        googleSheetsExpectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", genderValues);
                     }
                 }
             }
@@ -320,7 +321,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
 
                     if (j == 3)
                     {
-                        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + uniqueMonthsArrayForCumulativeCasesForDashboardCharts[y] + "|", genderValues);
+                        googleSheetsExpectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + uniqueMonthsArrayForCumulativeCasesForDashboardCharts[y] + "|", genderValues);
                     }
                 }
             }
@@ -342,7 +343,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
 
                     if (j == 3)
                     {
-                        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + CD4_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", genderValues);
+                        googleSheetsExpectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + CD4_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", genderValues);
                     }
                 }
             }
@@ -382,7 +383,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
 
                     if (j == 2)
                     {
-                        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + VL_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", vlStatusValues);
+                        googleSheetsExpectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + VL_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", vlStatusValues);
                     }
                 }
             }
@@ -396,7 +397,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
     
     base.setCucumberTestScenarios("And I check GoogleSheets" + "\n");
     base.setCucumberTestScenarios("Then there should be a total for GoogleSheet Dashboard Chart fields" + "\n");
-    base.setCucumberTestScenarios(expectedOutcometable);
+    base.setCucumberTestScenarios(googleSheetsExpectedOutcometable);
 }
 
 function calculateTotalHivPositivePeople(reportingStartDate, reportingEndDate)
