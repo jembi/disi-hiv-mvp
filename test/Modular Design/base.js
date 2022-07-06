@@ -97,12 +97,21 @@ class Base{
     return VALUE_FOR_GIVEN_ENCOUNTER != "" ? moment(VALUE_FOR_GIVEN_ENCOUNTER).utc(UTC_Offset).format(this.STRING_DATE_FORMAT) : "";
   }
 
-  displayOutcomeJSReportVariable(jsReportField, value) {
-    if (this.getStringOrNullValue(value).trim() != "") {
-      return jsReportField + value + "|\n";
+  handleVOutcomeVariablesToBeDisplayed(field, val)
+  {
+    if (this.getStringOrNullValue(val).trim() != "") {
+      return field + val + "|\n";
     }
 
     return "";
+  }
+
+  displayOutcomeJSReportVariable(jsReportField, value) {
+   return this.handleVOutcomeVariablesToBeDisplayed(jsReportField, value);
+  }
+
+  displayOutcomeGoogleSheetsVariable(gsReportField, value) {
+    return this.handleVOutcomeVariablesToBeDisplayed(gsReportField, value);
   }
 
   isMRNWithMultipleEncounter(data, rowInt, lastRowInt, colInt) {

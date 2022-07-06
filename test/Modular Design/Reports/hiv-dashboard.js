@@ -199,7 +199,7 @@ function generateExpectedOutcomeDataHashForSummaryTotals(expectedOutcomeData)
                 break;
         }
 
-        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + value[0], "|" + actualValue);
+        expectedOutcometable += base.displayOutcomeGoogleSheetsVariable("|" + value[0], "|" + actualValue);
     }
 
    
@@ -299,7 +299,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
 
                     if (j == 3)
                     {
-                        googleSheetsExpectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", genderValues);
+                        googleSheetsExpectedOutcometable += base.displayOutcomeGoogleSheetsVariable("|" + chartName + "_" + AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", genderValues);
                     }
                 }
             }
@@ -321,7 +321,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
 
                     if (j == 3)
                     {
-                        googleSheetsExpectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + uniqueMonthsArrayForCumulativeCasesForDashboardCharts[y] + "|", genderValues);
+                        googleSheetsExpectedOutcometable += base.displayOutcomeGoogleSheetsVariable("|" + chartName + "_" + uniqueMonthsArrayForCumulativeCasesForDashboardCharts[y] + "|", genderValues);
                     }
                 }
             }
@@ -343,7 +343,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
 
                     if (j == 3)
                     {
-                        googleSheetsExpectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + CD4_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", genderValues);
+                        googleSheetsExpectedOutcometable += base.displayOutcomeGoogleSheetsVariable("|" + chartName + "_" + CD4_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", genderValues);
                     }
                 }
             }
@@ -383,7 +383,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
 
                     if (j == 2)
                     {
-                        googleSheetsExpectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + VL_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", vlStatusValues);
+                        googleSheetsExpectedOutcometable += base.displayOutcomeGoogleSheetsVariable("|" + chartName + "_" + VL_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", vlStatusValues);
                     }
                 }
             }
