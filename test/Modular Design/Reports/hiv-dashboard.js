@@ -14,10 +14,10 @@ const VL_Totals = require('./HIV Dashboard Helpers/VL_Totals')
 const FEATURE_NAME = "HIV-DASHBOARD";
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
 const REPORT_SPECFIC_FILTERS = []; //add any additional report filters
-const AGE_DISAGGREGATION = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", 
+const AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29", 
     "30-34", "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65+"];
-const CD4_DISAGGREGATION = ["less than 200", "200 – 349", "350 – 499", "≥500", "Unknown"];
-const VL_DISAGGREGATION = ["VL Status"];
+const CD4_DISAGGREGATION_FOR_DASHBOARD_CHARTS = ["less than 200", "200 – 349", "350 – 499", "≥500", "Unknown"];
+const VL_DISAGGREGATION_FOR_DASHBOARD_CHARTS = ["New"];
 const NUMBER_OF_CHARTS_IN_HIV_DASHBOARD = 6;
 const NUMBER_OF_SUMMARY_TOTAL_CATEGORIES = 5;
 const NUMBER_OF_GENDERS_FOR_CHART_DISAGGREGATION = 4;
@@ -260,7 +260,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
 
         if (x < 3)
         {
-            for (var y = 0; y < AGE_DISAGGREGATION.length; y++) 
+            for (var y = 0; y < AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS.length; y++) 
             {
                 var genderValues = [];
 
@@ -273,15 +273,15 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
                     switch (x)
                     {
                         case 0:
-                            value = Totals.Gender_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_GENDER_DISAGGREGATION.filter(obj => eval("obj." + GENDER + "[0]") === AGE_DISAGGREGATION[y]).length;
+                            value = Totals.Gender_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_GENDER_DISAGGREGATION.filter(obj => eval("obj." + GENDER + "[0]") === AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y]).length;
                             
                             break;
                         case 1:
-                            value = Totals.Gender_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_ON_ART_GENDER_DISAGGREGATION.filter(obj => eval("obj." + GENDER + "[0]") === AGE_DISAGGREGATION[y]).length;
+                            value = Totals.Gender_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_ON_ART_GENDER_DISAGGREGATION.filter(obj => eval("obj." + GENDER + "[0]") === AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y]).length;
                             
                             break;
                         case 2:
-                            value = Totals.Gender_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_WHO_DIED_GENDER_DISAGGREGATION.filter(obj => eval("obj." + GENDER + "[0]") === AGE_DISAGGREGATION[y]).length;
+                            value = Totals.Gender_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_WHO_DIED_GENDER_DISAGGREGATION.filter(obj => eval("obj." + GENDER + "[0]") === AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y]).length;
                             
                             break;
                         default:
@@ -292,7 +292,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
 
                     if (j == 3)
                     {
-                        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + AGE_DISAGGREGATION[y] + "|", genderValues);
+                        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", genderValues);
                     }
                 }
             }
@@ -300,7 +300,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
 
         if (x == 4)
         {
-            for (var y = 0; y < CD4_DISAGGREGATION.length; y++) 
+            for (var y = 0; y < CD4_DISAGGREGATION_FOR_DASHBOARD_CHARTS.length; y++) 
             {
                 var genderValues = [];
 
@@ -308,13 +308,13 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
                 {
                     const GENDER = getGenderByIndex(j);
 
-                    const value = Totals.Gender_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_ON_ART_BASELINE_CD4_GENDER_DISAGGREGATION.filter(obj => eval("obj." + GENDER + "[0]") === CD4_DISAGGREGATION[y]).length;
+                    const value = Totals.Gender_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_ON_ART_BASELINE_CD4_GENDER_DISAGGREGATION.filter(obj => eval("obj." + GENDER + "[0]") === CD4_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y]).length;
 
                     genderValues.push(value);
 
                     if (j == 3)
                     {
-                        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + CD4_DISAGGREGATION[y] + "|", genderValues);
+                        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + CD4_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", genderValues);
                     }
                 }
             }
@@ -322,7 +322,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
 
         if (x == 5)
         {
-            for (var y = 0; y < VL_DISAGGREGATION.length; y++) 
+            for (var y = 0; y < VL_DISAGGREGATION_FOR_DASHBOARD_CHARTS.length; y++) 
             {
                 var vlStatusValues = [];
 
@@ -348,13 +348,13 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
                             break;
                     }
 
-                    const value = Totals.VL_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_VIRAL_STATUS_DISAGGREGATION.filter(obj => eval("obj." + vlStatus + "[0]") === VL_DISAGGREGATION[y]).length;
+                    const value = Totals.VL_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_VIRAL_STATUS_DISAGGREGATION.filter(obj => eval("obj." + vlStatus + "[0]") === VL_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y]).length;
 
                     vlStatusValues.push(value);
 
                     if (j == 2)
                     {
-                        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + VL_DISAGGREGATION[y] + "|", vlStatusValues);
+                        expectedOutcometable += base.displayOutcomeJSReportVariable("|" + chartName + "_" + VL_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", vlStatusValues);
                     }
                 }
             }

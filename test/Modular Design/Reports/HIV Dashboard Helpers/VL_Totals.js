@@ -18,15 +18,15 @@ class VL_Totals {
         switch (VL_GROUP)
         {
             case "suppressed":
-                this.#DISAGGREGATION.Suppressed.push("VL Status", Encounters.Data.Registration.MRN );    
+                this.#DISAGGREGATION.Suppressed.push("New", Encounters.Data.Registration.MRN );    
                 
                 break;
             case "unsuppressed":
-                this.#DISAGGREGATION.Unsuppressed.push("VL Status", Encounters.Data.Registration.MRN);  
+                this.#DISAGGREGATION.Unsuppressed.push("New", Encounters.Data.Registration.MRN);  
 
                 break;
             case "unknown":
-                this.#DISAGGREGATION.Unknown.push("VL Status", Encounters.Data.Registration.MRN);        
+                this.#DISAGGREGATION.Unknown.push("New", Encounters.Data.Registration.MRN);        
 
                 break;
             default:
