@@ -6,10 +6,10 @@ const Encounters = require("../Encounters");
 const Scenarios = require("../Scenarios");
 const Death = require("../Extended Modules/DEATH");
 const Viral_Load = require("../Extended Modules/Viral_Load");
+const VL_Totals_For_Dashboard_Charts = require('./HIV Dashboard Helpers/VL_Totals')
 const CD4 = require("../Extended Modules/CD4");
-const Gender_Totals = require('./HIV Dashboard Helpers/Gender_Totals')
-const CD4_Totals = require('./HIV Dashboard Helpers/CD4_Totals')
-const VL_Totals = require('./HIV Dashboard Helpers/VL_Totals')
+const CD4_Totals_For_Dashboard_Charts = require('./HIV Dashboard Helpers/CD4_Totals')
+const Gender_Totals_For_Dashboard_Charts = require('./HIV Dashboard Helpers/Gender_Totals')
 
 const FEATURE_NAME = "HIV-DASHBOARD";
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
@@ -22,6 +22,8 @@ const NUMBER_OF_CHARTS_IN_HIV_DASHBOARD = 6;
 const NUMBER_OF_SUMMARY_TOTAL_CATEGORIES = 5;
 const NUMBER_OF_GENDERS_FOR_CHART_DISAGGREGATION = 4;
 const SUBMIT_ALL_INPUT_DATA = true; //Using postman, every record in the input dataset is submitted to the CDR
+
+var uniqueMonthsArrayForCumulativeCasesForDashboardCharts = [];
 
 class Totals{
     static Summary = {
@@ -149,9 +151,10 @@ function prepareData(reportDataSets)
 
             Encounters.baseModule.generateFeatureFile(UPLOAD_FILES_TO_GOOGLE_DRIVE, FEATURE_NAME, function (){ 
                 console.log("Execution completed!\n");
-            });
 
-            Totals = null;
+                Totals = null;
+                uniqueMonthsArrayForCumulativeCasesForDashboardCharts = null;
+            });
         }
     }); 
 }
@@ -381,11 +384,16 @@ function calculateTotalHivPositivePeople(reportingStartDate, reportingEndDate)
         {
             if (!Totals.Summary.HIV_POSITIVE_PEOPLE.includes(Encounters.Data.Registration.MRN))
             {
-                let genderDisaggregation = new Gender_Totals();
+                let genderDisaggregation = new Gender_Totals_For_Dashboard_Charts();
                 genderDisaggregation.processDisaggregation();
                 Totals.Gender_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_GENDER_DISAGGREGATION.push(genderDisaggregation.getGenderCounts());
 
                 Totals.Summary.HIV_POSITIVE_PEOPLE.push(Encounters.Data.Registration.MRN);
+            }
+
+            if (!uniqueMonthsArrayForCumulativeCasesForDashboardCharts.includes(moment(Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DATE).format("MMM, yyyy")))
+            {
+                uniqueMonthsArrayForCumulativeCasesForDashboardCharts.push(moment(Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DATE).format("MMM, yyyy"));
             }
         }
     }
@@ -401,7 +409,7 @@ function calculateTotalHivPositiveDeaths(reportingStartDate, reportingEndDate)
         {
             if (!Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_DIED.includes(Encounters.Data.Registration.MRN))
             {
-                let genderDisaggregation = new Gender_Totals();
+                let genderDisaggregation = new Gender_Totals_For_Dashboard_Charts();
                 genderDisaggregation.processDisaggregation();
                 Totals.Gender_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_WHO_DIED_GENDER_DISAGGREGATION.push(genderDisaggregation.getGenderCounts());
                 
@@ -423,7 +431,7 @@ function calculateTotalHivPositivePeopleEnrolledIntoCare(reportingStartDate, rep
         {
             if (!Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE.includes(Encounters.Data.Registration.MRN))
             {
-                let genderDisaggregation = new Gender_Totals();
+                let genderDisaggregation = new Gender_Totals_For_Dashboard_Charts();
                 genderDisaggregation.processDisaggregation();
                 Totals.Gender_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE_GENDER_DISAGGREGATION.push(genderDisaggregation.getGenderCounts());
                 
@@ -446,7 +454,7 @@ function calculateTotalHivPositivePeopleOnART(reportingStartDate, reportingEndDa
         {
             if (!Totals.Summary.HIV_POSITIVE_PEOPLE_ON_ART.includes(Encounters.Data.Registration.MRN))
             {
-                let genderDisaggregation = new Gender_Totals();
+                let genderDisaggregation = new Gender_Totals_For_Dashboard_Charts();
                 genderDisaggregation.processDisaggregation();
                 Totals.Gender_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_ON_ART_GENDER_DISAGGREGATION.push(genderDisaggregation.getGenderCounts());
                 
@@ -477,7 +485,7 @@ function calculateTotalHivPositivePeopleVirallySupressed(reportingStartDate, rep
 
             if (!Object.values(Totals.VL_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_VIRAL_STATUS_DISAGGREGATION).some(value => value === Encounters.Data.Registration.MRN))
             {   
-                let genderDisaggregation = new VL_Totals();
+                let genderDisaggregation = new VL_Totals_For_Dashboard_Charts();
                 genderDisaggregation.processDisaggregation();
                 Totals.VL_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_VIRAL_STATUS_DISAGGREGATION.push(genderDisaggregation.getVLCounts());
             }
@@ -498,7 +506,7 @@ function calculateTotalBaselineCD4ForNewlyStartedARTPatients(reportingStartDate,
         {
             if (!Totals.Summary.HIV_POSITIVE_PEOPLE_ON_ART_BASELINE_CD4.includes(Encounters.Data.Registration.MRN))
             {
-                let cd4Disaggregation = new CD4_Totals();
+                let cd4Disaggregation = new CD4_Totals_For_Dashboard_Charts();
                 cd4Disaggregation.processDisaggregation();
                 Totals.Gender_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_ON_ART_BASELINE_CD4_GENDER_DISAGGREGATION.push(cd4Disaggregation.getGenderCounts());
                 
