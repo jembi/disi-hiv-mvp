@@ -173,7 +173,7 @@ class Base{
     })
   }
 
-  prepareJsReportParams(featureName, mrn, period, reportSpecifcFilters)
+  prepareJsReportParams(featureName, period, reportSpecifcFilters)
   {
     var jsReportParams = this.prepareInitialJsReportParams(featureName);
 

@@ -208,21 +208,10 @@ async function beforeRender(req) {
   }
 
   for (const statusBucket of aggs.viralSuppression.buckets) {
-    if (statusBucket.key == "Suppressed")
-    {
-      results.rows.push({
-        vlStatusGroup: statusBucket.key,
-        total: statusBucket.doc_count
-      })
-    }
-
-     if (statusBucket.key == "Unsuppressed")
-    {
-      results.rows.push({
-        vlStatusGroup: statusBucket.key,
-        total: statusBucket.doc_count
-      })
-    }
+    results.rows.push({
+      vlStatusGroup: statusBucket.key,
+      total: statusBucket.doc_count
+    })
   }
 
   req.data = Object.assign(req.data, results)

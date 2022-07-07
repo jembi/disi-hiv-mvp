@@ -177,7 +177,7 @@ class Scenarios
             if (Encounters.inputDataLastRowReached)
             {
                 base.setCucumberTestScenarios(this.#CUCUMBER.AND_STATEMENT + "\n");
-                base.setCucumberTestScenarios(base.prepareJsReportParams(this.#getFeature(), DYNAMIC_MRN, REPORTING_PERIOD) + "\n");
+                base.setCucumberTestScenarios(base.prepareJsReportParams(this.#getFeature(), REPORTING_PERIOD, this.#getReportFilters()) + "\n");
 
                 for (var y = 0; y < this.#getRowDisaggregationKeyValue().length; y++) 
                 {
@@ -188,7 +188,7 @@ class Scenarios
                     if (Encounters.inputDataLastRowReached || IS_LAST_ROW_FOR_MULTI_ENCOUNTER_AGG_REPORT)
                     {
                         base.setCucumberTestScenarios(then != null ? then  + "\n" : "\n");
-                        base.setCucumberTestScenarios(then != null ? this.generateExpectedOutcomeDataHash(y) + "" + "\n" : "" + "\n");
+                        base.setCucumberTestScenarios(then != null ? this.#generateExpectedOutcomeDataHash(y) + "" + "\n" : "" + "\n");
                     }
                 }
 
@@ -201,7 +201,7 @@ class Scenarios
         }
     }
 
-    generateExpectedOutcomeDataHash(index)
+    #generateExpectedOutcomeDataHash(index)
     {
         const OUTCOME_DATA_LAST_ROW = this.#getOutcomeDataset().values.length;
         const base = Encounters.baseModule;
