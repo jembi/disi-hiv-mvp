@@ -24,6 +24,7 @@ const NUMBER_OF_CHARTS_IN_HIV_DASHBOARD = 6;
 const NUMBER_OF_SUMMARY_TOTAL_CATEGORIES = 5;
 const NUMBER_OF_GENDERS_FOR_CHART_DISAGGREGATION = 4;
 const SUBMIT_ALL_INPUT_DATA = true; //Using postman, every record in the input dataset is submitted to the CDR
+const HASH_HEADERS = "\n|field|value|\n";
 
 var uniqueMonthsArrayForCumulativeCasesForDashboardCharts = [];
 
@@ -166,40 +167,64 @@ function generateExpectedOutcomeDataHashForSummaryTotals(expectedOutcomeData)
 {
     const base = Encounters.baseModule;
 
-    var expectedOutcometable = "|field|value|\n";
+    var googleSheetsExpectedOutcometable = HASH_HEADERS;
+    var jsReportsExpectedOutcometable = "";
 
     for (var x = 0; x < NUMBER_OF_SUMMARY_TOTAL_CATEGORIES; x++) {
         const value = expectedOutcomeData.values[x];
 
         var actualValue = 0;
+        var chartName = null;
+        var jsReportGroupName = null;
 
         switch (x)
         {
             case 0:
                 actualValue = Totals.Summary.HIV_POSITIVE_PEOPLE.length;
+
+                chartName = "hiv-dashboard-HIV+ve people";
+                jsReportGroupName = "hivPositive";
                 
                 break;
             case 1:
                 actualValue = Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE.length;
+
+                chartName = "hiv-dashboard-People who entered care";
+                jsReportGroupName = "enrolledtoCare";
                
                 break;
             case 2:
                 actualValue = Totals.Summary.HIV_POSITIVE_PEOPLE_ON_ART.length;
+
+                chartName = "hiv-dashboard-HIV +ve people on ART";
+                jsReportGroupName = "artInitiated";
                
                 break;
             case 3:
                 actualValue = Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.length;
+
+                chartName = "hiv-dashboard-Current VL status of patients newly started on ART";
+                jsReportGroupName = "suppressed";
                 
                 break;
             case 4:
                 actualValue = Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_DIED.length;
+
+                chartName = "hiv-dashboard-HIV+ve people that have died";
+                jsReportGroupName = "deaths";
                 
                 break;
             default:
                 break;
         }
 
-        expectedOutcometable += base.displayOutcomeGoogleSheetsVariable("|" + value[0], "|" + actualValue);
+        jsReportsExpectedOutcometable += "\nAnd I check JSReports for the HIV Dashboard named \"" + chartName + "\" using the following report filters" + "\n";
+        jsReportsExpectedOutcometable += base.prepareJsReportParams(FEATURE_NAME, Encounters.Data.REPORTING_PERIOD, REPORT_SPECFIC_FILTERS) + "\n";
+        jsReportsExpectedOutcometable += "Then there should be a row identified by \"group\" of \"" + jsReportGroupName + "\" with the following fields and values"
+        jsReportsExpectedOutcometable += HASH_HEADERS;
+        jsReportsExpectedOutcometable += base.displayOutcomeJSReportVariable("|total|", actualValue);
+
+        googleSheetsExpectedOutcometable += base.displayOutcomeGoogleSheetsVariable("|" + value[0], "|" + actualValue);
     }
 
    
@@ -210,7 +235,9 @@ function generateExpectedOutcomeDataHashForSummaryTotals(expectedOutcomeData)
 
     base.setCucumberTestScenarios("And I check GoogleSheets" + "\n");
     base.setCucumberTestScenarios("Then there should be a total for GoogleSheet Summary fields" + "\n");
-    base.setCucumberTestScenarios(expectedOutcometable);
+    base.setCucumberTestScenarios(googleSheetsExpectedOutcometable);
+    base.setCucumberTestScenarios("\n");
+    base.setCucumberTestScenarios(jsReportsExpectedOutcometable);
 }
 
 function getGenderByIndexForGoogleSheets(index)
@@ -269,8 +296,6 @@ function getCd4DisaggregationGroupForJSReportsAsserts(googleSheetCd4Disaggregati
 function generateExpectedOutcomeDataHashForDashboardTotals()
 {
     const base = Encounters.baseModule;
-
-    const HASH_HEADERS = "\n|field|value|\n";
     
     var googleSheetsExpectedOutcometable = HASH_HEADERS;
     var jsReportsExpectedOutcometable = "";

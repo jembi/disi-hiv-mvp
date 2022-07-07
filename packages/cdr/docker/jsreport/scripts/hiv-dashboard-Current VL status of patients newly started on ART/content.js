@@ -209,7 +209,7 @@ async function beforeRender(req) {
 
   for (const statusBucket of aggs.viralSuppression.buckets) {
     results.rows.push({
-      vlStatusGroup: statusBucket.key,
+      group: statusBucket.key,
       total: statusBucket.doc_count
     })
   }
