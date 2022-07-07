@@ -79,8 +79,8 @@ class Base{
     const REPORTING_PERIOD = data[rowInt][colInt].split("-");
     var array = new Array();
 
-    array[0] = moment(REPORTING_PERIOD[0]).utc(UTC_Offset).format(this.STRING_DATE_FORMAT);
-    array[1] = moment(REPORTING_PERIOD[1]).utc(UTC_Offset).format(this.STRING_DATE_FORMAT);
+    array[0] = moment(REPORTING_PERIOD[0]).utc(true).format(Base.STRING_DATE_FORMAT);
+    array[1] = moment(REPORTING_PERIOD[1]).utc(true).format(Base.STRING_DATE_FORMAT);
 
     return array
   }
@@ -88,13 +88,13 @@ class Base{
   getInputDate(data, rowInt, encounterIndex, colInt) {
     const VALUE_FOR_GIVEN_ENCOUNTER = this.getStringOrNullValue(data[rowInt + encounterIndex][colInt]).trim();
 
-    return VALUE_FOR_GIVEN_ENCOUNTER != "" ? moment(VALUE_FOR_GIVEN_ENCOUNTER).utc(UTC_Offset).format(this.STRING_DATE_FORMAT) : "";
+    return VALUE_FOR_GIVEN_ENCOUNTER != "" ? moment(VALUE_FOR_GIVEN_ENCOUNTER).utc(UTC_Offset).format(Base.STRING_DATE_FORMAT) : "";
   }
 
   getOutcomeDate(outcomeDatasetDate) {
     const VALUE_FOR_GIVEN_ENCOUNTER = this.getStringOrNullValue(outcomeDatasetDate).trim();
 
-    return VALUE_FOR_GIVEN_ENCOUNTER != "" ? moment(VALUE_FOR_GIVEN_ENCOUNTER).utc(UTC_Offset).format(this.STRING_DATE_FORMAT) : "";
+    return VALUE_FOR_GIVEN_ENCOUNTER != "" ? moment(VALUE_FOR_GIVEN_ENCOUNTER).utc(UTC_Offset).format(Base.STRING_DATE_FORMAT) : "";
   }
 
   handleVOutcomeVariablesToBeDisplayed(field, val)

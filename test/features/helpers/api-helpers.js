@@ -5,7 +5,7 @@ const getReport = async (params, isForKibanaDashboard, chartName = null) => {
 
   var template = null;
 
-  if (isForKibanaDashboard)
+  if (!isForKibanaDashboard)
   {
     template = `report-${params.report}-test`;
   }

@@ -14,7 +14,7 @@ When('I check JSReports using the following report filters', {timeout : 30 * 100
   this.output = data
 })
 
-When('I check JSReports for the HIV Dashboard named {string} using the following report filters', {timeout : 30 * 1000}, async function (field, value, table) {
+When('I check JSReports for the HIV Dashboard named {string} using the following report filters', {timeout : 30 * 1000}, async function (reportName, table) {
   const params = {}
   table.hashes().forEach(hash => {
     params[hash.field] = hash.value
@@ -22,7 +22,7 @@ When('I check JSReports for the HIV Dashboard named {string} using the following
 
   await new Promise(r => setTimeout(r, 20000));
 
-  const { data } = await getReport(params, true)
+  const { data } = await getReport(params, true, reportName)
   this.output = data
 })
 

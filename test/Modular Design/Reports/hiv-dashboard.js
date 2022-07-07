@@ -213,7 +213,7 @@ function generateExpectedOutcomeDataHashForSummaryTotals(expectedOutcomeData)
     base.setCucumberTestScenarios(expectedOutcometable);
 }
 
-function getGenderByIndex(index)
+function getGenderByIndexForGoogleSheets(index)
 {
     switch (index)
     {
@@ -230,11 +230,30 @@ function getGenderByIndex(index)
     }
 }
 
+function getGenderByIndexForJSReportsAsserts(index)
+{
+    switch (index)
+    {
+        case 0:
+            return "females";
+        case 1:
+            return "males";
+        case 2:
+            return "others";
+        case 3:
+            return "unknowns";
+        default:
+            return null;
+    }
+}
+
 function generateExpectedOutcomeDataHashForDashboardTotals()
 {
     const base = Encounters.baseModule;
+
+    const HASH_HEADERS = "|field|value|\n";
     
-    var googleSheetsExpectedOutcometable = "|field|value|\n";
+    var googleSheetsExpectedOutcometable = HASH_HEADERS;
     var jsReportsExpectedOutcometable = "";
 
     for (var x = 0; x < NUMBER_OF_CHARTS_IN_HIV_DASHBOARD; x++)
@@ -265,15 +284,15 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
                 break;
         }
 
-        jsReportsExpectedOutcometable += "\nAnd I check JSReports for the HIV Dashboard named \"" + chartName + "\" using the following report filters" + "\n";
-        jsReportsExpectedOutcometable += base.prepareJsReportParams(FEATURE_NAME, Encounters.Data.REPORTING_PERIOD, REPORT_SPECFIC_FILTERS) + "\n";
+        jsReportsExpectedOutcometable += "\nAnd I check JSReports for the HIV Dashboard named \"" + chartName + "\" using the following report filters";
+        jsReportsExpectedOutcometable += base.prepareJsReportParams(FEATURE_NAME, Encounters.Data.REPORTING_PERIOD, REPORT_SPECFIC_FILTERS);
 
         if (x < 3)
         {
             for (var y = 0; y < AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS.length; y++) 
             {
                 jsReportsExpectedOutcometable += "Then there should be a row identified by \"ageGroup\" of \"" + AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "\" with the following fields and values"
-                jsReportsExpectedOutcometable += "\n";
+                jsReportsExpectedOutcometable += HASH_HEADERS;
 
                 var genderValues = [];
 
@@ -281,7 +300,8 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
                 {
                     var value = null;
 
-                    const GENDER = getGenderByIndex(j);
+                    const GENDER = getGenderByIndexForGoogleSheets(j);
+                    const GENDER_FOR_JSREPORTS = getGenderByIndexForJSReportsAsserts(j);
 
                     switch (x)
                     {
@@ -308,7 +328,8 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
                         googleSheetsExpectedOutcometable += base.displayOutcomeGoogleSheetsVariable("|" + chartName + "_" + AGE_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", genderValues);
                     }
 
-                    jsReportsExpectedOutcometable += base.displayOutcomeJSReportVariable("|" + GENDER + "|", value);
+                    
+                    jsReportsExpectedOutcometable += base.displayOutcomeJSReportVariable("|" + GENDER_FOR_JSREPORTS + "|", value);
                 }
             }
         }
@@ -318,13 +339,14 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
             for (var y = 0; y < uniqueMonthsArrayForCumulativeCasesForDashboardCharts.length; y++) 
             {
                 jsReportsExpectedOutcometable += "Then there should be a row identified by \"ageGroup\" of \"" + uniqueMonthsArrayForCumulativeCasesForDashboardCharts[y] + "\" with the following fields and values"
-                jsReportsExpectedOutcometable += "\n";
+                jsReportsExpectedOutcometable += HASH_HEADERS;
 
                 var genderValues = [];
 
                 for (var j = 0; j < NUMBER_OF_GENDERS_FOR_CHART_DISAGGREGATION; j++)
                 {
-                    const GENDER = getGenderByIndex(j);
+                    const GENDER = getGenderByIndexForGoogleSheets(j);
+                    const GENDER_FOR_JSREPORTS = getGenderByIndexForJSReportsAsserts(j);
 
                     const value = Totals.Gender_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_CUMULATIVE_CASES_GENDER_DISAGGREGATION.filter(obj => eval("obj." + GENDER + "[0]") === uniqueMonthsArrayForCumulativeCasesForDashboardCharts[y]).length;
 
@@ -335,7 +357,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
                         googleSheetsExpectedOutcometable += base.displayOutcomeGoogleSheetsVariable("|" + chartName + "_" + uniqueMonthsArrayForCumulativeCasesForDashboardCharts[y] + "|", genderValues);
                     }
 
-                    jsReportsExpectedOutcometable += base.displayOutcomeJSReportVariable("|" + GENDER + "|", value);
+                    jsReportsExpectedOutcometable += base.displayOutcomeJSReportVariable("|" + GENDER_FOR_JSREPORTS + "|", value);
                 }
             }
         }
@@ -345,13 +367,14 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
             for (var y = 0; y < CD4_DISAGGREGATION_FOR_DASHBOARD_CHARTS.length; y++) 
             {
                 jsReportsExpectedOutcometable += "Then there should be a row identified by \"cd4Group\" of \"" + CD4_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "\" with the following fields and values"
-                jsReportsExpectedOutcometable += "\n";
+                jsReportsExpectedOutcometable += HASH_HEADERS;
 
                 var genderValues = [];
 
                 for (var j = 0; j < NUMBER_OF_GENDERS_FOR_CHART_DISAGGREGATION; j++)
                 {
-                    const GENDER = getGenderByIndex(j);
+                    const GENDER = getGenderByIndexForGoogleSheets(j);
+                    const GENDER_FOR_JSREPORTS = getGenderByIndexForJSReportsAsserts(j);
 
                     const value = Totals.Gender_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_ON_ART_BASELINE_CD4_GENDER_DISAGGREGATION.filter(obj => eval("obj." + GENDER + "[0]") === CD4_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y]).length;
 
@@ -362,7 +385,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
                         googleSheetsExpectedOutcometable += base.displayOutcomeGoogleSheetsVariable("|" + chartName + "_" + CD4_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "|", genderValues);
                     }
 
-                    jsReportsExpectedOutcometable += base.displayOutcomeJSReportVariable("|" + GENDER + "|", value);
+                    jsReportsExpectedOutcometable += base.displayOutcomeJSReportVariable("|" + GENDER_FOR_JSREPORTS + "|", value);
                 }
             }
         }
@@ -396,7 +419,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
                     }
 
                     jsReportsExpectedOutcometable += "Then there should be a row identified by \"vlStatusGroup\" of \"" + vlStatus + "\" with the following fields and values"
-                    jsReportsExpectedOutcometable += "\n";
+                    jsReportsExpectedOutcometable += HASH_HEADERS;
 
                     const value = Totals.VL_Diaggregation_For_Charts.HIV_POSITIVE_PEOPLE_VIRAL_STATUS_DISAGGREGATION.filter(obj => eval("obj." + vlStatus + "[0]") === VL_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y]).length;
 
