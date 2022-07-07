@@ -14,13 +14,13 @@ When('I check JSReports using the following report filters', {timeout : 30 * 100
   this.output = data
 })
 
-When('I check JSReports for the HIV Dashboard named {string} using the following report filters', {timeout : 30 * 1000}, async function (reportName, table) {
+When('I check JSReports for the HIV Dashboard named {string} using the following report filters', async function (reportName, table) {
   const params = {}
   table.hashes().forEach(hash => {
     params[hash.field] = hash.value
   })
 
-  await new Promise(r => setTimeout(r, 20000));
+  await new Promise(r => setTimeout(r, 2000));
 
   const { data } = await getReport(params, true, reportName)
   this.output = data

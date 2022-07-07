@@ -251,7 +251,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
 {
     const base = Encounters.baseModule;
 
-    const HASH_HEADERS = "|field|value|\n";
+    const HASH_HEADERS = "\n|field|value|\n";
     
     var googleSheetsExpectedOutcometable = HASH_HEADERS;
     var jsReportsExpectedOutcometable = "";
@@ -284,8 +284,8 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
                 break;
         }
 
-        jsReportsExpectedOutcometable += "\nAnd I check JSReports for the HIV Dashboard named \"" + chartName + "\" using the following report filters";
-        jsReportsExpectedOutcometable += base.prepareJsReportParams(FEATURE_NAME, Encounters.Data.REPORTING_PERIOD, REPORT_SPECFIC_FILTERS);
+        jsReportsExpectedOutcometable += "\nAnd I check JSReports for the HIV Dashboard named \"" + chartName + "\" using the following report filters" + "\n";
+        jsReportsExpectedOutcometable += base.prepareJsReportParams(FEATURE_NAME, Encounters.Data.REPORTING_PERIOD, REPORT_SPECFIC_FILTERS) + "\n";
 
         if (x < 3)
         {
