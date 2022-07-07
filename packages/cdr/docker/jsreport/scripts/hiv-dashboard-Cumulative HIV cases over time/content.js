@@ -201,11 +201,65 @@ async function beforeRender(req) {
     rows: []
   }
 
+   GENDER_DISAGGREGATION = {
+        Male: [],
+        Female: [],
+        Other: [],
+        Unknown: []
+    }
+
+  var arrayUniqueByKey = null
+
   for (const genderBucket of aggs.gender.buckets) {
-      results.rows.push({
-        genderGroup: genderBucket.key,
-        dates: genderBucket.hivPositiveDiagnosisDate.buckets
-      })
+    for (const hivPositiveDiagnosisDateBucket of genderBucket.hivPositiveDiagnosisDate.buckets) {
+      const MONTH_GROUP = hivPositiveDiagnosisDateBucket.key_as_string
+  
+      switch (genderBucket.key)
+      {
+          case "male":
+              this.GENDER_DISAGGREGATION.Male.push({month: MONTH_GROUP, count:hivPositiveDiagnosisDateBucket.doc_count } );    
+              
+              break;
+          case "female":
+              this.GENDER_DISAGGREGATION.Female.push({month: MONTH_GROUP, count:hivPositiveDiagnosisDateBucket.doc_count});  
+
+              break;
+          case "other":
+              this.GENDER_DISAGGREGATION.Other.push({month: MONTH_GROUP, count:hivPositiveDiagnosisDateBucket.doc_count});        
+
+              break;
+          case "unknown":
+              this.GENDER_DISAGGREGATION.Unknown.push({month: MONTH_GROUP, count:hivPositiveDiagnosisDateBucket.doc_count});       
+
+              break;
+          default:
+              break;
+      }
+    }
+
+    arrayUniqueByKey = [...new Map(genderBucket.hivPositiveDiagnosisDate.buckets.map(item =>
+    [item.key_as_string, item.key_as_string])).values()];
+    
+  }
+
+  for (const month of arrayUniqueByKey) {
+    const males = GENDER_DISAGGREGATION.Male.filter(obj => obj.month === month);
+    const females = GENDER_DISAGGREGATION.Female.filter(obj => obj.month === month);
+    const others = GENDER_DISAGGREGATION.Other.filter(obj => obj.month === month);
+    const unknowns = GENDER_DISAGGREGATION.Unknown.filter(obj => obj.month === month);
+
+    let malesTotal = males.map((item) => item.count)[0] || 0
+    let femalesTotal = females.map((item) => item.count)[0] || 0
+    let othersTotal = others.map((item) => item.count)[0] || 0
+    let unknownsTotal = unknowns.map((item) => item.count)[0] || 0
+  
+    results.rows.push({
+          monthGroup: month.toString().split("T")[0],
+          males: malesTotal,
+          females: femalesTotal,
+          others: othersTotal,
+          unknowns: unknownsTotal
+        })
   }
 
   req.data = Object.assign(req.data, results)

@@ -247,6 +247,25 @@ function getGenderByIndexForJSReportsAsserts(index)
     }
 }
 
+function getCd4DisaggregationGroupForJSReportsAsserts(googleSheetCd4DisaggregationGroup)
+{
+    switch (googleSheetCd4DisaggregationGroup)
+    {
+        case "less than 200":
+            return "0.0-200.0";
+        case "200 – 349":
+            return "200.0-350.0";
+        case "350 – 499":
+            return "350.0-500.0";
+        case "≥500":
+            return "500.0-*";
+        case "Unknown":
+            return "unknown";
+        default:
+            return null;
+    }
+}
+
 function generateExpectedOutcomeDataHashForDashboardTotals()
 {
     const base = Encounters.baseModule;
@@ -338,7 +357,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
         {
             for (var y = 0; y < uniqueMonthsArrayForCumulativeCasesForDashboardCharts.length; y++) 
             {
-                jsReportsExpectedOutcometable += "Then there should be a row identified by \"ageGroup\" of \"" + uniqueMonthsArrayForCumulativeCasesForDashboardCharts[y] + "\" with the following fields and values"
+                jsReportsExpectedOutcometable += "Then there should be a row identified by \"monthGroup\" of \"" + moment(uniqueMonthsArrayForCumulativeCasesForDashboardCharts[y]).format(Base.STRING_DATE_FORMAT) + "\" with the following fields and values"
                 jsReportsExpectedOutcometable += HASH_HEADERS;
 
                 var genderValues = [];
@@ -366,7 +385,7 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
         {
             for (var y = 0; y < CD4_DISAGGREGATION_FOR_DASHBOARD_CHARTS.length; y++) 
             {
-                jsReportsExpectedOutcometable += "Then there should be a row identified by \"cd4Group\" of \"" + CD4_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y] + "\" with the following fields and values"
+                jsReportsExpectedOutcometable += "Then there should be a row identified by \"cd4Group\" of \"" + getCd4DisaggregationGroupForJSReportsAsserts(CD4_DISAGGREGATION_FOR_DASHBOARD_CHARTS[y]) + "\" with the following fields and values"
                 jsReportsExpectedOutcometable += HASH_HEADERS;
 
                 var genderValues = [];
