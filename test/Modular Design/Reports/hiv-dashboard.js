@@ -25,6 +25,7 @@ const NUMBER_OF_SUMMARY_TOTAL_CATEGORIES = 5;
 const NUMBER_OF_GENDERS_FOR_CHART_DISAGGREGATION = 4;
 const SUBMIT_ALL_INPUT_DATA = true; //Using postman, every record in the input dataset is submitted to the CDR
 const HASH_HEADERS = "\n|field|value|\n";
+const MUST_VERIFY_EXPECTED_OUTCOME_DATA_IN_GOOGLE_SHEET = false;
 
 var uniqueMonthsArrayForCumulativeCasesForDashboardCharts = [];
 
@@ -182,35 +183,35 @@ function generateExpectedOutcomeDataHashForSummaryTotals(expectedOutcomeData)
             case 0:
                 actualValue = Totals.Summary.HIV_POSITIVE_PEOPLE.length;
 
-                chartName = "hiv-dashboard-HIV+ve people";
+                chartName = "HIV+ve people";
                 jsReportGroupName = "hivPositive";
                 
                 break;
             case 1:
                 actualValue = Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_ENTERED_CARE.length;
 
-                chartName = "hiv-dashboard-People who entered care";
+                chartName = "People who entered care";
                 jsReportGroupName = "enrolledtoCare";
                
                 break;
             case 2:
                 actualValue = Totals.Summary.HIV_POSITIVE_PEOPLE_ON_ART.length;
 
-                chartName = "hiv-dashboard-HIV +ve people on ART";
+                chartName = "HIV +ve people on ART";
                 jsReportGroupName = "artInitiated";
                
                 break;
             case 3:
                 actualValue = Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_VIRALLY_SUPPRESSED.length;
 
-                chartName = "hiv-dashboard-Current VL status of patients newly started on ART";
+                chartName = "Current VL status of patients newly started on ART";
                 jsReportGroupName = "suppressed";
                 
                 break;
             case 4:
                 actualValue = Totals.Summary.HIV_POSITIVE_PEOPLE_WHO_DIED.length;
 
-                chartName = "hiv-dashboard-HIV+ve people that have died";
+                chartName = "HIV+ve people that have died";
                 jsReportGroupName = "deaths";
                 
                 break;
@@ -233,10 +234,14 @@ function generateExpectedOutcomeDataHashForSummaryTotals(expectedOutcomeData)
         base.setCucumberTestScenarios("Scenario: Summary Totals" + "\n");
     }
 
-    base.setCucumberTestScenarios("And I check GoogleSheets" + "\n");
-    base.setCucumberTestScenarios("Then there should be a total for GoogleSheet Summary fields" + "\n");
-    base.setCucumberTestScenarios(googleSheetsExpectedOutcometable);
-    base.setCucumberTestScenarios("\n");
+    if (MUST_VERIFY_EXPECTED_OUTCOME_DATA_IN_GOOGLE_SHEET)
+    {
+        base.setCucumberTestScenarios("And I check GoogleSheets" + "\n");
+        base.setCucumberTestScenarios("Then there should be a total for GoogleSheet Summary fields" + "\n");
+        base.setCucumberTestScenarios(googleSheetsExpectedOutcometable);
+        base.setCucumberTestScenarios("\n");
+    }
+    
     base.setCucumberTestScenarios(jsReportsExpectedOutcometable);
 }
 
@@ -485,10 +490,14 @@ function generateExpectedOutcomeDataHashForDashboardTotals()
         base.setCucumberTestScenarios("Scenario: Dashboard Totals" + "\n");
     }
     
-    base.setCucumberTestScenarios("And I check GoogleSheets" + "\n");
-    base.setCucumberTestScenarios("Then there should be a total for GoogleSheet Dashboard Chart fields" + "\n");
-    base.setCucumberTestScenarios(googleSheetsExpectedOutcometable);
-    base.setCucumberTestScenarios("\n");
+    if (MUST_VERIFY_EXPECTED_OUTCOME_DATA_IN_GOOGLE_SHEET)
+    {
+        base.setCucumberTestScenarios("And I check GoogleSheets" + "\n");
+        base.setCucumberTestScenarios("Then there should be a total for GoogleSheet Dashboard Chart fields" + "\n");
+        base.setCucumberTestScenarios(googleSheetsExpectedOutcometable);
+        base.setCucumberTestScenarios("\n");
+    }
+    
     base.setCucumberTestScenarios(jsReportsExpectedOutcometable);
 }
 
