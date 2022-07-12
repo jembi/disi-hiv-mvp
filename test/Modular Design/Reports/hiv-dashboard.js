@@ -131,8 +131,8 @@ function prepareData(reportDataSets)
             });
         }
 
-        if(Encounters.mustEncounterBeReportedOn)
-        {
+        //if(Encounters.mustEncounterBeReportedOn)
+        //{
             const REPORTING_PERIOD_START_DATE = moment(Encounters.Data.REPORTING_PERIOD[0], base.form);
             const REPORTING_PERIOD_END_DATE = moment(Encounters.Data.REPORTING_PERIOD[1], Base.STRING_DATE_FORMAT);
 
@@ -142,7 +142,7 @@ function prepareData(reportDataSets)
             calculateTotalHivPositivePeopleVirallySupressed(REPORTING_PERIOD_START_DATE, REPORTING_PERIOD_END_DATE);
             calculateTotalHivPositiveDeaths(REPORTING_PERIOD_START_DATE, REPORTING_PERIOD_END_DATE);
             calculateTotalBaselineCD4ForNewlyStartedARTPatients(REPORTING_PERIOD_START_DATE, REPORTING_PERIOD_END_DATE);
-        }
+        //}
 
         if (Encounters.inputDataLastRowReached)
         {

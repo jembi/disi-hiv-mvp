@@ -44,7 +44,7 @@ class Gender_Totals {
     #verifyPatientAgeGroup()
     {
         const REPORTING_PERIOD_END_DATE = moment(Encounters.Data.REPORTING_PERIOD[1], Base.STRING_DATE_FORMAT);
-        const AGE_AT_END_OF_REPORTING_PERIOD = Math.round(moment.duration(REPORTING_PERIOD_END_DATE.diff(Encounters.Data.Registration.DATE_OF_BIRTH)).asYears());
+        const AGE_AT_END_OF_REPORTING_PERIOD = Math.floor(moment.duration(REPORTING_PERIOD_END_DATE.diff(Encounters.Data.Registration.DATE_OF_BIRTH)).asYears());
 
         //age in years
         if (AGE_AT_END_OF_REPORTING_PERIOD < 5)

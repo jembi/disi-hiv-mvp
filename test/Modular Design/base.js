@@ -2,14 +2,15 @@ const moment = require('moment');
 const googleApi = require("./googleApi");
 const fs = require('fs');
 const LOCAL_CUCUMBER_FEATURES_DIR = "../../../test/features/scenarios/reports/";
-const UTC_Offset = "+02:00";
 const organisations = require("./organisations.json");
 
 
 class Base{
+  static UTC_Offset = "+02:00";
   static STRING_DATE_FORMAT = "YYYY-MM-DD";
   static DAY_OF_YEAR_POSTFIX = this.getEpochDayOfYearNumber();
-  static HH_MM_SS = moment(Date.now()).utc(UTC_Offset).format("hhmmss");
+  static HH_MM_SS = moment(Date.now()).utc(Base.UTC_Offset).format("hhmmss");
+  
 
   static getEpochDayOfYearNumber() {
     return Math.ceil((Date.now() - new Date(new Date().getFullYear(), 0, 1)) / 86400000);
@@ -88,13 +89,13 @@ class Base{
   getInputDate(data, rowInt, encounterIndex, colInt) {
     const VALUE_FOR_GIVEN_ENCOUNTER = this.getStringOrNullValue(data[rowInt + encounterIndex][colInt]).trim();
 
-    return VALUE_FOR_GIVEN_ENCOUNTER != "" ? moment(VALUE_FOR_GIVEN_ENCOUNTER).utc(UTC_Offset).format(Base.STRING_DATE_FORMAT) : "";
+    return VALUE_FOR_GIVEN_ENCOUNTER != "" ? moment(VALUE_FOR_GIVEN_ENCOUNTER).utc(Base.UTC_Offset).format(Base.STRING_DATE_FORMAT) : "";
   }
 
   getOutcomeDate(outcomeDatasetDate) {
     const VALUE_FOR_GIVEN_ENCOUNTER = this.getStringOrNullValue(outcomeDatasetDate).trim();
 
-    return VALUE_FOR_GIVEN_ENCOUNTER != "" ? moment(VALUE_FOR_GIVEN_ENCOUNTER).utc(UTC_Offset).format(Base.STRING_DATE_FORMAT) : "";
+    return VALUE_FOR_GIVEN_ENCOUNTER != "" ? moment(VALUE_FOR_GIVEN_ENCOUNTER).utc(Base.UTC_Offset).format(Base.STRING_DATE_FORMAT) : "";
   }
 
   handleVOutcomeVariablesToBeDisplayed(field, val)
