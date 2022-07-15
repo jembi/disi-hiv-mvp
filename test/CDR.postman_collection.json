@@ -563,7 +563,7 @@
 					"const currVLSupression = pm.variables.get('currVLSupression')",
 					"",
 					"",
-					"//pm.variables.set('randomClientId', clientID)",
+					"pm.variables.set('randomClientId', getRandomInt(1, 3))",
 					"pm.variables.set('randomClientGuid', uuid.v4())",
 					"pm.variables.set('randomFirstName', firstName)",
 					"pm.variables.set('randomLastName', lastName)",
@@ -923,7 +923,7 @@
 	"variable": [
 		{
 			"key": "openhimUrl",
-			"value": "https://oh-route.gicsandbox.org/fhir"
+			"value": "https://openhimcore.qa.disi.gicsandbox.org/fhir"
 		}
 	]
 }
