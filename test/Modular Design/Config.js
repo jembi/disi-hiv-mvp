@@ -4,7 +4,7 @@ class Config{
         //For example for the input data: https://docs.google.com/spreadsheets/d/1t8ZlxqRoYjewMQhLy7bnAj8SYkr0VlHRRMnSILL4Puw/edit#gid=1756021364
         
         EXPECTED_OUTCOME_WORKBOOK_ID: "1j9j2HilBlcUR_ZFG-sF1aW8YBsKtP-kPImLhciG3z6s", // This is the ID for the google sheet that has the expected outcome data
-        INPUT_DATA_WORKBOOK_ID: "1ZgDAL9ONRNerDw3VMittCSSxMihi8q0XBbCDRyUyqFc" // This is the ID for the google sheet that has the input data
+        INPUT_DATA_WORKBOOK_ID: "1EB1hjzy9WOcVSK2wu5NotnNctLzRj_GH8cdWmjgk-sc"//"1ZgDAL9ONRNerDw3VMittCSSxMihi8q0XBbCDRyUyqFc" // This is the ID for the google sheet that has the input data
     }
 
     static GoogleServices = {
