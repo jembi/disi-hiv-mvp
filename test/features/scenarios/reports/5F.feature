@@ -1,1859 +1,1916 @@
 Feature: 5F
-      Scenario: MRN00005F-233-175-024115
+      Scenario: MRN00005F-233-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Rediat                 |
-                  | lastName                             | Ephram                 |
-                  | gender                               | male                   |
-                  | dateOfBirth                          | 1999-02-05             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-233          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F233        |
-                  | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5F-0001175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | TDF + FTC + EFV        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Rediat                        |
+                  | lastName                             | Ephram                        |
+                  | gender                               | male                          |
+                  | dateOfBirth                          | 1999-03-05                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Rediat00005F-2320072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F233               |
+                  | dateClientEnrolledToCare             | 2022-07-10                    |
+                  | enrolledToCareUID                    | 2022-5F-0001201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | First Line                    |
+                  | artInitiationRegimen                 | TDF + FTC + EFV               |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 300                           |
+                  | vlInterpretation                     | Non Detectable                |
+                  | currVLSupression                     | Suppressed                    |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-234-175-024115
+
+      Scenario: MRN00005F-234-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Dawit                  |
-                  | lastName                             | Fassilidas             |
-                  | gender                               | female                 |
-                  | dateOfBirth                          | 2000-02-05             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-234          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-04-20             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F234        |
-                  | dateClientEnrolledToCare             | 2022-06-20             |
-                  | enrolledToCareUID                    | 2022-5F-0002175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | ABC + 3TC + RAL        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 1000                   |
-                  | vlInterpretation                     | Detectable             |
-                  | currVLSupression                     | Unsuppressed           |
+                  | key                                  | value                        |
+                  | orgId                                | HIVOrganizationExample6      |
+                  | firstName                            | Dawit                        |
+                  | lastName                             | Fassilidas                   |
+                  | gender                               | female                       |
+                  | dateOfBirth                          | 2000-03-05                   |
+                  | registrationFacilityCode             | HIVOrganizationExample6      |
+                  | registrationDate                     | 2022-05-20                   |
+                  | NID                                  | Dawit00005F-2220072022143707 |
+                  | addressCountry                       | QA Country                   |
+                  | addressProvince                      | QA State                     |
+                  | addressDistrict                      | QA District                  |
+                  | addressCity                          | QA Ward                      |
+                  | hivPositiveDate                      | 2022-05-20                   |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6      |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F        |
+                  | hivPositiveTestingUID                | HIVPOS00005F234              |
+                  | dateClientEnrolledToCare             | 2022-07-20                   |
+                  | enrolledToCareUID                    | 2022-5F-0002201023728        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6      |
+                  | enrolledToCareFacName                | Reporting Facility 5F        |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-05-20                   |
+                  | artInitiationDate                    | 2022-06-01                   |
+                  | artInitiationRegimenLine             | First Line                   |
+                  | artInitiationRegimen                 | ABC + 3TC + RAL              |
+                  | vlDate                               | 2022-06-05                   |
+                  | vlResult                             | 1000                         |
+                  | vlInterpretation                     | Detectable                   |
+                  | currVLSupression                     | Unsuppressed                 |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-235-175-024115
+
+      Scenario: MRN00005F-235-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Amsalu                 |
-                  | lastName                             | Asmelash               |
-                  | gender                               | female                 |
-                  | dateOfBirth                          | 2001-12-05             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-235          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      |                        |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     |                        |
-                  | hivPositiveTestingUID                |                        |
-                  | dateClientEnrolledToCare             | 2022-06-08             |
-                  | enrolledToCareUID                    | 2022-5F-0003175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | ABC + 3TC + LPV/r      |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Amsalu                        |
+                  | lastName                             | Asmelash                      |
+                  | gender                               | female                        |
+                  | dateOfBirth                          | 2002-01-05                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Amsalu00005F-2020072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      |                               |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                |                               |
+                  | dateClientEnrolledToCare             | 2022-07-08                    |
+                  | enrolledToCareUID                    | 2022-5F-0003201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | First Line                    |
+                  | artInitiationRegimen                 | ABC + 3TC + LPV/r             |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 300                           |
+                  | vlInterpretation                     | Non Detectable                |
+                  | currVLSupression                     | Suppressed                    |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-236-175-024115
+
+      Scenario: MRN00005F-236-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Sirak                  |
-                  | lastName                             | Assefa                 |
-                  | gender                               | male                   |
-                  | dateOfBirth                          | 1996-02-05             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-236          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-04-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F236        |
-                  | dateClientEnrolledToCare             | 2022-06-21             |
-                  | enrolledToCareUID                    | 2022-5F-0004175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-04-20             |
-                  | artInitiationDate                    | 2022-04-20             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | ABC + 3TC + EFV        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
+                  | key                                  | value                        |
+                  | orgId                                | HIVOrganizationExample6      |
+                  | firstName                            | Sirak                        |
+                  | lastName                             | Assefa                       |
+                  | gender                               | male                         |
+                  | dateOfBirth                          | 1996-03-05                   |
+                  | registrationFacilityCode             | HIVOrganizationExample6      |
+                  | registrationDate                     | 2022-05-01                   |
+                  | NID                                  | Sirak00005F-2620072022143707 |
+                  | addressCountry                       | QA Country                   |
+                  | addressProvince                      | QA State                     |
+                  | addressDistrict                      | QA District                  |
+                  | addressCity                          | QA Ward                      |
+                  | hivPositiveDate                      | 2022-05-01                   |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6      |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F        |
+                  | hivPositiveTestingUID                | HIVPOS00005F236              |
+                  | dateClientEnrolledToCare             | 2022-07-21                   |
+                  | enrolledToCareUID                    | 2022-5F-0004201023728        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6      |
+                  | enrolledToCareFacName                | Reporting Facility 5F        |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01                   |
+                  | artInitiationDate                    | 2022-05-20                   |
+                  | artInitiationRegimenLine             | First Line                   |
+                  | artInitiationRegimen                 | ABC + 3TC + EFV              |
+                  | vlDate                               | 2022-06-05                   |
+                  | vlResult                             | 300                          |
+                  | vlInterpretation                     | Non Detectable               |
+                  | currVLSupression                     | Suppressed                   |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-237-175-024115
+
+      Scenario: MRN00005F-237-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Yilema                 |
-                  | lastName                             | Gerdarm                |
-                  | gender                               | male                   |
-                  | dateOfBirth                          | 2001-12-05             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-237          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F237        |
-                  | dateClientEnrolledToCare             | 2022-06-19             |
-                  | enrolledToCareUID                    |                        |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | ABC + 3TC + DTG        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Yilema                        |
+                  | lastName                             | Gerdarm                       |
+                  | gender                               | male                          |
+                  | dateOfBirth                          | 2002-01-05                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Yilema00005F-2020072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F237               |
+                  | dateClientEnrolledToCare             | 2022-07-19                    |
+                  | enrolledToCareUID                    |                               |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | First Line                    |
+                  | artInitiationRegimen                 | ABC + 3TC + DTG               |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 300                           |
+                  | vlInterpretation                     | Non Detectable                |
+                  | currVLSupression                     | Suppressed                    |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-238-175-024115
+
+      Scenario: MRN00005F-238-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Louam                  |
-                  | lastName                             | Getachew               |
-                  | gender                               | male                   |
-                  | dateOfBirth                          | 1978-08-05             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-238          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F238        |
-                  | dateClientEnrolledToCare             | 2022-05-19             |
-                  | enrolledToCareUID                    | 2022-5F-0006175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit |                        |
-                  | artInitiationDate                    |                        |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | ABC + 3TC + DRVr       |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
+                  | key                                  | value                        |
+                  | orgId                                | HIVOrganizationExample6      |
+                  | firstName                            | Louam                        |
+                  | lastName                             | Getachew                     |
+                  | gender                               | male                         |
+                  | dateOfBirth                          | 1978-09-05                   |
+                  | registrationFacilityCode             | HIVOrganizationExample6      |
+                  | registrationDate                     | 2022-06-01                   |
+                  | NID                                  | Louam00005F-4320072022143707 |
+                  | addressCountry                       | QA Country                   |
+                  | addressProvince                      | QA State                     |
+                  | addressDistrict                      | QA District                  |
+                  | addressCity                          | QA Ward                      |
+                  | hivPositiveDate                      | 2022-06-01                   |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6      |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F        |
+                  | hivPositiveTestingUID                | HIVPOS00005F238              |
+                  | dateClientEnrolledToCare             | 2022-06-19                   |
+                  | enrolledToCareUID                    | 2022-5F-0006201023728        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6      |
+                  | enrolledToCareFacName                | Reporting Facility 5F        |
+                  | enrolledToCareDateFirstClinicalVisit |                              |
+                  | artInitiationDate                    |                              |
+                  | artInitiationRegimenLine             | First Line                   |
+                  | artInitiationRegimen                 | ABC + 3TC + DRVr             |
+                  | vlDate                               | 2022-06-05                   |
+                  | vlResult                             | 300                          |
+                  | vlInterpretation                     | Non Detectable               |
+                  | currVLSupression                     | Suppressed                   |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-239-175-024115
+
+      Scenario: MRN00005F-239-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Meraffe                |
-                  | lastName                             | Demeke                 |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 1985-11-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-239          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F239        |
-                  | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0007175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 |                        |
-                  | vlDate                               |                        |
-                  | vlResult                             |                        |
-                  | vlInterpretation                     |                        |
-                  | currVLSupression                     |                        |
+                  | key                                  | value                          |
+                  | orgId                                | HIVOrganizationExample6        |
+                  | firstName                            | Meraffe                        |
+                  | lastName                             | Demeke                         |
+                  | gender                               | unknown                        |
+                  | dateOfBirth                          | 1985-12-15                     |
+                  | registrationFacilityCode             | HIVOrganizationExample6        |
+                  | registrationDate                     | 2022-06-01                     |
+                  | NID                                  | Meraffe00005F-3620072022143707 |
+                  | addressCountry                       | QA Country                     |
+                  | addressProvince                      | QA State                       |
+                  | addressDistrict                      | QA District                    |
+                  | addressCity                          | QA Ward                        |
+                  | hivPositiveDate                      | 2022-06-01                     |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6        |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F          |
+                  | hivPositiveTestingUID                | HIVPOS00005F239                |
+                  | dateClientEnrolledToCare             | 2022-06-15                     |
+                  | enrolledToCareUID                    | 2022-5F-0007201023728          |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6        |
+                  | enrolledToCareFacName                | Reporting Facility 5F          |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
+                  | artInitiationDate                    | 2022-06-01                     |
+                  | artInitiationRegimenLine             | First Line                     |
+                  | artInitiationRegimen                 |                                |
+                  | vlDate                               | 2022-06-05                     |
+                  | vlResult                             |                                |
+                  | vlInterpretation                     |                                |
+                  | currVLSupression                     |                                |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-240-175-024115
+
+      Scenario: MRN00005F-240-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Benti                  |
-                  | lastName                             | Mihret                 |
-                  | gender                               | male                   |
-                  | dateOfBirth                          | 1954-11-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-240          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F240        |
-                  | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0008175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | AZT + 3TC + NVP        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 1000                   |
-                  | vlInterpretation                     | Detectable             |
-                  | currVLSupression                     | Unsuppressed           |
+                  | key                                  | value                        |
+                  | orgId                                | HIVOrganizationExample6      |
+                  | firstName                            | Benti                        |
+                  | lastName                             | Mihret                       |
+                  | gender                               | male                         |
+                  | dateOfBirth                          | 1954-12-15                   |
+                  | registrationFacilityCode             | HIVOrganizationExample6      |
+                  | registrationDate                     | 2022-06-01                   |
+                  | NID                                  | Benti00005F-6720072022143707 |
+                  | addressCountry                       | QA Country                   |
+                  | addressProvince                      | QA State                     |
+                  | addressDistrict                      | QA District                  |
+                  | addressCity                          | QA Ward                      |
+                  | hivPositiveDate                      | 2022-06-01                   |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6      |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F        |
+                  | hivPositiveTestingUID                | HIVPOS00005F240              |
+                  | dateClientEnrolledToCare             | 2022-06-15                   |
+                  | enrolledToCareUID                    | 2022-5F-0008201023728        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6      |
+                  | enrolledToCareFacName                | Reporting Facility 5F        |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
+                  | artInitiationDate                    | 2022-06-01                   |
+                  | artInitiationRegimenLine             | First Line                   |
+                  | artInitiationRegimen                 | AZT + 3TC + NVP              |
+                  | vlDate                               | 2022-06-05                   |
+                  | vlResult                             | 1000                         |
+                  | vlInterpretation                     | Detectable                   |
+                  | currVLSupression                     | Unsuppressed                 |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-241-175-024115
+
+      Scenario: MRN00005F-241-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Denkayehu              |
-                  | lastName                             | Tsium                  |
-                  | gender                               | female                 |
-                  | dateOfBirth                          | 1954-09-22             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-241          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F241        |
-                  | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0009175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | RAL + 3TC + DRV + RTV  |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 1000                   |
-                  | vlInterpretation                     | Detectable             |
-                  | currVLSupression                     | Unsuppressed           |
+                  | key                                  | value                            |
+                  | orgId                                | HIVOrganizationExample6          |
+                  | firstName                            | Denkayehu                        |
+                  | lastName                             | Tsium                            |
+                  | gender                               | female                           |
+                  | dateOfBirth                          | 1954-10-22                       |
+                  | registrationFacilityCode             | HIVOrganizationExample6          |
+                  | registrationDate                     | 2022-06-01                       |
+                  | NID                                  | Denkayehu00005F-6720072022143707 |
+                  | addressCountry                       | QA Country                       |
+                  | addressProvince                      | QA State                         |
+                  | addressDistrict                      | QA District                      |
+                  | addressCity                          | QA Ward                          |
+                  | hivPositiveDate                      | 2022-06-01                       |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6          |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F            |
+                  | hivPositiveTestingUID                | HIVPOS00005F241                  |
+                  | dateClientEnrolledToCare             | 2022-06-15                       |
+                  | enrolledToCareUID                    | 2022-5F-0009201023728            |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6          |
+                  | enrolledToCareFacName                | Reporting Facility 5F            |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                       |
+                  | artInitiationDate                    | 2022-06-01                       |
+                  | artInitiationRegimenLine             | First Line                       |
+                  | artInitiationRegimen                 | RAL + 3TC + DRV + RTV            |
+                  | vlDate                               | 2022-06-05                       |
+                  | vlResult                             | 1000                             |
+                  | vlInterpretation                     | Detectable                       |
+                  | currVLSupression                     | Unsuppressed                     |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-242-175-024115
+
+      Scenario: MRN00005F-242-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Derebu                        |
+                  | lastName                             | Senbeta                       |
+                  | gender                               | female                        |
+                  | dateOfBirth                          | 1959-12-15                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Derebu00005F-6220072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F242               |
+                  | dateClientEnrolledToCare             | 2022-06-15                    |
+                  | enrolledToCareUID                    | 2022-5F-0010201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | First Line                    |
+                  | artInitiationRegimen                 | RAL + 3TC + DRV + RTV + ABC   |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 1000                          |
+                  | vlInterpretation                     | Detectable                    |
+                  | currVLSupression                     | Unsuppressed                  |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-243-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                          |
+                  | orgId                                | HIVOrganizationExample6        |
+                  | firstName                            | Dinseri                        |
+                  | lastName                             | Tadesse                        |
+                  | gender                               | male                           |
+                  | dateOfBirth                          | 1964-02-15                     |
+                  | registrationFacilityCode             | HIVOrganizationExample6        |
+                  | registrationDate                     | 2022-06-01                     |
+                  | NID                                  | Dinseri00005F-5820072022143707 |
+                  | addressCountry                       | QA Country                     |
+                  | addressProvince                      | QA State                       |
+                  | addressDistrict                      | QA District                    |
+                  | addressCity                          | QA Ward                        |
+                  | hivPositiveDate                      | 2022-06-01                     |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6        |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F          |
+                  | hivPositiveTestingUID                | HIVPOS00005F243                |
+                  | dateClientEnrolledToCare             | 2022-06-15                     |
+                  | enrolledToCareUID                    | 2022-5F-0011201023728          |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6        |
+                  | enrolledToCareFacName                | Reporting Facility 5F          |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
+                  | artInitiationDate                    | 2022-06-01                     |
+                  | artInitiationRegimenLine             | First Line                     |
+                  | artInitiationRegimen                 | d4T + 3TC + NVP                |
+                  | vlDate                               | 2022-06-05                     |
+                  | vlResult                             | 300                            |
+                  | vlInterpretation                     | Non Detectable                 |
+                  | currVLSupression                     | Suppressed                     |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-244-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                          |
+                  | orgId                                | HIVOrganizationExample6        |
+                  | firstName                            | Teferra                        |
+                  | lastName                             | Shimelis                       |
+                  | gender                               | male                           |
+                  | dateOfBirth                          | 1968-04-15                     |
+                  | registrationFacilityCode             | HIVOrganizationExample6        |
+                  | registrationDate                     | 2022-06-01                     |
+                  | NID                                  | Teferra00005F-5420072022143707 |
+                  | addressCountry                       | QA Country                     |
+                  | addressProvince                      | QA State                       |
+                  | addressDistrict                      | QA District                    |
+                  | addressCity                          | QA Ward                        |
+                  | hivPositiveDate                      | 2022-06-01                     |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6        |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F          |
+                  | hivPositiveTestingUID                | HIVPOS00005F244                |
+                  | dateClientEnrolledToCare             | 2022-06-22                     |
+                  | enrolledToCareUID                    | 2022-5F-0012201023728          |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6        |
+                  | enrolledToCareFacName                | Reporting Facility 5F          |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
+                  | artInitiationDate                    | 2022-06-01                     |
+                  | artInitiationRegimenLine             | First Line                     |
+                  | artInitiationRegimen                 | d4T + 3TC + EFV                |
+                  | vlDate                               | 2022-06-05                     |
+                  | vlResult                             | 300                            |
+                  | vlInterpretation                     | Non Detectable                 |
+                  | currVLSupression                     | Suppressed                     |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-245-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Nataye                        |
+                  | lastName                             | Temesgen                      |
+                  | gender                               | unknown                       |
+                  | dateOfBirth                          | 1979-02-15                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Nataye00005F-4320072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      |                               |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                |                               |
+                  | dateClientEnrolledToCare             |                               |
+                  | enrolledToCareUID                    |                               |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit |                               |
+                  | artInitiationDate                    |                               |
+                  | artInitiationRegimenLine             |                               |
+                  | artInitiationRegimen                 |                               |
+                  | vlDate                               |                               |
+                  | vlResult                             |                               |
+                  | vlInterpretation                     |                               |
+                  | currVLSupression                     |                               |
+            When I POST the FHIR bundle to the IOL
+
+
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Nataye                        |
+                  | lastName                             | Temesgen                      |
+                  | gender                               | unknown                       |
+                  | dateOfBirth                          | 1979-02-15                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Nataye00005F-4320072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F245               |
+                  | dateClientEnrolledToCare             | 2022-07-01                    |
+                  | enrolledToCareUID                    | 2022-5F-0013201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | First Line                    |
+                  | artInitiationRegimen                 | AZT + 3TC + RAL               |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 300                           |
+                  | vlInterpretation                     | Non Detectable                |
+                  | currVLSupression                     | Suppressed                    |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-245-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Nataye                        |
+                  | lastName                             | Temesgen                      |
+                  | gender                               | unknown                       |
+                  | dateOfBirth                          | 1979-02-15                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Nataye00005F-4320072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F245               |
+                  | dateClientEnrolledToCare             | 2022-07-01                    |
+                  | enrolledToCareUID                    | 2022-5F-0013201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | First Line                    |
+                  | artInitiationRegimen                 | AZT + 3TC + RAL               |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 300                           |
+                  | vlInterpretation                     | Non Detectable                |
+                  | currVLSupression                     | Suppressed                    |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-247-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                        |
+                  | orgId                                | HIVOrganizationExample6      |
+                  | firstName                            | Teklu                        |
+                  | lastName                             | Chibssa                      |
+                  | gender                               | other                        |
+                  | dateOfBirth                          | 1974-02-15                   |
+                  | registrationFacilityCode             | HIVOrganizationExample6      |
+                  | registrationDate                     | 2022-06-01                   |
+                  | NID                                  | Teklu00005F-4820072022143707 |
+                  | addressCountry                       | QA Country                   |
+                  | addressProvince                      | QA State                     |
+                  | addressDistrict                      | QA District                  |
+                  | addressCity                          | QA Ward                      |
+                  | hivPositiveDate                      |                              |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6      |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F        |
+                  | hivPositiveTestingUID                |                              |
+                  | dateClientEnrolledToCare             |                              |
+                  | enrolledToCareUID                    |                              |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6      |
+                  | enrolledToCareFacName                | Reporting Facility 5F        |
+                  | enrolledToCareDateFirstClinicalVisit |                              |
+                  | artInitiationDate                    |                              |
+                  | artInitiationRegimenLine             |                              |
+                  | artInitiationRegimen                 |                              |
+                  | vlDate                               |                              |
+                  | vlResult                             |                              |
+                  | vlInterpretation                     |                              |
+                  | currVLSupression                     |                              |
+            When I POST the FHIR bundle to the IOL
+
+
+            Given I set FHIR bundle parameters
+                  | key                                  | value                        |
+                  | orgId                                | HIVOrganizationExample6      |
+                  | firstName                            | Teklu                        |
+                  | lastName                             | Chibssa                      |
+                  | gender                               | other                        |
+                  | dateOfBirth                          | 1974-02-15                   |
+                  | registrationFacilityCode             | HIVOrganizationExample6      |
+                  | registrationDate                     | 2022-06-01                   |
+                  | NID                                  | Teklu00005F-4820072022143707 |
+                  | addressCountry                       | QA Country                   |
+                  | addressProvince                      | QA State                     |
+                  | addressDistrict                      | QA District                  |
+                  | addressCity                          | QA Ward                      |
+                  | hivPositiveDate                      | 2022-06-01                   |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6      |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F        |
+                  | hivPositiveTestingUID                | HIVPOS00005F247              |
+                  | dateClientEnrolledToCare             | 2022-07-10                   |
+                  | enrolledToCareUID                    | 2022-5F-0014201023728        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6      |
+                  | enrolledToCareFacName                | Reporting Facility 5F        |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
+                  | artInitiationDate                    | 2022-06-01                   |
+                  | artInitiationRegimenLine             | First Line                   |
+                  | artInitiationRegimen                 | AZT + 3TC + NVP              |
+                  | vlDate                               | 2022-06-05                   |
+                  | vlResult                             | 300                          |
+                  | vlInterpretation                     | Non Detectable               |
+                  | currVLSupression                     | Suppressed                   |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-247-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                        |
+                  | orgId                                | HIVOrganizationExample6      |
+                  | firstName                            | Teklu                        |
+                  | lastName                             | Chibssa                      |
+                  | gender                               | other                        |
+                  | dateOfBirth                          | 1974-02-15                   |
+                  | registrationFacilityCode             | HIVOrganizationExample6      |
+                  | registrationDate                     | 2022-06-01                   |
+                  | NID                                  | Teklu00005F-4820072022143707 |
+                  | addressCountry                       | QA Country                   |
+                  | addressProvince                      | QA State                     |
+                  | addressDistrict                      | QA District                  |
+                  | addressCity                          | QA Ward                      |
+                  | hivPositiveDate                      | 2022-06-01                   |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6      |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F        |
+                  | hivPositiveTestingUID                | HIVPOS00005F247              |
+                  | dateClientEnrolledToCare             | 2022-07-10                   |
+                  | enrolledToCareUID                    | 2022-5F-0014201023728        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6      |
+                  | enrolledToCareFacName                | Reporting Facility 5F        |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
+                  | artInitiationDate                    | 2022-06-01                   |
+                  | artInitiationRegimenLine             | First Line                   |
+                  | artInitiationRegimen                 | AZT + 3TC + NVP              |
+                  | vlDate                               | 2022-06-05                   |
+                  | vlResult                             | 300                          |
+                  | vlInterpretation                     | Non Detectable               |
+                  | currVLSupression                     | Suppressed                   |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-249-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                          |
+                  | orgId                                | HIVOrganizationExample6        |
+                  | firstName                            | Dinseri                        |
+                  | lastName                             | Tadesse                        |
+                  | gender                               | unknown                        |
+                  | dateOfBirth                          | 1999-02-15                     |
+                  | registrationFacilityCode             | HIVOrganizationExample6        |
+                  | registrationDate                     | 2022-06-01                     |
+                  | NID                                  | Dinseri00005F-2320072022143707 |
+                  | addressCountry                       | QA Country                     |
+                  | addressProvince                      | QA State                       |
+                  | addressDistrict                      | QA District                    |
+                  | addressCity                          | QA Ward                        |
+                  | hivPositiveDate                      |                                |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6        |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F          |
+                  | hivPositiveTestingUID                |                                |
+                  | dateClientEnrolledToCare             |                                |
+                  | enrolledToCareUID                    |                                |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6        |
+                  | enrolledToCareFacName                | Reporting Facility 5F          |
+                  | enrolledToCareDateFirstClinicalVisit |                                |
+                  | artInitiationDate                    |                                |
+                  | artInitiationRegimenLine             |                                |
+                  | artInitiationRegimen                 |                                |
+                  | vlDate                               |                                |
+                  | vlResult                             |                                |
+                  | vlInterpretation                     |                                |
+                  | currVLSupression                     |                                |
+            When I POST the FHIR bundle to the IOL
+
+
+            Given I set FHIR bundle parameters
+                  | key                                  | value                          |
+                  | orgId                                | HIVOrganizationExample6        |
+                  | firstName                            | Dinseri                        |
+                  | lastName                             | Tadesse                        |
+                  | gender                               | unknown                        |
+                  | dateOfBirth                          | 1999-02-15                     |
+                  | registrationFacilityCode             | HIVOrganizationExample6        |
+                  | registrationDate                     | 2022-06-01                     |
+                  | NID                                  | Dinseri00005F-2320072022143707 |
+                  | addressCountry                       | QA Country                     |
+                  | addressProvince                      | QA State                       |
+                  | addressDistrict                      | QA District                    |
+                  | addressCity                          | QA Ward                        |
+                  | hivPositiveDate                      | 2022-06-01                     |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6        |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F          |
+                  | hivPositiveTestingUID                | HIVPOS00005F249                |
+                  | dateClientEnrolledToCare             | 2022-06-10                     |
+                  | enrolledToCareUID                    | 2022-5F-0015201023728          |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6        |
+                  | enrolledToCareFacName                | Reporting Facility 5F          |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
+                  | artInitiationDate                    | 2022-06-01                     |
+                  | artInitiationRegimenLine             | First Line                     |
+                  | artInitiationRegimen                 | AZT + 3TC + EFV                |
+                  | vlDate                               | 2022-06-05                     |
+                  | vlResult                             | 300                            |
+                  | vlInterpretation                     | Non Detectable                 |
+                  | currVLSupression                     | Suppressed                     |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-249-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                          |
+                  | orgId                                | HIVOrganizationExample6        |
+                  | firstName                            | Dinseri                        |
+                  | lastName                             | Tadesse                        |
+                  | gender                               | unknown                        |
+                  | dateOfBirth                          | 1999-02-15                     |
+                  | registrationFacilityCode             | HIVOrganizationExample6        |
+                  | registrationDate                     | 2022-06-01                     |
+                  | NID                                  | Dinseri00005F-2320072022143707 |
+                  | addressCountry                       | QA Country                     |
+                  | addressProvince                      | QA State                       |
+                  | addressDistrict                      | QA District                    |
+                  | addressCity                          | QA Ward                        |
+                  | hivPositiveDate                      | 2022-06-01                     |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6        |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F          |
+                  | hivPositiveTestingUID                | HIVPOS00005F249                |
+                  | dateClientEnrolledToCare             | 2022-06-10                     |
+                  | enrolledToCareUID                    | 2022-5F-0015201023728          |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6        |
+                  | enrolledToCareFacName                | Reporting Facility 5F          |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
+                  | artInitiationDate                    | 2022-06-01                     |
+                  | artInitiationRegimenLine             | First Line                     |
+                  | artInitiationRegimen                 | AZT + 3TC + EFV                |
+                  | vlDate                               | 2022-06-05                     |
+                  | vlResult                             | 300                            |
+                  | vlInterpretation                     | Non Detectable                 |
+                  | currVLSupression                     | Suppressed                     |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-251-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Elfitu                        |
+                  | lastName                             | Aba bulgu                     |
+                  | gender                               | unknown                       |
+                  | dateOfBirth                          | 1988-12-15                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Elfitu00005F-3320072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      |                               |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                |                               |
+                  | dateClientEnrolledToCare             |                               |
+                  | enrolledToCareUID                    |                               |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit |                               |
+                  | artInitiationDate                    |                               |
+                  | artInitiationRegimenLine             |                               |
+                  | artInitiationRegimen                 |                               |
+                  | vlDate                               |                               |
+                  | vlResult                             |                               |
+                  | vlInterpretation                     |                               |
+                  | currVLSupression                     |                               |
+            When I POST the FHIR bundle to the IOL
+
+
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Elfitu                        |
+                  | lastName                             | Aba bulgu                     |
+                  | gender                               | unknown                       |
+                  | dateOfBirth                          | 1988-12-15                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Elfitu00005F-3320072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F251               |
+                  | dateClientEnrolledToCare             | 2022-07-01                    |
+                  | enrolledToCareUID                    | 2022-5F-0016201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | Second Line                   |
+                  | artInitiationRegimen                 | AZT + 3TC + DTG               |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 300                           |
+                  | vlInterpretation                     | Non Detectable                |
+                  | currVLSupression                     | Suppressed                    |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-251-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Elfitu                        |
+                  | lastName                             | Aba bulgu                     |
+                  | gender                               | unknown                       |
+                  | dateOfBirth                          | 1988-12-15                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Elfitu00005F-3320072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F251               |
+                  | dateClientEnrolledToCare             | 2022-07-01                    |
+                  | enrolledToCareUID                    | 2022-5F-0016201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | Second Line                   |
+                  | artInitiationRegimen                 | AZT + 3TC + DTG               |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 300                           |
+                  | vlInterpretation                     | Non Detectable                |
+                  | currVLSupression                     | Suppressed                    |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-253-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                        |
+                  | orgId                                | HIVOrganizationExample6      |
+                  | firstName                            | Hamda                        |
+                  | lastName                             | Zemichael                    |
+                  | gender                               | unknown                      |
+                  | dateOfBirth                          | 1976-04-13                   |
+                  | registrationFacilityCode             | HIVOrganizationExample6      |
+                  | registrationDate                     | 2022-06-01                   |
+                  | NID                                  | Hamda00005F-4620072022143707 |
+                  | addressCountry                       | QA Country                   |
+                  | addressProvince                      | QA State                     |
+                  | addressDistrict                      | QA District                  |
+                  | addressCity                          | QA Ward                      |
+                  | hivPositiveDate                      | 2022-06-01                   |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6      |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F        |
+                  | hivPositiveTestingUID                | HIVPOS00005F253              |
+                  | dateClientEnrolledToCare             | 2022-06-11                   |
+                  | enrolledToCareUID                    | 2022-5F-0017201023728        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6      |
+                  | enrolledToCareFacName                | Reporting Facility 5F        |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
+                  | artInitiationDate                    | 2022-06-01                   |
+                  | artInitiationRegimenLine             | Second Line                  |
+                  | artInitiationRegimen                 | d4T + 3TC + LPV/r            |
+                  | vlDate                               | 2022-06-05                   |
+                  | vlResult                             | 300                          |
+                  | vlInterpretation                     | Non Detectable               |
+                  | currVLSupression                     | Suppressed                   |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-254-201-023728
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
-                  | orgId                                | HIVOrganizationExample      |
-                  | firstName                            | Derebu                      |
-                  | lastName                             | Senbeta                     |
-                  | gender                               | female                      |
-                  | dateOfBirth                          | 1959-11-15                  |
-                  | registrationFacilityCode             | HIVOrganizationExample      |
-                  | registrationDate                     | 2022-05-01                  |
-                  | NID                                  | MRN00005F-242               |
+                  | orgId                                | HIVOrganizationExample6     |
+                  | firstName                            | Biruh                       |
+                  | lastName                             | Negussie                    |
+                  | gender                               | unknown                     |
+                  | dateOfBirth                          | 2018-07-13                  |
+                  | registrationFacilityCode             | HIVOrganizationExample6     |
+                  | registrationDate                     | 2022-06-01                  |
+                  | NID                                  | Biruh00005F-420072022143707 |
                   | addressCountry                       | QA Country                  |
                   | addressProvince                      | QA State                    |
                   | addressDistrict                      | QA District                 |
                   | addressCity                          | QA Ward                     |
-                  | hivPositiveDate                      | 2022-05-01                  |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample      |
+                  | hivPositiveDate                      | 2022-06-01                  |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6     |
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F       |
-                  | hivPositiveTestingUID                | HIVPOS00005F242             |
-                  | dateClientEnrolledToCare             | 2022-05-15                  |
-                  | enrolledToCareUID                    | 2022-5F-0010175024115       |
-                  | enrolledToCareFacCode                | HIVOrganizationExample      |
+                  | hivPositiveTestingUID                | HIVPOS00005F254             |
+                  | dateClientEnrolledToCare             | 2022-07-10                  |
+                  | enrolledToCareUID                    | 2022-5F-0018201023728       |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6     |
                   | enrolledToCareFacName                | Reporting Facility 5F       |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01                  |
-                  | artInitiationDate                    | 2022-05-01                  |
-                  | artInitiationRegimenLine             | First Line                  |
-                  | artInitiationRegimen                 | RAL + 3TC + DRV + RTV + ABC |
-                  | vlDate                               | 2022-05-05                  |
-                  | vlResult                             | 1000                        |
-                  | vlInterpretation                     | Detectable                  |
-                  | currVLSupression                     | Unsuppressed                |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-243-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Dinseri                |
-                  | lastName                             | Tadesse                |
-                  | gender                               | male                   |
-                  | dateOfBirth                          | 1964-01-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-243          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F243        |
-                  | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0011175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | d4T + 3TC + NVP        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-244-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Teferra                |
-                  | lastName                             | Shimelis               |
-                  | gender                               | male                   |
-                  | dateOfBirth                          | 1968-03-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-244          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F244        |
-                  | dateClientEnrolledToCare             | 2022-05-22             |
-                  | enrolledToCareUID                    | 2022-5F-0012175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | d4T + 3TC + EFV        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-245-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Nataye                 |
-                  | lastName                             | Temesgen               |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 1979-01-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-245          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      |                        |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     |                        |
-                  | hivPositiveTestingUID                |                        |
-                  | dateClientEnrolledToCare             |                        |
-                  | enrolledToCareUID                    |                        |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                |                        |
-                  | enrolledToCareDateFirstClinicalVisit |                        |
-                  | artInitiationDate                    |                        |
-                  | artInitiationRegimenLine             |                        |
-                  | artInitiationRegimen                 |                        |
-                  | vlDate                               |                        |
-                  | vlResult                             |                        |
-                  | vlInterpretation                     |                        |
-                  | currVLSupression                     |                        |
-            When I POST the FHIR bundle to the IOL
-
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Nataye                 |
-                  | lastName                             | Temesgen               |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 1979-01-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-245          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F245        |
-                  | dateClientEnrolledToCare             | 2022-06-01             |
-                  | enrolledToCareUID                    | 2022-5F-0013175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | AZT + 3TC + RAL        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-245-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Nataye                 |
-                  | lastName                             | Temesgen               |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 1979-01-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-245          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F245        |
-                  | dateClientEnrolledToCare             | 2022-06-01             |
-                  | enrolledToCareUID                    | 2022-5F-0013175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | AZT + 3TC + RAL        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-247-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Teklu                  |
-                  | lastName                             | Chibssa                |
-                  | gender                               | other                  |
-                  | dateOfBirth                          | 1974-01-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-247          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      |                        |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     |                        |
-                  | hivPositiveTestingUID                |                        |
-                  | dateClientEnrolledToCare             |                        |
-                  | enrolledToCareUID                    |                        |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                |                        |
-                  | enrolledToCareDateFirstClinicalVisit |                        |
-                  | artInitiationDate                    |                        |
-                  | artInitiationRegimenLine             |                        |
-                  | artInitiationRegimen                 |                        |
-                  | vlDate                               |                        |
-                  | vlResult                             |                        |
-                  | vlInterpretation                     |                        |
-                  | currVLSupression                     |                        |
-            When I POST the FHIR bundle to the IOL
-
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Teklu                  |
-                  | lastName                             | Chibssa                |
-                  | gender                               | other                  |
-                  | dateOfBirth                          | 1974-01-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-247          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F247        |
-                  | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5F-0014175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | AZT + 3TC + NVP        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-247-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Teklu                  |
-                  | lastName                             | Chibssa                |
-                  | gender                               | other                  |
-                  | dateOfBirth                          | 1974-01-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-247          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F247        |
-                  | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5F-0014175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | AZT + 3TC + NVP        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-249-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Dinseri                |
-                  | lastName                             | Tadesse                |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 1999-01-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-249          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      |                        |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     |                        |
-                  | hivPositiveTestingUID                |                        |
-                  | dateClientEnrolledToCare             |                        |
-                  | enrolledToCareUID                    |                        |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                |                        |
-                  | enrolledToCareDateFirstClinicalVisit |                        |
-                  | artInitiationDate                    |                        |
-                  | artInitiationRegimenLine             |                        |
-                  | artInitiationRegimen                 |                        |
-                  | vlDate                               |                        |
-                  | vlResult                             |                        |
-                  | vlInterpretation                     |                        |
-                  | currVLSupression                     |                        |
-            When I POST the FHIR bundle to the IOL
-
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Dinseri                |
-                  | lastName                             | Tadesse                |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 1999-01-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-249          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F249        |
-                  | dateClientEnrolledToCare             | 2022-05-10             |
-                  | enrolledToCareUID                    | 2022-5F-0015175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | AZT + 3TC + EFV        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-249-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Dinseri                |
-                  | lastName                             | Tadesse                |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 1999-01-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-249          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F249        |
-                  | dateClientEnrolledToCare             | 2022-05-10             |
-                  | enrolledToCareUID                    | 2022-5F-0015175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | AZT + 3TC + EFV        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-251-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Elfitu                 |
-                  | lastName                             | Aba bulgu              |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 1988-11-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-251          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      |                        |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     |                        |
-                  | hivPositiveTestingUID                |                        |
-                  | dateClientEnrolledToCare             |                        |
-                  | enrolledToCareUID                    |                        |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                |                        |
-                  | enrolledToCareDateFirstClinicalVisit |                        |
-                  | artInitiationDate                    |                        |
-                  | artInitiationRegimenLine             |                        |
-                  | artInitiationRegimen                 |                        |
-                  | vlDate                               |                        |
-                  | vlResult                             |                        |
-                  | vlInterpretation                     |                        |
-                  | currVLSupression                     |                        |
-            When I POST the FHIR bundle to the IOL
-
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Elfitu                 |
-                  | lastName                             | Aba bulgu              |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 1988-11-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-251          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F251        |
-                  | dateClientEnrolledToCare             | 2022-05-31             |
-                  | enrolledToCareUID                    | 2022-5F-0016175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | Second Line            |
-                  | artInitiationRegimen                 | AZT + 3TC + DTG        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-251-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Elfitu                 |
-                  | lastName                             | Aba bulgu              |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 1988-11-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-251          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F251        |
-                  | dateClientEnrolledToCare             | 2022-05-31             |
-                  | enrolledToCareUID                    | 2022-5F-0016175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | Second Line            |
-                  | artInitiationRegimen                 | AZT + 3TC + DTG        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-253-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Hamda                  |
-                  | lastName                             | Zemichael              |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 1976-03-13             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-253          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F253        |
-                  | dateClientEnrolledToCare             | 2022-05-11             |
-                  | enrolledToCareUID                    | 2022-5F-0017175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | Second Line            |
-                  | artInitiationRegimen                 | d4T + 3TC + LPV/r      |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-254-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Biruh                  |
-                  | lastName                             | Negussie               |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 2018-06-13             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-254          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F254        |
-                  | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5F-0018175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | Second Line            |
-                  | artInitiationRegimen                 | AZT + 3TC + LPV/r      |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-255-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Eyerusalem             |
-                  | lastName                             | Hentsa                 |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 1994-07-13             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-255          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F255        |
-                  | dateClientEnrolledToCare             | 2022-06-20             |
-                  | enrolledToCareUID                    | 2022-5F-0019175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | Second Line            |
-                  | artInitiationRegimen                 | TDF + 3TC + NVP        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-256-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Alene                  |
-                  | lastName                             | Lisanework             |
-                  | gender                               | female                 |
-                  | dateOfBirth                          | 1991-07-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-256          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F256        |
-                  | dateClientEnrolledToCare             | 2022-06-08             |
-                  | enrolledToCareUID                    | 2022-5F-0020175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | Second Line            |
-                  | artInitiationRegimen                 | TDF + FTC + DTG        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-257-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Asefa                  |
-                  | lastName                             | Negera                 |
-                  | gender                               | female                 |
-                  | dateOfBirth                          | 1974-01-02             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-257          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F257        |
-                  | dateClientEnrolledToCare             | 2022-06-21             |
-                  | enrolledToCareUID                    | 2022-5F-0021175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | TDF + FTC + EFV        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-258-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Ayichew                |
-                  | lastName                             | Deribe                 |
-                  | gender                               | other                  |
-                  | dateOfBirth                          | 1947-09-03             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-258          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F258        |
-                  | dateClientEnrolledToCare             |                        |
-                  | enrolledToCareUID                    |                        |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                |                        |
-                  | enrolledToCareDateFirstClinicalVisit |                        |
-                  | artInitiationDate                    |                        |
-                  | artInitiationRegimenLine             |                        |
-                  | artInitiationRegimen                 |                        |
-                  | vlDate                               |                        |
-                  | vlResult                             |                        |
-                  | vlInterpretation                     |                        |
-                  | currVLSupression                     |                        |
-            When I POST the FHIR bundle to the IOL
-
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Ayichew                |
-                  | lastName                             | Deribe                 |
-                  | gender                               | other                  |
-                  | dateOfBirth                          | 1947-09-03             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-258          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F258        |
-                  | dateClientEnrolledToCare             | 2022-06-19             |
-                  | enrolledToCareUID                    | 2022-5F-0022175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | TDF + FTC + EFV        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 999                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-258-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Ayichew                |
-                  | lastName                             | Deribe                 |
-                  | gender                               | other                  |
-                  | dateOfBirth                          | 1947-09-03             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-258          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F258        |
-                  | dateClientEnrolledToCare             | 2022-06-19             |
-                  | enrolledToCareUID                    | 2022-5F-0022175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | TDF + FTC + EFV        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 999                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-260-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Mariam                 |
-                  | lastName                             | Aba bulgu              |
-                  | gender                               | male                   |
-                  | dateOfBirth                          | 2003-11-03             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-260          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F260        |
-                  | dateClientEnrolledToCare             |                        |
-                  | enrolledToCareUID                    |                        |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                |                        |
-                  | enrolledToCareDateFirstClinicalVisit |                        |
-                  | artInitiationDate                    |                        |
-                  | artInitiationRegimenLine             |                        |
-                  | artInitiationRegimen                 |                        |
-                  | vlDate                               |                        |
-                  | vlResult                             |                        |
-                  | vlInterpretation                     |                        |
-                  | currVLSupression                     |                        |
-            When I POST the FHIR bundle to the IOL
-
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Mariam                 |
-                  | lastName                             | Aba bulgu              |
-                  | gender                               | male                   |
-                  | dateOfBirth                          | 2003-11-03             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-260          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F260        |
-                  | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0023175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | ABC + 3TC + RAL        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-260-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Mariam                 |
-                  | lastName                             | Aba bulgu              |
-                  | gender                               | male                   |
-                  | dateOfBirth                          | 2003-11-03             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-260          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F260        |
-                  | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0023175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | ABC + 3TC + RAL        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-262-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Tadesse                |
-                  | lastName                             | Mebrie                 |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 2017-03-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-262          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F262        |
-                  | dateClientEnrolledToCare             |                        |
-                  | enrolledToCareUID                    |                        |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                |                        |
-                  | enrolledToCareDateFirstClinicalVisit |                        |
-                  | artInitiationDate                    |                        |
-                  | artInitiationRegimenLine             |                        |
-                  | artInitiationRegimen                 |                        |
-                  | vlDate                               |                        |
-                  | vlResult                             |                        |
-                  | vlInterpretation                     |                        |
-                  | currVLSupression                     |                        |
-            When I POST the FHIR bundle to the IOL
-
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Tadesse                |
-                  | lastName                             | Mebrie                 |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 2017-03-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-262          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F262        |
-                  | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0024175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | ABC + 3TC + LPV/r      |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-262-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Tadesse                |
-                  | lastName                             | Mebrie                 |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 2017-03-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-262          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F262        |
-                  | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0024175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | ABC + 3TC + LPV/r      |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-264-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Eyerusalem             |
-                  | lastName                             | T/Egzi                 |
-                  | gender                               | other                  |
-                  | dateOfBirth                          | 1985-11-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-264          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F264        |
-                  | dateClientEnrolledToCare             |                        |
-                  | enrolledToCareUID                    |                        |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                |                        |
-                  | enrolledToCareDateFirstClinicalVisit |                        |
-                  | artInitiationDate                    |                        |
-                  | artInitiationRegimenLine             |                        |
-                  | artInitiationRegimen                 |                        |
-                  | vlDate                               |                        |
-                  | vlResult                             |                        |
-                  | vlInterpretation                     |                        |
-                  | currVLSupression                     |                        |
-            When I POST the FHIR bundle to the IOL
-
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Eyerusalem             |
-                  | lastName                             | T/Egzi                 |
-                  | gender                               | other                  |
-                  | dateOfBirth                          | 1985-11-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-264          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F264        |
-                  | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0025175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | TDF + FTC + EFV        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-264-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Eyerusalem             |
-                  | lastName                             | T/Egzi                 |
-                  | gender                               | other                  |
-                  | dateOfBirth                          | 1985-11-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-264          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F264        |
-                  | dateClientEnrolledToCare             | 2022-05-15             |
-                  | enrolledToCareUID                    | 2022-5F-0025175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | TDF + FTC + EFV        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-266-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Fatuma                 |
-                  | lastName                             | Mohammed               |
-                  | gender                               | unknown                |
-                  | dateOfBirth                          | 1958-03-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-266          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F266        |
-                  | dateClientEnrolledToCare             | 2022-05-10             |
-                  | enrolledToCareUID                    | 2022-5F-0026175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | ABC + 3TC + RAL        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 999                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-267-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Wolde                  |
-                  | lastName                             | Muleta                 |
-                  | gender                               | female                 |
-                  | dateOfBirth                          | 1991-07-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-267          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F267        |
-                  | dateClientEnrolledToCare             | 2022-05-11             |
-                  | enrolledToCareUID                    | 2022-5F-0027175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | ABC + 3TC + LPV/r      |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 1000                   |
-                  | vlInterpretation                     | Detectable             |
-                  | currVLSupression                     | Unsuppressed           |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-268-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Foziya                 |
-                  | lastName                             | Ali                    |
-                  | gender                               | female                 |
-                  | dateOfBirth                          | 1994-01-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-268          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F268        |
-                  | dateClientEnrolledToCare             | 2022-05-22             |
-                  | enrolledToCareUID                    | 2022-5F-0028175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | ABC + 3TC + EFV        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 1000                   |
-                  | vlInterpretation                     | Detectable             |
-                  | currVLSupression                     | Unsuppressed           |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-269-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Daniel                 |
-                  | lastName                             | Getachew               |
-                  | gender                               | female                 |
-                  | dateOfBirth                          | 2004-01-03             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-269          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F269        |
-                  | dateClientEnrolledToCare             | 2022-06-01             |
-                  | enrolledToCareUID                    | 2022-5F-0029175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | ABC + 3TC + DTG        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 999                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-270-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Kassech                |
-                  | lastName                             | Geremew                |
-                  | gender                               | male                   |
-                  | dateOfBirth                          | 2010-09-05             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-270          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F270        |
-                  | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5F-0030175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | First Line             |
-                  | artInitiationRegimen                 | ABC + 3TC + DRVr       |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 300                    |
-                  | vlInterpretation                     | Non Detectable         |
-                  | currVLSupression                     | Suppressed             |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-271-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Leilena                |
-                  | lastName                             | Alebachew              |
-                  | gender                               | female                 |
-                  | dateOfBirth                          | 1979-01-03             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-271          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F271        |
-                  | dateClientEnrolledToCare             | 2022-05-10             |
-                  | enrolledToCareUID                    | 2022-5F-0031175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | Second Line            |
-                  | artInitiationRegimen                 | RAL + 3TC + DRV + RTV  |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 1000                   |
-                  | vlInterpretation                     | Detectable             |
-                  | currVLSupression                     | Unsuppressed           |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-272-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                       |
-                  | orgId                                | HIVOrganizationExample      |
-                  | firstName                            | Workineh                    |
-                  | lastName                             | Musie                       |
-                  | gender                               | female                      |
-                  | dateOfBirth                          | 1969-11-15                  |
-                  | registrationFacilityCode             | HIVOrganizationExample      |
-                  | registrationDate                     | 2022-05-01                  |
-                  | NID                                  | MRN00005F-272               |
-                  | addressCountry                       | QA Country                  |
-                  | addressProvince                      | QA State                    |
-                  | addressDistrict                      | QA District                 |
-                  | addressCity                          | QA Ward                     |
-                  | hivPositiveDate                      | 2022-05-01                  |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample      |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F       |
-                  | hivPositiveTestingUID                | HIVPOS00005F272             |
-                  | dateClientEnrolledToCare             | 2022-05-31                  |
-                  | enrolledToCareUID                    | 2022-5F-0032175024115       |
-                  | enrolledToCareFacCode                | HIVOrganizationExample      |
-                  | enrolledToCareFacName                | Reporting Facility 5F       |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01                  |
-                  | artInitiationDate                    | 2022-05-01                  |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                  |
+                  | artInitiationDate                    | 2022-06-01                  |
                   | artInitiationRegimenLine             | Second Line                 |
-                  | artInitiationRegimen                 | RAL + 3TC + DRV + RTV + ABC |
-                  | vlDate                               | 2022-05-05                  |
-                  | vlResult                             | 1000                        |
-                  | vlInterpretation                     | Detectable                  |
-                  | currVLSupression                     | Unsuppressed                |
+                  | artInitiationRegimen                 | AZT + 3TC + LPV/r           |
+                  | vlDate                               | 2022-06-05                  |
+                  | vlResult                             | 300                         |
+                  | vlInterpretation                     | Non Detectable              |
+                  | currVLSupression                     | Suppressed                  |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-273-175-024115
+
+      Scenario: MRN00005F-255-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                             |
+                  | orgId                                | HIVOrganizationExample6           |
+                  | firstName                            | Eyerusalem                        |
+                  | lastName                             | Hentsa                            |
+                  | gender                               | unknown                           |
+                  | dateOfBirth                          | 1994-08-13                        |
+                  | registrationFacilityCode             | HIVOrganizationExample6           |
+                  | registrationDate                     | 2022-06-01                        |
+                  | NID                                  | Eyerusalem00005F-2820072022143707 |
+                  | addressCountry                       | QA Country                        |
+                  | addressProvince                      | QA State                          |
+                  | addressDistrict                      | QA District                       |
+                  | addressCity                          | QA Ward                           |
+                  | hivPositiveDate                      | 2022-06-01                        |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6           |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F             |
+                  | hivPositiveTestingUID                | HIVPOS00005F255                   |
+                  | dateClientEnrolledToCare             | 2022-07-20                        |
+                  | enrolledToCareUID                    | 2022-5F-0019201023728             |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6           |
+                  | enrolledToCareFacName                | Reporting Facility 5F             |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                        |
+                  | artInitiationDate                    | 2022-06-01                        |
+                  | artInitiationRegimenLine             | Second Line                       |
+                  | artInitiationRegimen                 | TDF + 3TC + NVP                   |
+                  | vlDate                               | 2022-06-05                        |
+                  | vlResult                             | 300                               |
+                  | vlInterpretation                     | Non Detectable                    |
+                  | currVLSupression                     | Suppressed                        |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-256-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                        |
+                  | orgId                                | HIVOrganizationExample6      |
+                  | firstName                            | Alene                        |
+                  | lastName                             | Lisanework                   |
+                  | gender                               | female                       |
+                  | dateOfBirth                          | 1991-08-15                   |
+                  | registrationFacilityCode             | HIVOrganizationExample6      |
+                  | registrationDate                     | 2022-06-01                   |
+                  | NID                                  | Alene00005F-3120072022143707 |
+                  | addressCountry                       | QA Country                   |
+                  | addressProvince                      | QA State                     |
+                  | addressDistrict                      | QA District                  |
+                  | addressCity                          | QA Ward                      |
+                  | hivPositiveDate                      | 2022-06-01                   |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6      |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F        |
+                  | hivPositiveTestingUID                | HIVPOS00005F256              |
+                  | dateClientEnrolledToCare             | 2022-07-08                   |
+                  | enrolledToCareUID                    | 2022-5F-0020201023728        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6      |
+                  | enrolledToCareFacName                | Reporting Facility 5F        |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
+                  | artInitiationDate                    | 2022-06-01                   |
+                  | artInitiationRegimenLine             | Second Line                  |
+                  | artInitiationRegimen                 | TDF + FTC + DTG              |
+                  | vlDate                               | 2022-06-05                   |
+                  | vlResult                             | 300                          |
+                  | vlInterpretation                     | Non Detectable               |
+                  | currVLSupression                     | Suppressed                   |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-257-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                        |
+                  | orgId                                | HIVOrganizationExample6      |
+                  | firstName                            | Asefa                        |
+                  | lastName                             | Negera                       |
+                  | gender                               | female                       |
+                  | dateOfBirth                          | 1974-02-02                   |
+                  | registrationFacilityCode             | HIVOrganizationExample6      |
+                  | registrationDate                     | 2022-06-01                   |
+                  | NID                                  | Asefa00005F-4820072022143707 |
+                  | addressCountry                       | QA Country                   |
+                  | addressProvince                      | QA State                     |
+                  | addressDistrict                      | QA District                  |
+                  | addressCity                          | QA Ward                      |
+                  | hivPositiveDate                      | 2022-06-01                   |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6      |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F        |
+                  | hivPositiveTestingUID                | HIVPOS00005F257              |
+                  | dateClientEnrolledToCare             | 2022-07-21                   |
+                  | enrolledToCareUID                    | 2022-5F-0021201023728        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6      |
+                  | enrolledToCareFacName                | Reporting Facility 5F        |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
+                  | artInitiationDate                    | 2022-06-01                   |
+                  | artInitiationRegimenLine             | First Line                   |
+                  | artInitiationRegimen                 | TDF + FTC + EFV              |
+                  | vlDate                               | 2022-06-05                   |
+                  | vlResult                             | 300                          |
+                  | vlInterpretation                     | Non Detectable               |
+                  | currVLSupression                     | Suppressed                   |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-258-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                          |
+                  | orgId                                | HIVOrganizationExample6        |
+                  | firstName                            | Ayichew                        |
+                  | lastName                             | Deribe                         |
+                  | gender                               | other                          |
+                  | dateOfBirth                          | 1947-10-03                     |
+                  | registrationFacilityCode             | HIVOrganizationExample6        |
+                  | registrationDate                     | 2022-06-01                     |
+                  | NID                                  | Ayichew00005F-7420072022143707 |
+                  | addressCountry                       | QA Country                     |
+                  | addressProvince                      | QA State                       |
+                  | addressDistrict                      | QA District                    |
+                  | addressCity                          | QA Ward                        |
+                  | hivPositiveDate                      | 2022-06-01                     |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6        |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F          |
+                  | hivPositiveTestingUID                | HIVPOS00005F258                |
+                  | dateClientEnrolledToCare             |                                |
+                  | enrolledToCareUID                    |                                |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6        |
+                  | enrolledToCareFacName                | Reporting Facility 5F          |
+                  | enrolledToCareDateFirstClinicalVisit |                                |
+                  | artInitiationDate                    |                                |
+                  | artInitiationRegimenLine             |                                |
+                  | artInitiationRegimen                 |                                |
+                  | vlDate                               |                                |
+                  | vlResult                             |                                |
+                  | vlInterpretation                     |                                |
+                  | currVLSupression                     |                                |
+            When I POST the FHIR bundle to the IOL
+
+
+            Given I set FHIR bundle parameters
+                  | key                                  | value                          |
+                  | orgId                                | HIVOrganizationExample6        |
+                  | firstName                            | Ayichew                        |
+                  | lastName                             | Deribe                         |
+                  | gender                               | other                          |
+                  | dateOfBirth                          | 1947-10-03                     |
+                  | registrationFacilityCode             | HIVOrganizationExample6        |
+                  | registrationDate                     | 2022-06-01                     |
+                  | NID                                  | Ayichew00005F-7420072022143707 |
+                  | addressCountry                       | QA Country                     |
+                  | addressProvince                      | QA State                       |
+                  | addressDistrict                      | QA District                    |
+                  | addressCity                          | QA Ward                        |
+                  | hivPositiveDate                      | 2022-06-01                     |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6        |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F          |
+                  | hivPositiveTestingUID                | HIVPOS00005F258                |
+                  | dateClientEnrolledToCare             | 2022-07-19                     |
+                  | enrolledToCareUID                    | 2022-5F-0022201023728          |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6        |
+                  | enrolledToCareFacName                | Reporting Facility 5F          |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
+                  | artInitiationDate                    | 2022-06-01                     |
+                  | artInitiationRegimenLine             | First Line                     |
+                  | artInitiationRegimen                 | TDF + FTC + EFV                |
+                  | vlDate                               | 2022-06-05                     |
+                  | vlResult                             | 999                            |
+                  | vlInterpretation                     | Non Detectable                 |
+                  | currVLSupression                     | Suppressed                     |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-258-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                          |
+                  | orgId                                | HIVOrganizationExample6        |
+                  | firstName                            | Ayichew                        |
+                  | lastName                             | Deribe                         |
+                  | gender                               | other                          |
+                  | dateOfBirth                          | 1947-10-03                     |
+                  | registrationFacilityCode             | HIVOrganizationExample6        |
+                  | registrationDate                     | 2022-06-01                     |
+                  | NID                                  | Ayichew00005F-7420072022143707 |
+                  | addressCountry                       | QA Country                     |
+                  | addressProvince                      | QA State                       |
+                  | addressDistrict                      | QA District                    |
+                  | addressCity                          | QA Ward                        |
+                  | hivPositiveDate                      | 2022-06-01                     |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6        |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F          |
+                  | hivPositiveTestingUID                | HIVPOS00005F258                |
+                  | dateClientEnrolledToCare             | 2022-07-19                     |
+                  | enrolledToCareUID                    | 2022-5F-0022201023728          |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6        |
+                  | enrolledToCareFacName                | Reporting Facility 5F          |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
+                  | artInitiationDate                    | 2022-06-01                     |
+                  | artInitiationRegimenLine             | First Line                     |
+                  | artInitiationRegimen                 | TDF + FTC + EFV                |
+                  | vlDate                               | 2022-06-05                     |
+                  | vlResult                             | 999                            |
+                  | vlInterpretation                     | Non Detectable                 |
+                  | currVLSupression                     | Suppressed                     |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-260-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Mariam                        |
+                  | lastName                             | Aba bulgu                     |
+                  | gender                               | male                          |
+                  | dateOfBirth                          | 2003-12-03                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Mariam00005F-1820072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F260               |
+                  | dateClientEnrolledToCare             |                               |
+                  | enrolledToCareUID                    |                               |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit |                               |
+                  | artInitiationDate                    |                               |
+                  | artInitiationRegimenLine             |                               |
+                  | artInitiationRegimen                 |                               |
+                  | vlDate                               |                               |
+                  | vlResult                             |                               |
+                  | vlInterpretation                     |                               |
+                  | currVLSupression                     |                               |
+            When I POST the FHIR bundle to the IOL
+
+
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Mariam                        |
+                  | lastName                             | Aba bulgu                     |
+                  | gender                               | male                          |
+                  | dateOfBirth                          | 2003-12-03                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Mariam00005F-1820072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F260               |
+                  | dateClientEnrolledToCare             | 2022-06-15                    |
+                  | enrolledToCareUID                    | 2022-5F-0023201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | First Line                    |
+                  | artInitiationRegimen                 | ABC + 3TC + RAL               |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 300                           |
+                  | vlInterpretation                     | Non Detectable                |
+                  | currVLSupression                     | Suppressed                    |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-260-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Mariam                        |
+                  | lastName                             | Aba bulgu                     |
+                  | gender                               | male                          |
+                  | dateOfBirth                          | 2003-12-03                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Mariam00005F-1820072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F260               |
+                  | dateClientEnrolledToCare             | 2022-06-15                    |
+                  | enrolledToCareUID                    | 2022-5F-0023201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | First Line                    |
+                  | artInitiationRegimen                 | ABC + 3TC + RAL               |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 300                           |
+                  | vlInterpretation                     | Non Detectable                |
+                  | currVLSupression                     | Suppressed                    |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-262-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Tadesse                       |
+                  | lastName                             | Mebrie                        |
+                  | gender                               | unknown                       |
+                  | dateOfBirth                          | 2017-04-15                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Tadesse00005F-520072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F262               |
+                  | dateClientEnrolledToCare             |                               |
+                  | enrolledToCareUID                    |                               |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit |                               |
+                  | artInitiationDate                    |                               |
+                  | artInitiationRegimenLine             |                               |
+                  | artInitiationRegimen                 |                               |
+                  | vlDate                               |                               |
+                  | vlResult                             |                               |
+                  | vlInterpretation                     |                               |
+                  | currVLSupression                     |                               |
+            When I POST the FHIR bundle to the IOL
+
+
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Tadesse                       |
+                  | lastName                             | Mebrie                        |
+                  | gender                               | unknown                       |
+                  | dateOfBirth                          | 2017-04-15                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Tadesse00005F-520072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F262               |
+                  | dateClientEnrolledToCare             | 2022-06-15                    |
+                  | enrolledToCareUID                    | 2022-5F-0024201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | First Line                    |
+                  | artInitiationRegimen                 | ABC + 3TC + LPV/r             |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 300                           |
+                  | vlInterpretation                     | Non Detectable                |
+                  | currVLSupression                     | Suppressed                    |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-262-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Tadesse                       |
+                  | lastName                             | Mebrie                        |
+                  | gender                               | unknown                       |
+                  | dateOfBirth                          | 2017-04-15                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Tadesse00005F-520072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F262               |
+                  | dateClientEnrolledToCare             | 2022-06-15                    |
+                  | enrolledToCareUID                    | 2022-5F-0024201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | First Line                    |
+                  | artInitiationRegimen                 | ABC + 3TC + LPV/r             |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 300                           |
+                  | vlInterpretation                     | Non Detectable                |
+                  | currVLSupression                     | Suppressed                    |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-264-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                             |
+                  | orgId                                | HIVOrganizationExample6           |
+                  | firstName                            | Eyerusalem                        |
+                  | lastName                             | T/Egzi                            |
+                  | gender                               | other                             |
+                  | dateOfBirth                          | 1985-12-15                        |
+                  | registrationFacilityCode             | HIVOrganizationExample6           |
+                  | registrationDate                     | 2022-06-01                        |
+                  | NID                                  | Eyerusalem00005F-3620072022143707 |
+                  | addressCountry                       | QA Country                        |
+                  | addressProvince                      | QA State                          |
+                  | addressDistrict                      | QA District                       |
+                  | addressCity                          | QA Ward                           |
+                  | hivPositiveDate                      | 2022-06-01                        |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6           |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F             |
+                  | hivPositiveTestingUID                | HIVPOS00005F264                   |
+                  | dateClientEnrolledToCare             |                                   |
+                  | enrolledToCareUID                    |                                   |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6           |
+                  | enrolledToCareFacName                | Reporting Facility 5F             |
+                  | enrolledToCareDateFirstClinicalVisit |                                   |
+                  | artInitiationDate                    |                                   |
+                  | artInitiationRegimenLine             |                                   |
+                  | artInitiationRegimen                 |                                   |
+                  | vlDate                               |                                   |
+                  | vlResult                             |                                   |
+                  | vlInterpretation                     |                                   |
+                  | currVLSupression                     |                                   |
+            When I POST the FHIR bundle to the IOL
+
+
+            Given I set FHIR bundle parameters
+                  | key                                  | value                             |
+                  | orgId                                | HIVOrganizationExample6           |
+                  | firstName                            | Eyerusalem                        |
+                  | lastName                             | T/Egzi                            |
+                  | gender                               | other                             |
+                  | dateOfBirth                          | 1985-12-15                        |
+                  | registrationFacilityCode             | HIVOrganizationExample6           |
+                  | registrationDate                     | 2022-06-01                        |
+                  | NID                                  | Eyerusalem00005F-3620072022143707 |
+                  | addressCountry                       | QA Country                        |
+                  | addressProvince                      | QA State                          |
+                  | addressDistrict                      | QA District                       |
+                  | addressCity                          | QA Ward                           |
+                  | hivPositiveDate                      | 2022-06-01                        |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6           |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F             |
+                  | hivPositiveTestingUID                | HIVPOS00005F264                   |
+                  | dateClientEnrolledToCare             | 2022-06-15                        |
+                  | enrolledToCareUID                    | 2022-5F-0025201023728             |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6           |
+                  | enrolledToCareFacName                | Reporting Facility 5F             |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                        |
+                  | artInitiationDate                    | 2022-06-01                        |
+                  | artInitiationRegimenLine             | First Line                        |
+                  | artInitiationRegimen                 | TDF + FTC + EFV                   |
+                  | vlDate                               | 2022-06-05                        |
+                  | vlResult                             |                                   |
+                  | vlInterpretation                     |                                   |
+                  | currVLSupression                     |                                   |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-264-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                             |
+                  | orgId                                | HIVOrganizationExample6           |
+                  | firstName                            | Eyerusalem                        |
+                  | lastName                             | T/Egzi                            |
+                  | gender                               | other                             |
+                  | dateOfBirth                          | 1985-12-15                        |
+                  | registrationFacilityCode             | HIVOrganizationExample6           |
+                  | registrationDate                     | 2022-06-01                        |
+                  | NID                                  | Eyerusalem00005F-3620072022143707 |
+                  | addressCountry                       | QA Country                        |
+                  | addressProvince                      | QA State                          |
+                  | addressDistrict                      | QA District                       |
+                  | addressCity                          | QA Ward                           |
+                  | hivPositiveDate                      | 2022-06-01                        |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6           |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F             |
+                  | hivPositiveTestingUID                | HIVPOS00005F264                   |
+                  | dateClientEnrolledToCare             | 2022-06-15                        |
+                  | enrolledToCareUID                    | 2022-5F-0025201023728             |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6           |
+                  | enrolledToCareFacName                | Reporting Facility 5F             |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                        |
+                  | artInitiationDate                    | 2022-06-01                        |
+                  | artInitiationRegimenLine             | First Line                        |
+                  | artInitiationRegimen                 | TDF + FTC + EFV                   |
+                  | vlDate                               | 2022-06-05                        |
+                  | vlResult                             |                                   |
+                  | vlInterpretation                     |                                   |
+                  | currVLSupression                     |                                   |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-266-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Fatuma                        |
+                  | lastName                             | Mohammed                      |
+                  | gender                               | unknown                       |
+                  | dateOfBirth                          | 1958-04-15                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Fatuma00005F-6420072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F266               |
+                  | dateClientEnrolledToCare             | 2022-06-10                    |
+                  | enrolledToCareUID                    | 2022-5F-0026201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | First Line                    |
+                  | artInitiationRegimen                 | ABC + 3TC + RAL               |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 999                           |
+                  | vlInterpretation                     | Non Detectable                |
+                  | currVLSupression                     | Suppressed                    |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-267-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                        |
+                  | orgId                                | HIVOrganizationExample6      |
+                  | firstName                            | Wolde                        |
+                  | lastName                             | Muleta                       |
+                  | gender                               | female                       |
+                  | dateOfBirth                          | 1991-08-15                   |
+                  | registrationFacilityCode             | HIVOrganizationExample6      |
+                  | registrationDate                     | 2022-06-01                   |
+                  | NID                                  | Wolde00005F-3120072022143707 |
+                  | addressCountry                       | QA Country                   |
+                  | addressProvince                      | QA State                     |
+                  | addressDistrict                      | QA District                  |
+                  | addressCity                          | QA Ward                      |
+                  | hivPositiveDate                      | 2022-06-01                   |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6      |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F        |
+                  | hivPositiveTestingUID                | HIVPOS00005F267              |
+                  | dateClientEnrolledToCare             | 2022-06-11                   |
+                  | enrolledToCareUID                    | 2022-5F-0027201023728        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6      |
+                  | enrolledToCareFacName                | Reporting Facility 5F        |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
+                  | artInitiationDate                    | 2022-06-01                   |
+                  | artInitiationRegimenLine             | First Line                   |
+                  | artInitiationRegimen                 | ABC + 3TC + LPV/r            |
+                  | vlDate                               | 2022-06-05                   |
+                  | vlResult                             | 1000                         |
+                  | vlInterpretation                     | Detectable                   |
+                  | currVLSupression                     | Unsuppressed                 |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-268-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Foziya                        |
+                  | lastName                             | Ali                           |
+                  | gender                               | female                        |
+                  | dateOfBirth                          | 1994-02-15                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Foziya00005F-2820072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F268               |
+                  | dateClientEnrolledToCare             | 2022-06-22                    |
+                  | enrolledToCareUID                    | 2022-5F-0028201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | First Line                    |
+                  | artInitiationRegimen                 | ABC + 3TC + EFV               |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 1000                          |
+                  | vlInterpretation                     | Detectable                    |
+                  | currVLSupression                     | Unsuppressed                  |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-269-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Daniel                        |
+                  | lastName                             | Getachew                      |
+                  | gender                               | female                        |
+                  | dateOfBirth                          | 2004-02-03                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Daniel00005F-1820072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F269               |
+                  | dateClientEnrolledToCare             | 2022-07-01                    |
+                  | enrolledToCareUID                    | 2022-5F-0029201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | First Line                    |
+                  | artInitiationRegimen                 | ABC + 3TC + DTG               |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             |                               |
+                  | vlInterpretation                     |                               |
+                  | currVLSupression                     |                               |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-270-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                          |
+                  | orgId                                | HIVOrganizationExample6        |
+                  | firstName                            | Kassech                        |
+                  | lastName                             | Geremew                        |
+                  | gender                               | male                           |
+                  | dateOfBirth                          | 2010-10-05                     |
+                  | registrationFacilityCode             | HIVOrganizationExample6        |
+                  | registrationDate                     | 2022-06-01                     |
+                  | NID                                  | Kassech00005F-1120072022143707 |
+                  | addressCountry                       | QA Country                     |
+                  | addressProvince                      | QA State                       |
+                  | addressDistrict                      | QA District                    |
+                  | addressCity                          | QA Ward                        |
+                  | hivPositiveDate                      | 2022-06-01                     |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6        |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F          |
+                  | hivPositiveTestingUID                | HIVPOS00005F270                |
+                  | dateClientEnrolledToCare             | 2022-07-10                     |
+                  | enrolledToCareUID                    | 2022-5F-0030201023728          |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6        |
+                  | enrolledToCareFacName                | Reporting Facility 5F          |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
+                  | artInitiationDate                    | 2022-06-01                     |
+                  | artInitiationRegimenLine             | First Line                     |
+                  | artInitiationRegimen                 | ABC + 3TC + DRVr               |
+                  | vlDate                               | 2022-06-05                     |
+                  | vlResult                             |                                |
+                  | vlInterpretation                     |                                |
+                  | currVLSupression                     |                                |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-271-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                          |
+                  | orgId                                | HIVOrganizationExample6        |
+                  | firstName                            | Leilena                        |
+                  | lastName                             | Alebachew                      |
+                  | gender                               | female                         |
+                  | dateOfBirth                          | 1979-02-03                     |
+                  | registrationFacilityCode             | HIVOrganizationExample6        |
+                  | registrationDate                     | 2022-06-01                     |
+                  | NID                                  | Leilena00005F-4320072022143707 |
+                  | addressCountry                       | QA Country                     |
+                  | addressProvince                      | QA State                       |
+                  | addressDistrict                      | QA District                    |
+                  | addressCity                          | QA Ward                        |
+                  | hivPositiveDate                      | 2022-06-01                     |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6        |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F          |
+                  | hivPositiveTestingUID                | HIVPOS00005F271                |
+                  | dateClientEnrolledToCare             | 2022-06-10                     |
+                  | enrolledToCareUID                    | 2022-5F-0031201023728          |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6        |
+                  | enrolledToCareFacName                | Reporting Facility 5F          |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
+                  | artInitiationDate                    | 2022-06-01                     |
+                  | artInitiationRegimenLine             | Second Line                    |
+                  | artInitiationRegimen                 | RAL + 3TC + DRV + RTV          |
+                  | vlDate                               | 2022-06-05                     |
+                  | vlResult                             | 1000                           |
+                  | vlInterpretation                     | Detectable                     |
+                  | currVLSupression                     | Unsuppressed                   |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-272-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                           |
+                  | orgId                                | HIVOrganizationExample6         |
+                  | firstName                            | Workineh                        |
+                  | lastName                             | Musie                           |
+                  | gender                               | female                          |
+                  | dateOfBirth                          | 1969-12-15                      |
+                  | registrationFacilityCode             | HIVOrganizationExample6         |
+                  | registrationDate                     | 2022-06-01                      |
+                  | NID                                  | Workineh00005F-5220072022143707 |
+                  | addressCountry                       | QA Country                      |
+                  | addressProvince                      | QA State                        |
+                  | addressDistrict                      | QA District                     |
+                  | addressCity                          | QA Ward                         |
+                  | hivPositiveDate                      | 2022-06-01                      |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6         |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F           |
+                  | hivPositiveTestingUID                | HIVPOS00005F272                 |
+                  | dateClientEnrolledToCare             | 2022-07-01                      |
+                  | enrolledToCareUID                    | 2022-5F-0032201023728           |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6         |
+                  | enrolledToCareFacName                | Reporting Facility 5F           |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                      |
+                  | artInitiationDate                    | 2022-06-01                      |
+                  | artInitiationRegimenLine             | Second Line                     |
+                  | artInitiationRegimen                 | RAL + 3TC + DRV + RTV + ABC     |
+                  | vlDate                               | 2022-06-05                      |
+                  | vlResult                             | 1000                            |
+                  | vlInterpretation                     | Detectable                      |
+                  | currVLSupression                     | Unsuppressed                    |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-273-201-023728
+            Given I set FHIR bundle parameters
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Yigrem                        |
+                  | lastName                             | Tefera                        |
+                  | gender                               | male                          |
+                  | dateOfBirth                          | 1991-08-15                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Yigrem00005F-3120072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F273               |
+                  | dateClientEnrolledToCare             | 2022-06-11                    |
+                  | enrolledToCareUID                    | 2022-5F-0033201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | Second Line                   |
+                  | artInitiationRegimen                 | RAL + 3TC + DRV + RTV + ABC   |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 1000                          |
+                  | vlInterpretation                     | Detectable                    |
+                  | currVLSupression                     | Unsuppressed                  |
+            When I POST the FHIR bundle to the IOL
+
+      Scenario: MRN00005F-274-201-023728
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
-                  | orgId                                | HIVOrganizationExample      |
-                  | firstName                            | Yigrem                      |
-                  | lastName                             | Tefera                      |
-                  | gender                               | male                        |
-                  | dateOfBirth                          | 1991-07-15                  |
-                  | registrationFacilityCode             | HIVOrganizationExample      |
-                  | registrationDate                     | 2022-05-01                  |
-                  | NID                                  | MRN00005F-273               |
-                  | addressCountry                       | QA Country                  |
-                  | addressProvince                      | QA State                    |
-                  | addressDistrict                      | QA District                 |
-                  | addressCity                          | QA Ward                     |
-                  | hivPositiveDate                      | 2022-05-01                  |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample      |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F       |
-                  | hivPositiveTestingUID                | HIVPOS00005F273             |
-                  | dateClientEnrolledToCare             | 2022-05-11                  |
-                  | enrolledToCareUID                    | 2022-5F-0033175024115       |
-                  | enrolledToCareFacCode                | HIVOrganizationExample      |
-                  | enrolledToCareFacName                | Reporting Facility 5F       |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01                  |
-                  | artInitiationDate                    | 2022-05-01                  |
-                  | artInitiationRegimenLine             | Second Line                 |
-                  | artInitiationRegimen                 | RAL + 3TC + DRV + RTV + ABC |
-                  | vlDate                               | 2022-05-05                  |
-                  | vlResult                             | 1000                        |
-                  | vlInterpretation                     | Detectable                  |
-                  | currVLSupression                     | Unsuppressed                |
-            When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-274-175-024115
-            Given I set FHIR bundle parameters
-                  | key                                  | value                       |
-                  | orgId                                | HIVOrganizationExample      |
+                  | orgId                                | HIVOrganizationExample6     |
                   | firstName                            | Nono                        |
                   | lastName                             | Deribew                     |
                   | gender                               | male                        |
-                  | dateOfBirth                          | 1994-01-15                  |
-                  | registrationFacilityCode             | HIVOrganizationExample      |
-                  | registrationDate                     | 2022-05-01                  |
-                  | NID                                  | MRN00005F-274               |
+                  | dateOfBirth                          | 1994-02-15                  |
+                  | registrationFacilityCode             | HIVOrganizationExample6     |
+                  | registrationDate                     | 2022-06-01                  |
+                  | NID                                  | Nono00005F-2820072022143707 |
                   | addressCountry                       | QA Country                  |
                   | addressProvince                      | QA State                    |
                   | addressDistrict                      | QA District                 |
                   | addressCity                          | QA Ward                     |
-                  | hivPositiveDate                      | 2022-05-01                  |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample      |
+                  | hivPositiveDate                      | 2022-06-01                  |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6     |
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F       |
                   | hivPositiveTestingUID                | HIVPOS00005F274             |
-                  | dateClientEnrolledToCare             | 2022-05-22                  |
-                  | enrolledToCareUID                    | 2022-5F-0034175024115       |
-                  | enrolledToCareFacCode                | HIVOrganizationExample      |
+                  | dateClientEnrolledToCare             | 2022-06-22                  |
+                  | enrolledToCareUID                    | 2022-5F-0034201023728       |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6     |
                   | enrolledToCareFacName                | Reporting Facility 5F       |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01                  |
-                  | artInitiationDate                    | 2022-05-01                  |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                  |
+                  | artInitiationDate                    | 2022-06-01                  |
                   | artInitiationRegimenLine             | Second Line                 |
                   | artInitiationRegimen                 | RAL + 3TC + DRV + RTV + TDF |
-                  | vlDate                               | 2022-05-05                  |
+                  | vlDate                               | 2022-06-05                  |
                   | vlResult                             | 1000                        |
                   | vlInterpretation                     | Detectable                  |
                   | currVLSupression                     | Unsuppressed                |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-275-175-024115
+
+      Scenario: MRN00005F-275-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Aniley                 |
-                  | lastName                             | Yohannes               |
-                  | gender                               | male                   |
-                  | dateOfBirth                          | 1961-07-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-275          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F275        |
-                  | dateClientEnrolledToCare             | 2022-06-01             |
-                  | enrolledToCareUID                    | 2022-5F-0035175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | Second Line            |
-                  | artInitiationRegimen                 | d4T + 3TC + LPV/r      |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 1001                   |
-                  | vlInterpretation                     | Detectable             |
-                  | currVLSupression                     | Unsuppressed           |
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Aniley                        |
+                  | lastName                             | Yohannes                      |
+                  | gender                               | male                          |
+                  | dateOfBirth                          | 1961-08-15                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Aniley00005F-6120072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F275               |
+                  | dateClientEnrolledToCare             | 2022-07-01                    |
+                  | enrolledToCareUID                    | 2022-5F-0035201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | Second Line                   |
+                  | artInitiationRegimen                 | d4T + 3TC + LPV/r             |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 1001                          |
+                  | vlInterpretation                     | Detectable                    |
+                  | currVLSupression                     | Unsuppressed                  |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-276-175-024115
+
+      Scenario: MRN00005F-276-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Habon                  |
-                  | lastName                             | Sied                   |
-                  | gender                               | other                  |
-                  | dateOfBirth                          | 1995-08-13             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-276          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F276        |
-                  | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5F-0036175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | Second Line            |
-                  | artInitiationRegimen                 | AZT + 3TC + LPV/r      |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 1000                   |
-                  | vlInterpretation                     | Detectable             |
-                  | currVLSupression                     | Unsuppressed           |
+                  | key                                  | value                        |
+                  | orgId                                | HIVOrganizationExample6      |
+                  | firstName                            | Habon                        |
+                  | lastName                             | Sied                         |
+                  | gender                               | other                        |
+                  | dateOfBirth                          | 1995-09-13                   |
+                  | registrationFacilityCode             | HIVOrganizationExample6      |
+                  | registrationDate                     | 2022-06-01                   |
+                  | NID                                  | Habon00005F-2620072022143707 |
+                  | addressCountry                       | QA Country                   |
+                  | addressProvince                      | QA State                     |
+                  | addressDistrict                      | QA District                  |
+                  | addressCity                          | QA Ward                      |
+                  | hivPositiveDate                      | 2022-06-01                   |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6      |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F        |
+                  | hivPositiveTestingUID                | HIVPOS00005F276              |
+                  | dateClientEnrolledToCare             | 2022-07-10                   |
+                  | enrolledToCareUID                    | 2022-5F-0036201023728        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6      |
+                  | enrolledToCareFacName                | Reporting Facility 5F        |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
+                  | artInitiationDate                    | 2022-06-01                   |
+                  | artInitiationRegimenLine             | Second Line                  |
+                  | artInitiationRegimen                 | AZT + 3TC + LPV/r            |
+                  | vlDate                               | 2022-06-05                   |
+                  | vlResult                             | 1000                         |
+                  | vlInterpretation                     | Detectable                   |
+                  | currVLSupression                     | Unsuppressed                 |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-277-175-024115
+
+      Scenario: MRN00005F-277-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Solomon                |
-                  | lastName                             | Gahaw                  |
-                  | gender                               | female                 |
-                  | dateOfBirth                          | 1992-11-13             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-277          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F277        |
-                  | dateClientEnrolledToCare             | 2022-05-10             |
-                  | enrolledToCareUID                    | 2022-5F-0037175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | Second Line            |
-                  | artInitiationRegimen                 | TDF + 3TC + NVP        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 1000                   |
-                  | vlInterpretation                     | Detectable             |
-                  | currVLSupression                     | Unsuppressed           |
+                  | key                                  | value                          |
+                  | orgId                                | HIVOrganizationExample6        |
+                  | firstName                            | Solomon                        |
+                  | lastName                             | Gahaw                          |
+                  | gender                               | female                         |
+                  | dateOfBirth                          | 1992-12-13                     |
+                  | registrationFacilityCode             | HIVOrganizationExample6        |
+                  | registrationDate                     | 2022-06-01                     |
+                  | NID                                  | Solomon00005F-2920072022143707 |
+                  | addressCountry                       | QA Country                     |
+                  | addressProvince                      | QA State                       |
+                  | addressDistrict                      | QA District                    |
+                  | addressCity                          | QA Ward                        |
+                  | hivPositiveDate                      | 2022-06-01                     |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6        |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F          |
+                  | hivPositiveTestingUID                | HIVPOS00005F277                |
+                  | dateClientEnrolledToCare             | 2022-06-10                     |
+                  | enrolledToCareUID                    | 2022-5F-0037201023728          |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6        |
+                  | enrolledToCareFacName                | Reporting Facility 5F          |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
+                  | artInitiationDate                    | 2022-06-01                     |
+                  | artInitiationRegimenLine             | Second Line                    |
+                  | artInitiationRegimen                 | TDF + 3TC + NVP                |
+                  | vlDate                               | 2022-06-05                     |
+                  | vlResult                             | 1000                           |
+                  | vlInterpretation                     | Detectable                     |
+                  | currVLSupression                     | Unsuppressed                   |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-278-175-024115
+
+      Scenario: MRN00005F-278-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Fikire                 |
-                  | lastName                             | Engida                 |
-                  | gender                               | female                 |
-                  | dateOfBirth                          | 2011-07-13             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-278          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F278        |
-                  | dateClientEnrolledToCare             | 2022-05-31             |
-                  | enrolledToCareUID                    | 2022-5F-0038175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | Second Line            |
-                  | artInitiationRegimen                 | TDF + FTC + DTG        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 1000                   |
-                  | vlInterpretation                     | Detectable             |
-                  | currVLSupression                     | Unsuppressed           |
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Fikire                        |
+                  | lastName                             | Engida                        |
+                  | gender                               | female                        |
+                  | dateOfBirth                          | 2011-08-13                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Fikire00005F-1120072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F278               |
+                  | dateClientEnrolledToCare             | 2022-07-01                    |
+                  | enrolledToCareUID                    | 2022-5F-0038201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | Second Line                   |
+                  | artInitiationRegimen                 | TDF + FTC + DTG               |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 1000                          |
+                  | vlInterpretation                     | Detectable                    |
+                  | currVLSupression                     | Unsuppressed                  |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-279-175-024115
+
+      Scenario: MRN00005F-279-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Tesfaye                |
-                  | lastName                             | Kebede                 |
-                  | gender                               | male                   |
-                  | dateOfBirth                          | 2016-01-13             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-279          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F279        |
-                  | dateClientEnrolledToCare             | 2022-05-11             |
-                  | enrolledToCareUID                    | 2022-5F-0039175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | Second Line            |
-                  | artInitiationRegimen                 | ABC + 3TC + DTG        |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 1000                   |
-                  | vlInterpretation                     | Detectable             |
-                  | currVLSupression                     | Unsuppressed           |
+                  | key                                  | value                         |
+                  | orgId                                | HIVOrganizationExample6       |
+                  | firstName                            | Tesfaye                       |
+                  | lastName                             | Kebede                        |
+                  | gender                               | male                          |
+                  | dateOfBirth                          | 2016-02-13                    |
+                  | registrationFacilityCode             | HIVOrganizationExample6       |
+                  | registrationDate                     | 2022-06-01                    |
+                  | NID                                  | Tesfaye00005F-620072022143707 |
+                  | addressCountry                       | QA Country                    |
+                  | addressProvince                      | QA State                      |
+                  | addressDistrict                      | QA District                   |
+                  | addressCity                          | QA Ward                       |
+                  | hivPositiveDate                      | 2022-06-01                    |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6       |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F         |
+                  | hivPositiveTestingUID                | HIVPOS00005F279               |
+                  | dateClientEnrolledToCare             | 2022-06-11                    |
+                  | enrolledToCareUID                    | 2022-5F-0039201023728         |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6       |
+                  | enrolledToCareFacName                | Reporting Facility 5F         |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
+                  | artInitiationDate                    | 2022-06-01                    |
+                  | artInitiationRegimenLine             | Second Line                   |
+                  | artInitiationRegimen                 | ABC + 3TC + DTG               |
+                  | vlDate                               | 2022-06-05                    |
+                  | vlResult                             | 1000                          |
+                  | vlInterpretation                     | Detectable                    |
+                  | currVLSupression                     | Unsuppressed                  |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-280-175-024115
+
+      Scenario: MRN00005F-280-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Gedlu                  |
-                  | lastName                             | Tesfaye                |
-                  | gender                               | male                   |
-                  | dateOfBirth                          | 2019-01-13             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-280          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F280        |
-                  | dateClientEnrolledToCare             | 2022-06-10             |
-                  | enrolledToCareUID                    | 2022-5F-0040175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | Second Line            |
-                  | artInitiationRegimen                 | ABC + 3TC + DRVr       |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 1000                   |
-                  | vlInterpretation                     | Detectable             |
-                  | currVLSupression                     | Unsuppressed           |
+                  | key                                  | value                       |
+                  | orgId                                | HIVOrganizationExample6     |
+                  | firstName                            | Gedlu                       |
+                  | lastName                             | Tesfaye                     |
+                  | gender                               | male                        |
+                  | dateOfBirth                          | 2019-02-13                  |
+                  | registrationFacilityCode             | HIVOrganizationExample6     |
+                  | registrationDate                     | 2022-06-01                  |
+                  | NID                                  | Gedlu00005F-320072022143707 |
+                  | addressCountry                       | QA Country                  |
+                  | addressProvince                      | QA State                    |
+                  | addressDistrict                      | QA District                 |
+                  | addressCity                          | QA Ward                     |
+                  | hivPositiveDate                      | 2022-06-01                  |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6     |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F       |
+                  | hivPositiveTestingUID                | HIVPOS00005F280             |
+                  | dateClientEnrolledToCare             | 2022-07-10                  |
+                  | enrolledToCareUID                    | 2022-5F-0040201023728       |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6     |
+                  | enrolledToCareFacName                | Reporting Facility 5F       |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                  |
+                  | artInitiationDate                    | 2022-06-01                  |
+                  | artInitiationRegimenLine             | Second Line                 |
+                  | artInitiationRegimen                 | ABC + 3TC + DRVr            |
+                  | vlDate                               | 2022-06-05                  |
+                  | vlResult                             | 1000                        |
+                  | vlInterpretation                     | Detectable                  |
+                  | currVLSupression                     | Unsuppressed                |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-281-175-024115
+
+      Scenario: MRN00005F-281-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                   |
-                  | orgId                                | HIVOrganizationExample  |
-                  | firstName                            | Negash                  |
-                  | lastName                             | Tadesse                 |
-                  | gender                               | female                  |
-                  | dateOfBirth                          | 2018-03-15              |
-                  | registrationFacilityCode             | HIVOrganizationExample  |
-                  | registrationDate                     | 2022-05-01              |
-                  | NID                                  | MRN00005F-281           |
-                  | addressCountry                       | QA Country              |
-                  | addressProvince                      | QA State                |
-                  | addressDistrict                      | QA District             |
-                  | addressCity                          | QA Ward                 |
-                  | hivPositiveDate                      | 2022-05-01              |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample  |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F   |
-                  | hivPositiveTestingUID                | HIVPOS00005F281         |
-                  | dateClientEnrolledToCare             | 2022-06-20              |
-                  | enrolledToCareUID                    | 2022-5F-0041175024115   |
-                  | enrolledToCareFacCode                | HIVOrganizationExample  |
-                  | enrolledToCareFacName                | Reporting Facility 5F   |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01              |
-                  | artInitiationDate                    | 2022-05-01              |
-                  | artInitiationRegimenLine             | Second Line             |
-                  | artInitiationRegimen                 | ABC + 3TC + DRV+RTV+RAL |
-                  | vlDate                               | 2022-05-05              |
-                  | vlResult                             | 1100                    |
-                  | vlInterpretation                     | Detectable              |
-                  | currVLSupression                     | Unsuppressed            |
+                  | key                                  | value                        |
+                  | orgId                                | HIVOrganizationExample6      |
+                  | firstName                            | Negash                       |
+                  | lastName                             | Tadesse                      |
+                  | gender                               | female                       |
+                  | dateOfBirth                          | 2018-04-15                   |
+                  | registrationFacilityCode             | HIVOrganizationExample6      |
+                  | registrationDate                     | 2022-06-01                   |
+                  | NID                                  | Negash00005F-420072022143707 |
+                  | addressCountry                       | QA Country                   |
+                  | addressProvince                      | QA State                     |
+                  | addressDistrict                      | QA District                  |
+                  | addressCity                          | QA Ward                      |
+                  | hivPositiveDate                      | 2022-06-01                   |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6      |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F        |
+                  | hivPositiveTestingUID                | HIVPOS00005F281              |
+                  | dateClientEnrolledToCare             | 2022-07-20                   |
+                  | enrolledToCareUID                    | 2022-5F-0041201023728        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6      |
+                  | enrolledToCareFacName                | Reporting Facility 5F        |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
+                  | artInitiationDate                    | 2022-06-01                   |
+                  | artInitiationRegimenLine             | Second Line                  |
+                  | artInitiationRegimen                 | ABC + 3TC + DRV+RTV+RAL      |
+                  | vlDate                               | 2022-06-05                   |
+                  | vlResult                             | 1100                         |
+                  | vlInterpretation                     | Detectable                   |
+                  | currVLSupression                     | Unsuppressed                 |
             When I POST the FHIR bundle to the IOL
-      Scenario: MRN00005F-282-175-024115
+
+      Scenario: MRN00005F-282-201-023728
             Given I set FHIR bundle parameters
-                  | key                                  | value                  |
-                  | orgId                                | HIVOrganizationExample |
-                  | firstName                            | Ahimed                 |
-                  | lastName                             | Haregewoin             |
-                  | gender                               | female                 |
-                  | dateOfBirth                          | 2015-09-15             |
-                  | registrationFacilityCode             | HIVOrganizationExample |
-                  | registrationDate                     | 2022-05-01             |
-                  | NID                                  | MRN00005F-282          |
-                  | addressCountry                       | QA Country             |
-                  | addressProvince                      | QA State               |
-                  | addressDistrict                      | QA District            |
-                  | addressCity                          | QA Ward                |
-                  | hivPositiveDate                      | 2022-05-01             |
-                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample |
-                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F  |
-                  | hivPositiveTestingUID                | HIVPOS00005F282        |
-                  | dateClientEnrolledToCare             | 2022-06-08             |
-                  | enrolledToCareUID                    | 2022-5F-0042175024115  |
-                  | enrolledToCareFacCode                | HIVOrganizationExample |
-                  | enrolledToCareFacName                | Reporting Facility 5F  |
-                  | enrolledToCareDateFirstClinicalVisit | 2022-05-01             |
-                  | artInitiationDate                    | 2022-05-01             |
-                  | artInitiationRegimenLine             | Second Line            |
-                  | artInitiationRegimen                 | ABC + 3TC + ATVr       |
-                  | vlDate                               | 2022-05-05             |
-                  | vlResult                             | 1002                   |
-                  | vlInterpretation                     | Detectable             |
-                  | currVLSupression                     | Unsuppressed           |
+                  | key                                  | value                        |
+                  | orgId                                | HIVOrganizationExample6      |
+                  | firstName                            | Ahimed                       |
+                  | lastName                             | Haregewoin                   |
+                  | gender                               | female                       |
+                  | dateOfBirth                          | 2015-10-15                   |
+                  | registrationFacilityCode             | HIVOrganizationExample6      |
+                  | registrationDate                     | 2022-06-01                   |
+                  | NID                                  | Ahimed00005F-620072022143707 |
+                  | addressCountry                       | QA Country                   |
+                  | addressProvince                      | QA State                     |
+                  | addressDistrict                      | QA District                  |
+                  | addressCity                          | QA Ward                      |
+                  | hivPositiveDate                      | 2022-06-01                   |
+                  | hivPositiveDiagnosisFacilityCode     | HIVOrganizationExample6      |
+                  | hivPositiveDiagnosisFacilityName     | Reporting Facility 5F        |
+                  | hivPositiveTestingUID                | HIVPOS00005F282              |
+                  | dateClientEnrolledToCare             | 2022-07-08                   |
+                  | enrolledToCareUID                    | 2022-5F-0042201023728        |
+                  | enrolledToCareFacCode                | HIVOrganizationExample6      |
+                  | enrolledToCareFacName                | Reporting Facility 5F        |
+                  | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
+                  | artInitiationDate                    | 2022-06-01                   |
+                  | artInitiationRegimenLine             | Second Line                  |
+                  | artInitiationRegimen                 | ABC + 3TC + ATVr             |
+                  | vlDate                               | 2022-06-05                   |
+                  | vlResult                             | 1002                         |
+                  | vlInterpretation                     | Detectable                   |
+                  | currVLSupression                     | Unsuppressed                 |
             When I POST the FHIR bundle to the IOL
 
             And I check JSReports using the following report filters
@@ -1863,9 +1920,9 @@ Feature: 5F
                   | state        | all        |
                   | district     | all        |
                   | city         | all        |
-                  | facilityCode | all        |
-                  | from         | 2022-04-21 |
-                  | to           | 2022-07-20 |
+                  | facilityCode | HF000006   |
+                  | from         | 2022-05-21 |
+                  | to           | 2022-08-20 |
 
 
             Then there should be a row identified by "supGroup" of "Detectable" with the following fields and values
@@ -1879,21 +1936,21 @@ Feature: 5F
                   | unknown        | 0     |
                   | unknownPercent | 0     |
                   | total          | 18    |
-                  | totalPercent   | 47    |
+                  | totalPercent   | 46    |
 
 
             Then there should be a row identified by "supGroup" of "Non Detectable" with the following fields and values
                   | field          | value |
-                  | males          | 4     |
-                  | malesPercent   | 25    |
+                  | males          | 5     |
+                  | malesPercent   | 29    |
                   | females        | 2     |
-                  | femalesPercent | 13    |
+                  | femalesPercent | 12    |
                   | others         | 2     |
-                  | othersPercent  | 13    |
+                  | othersPercent  | 12    |
                   | unknown        | 8     |
-                  | unknownPercent | 50    |
-                  | total          | 16    |
-                  | totalPercent   | 42    |
+                  | unknownPercent | 47    |
+                  | total          | 17    |
+                  | totalPercent   | 44    |
 
 
             Then there should be a row identified by "supGroup" of "Unknown" with the following fields and values
@@ -1907,17 +1964,17 @@ Feature: 5F
                   | unknown        | 1     |
                   | unknownPercent | 25    |
                   | total          | 4     |
-                  | totalPercent   | 11    |
+                  | totalPercent   | 10    |
 
             Then there should be a total for fields
                   | field          | value |
-                  | males          | 11    |
-                  | malesPercent   | 29    |
+                  | males          | 12    |
+                  | malesPercent   | 31    |
                   | females        | 14    |
-                  | femalesPercent | 37    |
+                  | femalesPercent | 36    |
                   | others         | 4     |
-                  | othersPercent  | 11    |
+                  | othersPercent  | 10    |
                   | unknown        | 9     |
-                  | unknownPercent | 24    |
-                  | total          | 38    |
+                  | unknownPercent | 23    |
+                  | total          | 39    |
 

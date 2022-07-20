@@ -2,13 +2,13 @@ const { Then, When } = require('@cucumber/cucumber')
 const { expect } = require('chai')
 const { getReport } = require('../helpers/api-helpers')
 
-When('I check JSReports using the following report filters', {timeout : 30 * 1000}, async function (table) {
+When('I check JSReports using the following report filters', {timeout : 60 * 1000}, async function (table) {
   const params = {}
   table.hashes().forEach(hash => {
     params[hash.field] = hash.value
   })
 
-  await new Promise(r => setTimeout(r, 20000));
+  await new Promise(r => setTimeout(r, 50000));
 
   const { data } = await getReport(params, false)
   this.output = data
