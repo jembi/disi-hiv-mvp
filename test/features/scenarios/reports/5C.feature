@@ -1,5 +1,5 @@
 Feature: 5C
-      Scenario: MRN00005C-137-201-014624
+      Scenario: MRN00005C-137-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                           |
                   | orgId                                | HIVOrganizationExample4         |
@@ -9,7 +9,7 @@ Feature: 5C
                   | dateOfBirth                          | 2002-03-05                      |
                   | registrationFacilityCode             | HIVOrganizationExample4         |
                   | registrationDate                     | 2022-06-01                      |
-                  | NID                                  | Shimelis00005C-2020072022134544 |
+                  | NID                                  | Shimelis00005C-2021072022121933 |
                   | addressCountry                       | QA Country                      |
                   | addressProvince                      | QA State                        |
                   | addressDistrict                      | QA District                     |
@@ -19,7 +19,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C           |
                   | hivPositiveTestingUID                | HIVPOS00005C137                 |
                   | dateClientEnrolledToCare             | 2022-06-10                      |
-                  | enrolledToCareUID                    | 2022-5C-0001201014624           |
+                  | enrolledToCareUID                    | 2022-5C-0001202124541           |
                   | enrolledToCareFacCode                | HIVOrganizationExample4         |
                   | enrolledToCareFacName                | Reporting Facility 5C           |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                      |
@@ -31,7 +31,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                              |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-138-201-014624
+      Scenario: MRN00005C-138-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                           |
                   | orgId                                | HIVOrganizationExample4         |
@@ -41,7 +41,7 @@ Feature: 5C
                   | dateOfBirth                          | 1988-04-03                      |
                   | registrationFacilityCode             | HIVOrganizationExample4         |
                   | registrationDate                     | 2022-05-20                      |
-                  | NID                                  | Bogalech00005C-3420072022134544 |
+                  | NID                                  | Bogalech00005C-3421072022121933 |
                   | addressCountry                       | QA Country                      |
                   | addressProvince                      | QA State                        |
                   | addressDistrict                      | QA District                     |
@@ -51,7 +51,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C           |
                   | hivPositiveTestingUID                | HIVPOS00005C138                 |
                   | dateClientEnrolledToCare             | 2022-07-01                      |
-                  | enrolledToCareUID                    | 2022-5C-0002201014624           |
+                  | enrolledToCareUID                    | 2022-5C-0002202124541           |
                   | enrolledToCareFacCode                | HIVOrganizationExample4         |
                   | enrolledToCareFacName                | Reporting Facility 5C           |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                      |
@@ -63,7 +63,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                              |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-139-201-014624
+      Scenario: MRN00005C-139-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample4        |
@@ -73,7 +73,7 @@ Feature: 5C
                   | dateOfBirth                          | 2000-07-05                     |
                   | registrationFacilityCode             | HIVOrganizationExample4        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Debritu00005C-2220072022134544 |
+                  | NID                                  | Debritu00005C-2221072022121933 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -83,7 +83,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C          |
                   | hivPositiveTestingUID                |                                |
                   | dateClientEnrolledToCare             | 2022-06-11                     |
-                  | enrolledToCareUID                    | 2022-5C-0003201014624          |
+                  | enrolledToCareUID                    | 2022-5C-0003202124541          |
                   | enrolledToCareFacCode                | HIVOrganizationExample4        |
                   | enrolledToCareFacName                | Reporting Facility 5C          |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
@@ -95,7 +95,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-140-201-014624
+      Scenario: MRN00005C-140-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                           |
                   | orgId                                | HIVOrganizationExample4         |
@@ -105,7 +105,7 @@ Feature: 5C
                   | dateOfBirth                          | 1992-04-05                      |
                   | registrationFacilityCode             | HIVOrganizationExample4         |
                   | registrationDate                     | 2022-05-01                      |
-                  | NID                                  | Shimelis00005C-3020072022134544 |
+                  | NID                                  | Shimelis00005C-3021072022121933 |
                   | addressCountry                       | QA Country                      |
                   | addressProvince                      | QA State                        |
                   | addressDistrict                      | QA District                     |
@@ -115,7 +115,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C           |
                   | hivPositiveTestingUID                | HIVPOS00005C140                 |
                   | dateClientEnrolledToCare             | 2022-06-22                      |
-                  | enrolledToCareUID                    | 2022-5C-0004201014624           |
+                  | enrolledToCareUID                    | 2022-5C-0004202124541           |
                   | enrolledToCareFacCode                | HIVOrganizationExample4         |
                   | enrolledToCareFacName                | Reporting Facility 5C           |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01                      |
@@ -127,7 +127,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                              |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-141-201-014624
+      Scenario: MRN00005C-141-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample4        |
@@ -137,7 +137,7 @@ Feature: 5C
                   | dateOfBirth                          | 1993-11-05                     |
                   | registrationFacilityCode             | HIVOrganizationExample4        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Solomon00005C-2820072022134544 |
+                  | NID                                  | Solomon00005C-2821072022121933 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -159,7 +159,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-142-201-014624
+      Scenario: MRN00005C-142-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample4     |
@@ -169,7 +169,7 @@ Feature: 5C
                   | dateOfBirth                          | 1990-01-05                  |
                   | registrationFacilityCode             | HIVOrganizationExample4     |
                   | registrationDate                     | 2022-06-01                  |
-                  | NID                                  | Sori00005C-3220072022134544 |
+                  | NID                                  | Sori00005C-3221072022121933 |
                   | addressCountry                       | QA Country                  |
                   | addressProvince                      | QA State                    |
                   | addressDistrict                      | QA District                 |
@@ -179,19 +179,19 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C       |
                   | hivPositiveTestingUID                | HIVPOS00005C142             |
                   | dateClientEnrolledToCare             | 2022-07-10                  |
-                  | enrolledToCareUID                    | 2022-5C-0006201014624       |
+                  | enrolledToCareUID                    | 2022-5C-0006202124541       |
                   | enrolledToCareFacCode                | HIVOrganizationExample4     |
                   | enrolledToCareFacName                | Reporting Facility 5C       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                  |
                   | artInitiationDate                    | 2022-06-01                  |
                   | artInitiationRegimenLine             | First Line                  |
                   | artInitiationRegimen                 | RAL + 3TC + DRV + RTV + ABC |
-                  | cd4CollectionDate                    |                             |
+                  | cd4CollectionDate                    | 2022-06-01                  |
                   | cd4Result                            |                             |
                   | cd4Percentage                        |                             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-143-201-014624
+      Scenario: MRN00005C-143-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample4       |
@@ -201,7 +201,7 @@ Feature: 5C
                   | dateOfBirth                          | 2003-06-01                    |
                   | registrationFacilityCode             | HIVOrganizationExample4       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Gelila00005C-1920072022134544 |
+                  | NID                                  | Gelila00005C-1921072022121933 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -211,7 +211,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C         |
                   | hivPositiveTestingUID                | HIVPOS00005C143               |
                   | dateClientEnrolledToCare             | 2022-07-20                    |
-                  | enrolledToCareUID                    | 2022-5C-0007201014624         |
+                  | enrolledToCareUID                    | 2022-5C-0007202124541         |
                   | enrolledToCareFacCode                | HIVOrganizationExample4       |
                   | enrolledToCareFacName                | Reporting Facility 5C         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
@@ -223,7 +223,7 @@ Feature: 5C
                   | cd4Percentage                        | 18                            |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-144-201-014624
+      Scenario: MRN00005C-144-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                           |
                   | orgId                                | HIVOrganizationExample4         |
@@ -233,7 +233,7 @@ Feature: 5C
                   | dateOfBirth                          | 1950-04-05                      |
                   | registrationFacilityCode             | HIVOrganizationExample4         |
                   | registrationDate                     | 2022-06-01                      |
-                  | NID                                  | Elesbaan00005C-7220072022134544 |
+                  | NID                                  | Elesbaan00005C-7221072022121933 |
                   | addressCountry                       | QA Country                      |
                   | addressProvince                      | QA State                        |
                   | addressDistrict                      | QA District                     |
@@ -243,7 +243,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C           |
                   | hivPositiveTestingUID                | HIVPOS00005C144                 |
                   | dateClientEnrolledToCare             | 2022-07-08                      |
-                  | enrolledToCareUID                    | 2022-5C-0008201014624           |
+                  | enrolledToCareUID                    | 2022-5C-0008202124541           |
                   | enrolledToCareFacCode                | HIVOrganizationExample4         |
                   | enrolledToCareFacName                | Reporting Facility 5C           |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                      |
@@ -255,7 +255,7 @@ Feature: 5C
                   | cd4Percentage                        | 19.9                            |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-145-201-014624
+      Scenario: MRN00005C-145-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample4       |
@@ -265,7 +265,7 @@ Feature: 5C
                   | dateOfBirth                          | 2012-04-05                    |
                   | registrationFacilityCode             | HIVOrganizationExample4       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Abenet00005C-1020072022134544 |
+                  | NID                                  | Abenet00005C-1021072022121933 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -275,19 +275,19 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C         |
                   | hivPositiveTestingUID                | HIVPOS00005C145               |
                   | dateClientEnrolledToCare             | 2022-07-21                    |
-                  | enrolledToCareUID                    | 2022-5C-0009201014624         |
+                  | enrolledToCareUID                    | 2022-5C-0009202124541         |
                   | enrolledToCareFacCode                | HIVOrganizationExample4       |
                   | enrolledToCareFacName                | Reporting Facility 5C         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
                   | artInitiationDate                    | 2022-06-01                    |
                   | artInitiationRegimenLine             | Second Line                   |
                   | artInitiationRegimen                 | AZT + 3TC + LPV/r             |
-                  | cd4CollectionDate                    |                               |
+                  | cd4CollectionDate                    | 2022-06-01                    |
                   | cd4Result                            |                               |
                   | cd4Percentage                        |                               |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-146-201-014624
+      Scenario: MRN00005C-146-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample4     |
@@ -297,7 +297,7 @@ Feature: 5C
                   | dateOfBirth                          | 1992-04-03                  |
                   | registrationFacilityCode             | HIVOrganizationExample4     |
                   | registrationDate                     | 2022-06-01                  |
-                  | NID                                  | Duri00005C-3020072022134544 |
+                  | NID                                  | Duri00005C-3021072022121933 |
                   | addressCountry                       | QA Country                  |
                   | addressProvince                      | QA State                    |
                   | addressDistrict                      | QA District                 |
@@ -307,7 +307,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C       |
                   | hivPositiveTestingUID                | HIVPOS00005C146             |
                   | dateClientEnrolledToCare             | 2022-07-19                  |
-                  | enrolledToCareUID                    | 2022-5C-0010201014624       |
+                  | enrolledToCareUID                    | 2022-5C-0010202124541       |
                   | enrolledToCareFacCode                | HIVOrganizationExample4     |
                   | enrolledToCareFacName                | Reporting Facility 5C       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                  |
@@ -319,7 +319,7 @@ Feature: 5C
                   | cd4Percentage                        | 17                          |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-147-201-014624
+      Scenario: MRN00005C-147-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample4        |
@@ -329,7 +329,7 @@ Feature: 5C
                   | dateOfBirth                          | 1996-08-05                     |
                   | registrationFacilityCode             | HIVOrganizationExample4        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Meherka00005C-2620072022134544 |
+                  | NID                                  | Meherka00005C-2621072022121933 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -339,7 +339,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C          |
                   | hivPositiveTestingUID                | HIVPOS00005C147                |
                   | dateClientEnrolledToCare             | 2022-06-19                     |
-                  | enrolledToCareUID                    | 2022-5C-0011201014624          |
+                  | enrolledToCareUID                    | 2022-5C-0011202124541          |
                   | enrolledToCareFacCode                | HIVOrganizationExample4        |
                   | enrolledToCareFacName                | Reporting Facility 5C          |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
@@ -351,7 +351,7 @@ Feature: 5C
                   | cd4Percentage                        | 35                             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-148-201-014624
+      Scenario: MRN00005C-148-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample4        |
@@ -361,7 +361,7 @@ Feature: 5C
                   | dateOfBirth                          | 2018-04-05                     |
                   | registrationFacilityCode             | HIVOrganizationExample4        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Birtukan00005C-420072022134544 |
+                  | NID                                  | Birtukan00005C-421072022121933 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -371,7 +371,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C          |
                   | hivPositiveTestingUID                | HIVPOS00005C148                |
                   | dateClientEnrolledToCare             | 2022-06-15                     |
-                  | enrolledToCareUID                    | 2022-5C-0012201014624          |
+                  | enrolledToCareUID                    | 2022-5C-0012202124541          |
                   | enrolledToCareFacCode                | HIVOrganizationExample4        |
                   | enrolledToCareFacName                | Reporting Facility 5C          |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
@@ -383,7 +383,7 @@ Feature: 5C
                   | cd4Percentage                        | 40                             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-149-201-014624
+      Scenario: MRN00005C-149-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample4     |
@@ -393,7 +393,7 @@ Feature: 5C
                   | dateOfBirth                          | 2015-10-05                  |
                   | registrationFacilityCode             | HIVOrganizationExample4     |
                   | registrationDate                     | 2022-06-01                  |
-                  | NID                                  | Bitew00005C-620072022134544 |
+                  | NID                                  | Bitew00005C-621072022121933 |
                   | addressCountry                       | QA Country                  |
                   | addressProvince                      | QA State                    |
                   | addressDistrict                      | QA District                 |
@@ -403,7 +403,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C       |
                   | hivPositiveTestingUID                | HIVPOS00005C149             |
                   | dateClientEnrolledToCare             | 2022-06-15                  |
-                  | enrolledToCareUID                    | 2022-5C-0013201014624       |
+                  | enrolledToCareUID                    | 2022-5C-0013202124541       |
                   | enrolledToCareFacCode                | HIVOrganizationExample4     |
                   | enrolledToCareFacName                | Reporting Facility 5C       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                  |
@@ -415,7 +415,7 @@ Feature: 5C
                   | cd4Percentage                        | 45                          |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-150-201-014624
+      Scenario: MRN00005C-150-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                            |
                   | orgId                                | HIVOrganizationExample4          |
@@ -425,7 +425,7 @@ Feature: 5C
                   | dateOfBirth                          | 1966-08-11                       |
                   | registrationFacilityCode             | HIVOrganizationExample4          |
                   | registrationDate                     | 2022-06-01                       |
-                  | NID                                  | Bizuayehu00005C-5620072022134544 |
+                  | NID                                  | Bizuayehu00005C-5621072022121933 |
                   | addressCountry                       | QA Country                       |
                   | addressProvince                      | QA State                         |
                   | addressDistrict                      | QA District                      |
@@ -435,7 +435,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C            |
                   | hivPositiveTestingUID                | HIVPOS00005C150                  |
                   | dateClientEnrolledToCare             | 2022-06-15                       |
-                  | enrolledToCareUID                    | 2022-5C-0014201014624            |
+                  | enrolledToCareUID                    | 2022-5C-0014202124541            |
                   | enrolledToCareFacCode                | HIVOrganizationExample4          |
                   | enrolledToCareFacName                | Reporting Facility 5C            |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                       |
@@ -447,7 +447,7 @@ Feature: 5C
                   | cd4Percentage                        | 48                               |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-151-201-014624
+      Scenario: MRN00005C-151-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                            |
                   | orgId                                | HIVOrganizationExample4          |
@@ -457,7 +457,7 @@ Feature: 5C
                   | dateOfBirth                          | 1948-09-11                       |
                   | registrationFacilityCode             | HIVOrganizationExample4          |
                   | registrationDate                     | 2022-06-01                       |
-                  | NID                                  | Bizuayehu00005C-7320072022134544 |
+                  | NID                                  | Bizuayehu00005C-7321072022121933 |
                   | addressCountry                       | QA Country                       |
                   | addressProvince                      | QA State                         |
                   | addressDistrict                      | QA District                      |
@@ -467,7 +467,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C            |
                   | hivPositiveTestingUID                | HIVPOS00005C151                  |
                   | dateClientEnrolledToCare             | 2022-06-15                       |
-                  | enrolledToCareUID                    | 2022-5C-0015201014624            |
+                  | enrolledToCareUID                    | 2022-5C-0015202124541            |
                   | enrolledToCareFacCode                | HIVOrganizationExample4          |
                   | enrolledToCareFacName                | Reporting Facility 5C            |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                       |
@@ -479,7 +479,7 @@ Feature: 5C
                   | cd4Percentage                        | 37                               |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-152-201-014624
+      Scenario: MRN00005C-152-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                           |
                   | orgId                                | HIVOrganizationExample4         |
@@ -489,7 +489,7 @@ Feature: 5C
                   | dateOfBirth                          | 2004-06-01                      |
                   | registrationFacilityCode             | HIVOrganizationExample4         |
                   | registrationDate                     | 2022-06-01                      |
-                  | NID                                  | Bogalech00005C-1820072022134544 |
+                  | NID                                  | Bogalech00005C-1821072022121933 |
                   | addressCountry                       | QA Country                      |
                   | addressProvince                      | QA State                        |
                   | addressDistrict                      | QA District                     |
@@ -499,7 +499,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C           |
                   | hivPositiveTestingUID                | HIVPOS00005C152                 |
                   | dateClientEnrolledToCare             | 2022-06-15                      |
-                  | enrolledToCareUID                    | 2022-5C-0016201014624           |
+                  | enrolledToCareUID                    | 2022-5C-0016202124541           |
                   | enrolledToCareFacCode                | HIVOrganizationExample4         |
                   | enrolledToCareFacName                | Reporting Facility 5C           |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                      |
@@ -511,7 +511,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                              |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-153-201-014624
+      Scenario: MRN00005C-153-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample4       |
@@ -521,7 +521,7 @@ Feature: 5C
                   | dateOfBirth                          | 2010-03-01                    |
                   | registrationFacilityCode             | HIVOrganizationExample4       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Emaway00005C-1220072022134544 |
+                  | NID                                  | Emaway00005C-1221072022121933 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -531,7 +531,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C         |
                   | hivPositiveTestingUID                | HIVPOS00005C153               |
                   | dateClientEnrolledToCare             | 2022-06-15                    |
-                  | enrolledToCareUID                    | 2022-5C-0017201014624         |
+                  | enrolledToCareUID                    | 2022-5C-0017202124541         |
                   | enrolledToCareFacCode                | HIVOrganizationExample4       |
                   | enrolledToCareFacName                | Reporting Facility 5C         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
@@ -543,7 +543,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                            |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-154-201-014624
+      Scenario: MRN00005C-154-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample4       |
@@ -553,7 +553,7 @@ Feature: 5C
                   | dateOfBirth                          | 1974-02-02                    |
                   | registrationFacilityCode             | HIVOrganizationExample4       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Emebet00005C-4820072022134544 |
+                  | NID                                  | Emebet00005C-4821072022121933 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -563,7 +563,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C         |
                   | hivPositiveTestingUID                | HIVPOS00005C154               |
                   | dateClientEnrolledToCare             | 2022-06-10                    |
-                  | enrolledToCareUID                    | 2022-5C-0018201014624         |
+                  | enrolledToCareUID                    | 2022-5C-0018202124541         |
                   | enrolledToCareFacCode                | HIVOrganizationExample4       |
                   | enrolledToCareFacName                | Reporting Facility 5C         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
@@ -575,7 +575,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                            |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-155-201-014624
+      Scenario: MRN00005C-155-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample4        |
@@ -585,7 +585,7 @@ Feature: 5C
                   | dateOfBirth                          | 1947-10-03                     |
                   | registrationFacilityCode             | HIVOrganizationExample4        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Eskedar00005C-7420072022134544 |
+                  | NID                                  | Eskedar00005C-7421072022121933 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -617,7 +617,7 @@ Feature: 5C
                   | dateOfBirth                          | 1947-10-03                     |
                   | registrationFacilityCode             | HIVOrganizationExample4        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Eskedar00005C-7420072022134544 |
+                  | NID                                  | Eskedar00005C-7421072022121933 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -627,7 +627,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C          |
                   | hivPositiveTestingUID                | HIVPOS00005C155                |
                   | dateClientEnrolledToCare             | 2022-07-01                     |
-                  | enrolledToCareUID                    | 2022-5C-0019201014624          |
+                  | enrolledToCareUID                    | 2022-5C-0019202124541          |
                   | enrolledToCareFacCode                | HIVOrganizationExample4        |
                   | enrolledToCareFacName                | Reporting Facility 5C          |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
@@ -639,7 +639,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-155-201-014624
+      Scenario: MRN00005C-155-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample4        |
@@ -649,7 +649,7 @@ Feature: 5C
                   | dateOfBirth                          | 1947-10-03                     |
                   | registrationFacilityCode             | HIVOrganizationExample4        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Eskedar00005C-7420072022134544 |
+                  | NID                                  | Eskedar00005C-7421072022121933 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -659,7 +659,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C          |
                   | hivPositiveTestingUID                | HIVPOS00005C155                |
                   | dateClientEnrolledToCare             | 2022-07-01                     |
-                  | enrolledToCareUID                    | 2022-5C-0019201014624          |
+                  | enrolledToCareUID                    | 2022-5C-0019202124541          |
                   | enrolledToCareFacCode                | HIVOrganizationExample4        |
                   | enrolledToCareFacName                | Reporting Facility 5C          |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
@@ -671,7 +671,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-157-201-014624
+      Scenario: MRN00005C-157-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample4       |
@@ -681,7 +681,7 @@ Feature: 5C
                   | dateOfBirth                          | 2003-12-03                    |
                   | registrationFacilityCode             | HIVOrganizationExample4       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Mebrie00005C-1820072022134544 |
+                  | NID                                  | Mebrie00005C-1821072022121933 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -713,7 +713,7 @@ Feature: 5C
                   | dateOfBirth                          | 2003-12-03                    |
                   | registrationFacilityCode             | HIVOrganizationExample4       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Mebrie00005C-1820072022134544 |
+                  | NID                                  | Mebrie00005C-1821072022121933 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -723,7 +723,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C         |
                   | hivPositiveTestingUID                | HIVPOS00005C157               |
                   | dateClientEnrolledToCare             | 2022-06-11                    |
-                  | enrolledToCareUID                    | 2022-5C-0020201014624         |
+                  | enrolledToCareUID                    | 2022-5C-0020202124541         |
                   | enrolledToCareFacCode                | HIVOrganizationExample4       |
                   | enrolledToCareFacName                | Reporting Facility 5C         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
@@ -735,7 +735,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                            |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-157-201-014624
+      Scenario: MRN00005C-157-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample4       |
@@ -745,7 +745,7 @@ Feature: 5C
                   | dateOfBirth                          | 2003-12-03                    |
                   | registrationFacilityCode             | HIVOrganizationExample4       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Mebrie00005C-1820072022134544 |
+                  | NID                                  | Mebrie00005C-1821072022121933 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -755,7 +755,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C         |
                   | hivPositiveTestingUID                | HIVPOS00005C157               |
                   | dateClientEnrolledToCare             | 2022-06-11                    |
-                  | enrolledToCareUID                    | 2022-5C-0020201014624         |
+                  | enrolledToCareUID                    | 2022-5C-0020202124541         |
                   | enrolledToCareFacCode                | HIVOrganizationExample4       |
                   | enrolledToCareFacName                | Reporting Facility 5C         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
@@ -767,7 +767,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                            |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-159-201-014624
+      Scenario: MRN00005C-159-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample4      |
@@ -777,7 +777,7 @@ Feature: 5C
                   | dateOfBirth                          | 2000-12-15                   |
                   | registrationFacilityCode             | HIVOrganizationExample4      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Gizaw00005C-2120072022134544 |
+                  | NID                                  | Gizaw00005C-2121072022121933 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -809,7 +809,7 @@ Feature: 5C
                   | dateOfBirth                          | 2000-12-15                   |
                   | registrationFacilityCode             | HIVOrganizationExample4      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Gizaw00005C-2120072022134544 |
+                  | NID                                  | Gizaw00005C-2121072022121933 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -819,7 +819,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C        |
                   | hivPositiveTestingUID                | HIVPOS00005C159              |
                   | dateClientEnrolledToCare             | 2022-06-22                   |
-                  | enrolledToCareUID                    | 2022-5C-0021201014624        |
+                  | enrolledToCareUID                    | 2022-5C-0021202124541        |
                   | enrolledToCareFacCode                | HIVOrganizationExample4      |
                   | enrolledToCareFacName                | Reporting Facility 5C        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -831,7 +831,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                           |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-159-201-014624
+      Scenario: MRN00005C-159-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample4      |
@@ -841,7 +841,7 @@ Feature: 5C
                   | dateOfBirth                          | 2000-12-15                   |
                   | registrationFacilityCode             | HIVOrganizationExample4      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Gizaw00005C-2120072022134544 |
+                  | NID                                  | Gizaw00005C-2121072022121933 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -851,7 +851,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C        |
                   | hivPositiveTestingUID                | HIVPOS00005C159              |
                   | dateClientEnrolledToCare             | 2022-06-22                   |
-                  | enrolledToCareUID                    | 2022-5C-0021201014624        |
+                  | enrolledToCareUID                    | 2022-5C-0021202124541        |
                   | enrolledToCareFacCode                | HIVOrganizationExample4      |
                   | enrolledToCareFacName                | Reporting Facility 5C        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -863,7 +863,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                           |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-161-201-014624
+      Scenario: MRN00005C-161-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample4      |
@@ -873,7 +873,7 @@ Feature: 5C
                   | dateOfBirth                          | 1985-12-15                   |
                   | registrationFacilityCode             | HIVOrganizationExample4      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Yirga00005C-3620072022134544 |
+                  | NID                                  | Yirga00005C-3621072022121933 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -905,7 +905,7 @@ Feature: 5C
                   | dateOfBirth                          | 1985-12-15                   |
                   | registrationFacilityCode             | HIVOrganizationExample4      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Yirga00005C-3620072022134544 |
+                  | NID                                  | Yirga00005C-3621072022121933 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -915,7 +915,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C        |
                   | hivPositiveTestingUID                | HIVPOS00005C161              |
                   | dateClientEnrolledToCare             | 2022-07-01                   |
-                  | enrolledToCareUID                    | 2022-5C-0022201014624        |
+                  | enrolledToCareUID                    | 2022-5C-0022202124541        |
                   | enrolledToCareFacCode                | HIVOrganizationExample4      |
                   | enrolledToCareFacName                | Reporting Facility 5C        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -927,7 +927,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                           |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-161-201-014624
+      Scenario: MRN00005C-161-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample4      |
@@ -937,7 +937,7 @@ Feature: 5C
                   | dateOfBirth                          | 1985-12-15                   |
                   | registrationFacilityCode             | HIVOrganizationExample4      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Yirga00005C-3620072022134544 |
+                  | NID                                  | Yirga00005C-3621072022121933 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -947,7 +947,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C        |
                   | hivPositiveTestingUID                | HIVPOS00005C161              |
                   | dateClientEnrolledToCare             | 2022-07-01                   |
-                  | enrolledToCareUID                    | 2022-5C-0022201014624        |
+                  | enrolledToCareUID                    | 2022-5C-0022202124541        |
                   | enrolledToCareFacCode                | HIVOrganizationExample4      |
                   | enrolledToCareFacName                | Reporting Facility 5C        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -959,7 +959,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                           |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-163-201-014624
+      Scenario: MRN00005C-163-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample4       |
@@ -969,7 +969,7 @@ Feature: 5C
                   | dateOfBirth                          | 1958-04-15                    |
                   | registrationFacilityCode             | HIVOrganizationExample4       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Deribe00005C-6420072022134544 |
+                  | NID                                  | Deribe00005C-6421072022121933 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -979,7 +979,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C         |
                   | hivPositiveTestingUID                | HIVPOS00005C163               |
                   | dateClientEnrolledToCare             | 2022-07-10                    |
-                  | enrolledToCareUID                    | 2022-5C-0023201014624         |
+                  | enrolledToCareUID                    | 2022-5C-0023202124541         |
                   | enrolledToCareFacCode                | HIVOrganizationExample4       |
                   | enrolledToCareFacName                | Reporting Facility 5C         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
@@ -991,7 +991,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                            |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-164-201-014624
+      Scenario: MRN00005C-164-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                           |
                   | orgId                                | HIVOrganizationExample4         |
@@ -1001,7 +1001,7 @@ Feature: 5C
                   | dateOfBirth                          | 1991-08-15                      |
                   | registrationFacilityCode             | HIVOrganizationExample4         |
                   | registrationDate                     | 2022-06-01                      |
-                  | NID                                  | Getachew00005C-3120072022134544 |
+                  | NID                                  | Getachew00005C-3121072022121933 |
                   | addressCountry                       | QA Country                      |
                   | addressProvince                      | QA State                        |
                   | addressDistrict                      | QA District                     |
@@ -1011,19 +1011,19 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C           |
                   | hivPositiveTestingUID                | HIVPOS00005C164                 |
                   | dateClientEnrolledToCare             | 2022-07-20                      |
-                  | enrolledToCareUID                    | 2022-5C-0024201014624           |
+                  | enrolledToCareUID                    | 2022-5C-0024202124541           |
                   | enrolledToCareFacCode                | HIVOrganizationExample4         |
                   | enrolledToCareFacName                | Reporting Facility 5C           |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                      |
                   | artInitiationDate                    | 2022-06-01                      |
                   | artInitiationRegimenLine             | Second Line                     |
                   | artInitiationRegimen                 | d4T + 3TC + EFV                 |
-                  | cd4CollectionDate                    |                                 |
+                  | cd4CollectionDate                    | 2022-06-01                      |
                   | cd4Result                            |                                 |
                   | cd4Percentage                        |                                 |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-165-201-014624
+      Scenario: MRN00005C-165-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                           |
                   | orgId                                | HIVOrganizationExample4         |
@@ -1033,7 +1033,7 @@ Feature: 5C
                   | dateOfBirth                          | 1994-02-15                      |
                   | registrationFacilityCode             | HIVOrganizationExample4         |
                   | registrationDate                     | 2022-06-01                      |
-                  | NID                                  | Yohannes00005C-2820072022134544 |
+                  | NID                                  | Yohannes00005C-2821072022121933 |
                   | addressCountry                       | QA Country                      |
                   | addressProvince                      | QA State                        |
                   | addressDistrict                      | QA District                     |
@@ -1043,7 +1043,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C           |
                   | hivPositiveTestingUID                | HIVPOS00005C165                 |
                   | dateClientEnrolledToCare             | 2022-07-08                      |
-                  | enrolledToCareUID                    | 2022-5C-0025201014624           |
+                  | enrolledToCareUID                    | 2022-5C-0025202124541           |
                   | enrolledToCareFacCode                | HIVOrganizationExample4         |
                   | enrolledToCareFacName                | Reporting Facility 5C           |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                      |
@@ -1055,7 +1055,7 @@ Feature: 5C
                   | cd4Percentage                        | 40                              |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-166-201-014624
+      Scenario: MRN00005C-166-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                            |
                   | orgId                                | HIVOrganizationExample4          |
@@ -1065,7 +1065,7 @@ Feature: 5C
                   | dateOfBirth                          | 2004-02-03                       |
                   | registrationFacilityCode             | HIVOrganizationExample4          |
                   | registrationDate                     | 2022-06-01                       |
-                  | NID                                  | Mihiretie00005C-1820072022134544 |
+                  | NID                                  | Mihiretie00005C-1821072022121933 |
                   | addressCountry                       | QA Country                       |
                   | addressProvince                      | QA State                         |
                   | addressDistrict                      | QA District                      |
@@ -1075,7 +1075,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C            |
                   | hivPositiveTestingUID                | HIVPOS00005C166                  |
                   | dateClientEnrolledToCare             | 2022-07-21                       |
-                  | enrolledToCareUID                    | 2022-5C-0026201014624            |
+                  | enrolledToCareUID                    | 2022-5C-0026202124541            |
                   | enrolledToCareFacCode                | HIVOrganizationExample4          |
                   | enrolledToCareFacName                | Reporting Facility 5C            |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                       |
@@ -1087,7 +1087,7 @@ Feature: 5C
                   | cd4Percentage                        | 40                               |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-167-201-014624
+      Scenario: MRN00005C-167-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample4      |
@@ -1097,7 +1097,7 @@ Feature: 5C
                   | dateOfBirth                          | 2002-04-05                   |
                   | registrationFacilityCode             | HIVOrganizationExample4      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Tenaw00005C-2020072022134544 |
+                  | NID                                  | Tenaw00005C-2021072022121933 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -1107,7 +1107,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C        |
                   | hivPositiveTestingUID                | HIVPOS00005C167              |
                   | dateClientEnrolledToCare             | 2022-07-19                   |
-                  | enrolledToCareUID                    | 2022-5C-0027201014624        |
+                  | enrolledToCareUID                    | 2022-5C-0027202124541        |
                   | enrolledToCareFacCode                | HIVOrganizationExample4      |
                   | enrolledToCareFacName                | Reporting Facility 5C        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -1119,7 +1119,7 @@ Feature: 5C
                   | cd4Percentage                        | 40                           |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-168-201-014624
+      Scenario: MRN00005C-168-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                            |
                   | orgId                                | HIVOrganizationExample4          |
@@ -1129,7 +1129,7 @@ Feature: 5C
                   | dateOfBirth                          | 1964-02-13                       |
                   | registrationFacilityCode             | HIVOrganizationExample4          |
                   | registrationDate                     | 2022-06-01                       |
-                  | NID                                  | Addisalem00005C-5820072022134544 |
+                  | NID                                  | Addisalem00005C-5821072022121933 |
                   | addressCountry                       | QA Country                       |
                   | addressProvince                      | QA State                         |
                   | addressDistrict                      | QA District                      |
@@ -1161,7 +1161,7 @@ Feature: 5C
                   | dateOfBirth                          | 1964-02-13                       |
                   | registrationFacilityCode             | HIVOrganizationExample4          |
                   | registrationDate                     | 2022-06-01                       |
-                  | NID                                  | Addisalem00005C-5820072022134544 |
+                  | NID                                  | Addisalem00005C-5821072022121933 |
                   | addressCountry                       | QA Country                       |
                   | addressProvince                      | QA State                         |
                   | addressDistrict                      | QA District                      |
@@ -1171,7 +1171,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C            |
                   | hivPositiveTestingUID                | HIVPOS00005C168                  |
                   | dateClientEnrolledToCare             | 2022-06-19                       |
-                  | enrolledToCareUID                    | 2022-5C-0028201014624            |
+                  | enrolledToCareUID                    | 2022-5C-0028202124541            |
                   | enrolledToCareFacCode                | HIVOrganizationExample4          |
                   | enrolledToCareFacName                | Reporting Facility 5C            |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                       |
@@ -1183,7 +1183,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                               |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-168-201-014624
+      Scenario: MRN00005C-168-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                            |
                   | orgId                                | HIVOrganizationExample4          |
@@ -1193,7 +1193,7 @@ Feature: 5C
                   | dateOfBirth                          | 1964-02-13                       |
                   | registrationFacilityCode             | HIVOrganizationExample4          |
                   | registrationDate                     | 2022-06-01                       |
-                  | NID                                  | Addisalem00005C-5820072022134544 |
+                  | NID                                  | Addisalem00005C-5821072022121933 |
                   | addressCountry                       | QA Country                       |
                   | addressProvince                      | QA State                         |
                   | addressDistrict                      | QA District                      |
@@ -1203,7 +1203,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C            |
                   | hivPositiveTestingUID                | HIVPOS00005C168                  |
                   | dateClientEnrolledToCare             | 2022-06-19                       |
-                  | enrolledToCareUID                    | 2022-5C-0028201014624            |
+                  | enrolledToCareUID                    | 2022-5C-0028202124541            |
                   | enrolledToCareFacCode                | HIVOrganizationExample4          |
                   | enrolledToCareFacName                | Reporting Facility 5C            |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                       |
@@ -1215,7 +1215,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                               |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-170-201-014624
+      Scenario: MRN00005C-170-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample4        |
@@ -1225,7 +1225,7 @@ Feature: 5C
                   | dateOfBirth                          | 2004-12-13                     |
                   | registrationFacilityCode             | HIVOrganizationExample4        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Adhanet00005C-1720072022134544 |
+                  | NID                                  | Adhanet00005C-1721072022121933 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -1257,7 +1257,7 @@ Feature: 5C
                   | dateOfBirth                          | 2004-12-13                     |
                   | registrationFacilityCode             | HIVOrganizationExample4        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Adhanet00005C-1720072022134544 |
+                  | NID                                  | Adhanet00005C-1721072022121933 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -1267,19 +1267,19 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C          |
                   | hivPositiveTestingUID                | HIVPOS00005C170                |
                   | dateClientEnrolledToCare             | 2022-06-10                     |
-                  | enrolledToCareUID                    | 2022-5C-0029201014624          |
+                  | enrolledToCareUID                    | 2022-5C-0029202124541          |
                   | enrolledToCareFacCode                | HIVOrganizationExample4        |
                   | enrolledToCareFacName                | Reporting Facility 5C          |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
                   | artInitiationDate                    | 2022-06-01                     |
                   | artInitiationRegimenLine             | First Line                     |
                   | artInitiationRegimen                 | d4T + 3TC + LPV/r              |
-                  | cd4CollectionDate                    |                                |
+                  | cd4CollectionDate                    | 2022-06-01                     |
                   | cd4Result                            |                                |
                   | cd4Percentage                        |                                |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-170-201-014624
+      Scenario: MRN00005C-170-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample4        |
@@ -1289,7 +1289,7 @@ Feature: 5C
                   | dateOfBirth                          | 2004-12-13                     |
                   | registrationFacilityCode             | HIVOrganizationExample4        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Adhanet00005C-1720072022134544 |
+                  | NID                                  | Adhanet00005C-1721072022121933 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -1299,19 +1299,19 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C          |
                   | hivPositiveTestingUID                | HIVPOS00005C170                |
                   | dateClientEnrolledToCare             | 2022-06-10                     |
-                  | enrolledToCareUID                    | 2022-5C-0029201014624          |
+                  | enrolledToCareUID                    | 2022-5C-0029202124541          |
                   | enrolledToCareFacCode                | HIVOrganizationExample4        |
                   | enrolledToCareFacName                | Reporting Facility 5C          |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
                   | artInitiationDate                    | 2022-06-01                     |
                   | artInitiationRegimenLine             | First Line                     |
                   | artInitiationRegimen                 | d4T + 3TC + LPV/r              |
-                  | cd4CollectionDate                    |                                |
+                  | cd4CollectionDate                    | 2022-06-01                     |
                   | cd4Result                            |                                |
                   | cd4Percentage                        |                                |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-172-201-014624
+      Scenario: MRN00005C-172-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample4      |
@@ -1321,7 +1321,7 @@ Feature: 5C
                   | dateOfBirth                          | 1988-12-15                   |
                   | registrationFacilityCode             | HIVOrganizationExample4      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Habon00005C-3320072022134544 |
+                  | NID                                  | Habon00005C-3321072022121933 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -1353,7 +1353,7 @@ Feature: 5C
                   | dateOfBirth                          | 1988-12-15                   |
                   | registrationFacilityCode             | HIVOrganizationExample4      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Habon00005C-3320072022134544 |
+                  | NID                                  | Habon00005C-3321072022121933 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -1363,7 +1363,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C        |
                   | hivPositiveTestingUID                | HIVPOS00005C172              |
                   | dateClientEnrolledToCare             | 2022-07-01                   |
-                  | enrolledToCareUID                    | 2022-5C-0030201014624        |
+                  | enrolledToCareUID                    | 2022-5C-0030202124541        |
                   | enrolledToCareFacCode                | HIVOrganizationExample4      |
                   | enrolledToCareFacName                | Reporting Facility 5C        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -1375,7 +1375,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                           |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-172-201-014624
+      Scenario: MRN00005C-172-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample4      |
@@ -1385,7 +1385,7 @@ Feature: 5C
                   | dateOfBirth                          | 1988-12-15                   |
                   | registrationFacilityCode             | HIVOrganizationExample4      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Habon00005C-3320072022134544 |
+                  | NID                                  | Habon00005C-3321072022121933 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -1395,7 +1395,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C        |
                   | hivPositiveTestingUID                | HIVPOS00005C172              |
                   | dateClientEnrolledToCare             | 2022-07-01                   |
-                  | enrolledToCareUID                    | 2022-5C-0030201014624        |
+                  | enrolledToCareUID                    | 2022-5C-0030202124541        |
                   | enrolledToCareFacCode                | HIVOrganizationExample4      |
                   | enrolledToCareFacName                | Reporting Facility 5C        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -1407,7 +1407,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                           |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-174-201-014624
+      Scenario: MRN00005C-174-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample4        |
@@ -1417,7 +1417,7 @@ Feature: 5C
                   | dateOfBirth                          | 1991-08-15                     |
                   | registrationFacilityCode             | HIVOrganizationExample4        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Tesfaye00005C-3120072022134544 |
+                  | NID                                  | Tesfaye00005C-3121072022121933 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -1449,7 +1449,7 @@ Feature: 5C
                   | dateOfBirth                          | 1991-08-15                     |
                   | registrationFacilityCode             | HIVOrganizationExample4        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Tesfaye00005C-3120072022134544 |
+                  | NID                                  | Tesfaye00005C-3121072022121933 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -1459,7 +1459,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C          |
                   | hivPositiveTestingUID                | HIVPOS00005C174                |
                   | dateClientEnrolledToCare             | 2022-06-11                     |
-                  | enrolledToCareUID                    | 2022-5C-0031201014624          |
+                  | enrolledToCareUID                    | 2022-5C-0031202124541          |
                   | enrolledToCareFacCode                | HIVOrganizationExample4        |
                   | enrolledToCareFacName                | Reporting Facility 5C          |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
@@ -1471,7 +1471,7 @@ Feature: 5C
                   | cd4Percentage                        | 50                             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-174-201-014624
+      Scenario: MRN00005C-174-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample4        |
@@ -1481,7 +1481,7 @@ Feature: 5C
                   | dateOfBirth                          | 1991-08-15                     |
                   | registrationFacilityCode             | HIVOrganizationExample4        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Tesfaye00005C-3120072022134544 |
+                  | NID                                  | Tesfaye00005C-3121072022121933 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -1491,7 +1491,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C          |
                   | hivPositiveTestingUID                | HIVPOS00005C174                |
                   | dateClientEnrolledToCare             | 2022-06-11                     |
-                  | enrolledToCareUID                    | 2022-5C-0031201014624          |
+                  | enrolledToCareUID                    | 2022-5C-0031202124541          |
                   | enrolledToCareFacCode                | HIVOrganizationExample4        |
                   | enrolledToCareFacName                | Reporting Facility 5C          |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
@@ -1503,7 +1503,7 @@ Feature: 5C
                   | cd4Percentage                        | 50                             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-176-201-014624
+      Scenario: MRN00005C-176-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample4        |
@@ -1513,7 +1513,7 @@ Feature: 5C
                   | dateOfBirth                          | 1994-02-15                     |
                   | registrationFacilityCode             | HIVOrganizationExample4        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Tesfaye00005C-2820072022134544 |
+                  | NID                                  | Tesfaye00005C-2821072022121933 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -1523,7 +1523,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C          |
                   | hivPositiveTestingUID                | HIVPOS00005C176                |
                   | dateClientEnrolledToCare             | 2022-06-22                     |
-                  | enrolledToCareUID                    | 2022-5C-0032201014624          |
+                  | enrolledToCareUID                    | 2022-5C-0032202124541          |
                   | enrolledToCareFacCode                | HIVOrganizationExample4        |
                   | enrolledToCareFacName                | Reporting Facility 5C          |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
@@ -1535,7 +1535,7 @@ Feature: 5C
                   | cd4Percentage                        | 50                             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-177-201-014624
+      Scenario: MRN00005C-177-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                           |
                   | orgId                                | HIVOrganizationExample4         |
@@ -1545,7 +1545,7 @@ Feature: 5C
                   | dateOfBirth                          | 1976-04-13                      |
                   | registrationFacilityCode             | HIVOrganizationExample4         |
                   | registrationDate                     | 2022-06-01                      |
-                  | NID                                  | Agernesh00005C-4620072022134544 |
+                  | NID                                  | Agernesh00005C-4621072022121933 |
                   | addressCountry                       | QA Country                      |
                   | addressProvince                      | QA State                        |
                   | addressDistrict                      | QA District                     |
@@ -1555,19 +1555,19 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C           |
                   | hivPositiveTestingUID                | HIVPOS00005C177                 |
                   | dateClientEnrolledToCare             | 2022-07-01                      |
-                  | enrolledToCareUID                    | 2022-5C-0033201014624           |
+                  | enrolledToCareUID                    | 2022-5C-0033202124541           |
                   | enrolledToCareFacCode                | HIVOrganizationExample4         |
                   | enrolledToCareFacName                | Reporting Facility 5C           |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                      |
                   | artInitiationDate                    | 2022-06-01                      |
                   | artInitiationRegimenLine             | First Line                      |
                   | artInitiationRegimen                 | TDF + FTC + EFV                 |
-                  | cd4CollectionDate                    |                                 |
+                  | cd4CollectionDate                    | 2022-06-01                      |
                   | cd4Result                            |                                 |
                   | cd4Percentage                        |                                 |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-178-201-014624
+      Scenario: MRN00005C-178-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample4     |
@@ -1577,7 +1577,7 @@ Feature: 5C
                   | dateOfBirth                          | 2001-11-13                  |
                   | registrationFacilityCode             | HIVOrganizationExample4     |
                   | registrationDate                     | 2022-06-01                  |
-                  | NID                                  | Alem00005C-2020072022134544 |
+                  | NID                                  | Alem00005C-2021072022121933 |
                   | addressCountry                       | QA Country                  |
                   | addressProvince                      | QA State                    |
                   | addressDistrict                      | QA District                 |
@@ -1587,7 +1587,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C       |
                   | hivPositiveTestingUID                | HIVPOS00005C178             |
                   | dateClientEnrolledToCare             | 2022-07-10                  |
-                  | enrolledToCareUID                    | 2022-5C-0034201014624       |
+                  | enrolledToCareUID                    | 2022-5C-0034202124541       |
                   | enrolledToCareFacCode                | HIVOrganizationExample4     |
                   | enrolledToCareFacName                | Reporting Facility 5C       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                  |
@@ -1599,7 +1599,7 @@ Feature: 5C
                   | cd4Percentage                        | 50                          |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-179-201-014624
+      Scenario: MRN00005C-179-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample4       |
@@ -1609,7 +1609,7 @@ Feature: 5C
                   | dateOfBirth                          | 1994-08-13                    |
                   | registrationFacilityCode             | HIVOrganizationExample4       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Beyene00005C-2820072022134544 |
+                  | NID                                  | Beyene00005C-2821072022121933 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -1619,7 +1619,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C         |
                   | hivPositiveTestingUID                | HIVPOS00005C179               |
                   | dateClientEnrolledToCare             | 2022-06-10                    |
-                  | enrolledToCareUID                    | 2022-5C-0035201014624         |
+                  | enrolledToCareUID                    | 2022-5C-0035202124541         |
                   | enrolledToCareFacCode                | HIVOrganizationExample4       |
                   | enrolledToCareFacName                | Reporting Facility 5C         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
@@ -1631,7 +1631,7 @@ Feature: 5C
                   | cd4Percentage                        | 50                            |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-180-201-014624
+      Scenario: MRN00005C-180-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                           |
                   | orgId                                | HIVOrganizationExample4         |
@@ -1641,7 +1641,7 @@ Feature: 5C
                   | dateOfBirth                          | 1970-10-13                      |
                   | registrationFacilityCode             | HIVOrganizationExample4         |
                   | registrationDate                     | 2022-06-01                      |
-                  | NID                                  | Alemnesh00005C-5120072022134544 |
+                  | NID                                  | Alemnesh00005C-5121072022121933 |
                   | addressCountry                       | QA Country                      |
                   | addressProvince                      | QA State                        |
                   | addressDistrict                      | QA District                     |
@@ -1651,7 +1651,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C           |
                   | hivPositiveTestingUID                | HIVPOS00005C180                 |
                   | dateClientEnrolledToCare             | 2022-07-01                      |
-                  | enrolledToCareUID                    | 2022-5C-0036201014624           |
+                  | enrolledToCareUID                    | 2022-5C-0036202124541           |
                   | enrolledToCareFacCode                | HIVOrganizationExample4         |
                   | enrolledToCareFacName                | Reporting Facility 5C           |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                      |
@@ -1663,7 +1663,7 @@ Feature: 5C
                   | cd4Percentage                        | 50                              |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-181-201-014624
+      Scenario: MRN00005C-181-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                           |
                   | orgId                                | HIVOrganizationExample4         |
@@ -1673,7 +1673,7 @@ Feature: 5C
                   | dateOfBirth                          | 1986-05-13                      |
                   | registrationFacilityCode             | HIVOrganizationExample4         |
                   | registrationDate                     | 2022-06-01                      |
-                  | NID                                  | Alganesh00005C-3620072022134544 |
+                  | NID                                  | Alganesh00005C-3621072022121933 |
                   | addressCountry                       | QA Country                      |
                   | addressProvince                      | QA State                        |
                   | addressDistrict                      | QA District                     |
@@ -1683,7 +1683,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C           |
                   | hivPositiveTestingUID                | HIVPOS00005C181                 |
                   | dateClientEnrolledToCare             | 2022-06-11                      |
-                  | enrolledToCareUID                    | 2022-5C-0037201014624           |
+                  | enrolledToCareUID                    | 2022-5C-0037202124541           |
                   | enrolledToCareFacCode                | HIVOrganizationExample4         |
                   | enrolledToCareFacName                | Reporting Facility 5C           |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                      |
@@ -1695,7 +1695,7 @@ Feature: 5C
                   | cd4Percentage                        | 50                              |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-182-201-014624
+      Scenario: MRN00005C-182-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample4      |
@@ -1705,7 +1705,7 @@ Feature: 5C
                   | dateOfBirth                          | 2019-02-15                   |
                   | registrationFacilityCode             | HIVOrganizationExample4      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Legese00005C-320072022134544 |
+                  | NID                                  | Legese00005C-321072022121933 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -1715,7 +1715,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C        |
                   | hivPositiveTestingUID                | HIVPOS00005C182              |
                   | dateClientEnrolledToCare             | 2022-06-22                   |
-                  | enrolledToCareUID                    | 2022-5C-0038201014624        |
+                  | enrolledToCareUID                    | 2022-5C-0038202124541        |
                   | enrolledToCareFacCode                | HIVOrganizationExample4      |
                   | enrolledToCareFacName                | Reporting Facility 5C        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -1727,7 +1727,7 @@ Feature: 5C
                   | cd4Percentage                        | 30                           |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005C-183-201-014624
+      Scenario: MRN00005C-183-202-124541
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample4      |
@@ -1737,7 +1737,7 @@ Feature: 5C
                   | dateOfBirth                          | 2015-10-15                   |
                   | registrationFacilityCode             | HIVOrganizationExample4      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Negusu00005C-620072022134544 |
+                  | NID                                  | Negusu00005C-621072022121933 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -1747,7 +1747,7 @@ Feature: 5C
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5C        |
                   | hivPositiveTestingUID                | HIVPOS00005C183              |
                   | dateClientEnrolledToCare             | 2022-07-01                   |
-                  | enrolledToCareUID                    | 2022-5C-0039201014624        |
+                  | enrolledToCareUID                    | 2022-5C-0039202124541        |
                   | enrolledToCareFacCode                | HIVOrganizationExample4      |
                   | enrolledToCareFacName                | Reporting Facility 5C        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -1787,16 +1787,16 @@ Feature: 5C
 
             Then there should be a row identified by "cd4Group" of "200 – 349" with the following fields and values
                   | field           | value |
-                  | males           | 2     |
-                  | malesPercent    | 14    |
+                  | males           | 3     |
+                  | malesPercent    | 20    |
                   | females         | 6     |
-                  | femalesPercent  | 43    |
+                  | femalesPercent  | 40    |
                   | others          | 0     |
                   | othersPercent   | 0     |
                   | unknowns        | 6     |
-                  | unknownsPercent | 43    |
-                  | total           | 14    |
-                  | totalPercent    | 39    |
+                  | unknownsPercent | 40    |
+                  | total           | 15    |
+                  | totalPercent    | 41    |
 
 
             Then there should be a row identified by "cd4Group" of "350 – 499" with the following fields and values
@@ -1824,7 +1824,7 @@ Feature: 5C
                   | unknowns        | 0     |
                   | unknownsPercent | 0     |
                   | total           | 6     |
-                  | totalPercent    | 17    |
+                  | totalPercent    | 16    |
 
 
             Then there should be a row identified by "cd4Group" of "Unknown" with the following fields and values
@@ -1842,13 +1842,13 @@ Feature: 5C
 
             Then there should be a total for fields
                   | field           | value |
-                  | males           | 9     |
-                  | malesPercent    | 25    |
+                  | males           | 10    |
+                  | malesPercent    | 27    |
                   | females         | 12    |
-                  | femalesPercent  | 33    |
+                  | femalesPercent  | 32    |
                   | others          | 2     |
-                  | othersPercent   | 6     |
+                  | othersPercent   | 5     |
                   | unknowns        | 13    |
-                  | unknownsPercent | 36    |
-                  | total           | 36    |
+                  | unknownsPercent | 35    |
+                  | total           | 37    |
 

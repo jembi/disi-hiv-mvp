@@ -670,7 +670,7 @@ function calculateTotalHivPositivePeopleOnART(reportingStartDate, reportingEndDa
 function calculateTotalHivPositivePeopleVirallySupressed(reportingStartDate, reportingEndDate)
 {
     if (Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DATE 
-        //&& Encounters.Data.Entry_To_Care.CLIENT_UNIQUE_ID_ASSIGNED_AT_ENROLLMENT
+        && Encounters.Data.Entry_To_Care.CLIENT_UNIQUE_ID_ASSIGNED_AT_ENROLLMENT
         && Encounters.Data.ART_Initiation.DATE_CLIENT_INITIATED_ON_ART
         && Encounters.Data.VIRAL_SUPPRESSION.MOST_RECENT_COLLECTION_DATE)
     {

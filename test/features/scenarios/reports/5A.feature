@@ -1,5 +1,5 @@
 Feature: 5A
-      Scenario: MRN00005A-90-201-114253
+      Scenario: MRN00005A-90-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample3     |
@@ -9,7 +9,7 @@ Feature: 5A
                   | dateOfBirth                          | 1972-01-05                  |
                   | registrationFacilityCode             | HIVOrganizationExample3     |
                   | registrationDate                     | 2022-06-01                  |
-                  | NID                                  | Azeb00005A-5020072022111809 |
+                  | NID                                  | Azeb00005A-5021072022120501 |
                   | addressCountry                       | QA Country                  |
                   | addressProvince                      | QA State                    |
                   | addressDistrict                      | QA District                 |
@@ -19,7 +19,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A       |
                   | hivPositiveTestingUID                | HIVPOS00005A90              |
                   | dateClientEnrolledToCare             | 2022-06-10                  |
-                  | enrolledToCareUID                    | 2022-5A-0001201114253       |
+                  | enrolledToCareUID                    | 2022-5A-0001202121421       |
                   | enrolledToCareFacCode                | HIVOrganizationExample3     |
                   | enrolledToCareFacName                | Reporting Facility 5A       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                  |
@@ -28,7 +28,7 @@ Feature: 5A
                   | artInitiationRegimen                 | d4T + 3TC + NVP             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-91-201-114253
+      Scenario: MRN00005A-91-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                           |
                   | orgId                                | HIVOrganizationExample3         |
@@ -38,7 +38,7 @@ Feature: 5A
                   | dateOfBirth                          | 1968-04-05                      |
                   | registrationFacilityCode             | HIVOrganizationExample3         |
                   | registrationDate                     | 2022-05-20                      |
-                  | NID                                  | Behabtua00005A-5420072022111809 |
+                  | NID                                  | Behabtua00005A-5421072022120501 |
                   | addressCountry                       | QA Country                      |
                   | addressProvince                      | QA State                        |
                   | addressDistrict                      | QA District                     |
@@ -48,7 +48,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A           |
                   | hivPositiveTestingUID                | HIVPOS00005A91                  |
                   | dateClientEnrolledToCare             | 2022-07-01                      |
-                  | enrolledToCareUID                    | 2022-5A-0002201114253           |
+                  | enrolledToCareUID                    | 2022-5A-0002202121421           |
                   | enrolledToCareFacCode                | HIVOrganizationExample3         |
                   | enrolledToCareFacName                | Reporting Facility 5A           |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                      |
@@ -57,7 +57,7 @@ Feature: 5A
                   | artInitiationRegimen                 | d4T + 3TC + EFV                 |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-92-201-114253
+      Scenario: MRN00005A-92-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                            |
                   | orgId                                | HIVOrganizationExample3          |
@@ -67,7 +67,7 @@ Feature: 5A
                   | dateOfBirth                          | 1982-01-03                       |
                   | registrationFacilityCode             | HIVOrganizationExample3          |
                   | registrationDate                     | 2022-06-01                       |
-                  | NID                                  | Belaynesh00005A-4020072022111809 |
+                  | NID                                  | Belaynesh00005A-4021072022120501 |
                   | addressCountry                       | QA Country                       |
                   | addressProvince                      | QA State                         |
                   | addressDistrict                      | QA District                      |
@@ -77,7 +77,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A            |
                   | hivPositiveTestingUID                |                                  |
                   | dateClientEnrolledToCare             | 2022-06-11                       |
-                  | enrolledToCareUID                    | 2022-5A-0003201114253            |
+                  | enrolledToCareUID                    | 2022-5A-0003202121421            |
                   | enrolledToCareFacCode                | HIVOrganizationExample3          |
                   | enrolledToCareFacName                | Reporting Facility 5A            |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                       |
@@ -86,7 +86,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + RAL                  |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-93-201-114253
+      Scenario: MRN00005A-93-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample3       |
@@ -96,7 +96,7 @@ Feature: 5A
                   | dateOfBirth                          | 1954-02-05                    |
                   | registrationFacilityCode             | HIVOrganizationExample3       |
                   | registrationDate                     | 2022-05-01                    |
-                  | NID                                  | Beliyu00005A-6820072022111809 |
+                  | NID                                  | Beliyu00005A-6821072022120501 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -106,7 +106,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A         |
                   | hivPositiveTestingUID                | HIVPOS00005A93                |
                   | dateClientEnrolledToCare             | 2022-06-22                    |
-                  | enrolledToCareUID                    | 2022-5A-0004201114253         |
+                  | enrolledToCareUID                    | 2022-5A-0004202121421         |
                   | enrolledToCareFacCode                | HIVOrganizationExample3       |
                   | enrolledToCareFacName                | Reporting Facility 5A         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-01                    |
@@ -115,7 +115,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + NVP               |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-94-201-114253
+      Scenario: MRN00005A-94-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample3       |
@@ -125,7 +125,7 @@ Feature: 5A
                   | dateOfBirth                          | 1979-03-05                    |
                   | registrationFacilityCode             | HIVOrganizationExample3       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Berhan00005A-4320072022111809 |
+                  | NID                                  | Berhan00005A-4321072022120501 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -135,7 +135,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A         |
                   | hivPositiveTestingUID                | HIVPOS00005A94                |
                   | dateClientEnrolledToCare             | 2022-07-01                    |
-                  | enrolledToCareUID                    | 2022-5A-0005201114253         |
+                  | enrolledToCareUID                    | 2022-5A-0005202121421         |
                   | enrolledToCareFacCode                | HIVOrganizationExample3       |
                   | enrolledToCareFacName                | Reporting Facility 5A         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
@@ -144,7 +144,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + EFV               |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-95-201-114253
+      Scenario: MRN00005A-95-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                           |
                   | orgId                                | HIVOrganizationExample3         |
@@ -154,7 +154,7 @@ Feature: 5A
                   | dateOfBirth                          | 1996-05-05                      |
                   | registrationFacilityCode             | HIVOrganizationExample3         |
                   | registrationDate                     | 2022-05-20                      |
-                  | NID                                  | Birtukan00005A-2620072022111809 |
+                  | NID                                  | Birtukan00005A-2621072022120501 |
                   | addressCountry                       | QA Country                      |
                   | addressProvince                      | QA State                        |
                   | addressDistrict                      | QA District                     |
@@ -164,7 +164,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A           |
                   | hivPositiveTestingUID                | HIVPOS00005A95                  |
                   | dateClientEnrolledToCare             | 2022-07-10                      |
-                  | enrolledToCareUID                    | 2022-5A-0006201114253           |
+                  | enrolledToCareUID                    | 2022-5A-0006202121421           |
                   | enrolledToCareFacCode                | HIVOrganizationExample3         |
                   | enrolledToCareFacName                | Reporting Facility 5A           |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                      |
@@ -173,7 +173,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + DTG                 |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-96-201-114253
+      Scenario: MRN00005A-96-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample3      |
@@ -183,7 +183,7 @@ Feature: 5A
                   | dateOfBirth                          | 1987-01-03                   |
                   | registrationFacilityCode             | HIVOrganizationExample3      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Bitew00005A-3520072022111809 |
+                  | NID                                  | Bitew00005A-3521072022120501 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -193,7 +193,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A        |
                   | hivPositiveTestingUID                | HIVPOS00005A96               |
                   | dateClientEnrolledToCare             | 2022-07-20                   |
-                  | enrolledToCareUID                    | 2022-5A-0007201114253        |
+                  | enrolledToCareUID                    | 2022-5A-0007202121421        |
                   | enrolledToCareFacCode                | HIVOrganizationExample3      |
                   | enrolledToCareFacName                | Reporting Facility 5A        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -202,7 +202,7 @@ Feature: 5A
                   | artInitiationRegimen                 | d4T + 3TC + LPV/r            |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-97-201-114253
+      Scenario: MRN00005A-97-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample3       |
@@ -212,7 +212,7 @@ Feature: 5A
                   | dateOfBirth                          | 1950-04-05                    |
                   | registrationFacilityCode             | HIVOrganizationExample3       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Mulatu00005A-7220072022111809 |
+                  | NID                                  | Mulatu00005A-7221072022120501 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -222,7 +222,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A         |
                   | hivPositiveTestingUID                | HIVPOS00005A97                |
                   | dateClientEnrolledToCare             | 2022-07-08                    |
-                  | enrolledToCareUID                    | 2022-5A-0008201114253         |
+                  | enrolledToCareUID                    | 2022-5A-0008202121421         |
                   | enrolledToCareFacCode                | HIVOrganizationExample3       |
                   | enrolledToCareFacName                | Reporting Facility 5A         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
@@ -231,7 +231,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + LPV/r             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-98-201-114253
+      Scenario: MRN00005A-98-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample3       |
@@ -241,7 +241,7 @@ Feature: 5A
                   | dateOfBirth                          | 2012-04-05                    |
                   | registrationFacilityCode             | HIVOrganizationExample3       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Wedaje00005A-1020072022111809 |
+                  | NID                                  | Wedaje00005A-1021072022120501 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -251,7 +251,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A         |
                   | hivPositiveTestingUID                | HIVPOS00005A98                |
                   | dateClientEnrolledToCare             | 2022-07-21                    |
-                  | enrolledToCareUID                    | 2022-5A-0009201114253         |
+                  | enrolledToCareUID                    | 2022-5A-0009202121421         |
                   | enrolledToCareFacCode                | HIVOrganizationExample3       |
                   | enrolledToCareFacName                | Reporting Facility 5A         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
@@ -260,7 +260,7 @@ Feature: 5A
                   | artInitiationRegimen                 | TDF + 3TC + NVP               |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-99-201-114253
+      Scenario: MRN00005A-99-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample3     |
@@ -270,7 +270,7 @@ Feature: 5A
                   | dateOfBirth                          | 1992-04-03                  |
                   | registrationFacilityCode             | HIVOrganizationExample3     |
                   | registrationDate                     | 2022-06-01                  |
-                  | NID                                  | Dadi00005A-3020072022111809 |
+                  | NID                                  | Dadi00005A-3021072022120501 |
                   | addressCountry                       | QA Country                  |
                   | addressProvince                      | QA State                    |
                   | addressDistrict                      | QA District                 |
@@ -280,7 +280,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A       |
                   | hivPositiveTestingUID                | HIVPOS00005A99              |
                   | dateClientEnrolledToCare             | 2022-07-19                  |
-                  | enrolledToCareUID                    | 2022-5A-0010201114253       |
+                  | enrolledToCareUID                    | 2022-5A-0010202121421       |
                   | enrolledToCareFacCode                | HIVOrganizationExample3     |
                   | enrolledToCareFacName                | Reporting Facility 5A       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                  |
@@ -289,7 +289,7 @@ Feature: 5A
                   | artInitiationRegimen                 | TDF + FTC + DTG             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-100-201-114253
+      Scenario: MRN00005A-100-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample3        |
@@ -299,7 +299,7 @@ Feature: 5A
                   | dateOfBirth                          | 1996-08-05                     |
                   | registrationFacilityCode             | HIVOrganizationExample3        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Tessema00005A-2620072022111809 |
+                  | NID                                  | Tessema00005A-2621072022120501 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -309,7 +309,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A          |
                   | hivPositiveTestingUID                | HIVPOS00005A100                |
                   | dateClientEnrolledToCare             | 2022-06-19                     |
-                  | enrolledToCareUID                    | 2022-5A-0011201114253          |
+                  | enrolledToCareUID                    | 2022-5A-0011202121421          |
                   | enrolledToCareFacCode                | HIVOrganizationExample3        |
                   | enrolledToCareFacName                | Reporting Facility 5A          |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
@@ -318,7 +318,7 @@ Feature: 5A
                   | artInitiationRegimen                 | TDF + 3TC + NVP                |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-101-201-114253
+      Scenario: MRN00005A-101-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample3       |
@@ -328,7 +328,7 @@ Feature: 5A
                   | dateOfBirth                          | 2018-04-05                    |
                   | registrationFacilityCode             | HIVOrganizationExample3       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Bergena00005A-420072022111809 |
+                  | NID                                  | Bergena00005A-421072022120501 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -338,7 +338,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A         |
                   | hivPositiveTestingUID                | HIVPOS00005A101               |
                   | dateClientEnrolledToCare             | 2022-06-15                    |
-                  | enrolledToCareUID                    | 2022-5A-0012201114253         |
+                  | enrolledToCareUID                    | 2022-5A-0012202121421         |
                   | enrolledToCareFacCode                | HIVOrganizationExample3       |
                   | enrolledToCareFacName                | Reporting Facility 5A         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
@@ -347,7 +347,7 @@ Feature: 5A
                   | artInitiationRegimen                 | TDF + FTC + DTG               |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-102-201-114253
+      Scenario: MRN00005A-102-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample3     |
@@ -357,7 +357,7 @@ Feature: 5A
                   | dateOfBirth                          | 2015-10-05                  |
                   | registrationFacilityCode             | HIVOrganizationExample3     |
                   | registrationDate                     | 2022-06-01                  |
-                  | NID                                  | Negus00005A-620072022111809 |
+                  | NID                                  | Negus00005A-621072022120501 |
                   | addressCountry                       | QA Country                  |
                   | addressProvince                      | QA State                    |
                   | addressDistrict                      | QA District                 |
@@ -367,7 +367,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A       |
                   | hivPositiveTestingUID                | HIVPOS00005A102             |
                   | dateClientEnrolledToCare             | 2022-06-15                  |
-                  | enrolledToCareUID                    | 2022-5A-0013201114253       |
+                  | enrolledToCareUID                    | 2022-5A-0013202121421       |
                   | enrolledToCareFacCode                | HIVOrganizationExample3     |
                   | enrolledToCareFacName                | Reporting Facility 5A       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                  |
@@ -376,7 +376,7 @@ Feature: 5A
                   | artInitiationRegimen                 | TDF + FTC + EFV             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-103-201-114253
+      Scenario: MRN00005A-103-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                             |
                   | orgId                                | HIVOrganizationExample3           |
@@ -386,7 +386,7 @@ Feature: 5A
                   | dateOfBirth                          | 1966-08-11                        |
                   | registrationFacilityCode             | HIVOrganizationExample3           |
                   | registrationDate                     | 2022-06-01                        |
-                  | NID                                  | Eyesuralem00005A-5620072022111809 |
+                  | NID                                  | Eyesuralem00005A-5621072022120501 |
                   | addressCountry                       | QA Country                        |
                   | addressProvince                      | QA State                          |
                   | addressDistrict                      | QA District                       |
@@ -396,7 +396,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A             |
                   | hivPositiveTestingUID                | HIVPOS00005A103                   |
                   | dateClientEnrolledToCare             | 2022-06-15                        |
-                  | enrolledToCareUID                    | 2022-5A-0014201114253             |
+                  | enrolledToCareUID                    | 2022-5A-0014202121421             |
                   | enrolledToCareFacCode                | HIVOrganizationExample3           |
                   | enrolledToCareFacName                | Reporting Facility 5A             |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                        |
@@ -405,7 +405,7 @@ Feature: 5A
                   | artInitiationRegimen                 | ABC + 3TC + LPV/r                 |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-104-201-114253
+      Scenario: MRN00005A-104-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                             |
                   | orgId                                | HIVOrganizationExample3           |
@@ -415,7 +415,7 @@ Feature: 5A
                   | dateOfBirth                          | 1948-09-11                        |
                   | registrationFacilityCode             | HIVOrganizationExample3           |
                   | registrationDate                     | 2022-05-20                        |
-                  | NID                                  | Megdelawit00005A-7320072022111809 |
+                  | NID                                  | Megdelawit00005A-7321072022120501 |
                   | addressCountry                       | QA Country                        |
                   | addressProvince                      | QA State                          |
                   | addressDistrict                      | QA District                       |
@@ -425,7 +425,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A             |
                   | hivPositiveTestingUID                | HIVPOS00005A104                   |
                   | dateClientEnrolledToCare             | 2022-06-15                        |
-                  | enrolledToCareUID                    | 2022-5A-0015201114253             |
+                  | enrolledToCareUID                    | 2022-5A-0015202121421             |
                   | enrolledToCareFacCode                | HIVOrganizationExample3           |
                   | enrolledToCareFacName                | Reporting Facility 5A             |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                        |
@@ -434,7 +434,7 @@ Feature: 5A
                   | artInitiationRegimen                 | TDF + 3TC + NVP                   |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-105-201-114253
+      Scenario: MRN00005A-105-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample3       |
@@ -444,7 +444,7 @@ Feature: 5A
                   | dateOfBirth                          | 1973-06-12                    |
                   | registrationFacilityCode             | HIVOrganizationExample3       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Seyoum00005A-4920072022111809 |
+                  | NID                                  | Seyoum00005A-4921072022120501 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -454,7 +454,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A         |
                   | hivPositiveTestingUID                | HIVPOS00005A105               |
                   | dateClientEnrolledToCare             | 2022-06-15                    |
-                  | enrolledToCareUID                    | 2022-5A-0016201114253         |
+                  | enrolledToCareUID                    | 2022-5A-0016202121421         |
                   | enrolledToCareFacCode                | HIVOrganizationExample3       |
                   | enrolledToCareFacName                | Reporting Facility 5A         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
@@ -463,7 +463,7 @@ Feature: 5A
                   | artInitiationRegimen                 | TDF + FTC + DTG               |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-106-201-114253
+      Scenario: MRN00005A-106-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample3        |
@@ -473,7 +473,7 @@ Feature: 5A
                   | dateOfBirth                          | 2001-03-11                     |
                   | registrationFacilityCode             | HIVOrganizationExample3        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Behailu00005A-2120072022111809 |
+                  | NID                                  | Behailu00005A-2121072022120501 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -483,7 +483,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A          |
                   | hivPositiveTestingUID                | HIVPOS00005A106                |
                   | dateClientEnrolledToCare             | 2022-06-15                     |
-                  | enrolledToCareUID                    | 2022-5A-0017201114253          |
+                  | enrolledToCareUID                    | 2022-5A-0017202121421          |
                   | enrolledToCareFacCode                | HIVOrganizationExample3        |
                   | enrolledToCareFacName                | Reporting Facility 5A          |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
@@ -492,7 +492,7 @@ Feature: 5A
                   | artInitiationRegimen                 | TDF + FTC + EFV                |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-107-201-114253
+      Scenario: MRN00005A-107-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                            |
                   | orgId                                | HIVOrganizationExample3          |
@@ -502,7 +502,7 @@ Feature: 5A
                   | dateOfBirth                          | 2002-11-06                       |
                   | registrationFacilityCode             | HIVOrganizationExample3          |
                   | registrationDate                     | 2022-06-01                       |
-                  | NID                                  | Aselefech00005A-1920072022111809 |
+                  | NID                                  | Aselefech00005A-1921072022120501 |
                   | addressCountry                       | QA Country                       |
                   | addressProvince                      | QA State                         |
                   | addressDistrict                      | QA District                      |
@@ -531,7 +531,7 @@ Feature: 5A
                   | dateOfBirth                          | 2002-11-06                       |
                   | registrationFacilityCode             | HIVOrganizationExample3          |
                   | registrationDate                     | 2022-06-01                       |
-                  | NID                                  | Aselefech00005A-1920072022111809 |
+                  | NID                                  | Aselefech00005A-1921072022120501 |
                   | addressCountry                       | QA Country                       |
                   | addressProvince                      | QA State                         |
                   | addressDistrict                      | QA District                      |
@@ -541,7 +541,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A            |
                   | hivPositiveTestingUID                | HIVPOS00005A107                  |
                   | dateClientEnrolledToCare             | 2022-06-10                       |
-                  | enrolledToCareUID                    | 2022-5A-0018201114253            |
+                  | enrolledToCareUID                    | 2022-5A-0018202121421            |
                   | enrolledToCareFacCode                | HIVOrganizationExample3          |
                   | enrolledToCareFacName                | Reporting Facility 5A            |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                       |
@@ -550,7 +550,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + DRV + RTV + RAL      |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-107-201-114253
+      Scenario: MRN00005A-107-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                            |
                   | orgId                                | HIVOrganizationExample3          |
@@ -560,7 +560,7 @@ Feature: 5A
                   | dateOfBirth                          | 2002-11-06                       |
                   | registrationFacilityCode             | HIVOrganizationExample3          |
                   | registrationDate                     | 2022-06-01                       |
-                  | NID                                  | Aselefech00005A-1920072022111809 |
+                  | NID                                  | Aselefech00005A-1921072022120501 |
                   | addressCountry                       | QA Country                       |
                   | addressProvince                      | QA State                         |
                   | addressDistrict                      | QA District                      |
@@ -570,7 +570,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A            |
                   | hivPositiveTestingUID                | HIVPOS00005A107                  |
                   | dateClientEnrolledToCare             | 2022-06-10                       |
-                  | enrolledToCareUID                    | 2022-5A-0018201114253            |
+                  | enrolledToCareUID                    | 2022-5A-0018202121421            |
                   | enrolledToCareFacCode                | HIVOrganizationExample3          |
                   | enrolledToCareFacName                | Reporting Facility 5A            |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                       |
@@ -579,7 +579,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + DRV + RTV + RAL      |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-109-201-114253
+      Scenario: MRN00005A-109-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample3       |
@@ -589,7 +589,7 @@ Feature: 5A
                   | dateOfBirth                          | 1990-03-03                    |
                   | registrationFacilityCode             | HIVOrganizationExample3       |
                   | registrationDate                     | 2022-05-20                    |
-                  | NID                                  | Askale00005A-3220072022111809 |
+                  | NID                                  | Askale00005A-3221072022120501 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -618,7 +618,7 @@ Feature: 5A
                   | dateOfBirth                          | 1990-03-03                    |
                   | registrationFacilityCode             | HIVOrganizationExample3       |
                   | registrationDate                     | 2022-05-20                    |
-                  | NID                                  | Askale00005A-3220072022111809 |
+                  | NID                                  | Askale00005A-3221072022120501 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -628,7 +628,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A         |
                   | hivPositiveTestingUID                | HIVPOS00005A109               |
                   | dateClientEnrolledToCare             | 2022-07-01                    |
-                  | enrolledToCareUID                    | 2022-5A-0019201114253         |
+                  | enrolledToCareUID                    | 2022-5A-0019202121421         |
                   | enrolledToCareFacCode                | HIVOrganizationExample3       |
                   | enrolledToCareFacName                | Reporting Facility 5A         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                    |
@@ -637,7 +637,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + ATV/r             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-109-201-114253
+      Scenario: MRN00005A-109-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample3       |
@@ -647,7 +647,7 @@ Feature: 5A
                   | dateOfBirth                          | 1990-03-03                    |
                   | registrationFacilityCode             | HIVOrganizationExample3       |
                   | registrationDate                     | 2022-05-20                    |
-                  | NID                                  | Askale00005A-3220072022111809 |
+                  | NID                                  | Askale00005A-3221072022120501 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -657,7 +657,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A         |
                   | hivPositiveTestingUID                | HIVPOS00005A109               |
                   | dateClientEnrolledToCare             | 2022-07-01                    |
-                  | enrolledToCareUID                    | 2022-5A-0019201114253         |
+                  | enrolledToCareUID                    | 2022-5A-0019202121421         |
                   | enrolledToCareFacCode                | HIVOrganizationExample3       |
                   | enrolledToCareFacName                | Reporting Facility 5A         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                    |
@@ -666,7 +666,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + ATV/r             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-111-201-114253
+      Scenario: MRN00005A-111-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample3      |
@@ -676,7 +676,7 @@ Feature: 5A
                   | dateOfBirth                          | 2001-08-05                   |
                   | registrationFacilityCode             | HIVOrganizationExample3      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Aster00005A-2120072022111809 |
+                  | NID                                  | Aster00005A-2121072022120501 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -705,7 +705,7 @@ Feature: 5A
                   | dateOfBirth                          | 2001-08-05                   |
                   | registrationFacilityCode             | HIVOrganizationExample3      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Aster00005A-2120072022111809 |
+                  | NID                                  | Aster00005A-2121072022120501 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -715,7 +715,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A        |
                   | hivPositiveTestingUID                | HIVPOS00005A111              |
                   | dateClientEnrolledToCare             | 2022-06-11                   |
-                  | enrolledToCareUID                    | 2022-5A-0020201114253        |
+                  | enrolledToCareUID                    | 2022-5A-0020202121421        |
                   | enrolledToCareFacCode                | HIVOrganizationExample3      |
                   | enrolledToCareFacName                | Reporting Facility 5A        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -724,7 +724,7 @@ Feature: 5A
                   | artInitiationRegimen                 | RAL + 3TC + DRV + RTV        |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-111-201-114253
+      Scenario: MRN00005A-111-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample3      |
@@ -734,7 +734,7 @@ Feature: 5A
                   | dateOfBirth                          | 2001-08-05                   |
                   | registrationFacilityCode             | HIVOrganizationExample3      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Aster00005A-2120072022111809 |
+                  | NID                                  | Aster00005A-2121072022120501 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -744,7 +744,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A        |
                   | hivPositiveTestingUID                | HIVPOS00005A111              |
                   | dateClientEnrolledToCare             | 2022-06-11                   |
-                  | enrolledToCareUID                    | 2022-5A-0020201114253        |
+                  | enrolledToCareUID                    | 2022-5A-0020202121421        |
                   | enrolledToCareFacCode                | HIVOrganizationExample3      |
                   | enrolledToCareFacName                | Reporting Facility 5A        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -753,7 +753,7 @@ Feature: 5A
                   | artInitiationRegimen                 | RAL + 3TC + DRV + RTV        |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-113-201-114253
+      Scenario: MRN00005A-113-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                            |
                   | orgId                                | HIVOrganizationExample3          |
@@ -763,7 +763,7 @@ Feature: 5A
                   | dateOfBirth                          | 1994-09-05                       |
                   | registrationFacilityCode             | HIVOrganizationExample3          |
                   | registrationDate                     | 2022-05-20                       |
-                  | NID                                  | Atalelech00005A-2720072022111809 |
+                  | NID                                  | Atalelech00005A-2721072022120501 |
                   | addressCountry                       | QA Country                       |
                   | addressProvince                      | QA State                         |
                   | addressDistrict                      | QA District                      |
@@ -792,7 +792,7 @@ Feature: 5A
                   | dateOfBirth                          | 1994-09-05                       |
                   | registrationFacilityCode             | HIVOrganizationExample3          |
                   | registrationDate                     | 2022-05-20                       |
-                  | NID                                  | Atalelech00005A-2720072022111809 |
+                  | NID                                  | Atalelech00005A-2721072022120501 |
                   | addressCountry                       | QA Country                       |
                   | addressProvince                      | QA State                         |
                   | addressDistrict                      | QA District                      |
@@ -802,7 +802,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A            |
                   | hivPositiveTestingUID                | HIVPOS00005A113                  |
                   | dateClientEnrolledToCare             | 2022-06-22                       |
-                  | enrolledToCareUID                    | 2022-5A-0021201114253            |
+                  | enrolledToCareUID                    | 2022-5A-0021202121421            |
                   | enrolledToCareFacCode                | HIVOrganizationExample3          |
                   | enrolledToCareFacName                | Reporting Facility 5A            |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                       |
@@ -811,7 +811,7 @@ Feature: 5A
                   | artInitiationRegimen                 | RAL + 3TC + DRV + RTV + ABC      |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-113-201-114253
+      Scenario: MRN00005A-113-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                            |
                   | orgId                                | HIVOrganizationExample3          |
@@ -821,7 +821,7 @@ Feature: 5A
                   | dateOfBirth                          | 1994-09-05                       |
                   | registrationFacilityCode             | HIVOrganizationExample3          |
                   | registrationDate                     | 2022-05-20                       |
-                  | NID                                  | Atalelech00005A-2720072022111809 |
+                  | NID                                  | Atalelech00005A-2721072022120501 |
                   | addressCountry                       | QA Country                       |
                   | addressProvince                      | QA State                         |
                   | addressDistrict                      | QA District                      |
@@ -831,7 +831,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A            |
                   | hivPositiveTestingUID                | HIVPOS00005A113                  |
                   | dateClientEnrolledToCare             | 2022-06-22                       |
-                  | enrolledToCareUID                    | 2022-5A-0021201114253            |
+                  | enrolledToCareUID                    | 2022-5A-0021202121421            |
                   | enrolledToCareFacCode                | HIVOrganizationExample3          |
                   | enrolledToCareFacName                | Reporting Facility 5A            |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                       |
@@ -840,7 +840,7 @@ Feature: 5A
                   | artInitiationRegimen                 | RAL + 3TC + DRV + RTV + ABC      |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-115-201-114253
+      Scenario: MRN00005A-115-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample3      |
@@ -850,7 +850,7 @@ Feature: 5A
                   | dateOfBirth                          | 1988-02-05                   |
                   | registrationFacilityCode             | HIVOrganizationExample3      |
                   | registrationDate                     | 2022-05-20                   |
-                  | NID                                  | Asesa00005A-3420072022111809 |
+                  | NID                                  | Asesa00005A-3421072022120501 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -860,7 +860,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A        |
                   | hivPositiveTestingUID                | HIVPOS00005A115              |
                   | dateClientEnrolledToCare             | 2022-07-01                   |
-                  | enrolledToCareUID                    | 2022-5A-0022201114253        |
+                  | enrolledToCareUID                    | 2022-5A-0022202121421        |
                   | enrolledToCareFacCode                | HIVOrganizationExample3      |
                   | enrolledToCareFacName                | Reporting Facility 5A        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                   |
@@ -869,7 +869,7 @@ Feature: 5A
                   | artInitiationRegimen                 | RAL + 3TC + DRV + RTV + AZT  |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-116-201-114253
+      Scenario: MRN00005A-116-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample3      |
@@ -879,7 +879,7 @@ Feature: 5A
                   | dateOfBirth                          | 2004-04-03                   |
                   | registrationFacilityCode             | HIVOrganizationExample3      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Ester00005A-1820072022111809 |
+                  | NID                                  | Ester00005A-1821072022120501 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -889,7 +889,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A        |
                   | hivPositiveTestingUID                | HIVPOS00005A116              |
                   | dateClientEnrolledToCare             | 2022-07-10                   |
-                  | enrolledToCareUID                    | 2022-5A-0023201114253        |
+                  | enrolledToCareUID                    | 2022-5A-0023202121421        |
                   | enrolledToCareFacCode                | HIVOrganizationExample3      |
                   | enrolledToCareFacName                | Reporting Facility 5A        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -898,7 +898,7 @@ Feature: 5A
                   | artInitiationRegimen                 | RAL + 3TC + DRV + RTV + TDF  |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-117-201-114253
+      Scenario: MRN00005A-117-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample3      |
@@ -908,7 +908,7 @@ Feature: 5A
                   | dateOfBirth                          | 1986-08-05                   |
                   | registrationFacilityCode             | HIVOrganizationExample3      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Aster00005A-3620072022111809 |
+                  | NID                                  | Aster00005A-3621072022120501 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -918,7 +918,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A        |
                   | hivPositiveTestingUID                | HIVPOS00005A117              |
                   | dateClientEnrolledToCare             | 2022-07-20                   |
-                  | enrolledToCareUID                    | 2022-5A-0024201114253        |
+                  | enrolledToCareUID                    | 2022-5A-0024202121421        |
                   | enrolledToCareFacCode                | HIVOrganizationExample3      |
                   | enrolledToCareFacName                | Reporting Facility 5A        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -927,7 +927,7 @@ Feature: 5A
                   | artInitiationRegimen                 | d4T + 3TC + LPV/r            |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-118-201-114253
+      Scenario: MRN00005A-118-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample3     |
@@ -937,7 +937,7 @@ Feature: 5A
                   | dateOfBirth                          | 1994-09-05                  |
                   | registrationFacilityCode             | HIVOrganizationExample3     |
                   | registrationDate                     | 2022-06-01                  |
-                  | NID                                  | Nono00005A-2720072022111809 |
+                  | NID                                  | Nono00005A-2721072022120501 |
                   | addressCountry                       | QA Country                  |
                   | addressProvince                      | QA State                    |
                   | addressDistrict                      | QA District                 |
@@ -947,7 +947,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A       |
                   | hivPositiveTestingUID                | HIVPOS00005A118             |
                   | dateClientEnrolledToCare             | 2022-07-08                  |
-                  | enrolledToCareUID                    | 2022-5A-0025201114253       |
+                  | enrolledToCareUID                    | 2022-5A-0025202121421       |
                   | enrolledToCareFacCode                | HIVOrganizationExample3     |
                   | enrolledToCareFacName                | Reporting Facility 5A       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                  |
@@ -956,7 +956,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + LPV/r           |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-119-201-114253
+      Scenario: MRN00005A-119-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample3        |
@@ -966,7 +966,7 @@ Feature: 5A
                   | dateOfBirth                          | 1988-02-05                     |
                   | registrationFacilityCode             | HIVOrganizationExample3        |
                   | registrationDate                     | 2022-05-20                     |
-                  | NID                                  | Deribew00005A-3420072022111809 |
+                  | NID                                  | Deribew00005A-3421072022120501 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -976,7 +976,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A          |
                   | hivPositiveTestingUID                | HIVPOS00005A119                |
                   | dateClientEnrolledToCare             | 2022-07-21                     |
-                  | enrolledToCareUID                    | 2022-5A-0026201114253          |
+                  | enrolledToCareUID                    | 2022-5A-0026202121421          |
                   | enrolledToCareFacCode                | HIVOrganizationExample3        |
                   | enrolledToCareFacName                | Reporting Facility 5A          |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                     |
@@ -985,7 +985,7 @@ Feature: 5A
                   | artInitiationRegimen                 | TDF + 3TC + NVP                |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-120-201-114253
+      Scenario: MRN00005A-120-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample3        |
@@ -995,7 +995,7 @@ Feature: 5A
                   | dateOfBirth                          | 1981-08-03                     |
                   | registrationFacilityCode             | HIVOrganizationExample3        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Getahun00005A-4120072022111809 |
+                  | NID                                  | Getahun00005A-4121072022120501 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -1005,7 +1005,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A          |
                   | hivPositiveTestingUID                | HIVPOS00005A120                |
                   | dateClientEnrolledToCare             | 2022-07-19                     |
-                  | enrolledToCareUID                    | 2022-5A-0027201114253          |
+                  | enrolledToCareUID                    | 2022-5A-0027202121421          |
                   | enrolledToCareFacCode                | HIVOrganizationExample3        |
                   | enrolledToCareFacName                | Reporting Facility 5A          |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
@@ -1014,7 +1014,7 @@ Feature: 5A
                   | artInitiationRegimen                 | TDF + FTC + DTG                |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-121-201-114253
+      Scenario: MRN00005A-121-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample3       |
@@ -1024,7 +1024,7 @@ Feature: 5A
                   | dateOfBirth                          | 1986-08-05                    |
                   | registrationFacilityCode             | HIVOrganizationExample3       |
                   | registrationDate                     | 2022-05-20                    |
-                  | NID                                  | Tamrat00005A-3620072022111809 |
+                  | NID                                  | Tamrat00005A-3621072022120501 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -1034,7 +1034,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A         |
                   | hivPositiveTestingUID                | HIVPOS00005A121               |
                   | dateClientEnrolledToCare             | 2022-06-19                    |
-                  | enrolledToCareUID                    | 2022-5A-0028201114253         |
+                  | enrolledToCareUID                    | 2022-5A-0028202121421         |
                   | enrolledToCareFacCode                | HIVOrganizationExample3       |
                   | enrolledToCareFacName                | Reporting Facility 5A         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                    |
@@ -1043,7 +1043,7 @@ Feature: 5A
                   | artInitiationRegimen                 | TDF + FTC + EFV               |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-122-201-114253
+      Scenario: MRN00005A-122-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample3       |
@@ -1053,7 +1053,7 @@ Feature: 5A
                   | dateOfBirth                          | 1986-08-05                    |
                   | registrationFacilityCode             | HIVOrganizationExample3       |
                   | registrationDate                     | 2022-05-20                    |
-                  | NID                                  | Bekele00005A-3620072022111809 |
+                  | NID                                  | Bekele00005A-3621072022120501 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -1063,7 +1063,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A         |
                   | hivPositiveTestingUID                | HIVPOS00005A122               |
                   | dateClientEnrolledToCare             | 2022-06-10                    |
-                  | enrolledToCareUID                    | 2022-5A-0029201114253         |
+                  | enrolledToCareUID                    | 2022-5A-0029202121421         |
                   | enrolledToCareFacCode                | HIVOrganizationExample3       |
                   | enrolledToCareFacName                | Reporting Facility 5A         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                    |
@@ -1072,7 +1072,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + NVP               |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-123-201-114253
+      Scenario: MRN00005A-123-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                          |
                   | orgId                                | HIVOrganizationExample3        |
@@ -1082,7 +1082,7 @@ Feature: 5A
                   | dateOfBirth                          | 1991-08-05                     |
                   | registrationFacilityCode             | HIVOrganizationExample3        |
                   | registrationDate                     | 2022-06-01                     |
-                  | NID                                  | Tesfaye00005A-3120072022111809 |
+                  | NID                                  | Tesfaye00005A-3121072022120501 |
                   | addressCountry                       | QA Country                     |
                   | addressProvince                      | QA State                       |
                   | addressDistrict                      | QA District                    |
@@ -1092,7 +1092,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A          |
                   | hivPositiveTestingUID                | HIVPOS00005A123                |
                   | dateClientEnrolledToCare             | 2022-07-01                     |
-                  | enrolledToCareUID                    | 2022-5A-0030201114253          |
+                  | enrolledToCareUID                    | 2022-5A-0030202121421          |
                   | enrolledToCareFacCode                | HIVOrganizationExample3        |
                   | enrolledToCareFacName                | Reporting Facility 5A          |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                     |
@@ -1101,7 +1101,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + EFV                |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-124-201-114253
+      Scenario: MRN00005A-124-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample3      |
@@ -1111,7 +1111,7 @@ Feature: 5A
                   | dateOfBirth                          | 1999-02-15                   |
                   | registrationFacilityCode             | HIVOrganizationExample3      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Girma00005A-2320072022111809 |
+                  | NID                                  | Girma00005A-2321072022120501 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -1121,7 +1121,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A        |
                   | hivPositiveTestingUID                | HIVPOS00005A124              |
                   | dateClientEnrolledToCare             | 2022-06-11                   |
-                  | enrolledToCareUID                    | 2022-5A-0031201114253        |
+                  | enrolledToCareUID                    | 2022-5A-0031202121421        |
                   | enrolledToCareFacCode                | HIVOrganizationExample3      |
                   | enrolledToCareFacName                | Reporting Facility 5A        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -1130,7 +1130,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + DTG              |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-125-201-114253
+      Scenario: MRN00005A-125-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample3       |
@@ -1140,7 +1140,7 @@ Feature: 5A
                   | dateOfBirth                          | 1986-08-05                    |
                   | registrationFacilityCode             | HIVOrganizationExample3       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Askale00005A-3620072022111809 |
+                  | NID                                  | Askale00005A-3621072022120501 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -1150,7 +1150,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A         |
                   | hivPositiveTestingUID                | HIVPOS00005A125               |
                   | dateClientEnrolledToCare             | 2022-06-22                    |
-                  | enrolledToCareUID                    | 2022-5A-0032201114253         |
+                  | enrolledToCareUID                    | 2022-5A-0032202121421         |
                   | enrolledToCareFacCode                | HIVOrganizationExample3       |
                   | enrolledToCareFacName                | Reporting Facility 5A         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                    |
@@ -1159,7 +1159,7 @@ Feature: 5A
                   | artInitiationRegimen                 | d4T + 3TC + LPV/r             |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-126-201-114253
+      Scenario: MRN00005A-126-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                       |
                   | orgId                                | HIVOrganizationExample3     |
@@ -1169,7 +1169,7 @@ Feature: 5A
                   | dateOfBirth                          | 2018-05-05                  |
                   | registrationFacilityCode             | HIVOrganizationExample3     |
                   | registrationDate                     | 2022-05-20                  |
-                  | NID                                  | Aster00005A-420072022111809 |
+                  | NID                                  | Aster00005A-421072022120501 |
                   | addressCountry                       | QA Country                  |
                   | addressProvince                      | QA State                    |
                   | addressDistrict                      | QA District                 |
@@ -1179,7 +1179,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A       |
                   | hivPositiveTestingUID                | HIVPOS00005A126             |
                   | dateClientEnrolledToCare             | 2022-07-01                  |
-                  | enrolledToCareUID                    | 2022-5A-0033201114253       |
+                  | enrolledToCareUID                    | 2022-5A-0033202121421       |
                   | enrolledToCareFacCode                | HIVOrganizationExample3     |
                   | enrolledToCareFacName                | Reporting Facility 5A       |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                  |
@@ -1188,7 +1188,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + LPV/r           |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-127-201-114253
+      Scenario: MRN00005A-127-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                           |
                   | orgId                                | HIVOrganizationExample3         |
@@ -1198,7 +1198,7 @@ Feature: 5A
                   | dateOfBirth                          | 2016-08-05                      |
                   | registrationFacilityCode             | HIVOrganizationExample3         |
                   | registrationDate                     | 2022-06-01                      |
-                  | NID                                  | Atalelech00005A-620072022111809 |
+                  | NID                                  | Atalelech00005A-621072022120501 |
                   | addressCountry                       | QA Country                      |
                   | addressProvince                      | QA State                        |
                   | addressDistrict                      | QA District                     |
@@ -1208,7 +1208,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A           |
                   | hivPositiveTestingUID                | HIVPOS00005A127                 |
                   | dateClientEnrolledToCare             | 2022-07-10                      |
-                  | enrolledToCareUID                    | 2022-5A-0034201114253           |
+                  | enrolledToCareUID                    | 2022-5A-0034202121421           |
                   | enrolledToCareFacCode                | HIVOrganizationExample3         |
                   | enrolledToCareFacName                | Reporting Facility 5A           |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                      |
@@ -1217,7 +1217,7 @@ Feature: 5A
                   | artInitiationRegimen                 | TDF + 3TC + NVP                 |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-128-201-114253
+      Scenario: MRN00005A-128-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample3       |
@@ -1227,7 +1227,7 @@ Feature: 5A
                   | dateOfBirth                          | 1977-04-05                    |
                   | registrationFacilityCode             | HIVOrganizationExample3       |
                   | registrationDate                     | 2022-06-01                    |
-                  | NID                                  | Jemila00005A-4520072022111809 |
+                  | NID                                  | Jemila00005A-4521072022120501 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -1256,7 +1256,7 @@ Feature: 5A
                   | dateOfBirth                          | 1977-04-05                    |
                   | registrationFacilityCode             | HIVOrganizationExample3       |
                   | registrationDate                     | 2022-05-20                    |
-                  | NID                                  | Jemila00005A-4520072022111809 |
+                  | NID                                  | Jemila00005A-4521072022120501 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -1266,7 +1266,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A         |
                   | hivPositiveTestingUID                | HIVPOS00005A128               |
                   | dateClientEnrolledToCare             | 2022-07-20                    |
-                  | enrolledToCareUID                    | 2022-5A-0035201114253         |
+                  | enrolledToCareUID                    | 2022-5A-0035202121421         |
                   | enrolledToCareFacCode                | HIVOrganizationExample3       |
                   | enrolledToCareFacName                | Reporting Facility 5A         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                    |
@@ -1275,7 +1275,7 @@ Feature: 5A
                   | artInitiationRegimen                 | RAL + 3TC + DRV + RTV + TDF   |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-128-201-114253
+      Scenario: MRN00005A-128-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                         |
                   | orgId                                | HIVOrganizationExample3       |
@@ -1285,7 +1285,7 @@ Feature: 5A
                   | dateOfBirth                          | 1977-04-05                    |
                   | registrationFacilityCode             | HIVOrganizationExample3       |
                   | registrationDate                     | 2022-05-20                    |
-                  | NID                                  | Jemila00005A-4520072022111809 |
+                  | NID                                  | Jemila00005A-4521072022120501 |
                   | addressCountry                       | QA Country                    |
                   | addressProvince                      | QA State                      |
                   | addressDistrict                      | QA District                   |
@@ -1295,7 +1295,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A         |
                   | hivPositiveTestingUID                | HIVPOS00005A128               |
                   | dateClientEnrolledToCare             | 2022-07-20                    |
-                  | enrolledToCareUID                    | 2022-5A-0035201114253         |
+                  | enrolledToCareUID                    | 2022-5A-0035202121421         |
                   | enrolledToCareFacCode                | HIVOrganizationExample3       |
                   | enrolledToCareFacName                | Reporting Facility 5A         |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                    |
@@ -1304,7 +1304,7 @@ Feature: 5A
                   | artInitiationRegimen                 | RAL + 3TC + DRV + RTV + TDF   |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-130-201-114253
+      Scenario: MRN00005A-130-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample3      |
@@ -1314,7 +1314,7 @@ Feature: 5A
                   | dateOfBirth                          | 2000-10-05                   |
                   | registrationFacilityCode             | HIVOrganizationExample3      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Haile00005A-2120072022111809 |
+                  | NID                                  | Haile00005A-2121072022120501 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -1343,7 +1343,7 @@ Feature: 5A
                   | dateOfBirth                          | 2000-10-05                   |
                   | registrationFacilityCode             | HIVOrganizationExample3      |
                   | registrationDate                     | 2022-05-20                   |
-                  | NID                                  | Haile00005A-2120072022111809 |
+                  | NID                                  | Haile00005A-2121072022120501 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -1353,7 +1353,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A        |
                   | hivPositiveTestingUID                | HIVPOS00005A130              |
                   | dateClientEnrolledToCare             | 2022-07-21                   |
-                  | enrolledToCareUID                    | 2022-5A-0036201114253        |
+                  | enrolledToCareUID                    | 2022-5A-0036202121421        |
                   | enrolledToCareFacCode                | HIVOrganizationExample3      |
                   | enrolledToCareFacName                | Reporting Facility 5A        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                   |
@@ -1362,7 +1362,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + ATV/r            |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-130-201-114253
+      Scenario: MRN00005A-130-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample3      |
@@ -1372,7 +1372,7 @@ Feature: 5A
                   | dateOfBirth                          | 2000-10-05                   |
                   | registrationFacilityCode             | HIVOrganizationExample3      |
                   | registrationDate                     | 2022-05-20                   |
-                  | NID                                  | Haile00005A-2120072022111809 |
+                  | NID                                  | Haile00005A-2121072022120501 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -1382,7 +1382,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A        |
                   | hivPositiveTestingUID                | HIVPOS00005A130              |
                   | dateClientEnrolledToCare             | 2022-07-21                   |
-                  | enrolledToCareUID                    | 2022-5A-0036201114253        |
+                  | enrolledToCareUID                    | 2022-5A-0036202121421        |
                   | enrolledToCareFacCode                | HIVOrganizationExample3      |
                   | enrolledToCareFacName                | Reporting Facility 5A        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-05-20                   |
@@ -1391,7 +1391,7 @@ Feature: 5A
                   | artInitiationRegimen                 | AZT + 3TC + ATV/r            |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-132-201-114253
+      Scenario: MRN00005A-132-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample3      |
@@ -1401,7 +1401,7 @@ Feature: 5A
                   | dateOfBirth                          | 1998-01-05                   |
                   | registrationFacilityCode             | HIVOrganizationExample3      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Worku00005A-2420072022111809 |
+                  | NID                                  | Worku00005A-2421072022120501 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -1430,7 +1430,7 @@ Feature: 5A
                   | dateOfBirth                          | 1998-01-05                   |
                   | registrationFacilityCode             | HIVOrganizationExample3      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Worku00005A-2420072022111809 |
+                  | NID                                  | Worku00005A-2421072022120501 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -1440,7 +1440,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A        |
                   | hivPositiveTestingUID                | HIVPOS00005A132              |
                   | dateClientEnrolledToCare             | 2022-07-19                   |
-                  | enrolledToCareUID                    | 2022-5A-0037201114253        |
+                  | enrolledToCareUID                    | 2022-5A-0037202121421        |
                   | enrolledToCareFacCode                | HIVOrganizationExample3      |
                   | enrolledToCareFacName                | Reporting Facility 5A        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -1449,7 +1449,7 @@ Feature: 5A
                   | artInitiationRegimen                 | RAL + 3TC + DRV + RTV        |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-132-201-114253
+      Scenario: MRN00005A-132-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                        |
                   | orgId                                | HIVOrganizationExample3      |
@@ -1459,7 +1459,7 @@ Feature: 5A
                   | dateOfBirth                          | 1998-01-05                   |
                   | registrationFacilityCode             | HIVOrganizationExample3      |
                   | registrationDate                     | 2022-06-01                   |
-                  | NID                                  | Worku00005A-2420072022111809 |
+                  | NID                                  | Worku00005A-2421072022120501 |
                   | addressCountry                       | QA Country                   |
                   | addressProvince                      | QA State                     |
                   | addressDistrict                      | QA District                  |
@@ -1469,7 +1469,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A        |
                   | hivPositiveTestingUID                | HIVPOS00005A132              |
                   | dateClientEnrolledToCare             | 2022-07-19                   |
-                  | enrolledToCareUID                    | 2022-5A-0037201114253        |
+                  | enrolledToCareUID                    | 2022-5A-0037202121421        |
                   | enrolledToCareFacCode                | HIVOrganizationExample3      |
                   | enrolledToCareFacName                | Reporting Facility 5A        |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                   |
@@ -1478,7 +1478,7 @@ Feature: 5A
                   | artInitiationRegimen                 | RAL + 3TC + DRV + RTV        |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-134-201-114253
+      Scenario: MRN00005A-134-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                      |
                   | orgId                                | HIVOrganizationExample3    |
@@ -1488,7 +1488,7 @@ Feature: 5A
                   | dateOfBirth                          | 1984-03-05                 |
                   | registrationFacilityCode             | HIVOrganizationExample3    |
                   | registrationDate                     | 2022-06-01                 |
-                  | NID                                  | Ali00005A-3820072022111809 |
+                  | NID                                  | Ali00005A-3821072022120501 |
                   | addressCountry                       | QA Country                 |
                   | addressProvince                      | QA State                   |
                   | addressDistrict                      | QA District                |
@@ -1517,7 +1517,7 @@ Feature: 5A
                   | dateOfBirth                          | 1984-03-05                 |
                   | registrationFacilityCode             | HIVOrganizationExample3    |
                   | registrationDate                     | 2022-06-01                 |
-                  | NID                                  | Ali00005A-3820072022111809 |
+                  | NID                                  | Ali00005A-3821072022120501 |
                   | addressCountry                       | QA Country                 |
                   | addressProvince                      | QA State                   |
                   | addressDistrict                      | QA District                |
@@ -1527,7 +1527,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A      |
                   | hivPositiveTestingUID                | HIVPOS00005A134            |
                   | dateClientEnrolledToCare             | 2022-06-19                 |
-                  | enrolledToCareUID                    | 2022-5A-0038201114253      |
+                  | enrolledToCareUID                    | 2022-5A-0038202121421      |
                   | enrolledToCareFacCode                | HIVOrganizationExample3    |
                   | enrolledToCareFacName                | Reporting Facility 5A      |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                 |
@@ -1536,7 +1536,7 @@ Feature: 5A
                   | artInitiationRegimen                 | RAL + 3TC + DRV + RTV      |
             When I POST the FHIR bundle to the IOL
 
-      Scenario: MRN00005A-134-201-114253
+      Scenario: MRN00005A-134-202-121421
             Given I set FHIR bundle parameters
                   | key                                  | value                      |
                   | orgId                                | HIVOrganizationExample3    |
@@ -1546,7 +1546,7 @@ Feature: 5A
                   | dateOfBirth                          | 1984-03-05                 |
                   | registrationFacilityCode             | HIVOrganizationExample3    |
                   | registrationDate                     | 2022-06-01                 |
-                  | NID                                  | Ali00005A-3820072022111809 |
+                  | NID                                  | Ali00005A-3821072022120501 |
                   | addressCountry                       | QA Country                 |
                   | addressProvince                      | QA State                   |
                   | addressDistrict                      | QA District                |
@@ -1556,7 +1556,7 @@ Feature: 5A
                   | hivPositiveDiagnosisFacilityName     | Reporting Facility 5A      |
                   | hivPositiveTestingUID                | HIVPOS00005A134            |
                   | dateClientEnrolledToCare             | 2022-06-19                 |
-                  | enrolledToCareUID                    | 2022-5A-0038201114253      |
+                  | enrolledToCareUID                    | 2022-5A-0038202121421      |
                   | enrolledToCareFacCode                | HIVOrganizationExample3    |
                   | enrolledToCareFacName                | Reporting Facility 5A      |
                   | enrolledToCareDateFirstClinicalVisit | 2022-06-01                 |
