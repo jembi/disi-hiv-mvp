@@ -180,7 +180,7 @@ async function beforeRender(req) {
   try {
     const resData = await axios({
       method: 'post',
-      url: `http://es-analytics:9200/${ES_INDEX}/_search`,
+      url: `http://analytics-datastore-elastic-search:9200/${ES_INDEX}/_search`,
       data: esQuery,
       headers: {
         'Content-Type': 'application/json',
@@ -201,7 +201,7 @@ async function beforeRender(req) {
     rows: []
   }
 
-   GENDER_DISAGGREGATION = {
+  var GENDER_DISAGGREGATION = {
         Male: [],
         Female: [],
         Other: [],
@@ -217,19 +217,19 @@ async function beforeRender(req) {
       switch (genderBucket.key)
       {
           case "male":
-              this.GENDER_DISAGGREGATION.Male.push({month: MONTH_GROUP, count:hivPositiveDiagnosisDateBucket.doc_count } );    
+              GENDER_DISAGGREGATION.Male.push({month: MONTH_GROUP, count:hivPositiveDiagnosisDateBucket.doc_count } );    
               
               break;
           case "female":
-              this.GENDER_DISAGGREGATION.Female.push({month: MONTH_GROUP, count:hivPositiveDiagnosisDateBucket.doc_count});  
+              GENDER_DISAGGREGATION.Female.push({month: MONTH_GROUP, count:hivPositiveDiagnosisDateBucket.doc_count});  
 
               break;
           case "other":
-              this.GENDER_DISAGGREGATION.Other.push({month: MONTH_GROUP, count:hivPositiveDiagnosisDateBucket.doc_count});        
+              GENDER_DISAGGREGATION.Other.push({month: MONTH_GROUP, count:hivPositiveDiagnosisDateBucket.doc_count});        
 
               break;
           case "unknown":
-              this.GENDER_DISAGGREGATION.Unknown.push({month: MONTH_GROUP, count:hivPositiveDiagnosisDateBucket.doc_count});       
+              GENDER_DISAGGREGATION.Unknown.push({month: MONTH_GROUP, count:hivPositiveDiagnosisDateBucket.doc_count});       
 
               break;
           default:

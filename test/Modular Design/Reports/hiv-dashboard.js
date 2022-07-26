@@ -28,7 +28,7 @@ const HASH_HEADERS = "\n|field|value|\n";
 
 const Totals_Calculating_Algorithms = {
     MUST_VERIFY_EXPECTED_OUTCOME_DATA_IN_GOOGLE_SHEET: false,
-    USE_OUTPUT_FOR_EXPECTED_OUTCOME: false
+    USE_OUTPUT_FOR_EXPECTED_OUTCOME: true
 }
 
 var uniqueMonthsArrayForCumulativeCasesForDashboardCharts = [];
