@@ -28,7 +28,7 @@ const HASH_HEADERS = "\n|field|value|\n";
 
 const Totals_Calculating_Algorithms = {
     MUST_VERIFY_EXPECTED_OUTCOME_DATA_IN_GOOGLE_SHEET: false,
-    USE_OUTPUT_FOR_EXPECTED_OUTCOME: true
+    USE_OUTPUT_FOR_EXPECTED_OUTCOME: false
 }
 
 var uniqueMonthsArrayForCumulativeCasesForDashboardCharts = [];
@@ -604,7 +604,8 @@ function calculateTotalHivPositivePeople(reportingStartDate, reportingEndDate)
 
 function calculateTotalHivPositiveDeaths(reportingStartDate, reportingEndDate)
 {
-    if (Encounters.Data.Death.DATE_OF_DEATH)
+    if (Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DATE
+        && Encounters.Data.Death.DATE_OF_DEATH)
     {
         if (checkIfDateIsBetweenTwoDates(reportingStartDate, 
             reportingEndDate, 
@@ -626,7 +627,7 @@ function calculateTotalHivPositivePeopleEnrolledIntoCare(reportingStartDate, rep
 {
     if (Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DATE 
         && Encounters.Data.Entry_To_Care.CLIENT_UNIQUE_ID_ASSIGNED_AT_ENROLLMENT
-        && Encounters.Data.ART_Initiation.DATE_CLIENT_INITIATED_ON_ART)
+        && Encounters.Data.Entry_To_Care.DATE_CLIENT_ENROLLED_TO_CARE)
     {
         if (checkIfDateIsBetweenTwoDates(reportingStartDate, 
             reportingEndDate, 

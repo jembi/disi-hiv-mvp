@@ -13,7 +13,7 @@ When('I POST the FHIR bundle to the IOL', function () {
         collection: require('../../CDR.postman_collection.json'),
         environment: require(`../../${POSTMAN_ENV}.postman_environment.json`),
         reporters: 'cli',
-        folder: 'Submit random bundle - full',
+        folder: 'HIV CBS Submit random bundle - full',
         globalVar: this.input.fhirParams
       },
       err => {
