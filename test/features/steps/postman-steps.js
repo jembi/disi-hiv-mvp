@@ -5,8 +5,11 @@ Given('I set FHIR bundle parameters', function (dataTable) {
   this.input.fhirParams = dataTable.hashes()
 })
 
-When('I POST the FHIR bundle to the IOL', function () {
+When('I POST the FHIR bundle to the IOL', {timeout : 10 * 1000}, async function () {
   const { POSTMAN_ENV } = process.env
+
+  await new Promise(r => setTimeout(r, 5000));
+
   return new Promise((resolve, reject) => {
     newman.run(
       {
