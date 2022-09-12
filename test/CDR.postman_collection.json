@@ -758,7 +758,7 @@
 					"pm.variables.set('deathCause', deathCause)",
 					"",
 					"for (let x = 0; x < deathCausesForFHIR.length; x++) {",
-					"    if (deathCausesForFHIR[x][0] == artInitiationRegimenLine) {",
+					"    if (deathCausesForFHIR[x][0] == deathCause) {",
 					"        var FHIRDeathCause = deathCausesForFHIR[x][1]",
 					"        ",
 					"        pm.variables.set('deathCauseFhir', FHIRDeathCause)",
