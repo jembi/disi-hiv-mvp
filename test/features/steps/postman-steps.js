@@ -16,7 +16,7 @@ When('I POST the FHIR bundle to the IOL', {timeout : 10 * 1000}, async function 
         collection: require('../../CDR.postman_collection.json'),
         environment: require(`../../${POSTMAN_ENV}.postman_environment.json`),
         reporters: 'cli',
-        folder: 'HIV CBS Submit random bundle - full',
+        folder: 'Initial HIV CBS Submit random bundle',
         globalVar: this.input.fhirParams
       },
       err => {
