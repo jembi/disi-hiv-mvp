@@ -19,7 +19,9 @@ const Scenarios = require("../Scenarios");
 //List out all requires for extended modules that this report may require
 const moduleName = require("../Extended Modules/moduleName");
 
+//The Google service account must have editor permissions for the PARENT_FOLDER_ID folder specified in the config file
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
+
 const IS_LINE_LISTING_REPORT = true;
 const FEATURE_NAME = "x.x"; //This must have the exact same name as the report tab in the input dataset
 
