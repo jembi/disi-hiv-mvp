@@ -19,22 +19,7 @@ const Scenarios = require("../Scenarios");
 //List out all requires for extended modules that this report may require
 const moduleName = require("../Extended Modules/moduleName");
 
-/*
-If you need to share a feature file with others, set UPLOAD_FILES_TO_GOOGLE_DRIVE to true.
-Note -> before this will work, you will need to do the following:
-    1) Create a new project (give same name as Google Service Account) if not yet already done: https://console.cloud.google.com/cloud-resource-manager
-    2) Open your project https://console.cloud.google.com/apis/dashboard?project=cdr-cucumber-framework :
-        a) Enable the Google Drive API: https://console.cloud.google.com/apis/library/drive.googleapis.com?project=cdr-cucumber-framework
-        b) Enable the Google Sheets API: https://console.cloud.google.com/apis/library/drive.googleapis.com?project=cdr-cucumber-framework
-    3) Create service account for your project: https://console.cloud.google.com/iam-admin/serviceaccounts?project=cdr-cucumber-framework
-        a) Give it a meaningful name
-        b) After creating, download the service_account.json key file. See PRIVATE_KEY_PATH in the Config.js file for further assistance
-        c) Give the service account onwner permissions in the Principals list: https://console.cloud.google.com/iam-admin/serviceaccounts/details/108262455069914852273/permissions?project=cdr-cucumber-framework
-    4) On the Google Drive repo where feature uploads will happen, ensure that service account has owner/editor permissions. See PARENT_FOLDER_ID in the Config.js file for further assistance
-    5) On the Google Drive repo where the input and expected outcome datasets can be found, ensure that the service account has viewer permissions. See the Datasets implementation in Config.js file
-*/
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
-
 const IS_LINE_LISTING_REPORT = true;
 const FEATURE_NAME = "x.x"; //This must have the exact same name as the report tab in the input dataset
 

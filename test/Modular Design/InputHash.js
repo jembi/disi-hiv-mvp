@@ -74,7 +74,7 @@ class InputHash{
                     Encounters.inputDataLastRowReached = true;
                 }
 
-                if(INPUT_DATA.values[j][2] == "R" || INPUT_DATA.values[j][2] == "NR"){     
+                if(INPUT_DATA.values[j][2] == "R" || INPUT_DATA.values[j][2] == "NR"){  //R => record must be reported on, NR => record must not be reported on 
                     const mustBeReportedOn = (INPUT_DATA.values[j][2] == "R" ? true : false);
                     const numberOfEncounters = base.isMRNWithMultipleEncounter(INPUT_DATA.values, j, INPUT_DATA_LAST_ROW, 10);
 
