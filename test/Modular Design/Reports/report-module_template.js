@@ -7,26 +7,16 @@ const InputHash = require("../InputHash");
 //Used to set the patient record data for each encounter (from input dataset), one record at a time
 const Encounters = require("../Encounters");
 
-/*
-Contains helper functions that are used by all reports
-Used to generate the feature file locally and in Google Drive (if required)
-*/
-const Base = require("../base");
-
-//Used to prepare a test case (Scenario) in the feature file which includes the input hash and the expected outcome hash
+//Used to generate a scenario containing the various Cucumber test steps. This class also brings together the input and expected outcome data hashes
 const Scenarios = require("../Scenarios");
-
-//List out all requires for extended modules that this report may require
-const moduleName = require("../Extended Modules/moduleName");
 
 //The Google service account must have editor permissions for the PARENT_FOLDER_ID folder specified in the config file
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
 
-const IS_LINE_LISTING_REPORT = true;
 const FEATURE_NAME = "x.x"; //This must have the exact same name as the report tab in the input dataset
 
 /*
-Leave empty otherwise specify all additional reporting filters.
+Leave empty otherwise specify all additional JSReports report filters.
 For example:
     const REPORT_SPECFIC_FILTERS = [
     ["finalOutcome", "all"],
@@ -34,6 +24,10 @@ For example:
 ]
 */
 const REPORT_SPECFIC_FILTERS = []; 
+
+const ROW_DISAGGREGATION_KEY = ""; //The JSReports table row output variable name.
+const ROW_DISAGGREGATION_KEY_VALUES = []; //A list of all possible disaggregation values for the ROW_DISAGGREGATION_KEY
+const jsReportsVariables = []; //The key JSReports disaggregation grouping. For example, Male, Female, Unknown etc.
 
 //Do not remove this function or any part of it
 function main()
@@ -73,7 +67,6 @@ function prepareData(reportDataSets)
     let hash = new InputHash(
         reportDataSets[0], //input dataset
         FEATURE_NAME,
-        IS_LINE_LISTING_REPORT,
         UPLOAD_FILES_TO_GOOGLE_DRIVE
     );
     
@@ -96,27 +89,26 @@ function prepareData(reportDataSets)
 
         generateInputDataHash(function(inputDataHash)
         {
-            /*
-            Note: This defition only applies to aggregated reports and when IS_LINE_LISTING_REPORT = false
-            If the input dataset does not have multiple encounters for the very last patient in the dataset for the given report, simply use Encounters.mustEncounterBeReportedOn.
-            If the report is an aggregated report with multiple encounters for the very last patient in the input dataset, you must use Encounters.inputDataLastRowReached
-            */
-            if (Encounters.mustEncounterBeReportedOn)
+            if (Encounters.inputDataLastRowReached)
             {
-                generateExpectedOutcomeDataHash(reportDataSets[1] /*eexpected outcome dataset*/, function(expectedOutcomeDataHash)
-                {
-                    let scenario = new Scenarios(
-                        inputDataHash,
-                        currentEncounterCallback,
-                        FEATURE_NAME,
-                        REPORT_SPECFIC_FILTERS,
-                        IS_LINE_LISTING_REPORT,
-                        null,
-                        null,
-                        expectedOutcomeDataHash
-                    );
+                let scenario = new Scenarios(
+                    inputDataHash,
+                    currentEncounterCallback,
+                    FEATURE_NAME,
+                    REPORT_SPECFIC_FILTERS,
+                    true,
+                    ROW_DISAGGREGATION_KEY,
+                    ROW_DISAGGREGATION_KEY_VALUES,
+                    true,
+                    getTotals(reportDataSets[1]),
+                    jsReportsVariables,
+                    reportDataSets[1]
+                );
 
-                    scenario.generateScenarios();
+                scenario.generateScenarios();
+
+                Encounters.baseModule.generateFeatureFile(UPLOAD_FILES_TO_GOOGLE_DRIVE, FEATURE_NAME, function (){ 
+                    console.log("Execution completed!\n");
                 });
             }
             else
@@ -126,17 +118,12 @@ function prepareData(reportDataSets)
                     currentEncounterCallback,
                     FEATURE_NAME,
                     REPORT_SPECFIC_FILTERS,
-                    IS_LINE_LISTING_REPORT
+                    true,
+                    ROW_DISAGGREGATION_KEY,
+                    ROW_DISAGGREGATION_KEY_VALUES
                 );
 
                 scenario.generateScenarios();
-            }
-
-            if (Encounters.inputDataLastRowReached)
-            {
-                Encounters.baseModule.generateFeatureFile(UPLOAD_FILES_TO_GOOGLE_DRIVE, FEATURE_NAME, function (){ 
-                    console.log("Execution completed!\n");
-                });
             }
         });
     }); 
@@ -151,48 +138,40 @@ function generateInputDataHash(callback)
     See below example.
     This function is used to create the input hash of patient encounter data that will be submitted to the CDR via postman
     */
-    
-    var inputDataTable = Encounters.REPORTING_FACILITY_ORG_ID;//never remove this line
 
+    var inputDataTable = Encounters.REPORTING_FACILITY_ORG_ID;
 
-    inputDataTable += "|randomRegistrationDate  |" + Encounters.Data.REGISTRATION_DATE + "|\n";
-    inputDataTable += "|randomClientMRN  |" + Encounters.Data.DYNAMIC_MRN + "|\n";
-    inputDataTable += "|gender  |" + Encounters.Data.GENDER + "|\n";
-    inputDataTable += "|pregnant  |" + Encounters.Data.PREGNANT + "|\n";
-   
+    inputDataTable += "|firstName  |" + Encounters.Data.Registration.FIRST_NAME + "|\n";
+    inputDataTable += "|lastName  |" + Encounters.Data.Registration.LAST_NAME + "|\n";
+    inputDataTable += "|gender  |" + Encounters.Data.Registration.GENDER + "|\n";
+    inputDataTable += "|dateOfBirth  |" + Encounters.Data.Registration.DATE_OF_BIRTH + "|\n";
+    inputDataTable += "|hivPositiveDate  |" + Encounters.Data.HIV_Diagnosis.HIV_POSITIVE_DATE + "|\n";
+    inputDataTable += "|dateClientEnrolledToCare  |" + Encounters.Data.Entry_To_Care.DATE_CLIENT_ENROLLED_TO_CARE  + "|\n";
+
     callback(inputDataTable);
 }
 
 //Do not remove this function or any part of it
-function generateExpectedOutcomeDataHash(expectedOutcomeData, callback)
+function getTotals(expectedOutcomeData)
 {
-    /*
-    Use this function to generate the expected outcome hash that will be used to ensure that the data in ElasticSearch is accurate and correct for each patient MRN.
-    Use: expectedOutcometable += base.displayOutcomeJSReportVariable("|jsReportsApiVariable|", expectedOutcomeDatasetColumnValue);
-    See below example.
-    A more comples example can be seen in report-12_1.js which takes a very dyanmic approach in regards to generating the JSReports variables.
-    */
-
-    const DYNAMIC_MRN_POSTFIX = Base.DAY_OF_YEAR_POSTFIX + "-" + Base.HH_MM_SS
-    const DYNAMIC_UAN_POSTFIX = Base.DAY_OF_YEAR_POSTFIX  + Base.HH_MM_SS
-    const OUTCOME_DATA_LAST_ROW = expectedOutcomeData.values.length;
     const base = Encounters.baseModule;
+    const TOTAL_ROW = 17; //The totals row in the expected outcome dataset for the report you are testing
+    const START_COLUMN_INDEX = 1; //The first column which contains thefirst total value
 
-    for (var x = 0; x < OUTCOME_DATA_LAST_ROW; x++) {
-        const value = expectedOutcomeData.values[x];
+    var currentColumn = START_COLUMN_INDEX;
 
-        if (value[0] == Encounters.Data.MRN) {
-            var expectedOutcometable = "|field|value|\n";
-           
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|mrn|", value[0] + "-" + DYNAMIC_MRN_POSTFIX);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|uan|", base.getStringOrNullValue(value[1]) != "" ? value[1] + DYNAMIC_UAN_POSTFIX : "");
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|age|", value[2]);
-            expectedOutcometable += base.displayOutcomeJSReportVariable("|sex|", value[3]);
-  
-            callback(expectedOutcometable);
-        }
+    var totalsPerColummn = "";
+
+    for (var j = 0; j < 9; j++) 
+    {
+        const TOTAL_VALUE = expectedOutcomeData.values[TOTAL_ROW][currentColumn];
+        
+        totalsPerColummn += base.displayOutcomeJSReportVariable(jsReportsVariables[j], TOTAL_VALUE);
+
+        currentColumn++;
     }
+
+    return "|field|value|\n" + totalsPerColummn;
 }
 
-//Do not remove this function call as it is used to execute the generation of the report's feature file containing the input and expected outcome data hashes.
 main();
