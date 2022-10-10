@@ -10,7 +10,6 @@ class Encounters{
 
     static Data = {
         REPORTING_PERIOD: null,
-        IS_CARES_CASE_REPORT: null,
 
         Registration: {
             MRN: null,

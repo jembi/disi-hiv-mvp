@@ -22,7 +22,8 @@
     "jest": "^27.4.5",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.1",
-    "newman": "^5.2.2"
+    "newman": "^5.2.2",
+    "node-fetch": "^2.6.1"
   },
   "scripts": {
     "bootstrap": "yarn newman run 'CDR.postman_collection.json' --folder 'Bootstrap'",

@@ -6,20 +6,11 @@ class InputHash{
     #uploadToGoogleDrive = null;
     #feature = null;
     #baseModule = null;
-    #isCaresCaseReport = null;
 
-    constructor(dataSet, featureName, uploadFeatureToGoogleDrive, isCaresCaseReport){
+    constructor(dataSet, featureName, uploadFeatureToGoogleDrive){
         this.#setDataset(dataSet);
         this.#setUploadToGoogleDrive(uploadFeatureToGoogleDrive);
         this.#setFeatureName(featureName);
-        this.#setIsCaresCaseReport(isCaresCaseReport);
-    }
-
-    #getIsCaresCaseReport(){
-        return this.#isCaresCaseReport;
-    }
-    #setIsCaresCaseReport(data){
-        this.#isCaresCaseReport = data;
     }
 
     #getDataset(){
@@ -64,7 +55,6 @@ class InputHash{
         {
             console.log("Report %s: Successfully acquired the input dataset from Google Drive!", this.#getFeatureName());
             
-            Encounters.Data.IS_CARES_CASE_REPORT = this.#getIsCaresCaseReport();
             Encounters.REPORTING_FACILITY_ORG_ID = ORGANISATION_ID;
             Encounters.baseModule = base;
             

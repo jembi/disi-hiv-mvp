@@ -13,7 +13,7 @@ const CD4_Totals_For_Dashboard_Charts = require('./HIV Dashboard Helpers/CD4_Tot
 const Gender_Totals_For_Dashboard_Charts = require('./HIV Dashboard Helpers/Gender_Totals')
 const Cumulative_HIV_Cases_Totals_For_Dashboard_Charts = require('./HIV Dashboard Helpers/Cumulative_HIV_Cases_Totals')
 
-const REPORT_MODULE_IS_FOR_CARES = false;
+
 const FEATURE_NAME = "HIV-DASHBOARD";
 const UPLOAD_FILES_TO_GOOGLE_DRIVE = false;
 const REPORT_SPECFIC_FILTERS = []; //add any additional report filters
@@ -104,8 +104,7 @@ function prepareData(reportDataSets)
     let hash = new InputHash(
         reportDataSets[0], //input dataset
         FEATURE_NAME,
-        UPLOAD_FILES_TO_GOOGLE_DRIVE,
-        REPORT_MODULE_IS_FOR_CARES
+        UPLOAD_FILES_TO_GOOGLE_DRIVE
     );
 
     hash.enumerateEncountersForInputDataset(function(currentEncounterCallback)
@@ -725,7 +724,7 @@ function calculateTotalBaselineCD4ForNewlyStartedARTPatients(reportingStartDate,
 function generateInputDataHash(callback)
 {
     var inputDataTable = Encounters.REPORTING_FACILITY_ORG_ID;
-    inputDataTable += "|isCaresCaseReport  |" + Encounters.Data.IS_CARES_CASE_REPORT+ "|\n";
+  
     inputDataTable += "|firstName  |" + Encounters.Data.Registration.FIRST_NAME + "|\n";
     inputDataTable += "|lastName  |" + Encounters.Data.Registration.LAST_NAME + "|\n";
     inputDataTable += "|gender  |" + Encounters.Data.Registration.GENDER + "|\n";
