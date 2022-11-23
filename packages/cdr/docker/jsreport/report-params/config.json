@@ -14,9 +14,7 @@
     },
     "_id": "hJihV9aVe2Zs7CZi",
     "$entitySet": "templates",
-    "scripts": [
-        {
-            "shortid": "CMuLz7MgjP"
-        }
-    ]
+    "scripts": [{
+        "shortid": "CMuLz7MgjP"
+    }]
 }

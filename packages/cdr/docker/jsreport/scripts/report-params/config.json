@@ -5,10 +5,12 @@
         "$$date": 1622717092286
     },
     "modificationDate": {
-        "$$date": 1625830141142
+        "$$date": 1632750163482
     },
     "inheritedReadPermissions": [],
     "inheritedEditPermissions": [],
     "_id": "yHXVkLNa5Ed3yqVn",
-    "$entitySet": "scripts"
+    "$entitySet": "scripts",
+    "tags": [],
+    "isGlobal": true
 }
